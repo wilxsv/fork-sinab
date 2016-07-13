@@ -1,0 +1,1035 @@
+﻿Imports ABASTECIMIENTOS.ENTIDADES
+Imports ABASTECIMIENTOS.NEGOCIO
+
+
+Partial Class FrmDetMantDespacharProductos
+    Inherits System.Web.UI.Page
+
+    Private _IDALMACEN As Integer
+    Private _IDMOVIMIENTO As Integer
+    Private _ANIO As Integer
+    Private _IDVALE As Integer
+    Private _joker As Integer
+    Private _esFarmacia As Boolean
+
+#Region "Propiedades"
+
+    Public Property IDMOVIMIENTO() As Integer
+        Get
+            Return _IDMOVIMIENTO
+        End Get
+        Set(ByVal value As Integer)
+            _IDMOVIMIENTO = value
+            If Not Me.ViewState("IDMOVIMIENTO") Is Nothing Then Me.ViewState.Remove("IDMOVIMIENTO")
+            Me.ViewState.Add("IDMOVIMIENTO", value)
+            btnImprimir.OnClientClick = "window.open('" + Request.ApplicationPath + "/Reportes/FrmRptValeSalida.aspx?IdEMov=" + Session.Item("IdEstablecimiento").ToString + "&IdMov=" + Me.IDMOVIMIENTO.ToString + "', 'popup' ,'scrollbars= 1 ,resizable= 1 ,width= 800 ,height= 600 ');return;"
+        End Set
+    End Property
+
+    Public Property IDALMACEN() As Integer
+        Get
+            Return _IDALMACEN
+        End Get
+        Set(ByVal value As Integer)
+            _IDALMACEN = value
+            If Not Me.ViewState("IDALMACEN") Is Nothing Then Me.ViewState.Remove("IDALMACEN")
+            Me.ViewState.Add("IDALMACEN", value)
+        End Set
+    End Property
+
+    Public Property ANIO() As Integer
+        Get
+            Return _ANIO
+        End Get
+        Set(ByVal value As Integer)
+            _ANIO = value
+            If Not Me.ViewState("ANIO") Is Nothing Then Me.ViewState.Remove("ANIO")
+            Me.ViewState.Add("ANIO", value)
+        End Set
+    End Property
+
+    Public Property IDVALE() As Integer
+        Get
+            Return _IDVALE
+        End Get
+        Set(ByVal value As Integer)
+            _IDVALE = value
+            If Not Me.ViewState("IDVALE") Is Nothing Then Me.ViewState.Remove("IDVALE")
+            Me.ViewState.Add("IDVALE", value)
+        End Set
+    End Property
+    Public Property joker() As Integer
+        Get
+            Return _joker
+        End Get
+        Set(ByVal value As Integer)
+            _joker = value
+            If Not Me.ViewState("joker") Is Nothing Then Me.ViewState.Remove("joker")
+            Me.ViewState.Add("joker", value)
+        End Set
+    End Property
+
+    Public Property esFarmacia() As Boolean
+        Get
+            Return _esFarmacia
+        End Get
+        Set(ByVal value As Boolean)
+            _esFarmacia = value
+            If Not Me.ViewState("EsFarmacia") Is Nothing Then Me.ViewState.Remove("EsFarmacia")
+            Me.ViewState.Add("EsFarmacia", _esFarmacia)
+        End Set
+    End Property
+#End Region
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Me.boton.Visible = False
+
+        If Not IsPostBack Then
+
+            Me.Master.ControlMenu.Visible = False
+
+            Me.IDMOVIMIENTO = Request.QueryString("IdMov")
+            Me.IDALMACEN = Request.QueryString("IdAlm")
+
+            Me.cpFechaDespacho.UpperBoundDate = Now.Date
+            Me.cvFechaDespacho.ValueToCompare = Now.Date
+
+            DeshabilitarDobleClickBotones()
+
+            CargarDDLs()
+
+            If Me.IDMOVIMIENTO = 0 Then
+
+                Me.ddlSUMINISTROS1.SelectedValue = Session.Item("IdSuministro")
+
+                Me.btnCerrar.Enabled = False
+
+                If Session.Item("GuardaAlmacen") = 1 Then
+                    Me.txtEmpleadoAlmacen.Text = Session.Item("NombreUsuario").ToString
+                Else
+                    Dim cE As New cEMPLEADOSALMACEN
+                    Me.txtEmpleadoAlmacen.Text = cE.ObtenerGuardalmacen(Me.IDALMACEN)
+                End If
+
+                'seleccionar la primera opción
+                Me.lblTipoDespachoIndividual.Visible = True
+                Me.ddlTIPOMOVIMIENTOS1.Visible = True
+
+                Me.plBuscarDistribucion.Visible = False
+                Me.plEncabezado.Visible = True
+                Me.gvLista.Visible = True
+                Me.plGenerales.Visible = True
+
+                Me.plAgregarProducto.Visible = True
+                Limpiar()
+
+                Me.ddlESTABLECIMIENTOS1.Focus()
+
+            Else
+                CargarDatos()
+            End If
+
+        Else
+
+            If Not Me.ViewState("IDALMACEN") Is Nothing Then Me._IDALMACEN = Me.ViewState("IDALMACEN")
+            If Not Me.ViewState("IDMOVIMIENTO") Is Nothing Then Me._IDMOVIMIENTO = Me.ViewState("IDMOVIMIENTO")
+            If Not Me.ViewState("ANIO") Is Nothing Then Me._ANIO = Me.ViewState("ANIO")
+
+            If Not Me.ViewState("IDVALE") Is Nothing Then Me._IDVALE = Me.ViewState("IDVALE")
+            If Not Me.ViewState("joker") Is Nothing Then Me._joker = Me.ViewState("joker")
+
+        End If
+
+        If IsPostBack Then
+
+            If MessageBox.ConfirmTarget = "Nuevo" Then AfterUserConfirmationHandler(MessageBox.ConfirmArgument)
+
+
+        End If
+
+    End Sub
+    Private Sub DDLAlamcenesVisible()
+        ddlALMACENES1.Visible = cbVerTodos.Checked
+        lblNoAlmacenAsociado.Visible = Not cbVerTodos.Checked
+    End Sub
+    Private Sub CargarDatos()
+
+        Dim cM As New cMOVIMIENTOS
+        Dim eM As New MOVIMIENTOS
+
+        Dim cVS As New cVALESSALIDA
+        Dim eVS As New VALESSALIDA
+
+        Dim cDM As New cDETALLEMOVIMIENTOS
+
+        eM.IDESTABLECIMIENTO = Session.Item("IdEstablecimiento")
+        eM.IDTIPOTRANSACCION = eTIPOTRANSACCION.Salida
+        eM.IDMOVIMIENTO = Me.IDMOVIMIENTO
+
+        cM.ObtenerMOVIMIENTOS(eM)
+
+        Dim ds As Data.DataSet
+        ds = cDM.ObtenerSuministrosMovimiento(eM.IDESTABLECIMIENTO, eM.IDTIPOTRANSACCION, eM.IDMOVIMIENTO)
+
+        If ds Is Nothing Or ds.Tables(0).Rows.Count = 0 Then
+            Me.ddlSUMINISTROS1.SelectedValue = Session.Item("IdSuministro")
+        Else
+            Me.ddlSUMINISTROS1.SelectedValue = ds.Tables(0).Rows(0).Item("IDSUMINISTRO")
+            Me.ddlSUMINISTROS1.Enabled = False
+        End If
+
+        If Me.rbTipoDespacho.Visible Then
+            Me.rbTipoDespacho.SelectedValue = eM.CLASIFICACIONMOVIMIENTO
+        End If
+
+        'no mostrar el rb
+        'Me.rbTipoDespacho.Visible = True
+        'Me.rbTipoDespacho.Enabled = False
+
+        Me.ddlTIPOMOVIMIENTOS1.SelectedValue = eM.SUBCLASIFICACIONMOVIMIENTO
+        Me.lblTipoDespachoIndividual.Visible = True
+        Me.ddlTIPOMOVIMIENTOS1.Enabled = False
+        Me.ddlTIPOMOVIMIENTOS1.Visible = True
+
+        Me.cpFechaDespacho.SelectedDate = eM.FECHAMOVIMIENTO
+
+        If Not Session.Item("idTipoEstablecimiento") = 3 Or Session.Item("idTipoEstablecimiento") = 8 Then
+
+            If Me.ddlESTABLECIMIENTOS1.Items.FindByValue(eM.IDESTABLECIMIENTODESTINO) Is Nothing Then
+                Me.cbVerTodos.Checked = True
+                Me.ddlESTABLECIMIENTOS1.RecuperarEstablecimientosPorZonaAlmancen(Me.IDALMACEN, IIf(Me.cbVerTodos.Checked, 1, 0))
+            End If
+
+            Me.ddlESTABLECIMIENTOS1.SelectedValue = eM.IDESTABLECIMIENTODESTINO
+            RecuperarAlmacenEstablecimiento(eM.IDESTABLECIMIENTODESTINO)
+            Me.ddlALMACENES1.SelectedValue = eM.IDALMACENDESTINO
+        Else
+
+            If Me.ddlESTABLECIMIENTOS1.Items.FindByValue(eM.ID_LUGAR_ENTREGA_HOSPITAL) Is Nothing Then
+                Me.cbVerTodos.Checked = True
+                Me.ddlESTABLECIMIENTOS1.RecuperarEstablecimientosPorZonaAlmancen(Me.IDALMACEN, IIf(Me.cbVerTodos.Checked, 1, 0))
+                Me.ddlESTABLECIMIENTOS1.SelectedValue = eM.IDESTABLECIMIENTODESTINO
+                RecuperarAlmacenEstablecimiento(eM.IDESTABLECIMIENTODESTINO)
+                Me.ddlALMACENES1.SelectedValue = eM.IDALMACENDESTINO
+            Else
+                joker = 1
+                Me.cbVerTodos.Checked = False
+                Me.ddlESTABLECIMIENTOS1.RecuperarLugarEntregaHospital(Me.IDALMACEN, IIf(Me.cbVerTodos.Checked, 1, 0))
+                Me.ddlESTABLECIMIENTOS1.SelectedValue = eM.ID_LUGAR_ENTREGA_HOSPITAL
+                RecuperarAlmacenEstablecimiento(0)
+            End If
+
+        End If
+
+        Me.txtEmpleadoAlmacen.Text = eM.EMPLEADOALMACEN
+        Me.txtEMPLEADOPREPARA.Text = eM.EMPLEADOPREPARA
+
+        'Carga la información del vale de salida asociado
+        eVS.IDALMACEN = eM.IDALMACEN
+        eVS.ANIO = eM.ANIO
+        eVS.IDVALE = eM.IDDOCUMENTO
+
+        cVS.ObtenerVALESSALIDA(eVS)
+
+        Me.IDVALE = eVS.IDVALE
+
+        Me.txtNroVale.Text = eVS.IDVALE.ToString + "/" + eVS.ANIO.ToString
+
+        Me.lblNroVale.Visible = True
+        Me.txtNroVale.Visible = True
+
+
+        Me.txtObservacion.Text = eVS.OBSERVACION
+        Me.txtTransportista.Text = eVS.TRANSPORTISTA
+        Me.txtMatricula.Text = eVS.MATRICULAVEHICULO
+        Me.ddlTIPOIDENTIFICACION1.SelectedValue = eVS.IDTIPOIDENTIFICACION
+        Me.txtNumeroDocumento.Text = eVS.NUMEROIDENTIFICACION
+        Me.txtRecibe.Text = eVS.PERSONARECIBE
+
+        If eM.IDESTADO = eESTADOSMOVIMIENTOS.Cerrado Then
+
+            Me.ddlESTABLECIMIENTOS1.Enabled = False
+            Me.ddlALMACENES1.Enabled = False
+            Me.cbVerTodos.Enabled = False
+            Me.cpFechaDespacho.Enabled = False
+
+            Me.plAgregarProducto.Visible = False
+            Me.plDatosProducto.Visible = False
+
+            Me.txtEMPLEADOPREPARA.Enabled = False
+            Me.txtTransportista.Enabled = False
+            Me.txtMatricula.Enabled = False
+            Me.txtRecibe.Enabled = False
+            Me.ddlTIPOIDENTIFICACION1.Enabled = False
+            Me.txtNumeroDocumento.Enabled = False
+            Me.txtEmpleadoAlmacen.Enabled = False
+            Me.txtObservacion.Enabled = False
+
+            Me.btnGuardar.Visible = False
+            Me.btnCerrar.Visible = False
+            Me.btnImprimir.Enabled = True
+
+        ElseIf eM.IDESTADO = eESTADOSMOVIMIENTOS.Grabado Then
+
+            Me.plAgregarProducto.Visible = True
+
+            Me.btnCerrar.Enabled = True
+            Me.btnImprimir.Enabled = True
+
+            Me.txtProducto.Focus()
+
+        End If
+
+        'Carga del detalle del movimiento en el datagrid
+        ds = cDM.ObtenerDetalleMovimientosDS(eM.IDESTABLECIMIENTO, eM.IDTIPOTRANSACCION, eM.IDMOVIMIENTO)
+
+        Me.gvLista.DataSource = ds
+        Me.gvLista.DataBind()
+
+        Me.plEncabezado.Visible = True
+        Me.gvLista.Visible = True
+        Me.plGenerales.Visible = True
+
+    End Sub
+
+    Protected Sub btnCerrar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
+        CerrarVale()
+    End Sub
+
+    Private Sub CerrarVale()
+        If Me.ddlESTABLECIMIENTOS1.SelectedItem.Text.ToLower.Contains("farmacia") Then Me.esFarmacia = True
+
+        Dim cDM As New cDETALLEMOVIMIENTOS
+        Dim eM As New MOVIMIENTOS
+        Dim eVS As New VALESSALIDA
+
+        eM.IDESTABLECIMIENTO = Session.Item("IdEstablecimiento")
+        eM.IDTIPOTRANSACCION = eTIPOTRANSACCION.Salida
+        eM.IDMOVIMIENTO = Me.IDMOVIMIENTO
+
+        eM.IDESTADO = eESTADOSMOVIMIENTOS.Cerrado
+        eM.FECHAMOVIMIENTO = Me.cpFechaDespacho.SelectedDate
+        eM.EMPLEADOALMACEN = Me.txtEmpleadoAlmacen.Text
+        eM.EMPLEADOPREPARA = Me.txtEMPLEADOPREPARA.Text
+
+        If Session.Item("idTipoEstablecimiento") = 3 Or Session.Item("idTipoEstablecimiento") = 8 Then
+            If joker = 1 Then
+                eM.ID_LUGAR_ENTREGA_HOSPITAL = Me.ddlESTABLECIMIENTOS1.SelectedValue
+                eM.IDESTABLECIMIENTODESTINO = Nothing
+            Else
+                eM.ID_LUGAR_ENTREGA_HOSPITAL = Nothing
+                eM.IDESTABLECIMIENTODESTINO = Me.ddlESTABLECIMIENTOS1.SelectedValue
+            End If
+            eM.IDALMACENDESTINO = IIf(Me.ddlALMACENES1.Visible, Me.ddlALMACENES1.SelectedValue, Nothing)
+        Else
+            eM.IDESTABLECIMIENTODESTINO = Me.ddlESTABLECIMIENTOS1.SelectedValue
+            eM.IDALMACENDESTINO = IIf(Me.ddlALMACENES1.Visible, Me.ddlALMACENES1.SelectedValue, Nothing)
+        End If
+
+
+        eM.AUUSUARIOMODIFICACION = HttpContext.Current.User.Identity.Name
+        eM.AUFECHAMODIFICACION = Now
+
+        eVS.OBSERVACION = Me.txtObservacion.Text
+        eVS.TRANSPORTISTA = Me.txtTransportista.Text
+        eVS.MATRICULAVEHICULO = Me.txtMatricula.Text
+        eVS.IDTIPOIDENTIFICACION = Me.ddlTIPOIDENTIFICACION1.SelectedValue
+        eVS.NUMEROIDENTIFICACION = Me.txtNumeroDocumento.Text
+        eVS.PERSONARECIBE = Me.txtRecibe.Text
+        eVS.AUUSUARIOMODIFICACION = eM.AUUSUARIOMODIFICACION
+        eVS.AUFECHAMODIFICACION = eM.AUFECHAMODIFICACION
+
+        cDM.CerrarDespacho(eM, eVS, Me.esFarmacia)
+
+        'todo insert mysql
+
+        CargarDatos()
+        MessageBox.Confirm("El vale ha sido cerrado satisfactoriamente. ¿Desea crear uno nuevo?", "Nuevo", MessageBox.OptionPostBack.YesNotPostBack)
+
+        ' Me.MsgBox1.ShowConfirm("El vale ha sido cerrado satisfactoriamente. ¿Desea crear uno nuevo?", "Nuevo", Cooperator.Framework.Web.Controls.ConfirmOption.PostBackOnYes_NoActionOnNo, Cooperator.Framework.Web.Controls.DefaultButton.No)
+
+    End Sub
+
+    Protected Sub AfterUserConfirmationHandler(ByVal eventArgument As String)
+        If Convert.ToBoolean(MessageBox.ConfirmArgument) Then
+            Response.Redirect("~/FrmPrincipal.aspx", False)
+        Else
+            Response.Redirect("~/ALMACEN/FrmDetMantDespacharProductos.aspx?IdMov=0" + "&IdAlm=" + Me.IDALMACEN.ToString, False)
+        End If
+    End Sub
+
+    Protected Sub MsgBox1_YesChosen(ByVal sender As Object, ByVal e As Cooperator.Framework.Web.Controls.MsgBoxEventArgs) Handles MsgBox1.YesChosen
+
+        Select Case e.Key
+            Case "Nuevo"
+                Response.Redirect("~/ALMACEN/FrmDetMantDespacharProductos.aspx?IdMov=0" + "&IdAlm=" + Me.IDALMACEN.ToString, False)
+            Case "Cerrar"
+                CerrarVale()
+            Case "s"
+                Response.Redirect("~/FrmPrincipal.aspx", False)
+        End Select
+
+    End Sub
+
+    Protected Sub btnGuardar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
+        If GuardarMovimiento() = 1 Then
+            Limpiar()
+            CargarDatos()
+
+            Me.btnCerrar.Enabled = True
+            Me.btnImprimir.Enabled = True
+
+            If Me.txtProducto.Visible Then Me.txtProducto.Focus()
+
+            Me.MsgBox1.ShowConfirm("El vale " + Me.txtNroVale.Text + " se ha guardado satisfactoriamente. ¿Desea crear uno nuevo?", "Nuevo", Cooperator.Framework.Web.Controls.ConfirmOption.PostBackOnYes_NoActionOnNo, Cooperator.Framework.Web.Controls.DefaultButton.No)
+
+        End If
+    End Sub
+
+    Private Function GuardarMovimiento() As Integer
+
+        Dim resultado As Integer
+
+        Try
+
+            Dim cM As New cMOVIMIENTOS
+            Dim eM As New MOVIMIENTOS
+
+            Dim cVS As New cVALESSALIDA
+            Dim eVS As New VALESSALIDA
+
+
+
+
+
+            If Me.IDMOVIMIENTO = 0 Then
+                'Creacion del vale de salida
+                eVS.IDALMACEN = Me.IDALMACEN
+                eVS.ANIO = Me.cpFechaDespacho.SelectedDate.Year
+                eVS.IDVALE = 0
+
+                eVS.OBSERVACION = Me.txtObservacion.Text
+                eVS.TRANSPORTISTA = Me.txtTransportista.Text
+                eVS.MATRICULAVEHICULO = Me.txtMatricula.Text
+                eVS.IDTIPOIDENTIFICACION = Me.ddlTIPOIDENTIFICACION1.SelectedValue
+                eVS.NUMEROIDENTIFICACION = Me.txtNumeroDocumento.Text
+                eVS.PERSONARECIBE = Me.txtRecibe.Text
+
+                eVS.AUUSUARIOCREACION = HttpContext.Current.User.Identity.Name
+                eVS.AUFECHACREACION = Now()
+                eVS.ESTASINCRONIZADA = 0
+
+                cVS.ActualizarVALESSALIDA(eVS)
+
+                Me.IDVALE = eVS.IDVALE
+
+                Me.ddlSUMINISTROS1.Enabled = False
+
+                Me.txtNroVale.Text = eVS.IDVALE.ToString + "/" + eVS.ANIO.ToString
+                Me.lblNroVale.Visible = True
+                Me.txtNroVale.Visible = True
+
+
+                'movimiento
+                eM.IDESTABLECIMIENTO = Session.Item("IdEstablecimiento")
+                eM.IDTIPOTRANSACCION = eTIPOTRANSACCION.Salida
+                eM.IDMOVIMIENTO = 0
+
+                eM.IDALMACEN = eVS.IDALMACEN
+                eM.ANIO = eVS.ANIO
+                eM.IDDOCUMENTO = eVS.IDVALE
+
+                eM.FECHAMOVIMIENTO = Me.cpFechaDespacho.SelectedDate
+
+                eM.IDUNIDADSOLICITA = Session.Item("IdDependencia")
+                eM.CLASIFICACIONMOVIMIENTO = Me.rbTipoDespacho.SelectedValue
+                eM.SUBCLASIFICACIONMOVIMIENTO = Me.ddlTIPOMOVIMIENTOS1.SelectedValue
+                eM.EMPLEADOALMACEN = Me.txtEmpleadoAlmacen.Text
+                eM.EMPLEADOPREPARA = Me.txtEMPLEADOPREPARA.Text
+                eM.IDESTADO = eESTADOSMOVIMIENTOS.Grabado
+
+                If Session.Item("idTipoEstablecimiento") = 3 Or Session.Item("idTipoEstablecimiento") = 8 Then
+                    If joker = 1 Then
+                        eM.ID_LUGAR_ENTREGA_HOSPITAL = Me.ddlESTABLECIMIENTOS1.SelectedValue
+                        eM.IDESTABLECIMIENTODESTINO = Nothing
+                    Else
+                        eM.ID_LUGAR_ENTREGA_HOSPITAL = Nothing
+                        eM.IDESTABLECIMIENTODESTINO = Me.ddlESTABLECIMIENTOS1.SelectedValue
+                    End If
+                    eM.IDALMACENDESTINO = IIf(Me.ddlALMACENES1.Visible, Me.ddlALMACENES1.SelectedValue, Nothing)
+                Else
+                    eM.IDESTABLECIMIENTODESTINO = Me.ddlESTABLECIMIENTOS1.SelectedValue
+                    eM.IDALMACENDESTINO = IIf(Me.ddlALMACENES1.Visible, Me.ddlALMACENES1.SelectedValue, Nothing)
+                End If
+
+
+                eM.AUUSUARIOCREACION = HttpContext.Current.User.Identity.Name
+                eM.AUFECHACREACION = Now()
+                eM.ESTASINCRONIZADA = 0
+
+                cM.ActualizarMOVIMIENTOS(eM)
+
+                Me.IDMOVIMIENTO = eM.IDMOVIMIENTO
+
+            Else
+                'actualizar el movimiento
+                eM.IDESTABLECIMIENTO = Session.Item("IdEstablecimiento")
+                eM.IDMOVIMIENTO = Me.IDMOVIMIENTO
+
+                eM.FECHAMOVIMIENTO = Me.cpFechaDespacho.SelectedDate
+
+                If Session.Item("idTipoEstablecimiento") = 3 Or Session.Item("idTipoEstablecimiento") = 8 Then
+                    If joker = 1 Then
+                        eM.ID_LUGAR_ENTREGA_HOSPITAL = Me.ddlESTABLECIMIENTOS1.SelectedValue
+                        eM.IDESTABLECIMIENTODESTINO = Nothing
+                    Else
+                        eM.ID_LUGAR_ENTREGA_HOSPITAL = Nothing
+                        eM.IDESTABLECIMIENTODESTINO = Me.ddlESTABLECIMIENTOS1.SelectedValue
+                    End If
+                    eM.IDALMACENDESTINO = IIf(Me.ddlALMACENES1.Visible, Me.ddlALMACENES1.SelectedValue, Nothing)
+                Else
+                    eM.IDESTABLECIMIENTODESTINO = Me.ddlESTABLECIMIENTOS1.SelectedValue
+                    eM.IDALMACENDESTINO = IIf(Me.ddlALMACENES1.Visible, Me.ddlALMACENES1.SelectedValue, Nothing)
+                End If
+
+                eM.EMPLEADOALMACEN = Me.txtEmpleadoAlmacen.Text
+                eM.EMPLEADOPREPARA = Me.txtEMPLEADOPREPARA.Text
+                eM.AUUSUARIOMODIFICACION = HttpContext.Current.User.Identity.Name
+                eM.AUFECHAMODIFICACION = Now
+
+                'actualizar el vale de salida
+                eVS.TRANSPORTISTA = Me.txtTransportista.Text
+                eVS.MATRICULAVEHICULO = Me.txtMatricula.Text
+                eVS.PERSONARECIBE = Me.txtRecibe.Text
+                eVS.IDTIPOIDENTIFICACION = Me.ddlTIPOIDENTIFICACION1.SelectedValue
+                eVS.NUMEROIDENTIFICACION = Me.txtNumeroDocumento.Text
+                eVS.OBSERVACION = Me.txtObservacion.Text
+                eVS.AUUSUARIOMODIFICACION = HttpContext.Current.User.Identity.Name
+                eVS.AUFECHAMODIFICACION = Now
+
+                cM.GuardarDespacho(eM, eVS)
+
+            End If
+
+
+
+
+            'Dim cDM As New cDETALLEMOVIMIENTOS
+            'Dim cU As New cUTILERIAS
+
+            Me.ddlTIPOMOVIMIENTOS1.Enabled = False
+
+            'Me.ddlESTABLECIMIENTOS1.Enabled = False
+            'Me.ddlALMACENES1.Enabled = False
+
+            'Me.plAgregarProducto.Visible = False
+            'Me.plDatosProducto.Visible = False
+
+            'Me.btnAgregarLote.Enabled = False
+            'Me.dgLista.Columns.Item(7).Visible = False
+
+            resultado = 1
+
+        Catch ex As Exception
+            Me.MsgBox1.ShowAlert("Error:" & ex.Message, "e", Cooperator.Framework.Web.Controls.AlertOption.NoAction, Cooperator.Framework.Web.Controls.AlertType.Stop)
+        End Try
+
+        Return resultado
+
+    End Function
+
+    Protected Sub rdblCriterio_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rdblCriterio.SelectedIndexChanged
+        RestablecerCriterio()
+    End Sub
+
+    Private Sub RestablecerCriterio()
+
+        Limpiar()
+
+        If Me.rdblCriterio.SelectedValue = 0 Then
+            Me.ddlCATALOGOPRODUCTOS1.Visible = False
+            Me.txtProducto.Visible = True
+            Me.btnBuscar.Visible = True
+            'Me.btnActivarFiltro.Visible = False
+            Me.plFiltroSeleccion.Visible = False
+        Else
+            Me.txtProducto.Visible = False
+            Me.btnBuscar.Visible = False
+            Me.ddlCATALOGOPRODUCTOS1.RecuperarProductosConExistencia(Me.IDALMACEN, Me.ddlSUMINISTROS1.SelectedValue)
+            Me.ddlCATALOGOPRODUCTOS1.Visible = True
+            Me.lblCORRPRODUCTO.Visible = False
+            Me.lblDESCLARGO.Visible = False
+
+            If Me.ddlCATALOGOPRODUCTOS1.Items.Count > 0 Then
+                Buscar(Me.ddlCATALOGOPRODUCTOS1.SelectedValue)
+            End If
+
+            'Me.btnActivarFiltro.Visible = True
+            'buscarOpcion1()
+        End If
+
+    End Sub
+
+    Protected Sub btnBuscar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
+        Limpiar(False)
+        Buscar(0, Me.txtProducto.Text)
+    End Sub
+
+    Protected Sub ddlCATALOGOPRODUCTOS1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ddlCATALOGOPRODUCTOS1.SelectedIndexChanged
+        Limpiar()
+        Buscar(Me.ddlCATALOGOPRODUCTOS1.SelectedValue)
+    End Sub
+
+    Private Sub Limpiar(Optional ByVal LimpiarProducto As Boolean = True)
+
+        If LimpiarProducto Then Me.txtProducto.Text = String.Empty
+
+        Me.lblCORRPRODUCTO.Text = String.Empty
+        Me.lblDESCLARGO.Text = String.Empty
+
+        gvLotes.DataSource = Nothing
+        gvLotes.DataBind()
+
+        Me.plDatosProducto.Visible = False
+
+    End Sub
+
+    Protected Sub btnAgregarLote_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnAgregarLote.Click
+
+        If Me.lblDESCLARGO.Text = String.Empty Then
+            MessageBox.Alert("No se ha especificado ningun producto", Me)
+            'MsgBox1.ShowAlert("No se ha especificado ningun producto", "w", Cooperator.Framework.Web.Controls.AlertOption.NoAction, Cooperator.Framework.Web.Controls.AlertType.Information)
+            If Me.txtProducto.Visible Then Me.txtProducto.Focus()
+            Exit Sub
+        End If
+
+        If gvLotes.Rows.Count = 0 Then
+            MessageBox.Alert("No se ha especificado lote", Me)
+            'MsgBox1.ShowAlert("No se ha especificado lote", "w", Cooperator.Framework.Web.Controls.AlertOption.NoAction, Cooperator.Framework.Web.Controls.AlertType.Information)
+            If Me.txtProducto.Visible Then Me.txtProducto.Focus()
+            Exit Sub
+        End If
+
+        Dim continuar As Integer = 0
+
+        If Me.IDMOVIMIENTO = 0 Then
+            If Me.GuardarMovimiento() = 1 Then
+                continuar = 1
+            End If
+        Else
+            continuar = 2
+        End If
+
+        If continuar > 0 Then
+
+            'buscar si ya fue ingresado
+            Dim encontrado As Boolean
+
+            For Each row As GridViewRow In gvLotes.Rows
+
+                If CType(Me.gvLotes.Rows(row.RowIndex).FindControl("nbCantidad"), eWorld.UI.NumericBox).Text.Trim <> String.Empty Then
+
+                    encontrado = False
+
+                    For Each item As DataKey In gvLista.DataKeys
+                        If item("IDLOTE") = Me.gvLotes.DataKeys(row.RowIndex).Item("IDLOTE") Then
+                            encontrado = True
+                            Exit For
+                        End If
+                    Next
+
+                End If
+
+                If encontrado Then
+                    MessageBox.Alert("Lote " + Me.gvLotes.DataKeys(row.RowIndex).Item("CODIGO").ToString + " ya ingresado.", Me)
+                    'Me.MsgBox1.ShowAlert("Lote " + Me.gvLotes.DataKeys(row.RowIndex).Item("CODIGO").ToString + " ya ingresado.", "w", Cooperator.Framework.Web.Controls.AlertOption.NoAction, Cooperator.Framework.Web.Controls.AlertType.Exclamation)
+                    Me.gvLotes.Rows(0).Focus()
+                    Exit Sub
+                End If
+
+            Next
+
+            Dim cDM As New cDETALLEMOVIMIENTOS
+
+            Dim errorActualizacion As Boolean
+
+            For Each row As GridViewRow In gvLotes.Rows
+
+                If CType(Me.gvLotes.Rows(row.RowIndex).FindControl("nbCantidad"), eWorld.UI.NumericBox).Text.Trim <> String.Empty Then
+
+                    Dim eDM As New DETALLEMOVIMIENTOS
+                    eDM.IDESTABLECIMIENTO = Session.Item("IdEstablecimiento")
+                    eDM.IDTIPOTRANSACCION = eTIPOTRANSACCION.Salida
+                    eDM.IDMOVIMIENTO = Me.IDMOVIMIENTO
+
+                    eDM.IDPRODUCTO = Me.gvLotes.DataKeys(row.RowIndex).Item("IDPRODUCTO")
+                    eDM.IDALMACEN = Me.IDALMACEN
+                    eDM.IDLOTE = Me.gvLotes.DataKeys(row.RowIndex).Item("IDLOTE")
+                    eDM.CANTIDAD = CType(Me.gvLotes.Rows(row.RowIndex).FindControl("nbCantidad"), eWorld.UI.NumericBox).Text
+                    eDM.MONTO = 0
+
+                    eDM.AUUSUARIOCREACION = HttpContext.Current.User.Identity.Name
+                    eDM.AUFECHACREACION = Now
+                    eDM.AUUSUARIOMODIFICACION = HttpContext.Current.User.Identity.Name
+                    eDM.AUFECHAMODIFICACION = Now
+
+                    Dim OPERACIONCANTIDADDISPONIBLE, OPERACIONCANTIDADNODISPONIBLE, OPERACIONCANTIDADVENCIDA, OPERACIONCANTIDADTEMPORAL As Int16
+
+                    Select Case Me.ddlTIPOMOVIMIENTOS1.SelectedValue
+                        Case 3 'vencida
+                            OPERACIONCANTIDADVENCIDA = 2
+                        Case 4 'no disponible
+                            OPERACIONCANTIDADNODISPONIBLE = 2
+                            eDM.CANTIDADNODISPONIBLE = 1
+                        Case 5 'temporal
+                            OPERACIONCANTIDADTEMPORAL = 2
+                        Case Else 'disponible
+                            OPERACIONCANTIDADDISPONIBLE = 2
+                    End Select
+
+
+                    If cDM.ActualizarCantidades(eDM, OPERACIONCANTIDADDISPONIBLE, OPERACIONCANTIDADNODISPONIBLE, 1, OPERACIONCANTIDADVENCIDA, OPERACIONCANTIDADTEMPORAL) = 1 Then
+                        'ok
+                    Else
+                        errorActualizacion = True
+                    End If
+
+                End If
+
+            Next
+
+            Dim ds As Data.DataSet
+            ds = cDM.ObtenerDetalleMovimientosDS(Session.Item("IdEstablecimiento"), eTIPOTRANSACCION.Salida, Me.IDMOVIMIENTO)
+
+            Me.gvLista.DataSource = ds
+            Me.gvLista.DataBind()
+
+            Me.btnCerrar.Enabled = True
+            Me.btnImprimir.Enabled = True
+
+            Limpiar(Not errorActualizacion)
+
+            Me.plDatosProducto.Visible = False
+
+            If Me.txtProducto.Visible Then Me.txtProducto.Focus()
+            If continuar = 1 Then MessageBox.Alert("Se ha generado el vale " + Me.txtNroVale.Text + " satisfactoriamente.  " + IIf(errorActualizacion, "  Error al actualizar, verifique las cantidades ingresadas.", " Puede continuar ingresando productos."), Me)
+
+            'If continuar = 1 Then Me.MsgBox1.ShowAlert("Se ha generado el vale " + Me.txtNroVale.Text + " satisfactoriamente.  " + IIf(errorActualizacion, "  Error al actualizar, verifique las cantidades ingresadas.", " Puede continuar ingresando productos."), "i", Cooperator.Framework.Web.Controls.AlertOption.NoAction, IIf(errorActualizacion, Cooperator.Framework.Web.Controls.AlertType.Exclamation, Cooperator.Framework.Web.Controls.AlertType.Information))
+
+        End If
+
+    End Sub
+
+    Protected Sub rbTipoDespacho_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rbTipoDespacho.SelectedIndexChanged
+
+        Select Case Me.rbTipoDespacho.SelectedValue
+            Case 1
+                Me.lblTipoDespachoIndividual.Visible = True
+                Me.ddlTIPOMOVIMIENTOS1.Visible = True
+
+                Me.plBuscarDistribucion.Visible = False
+                Me.plEncabezado.Visible = True
+                Me.gvLista.Visible = True
+                Me.plGenerales.Visible = True
+
+                Me.plAgregarProducto.Visible = True
+                Limpiar()
+
+            Case 2
+                Me.lblTipoDespachoIndividual.Visible = False
+                Me.ddlTIPOMOVIMIENTOS1.Visible = False
+
+                Me.plBuscarDistribucion.Visible = True
+
+                Me.ddlFUENTEFINANCIAMIENTOS1.Recuperar()
+                Me.ddlESTABLECIMIENTOS2.RecuperarOrdenada(1)
+
+            Case 3
+                Me.lblTipoDespachoIndividual.Visible = False
+                Me.ddlTIPOMOVIMIENTOS1.Visible = False
+                Me.plBuscarDistribucion.Visible = False
+                Response.Redirect("~/ALMACEN/FrmDetMantDespachoRequisicionI.aspx")
+        End Select
+
+        rbTipoDespacho.Visible = False
+
+    End Sub
+
+    Protected Sub btnBuscarDistribucion_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnBuscarDistribucion.Click
+
+        Dim cPD As New cPROGRAMADISTRIBUCION
+
+        Dim ds As Data.DataSet
+        ds = cPD.BuscarProgramaParaDespacho(Me.ddlESTABLECIMIENTOS2.SelectedValue, Me.ddlFUENTEFINANCIAMIENTOS1.SelectedValue, Me.ddlSUMINISTROS1.SelectedValue)
+
+        If ds.Tables(0).Rows.Count = 0 Then
+            MsgBox1.ShowAlert("No se encontró ningún programa de distribución pendiente para el criterio de búsqueda seleccionado.", "w", Cooperator.Framework.Web.Controls.AlertOption.PostBackOnOk, Cooperator.Framework.Web.Controls.AlertType.Information)
+        Else
+            Me.plBuscarDistribucion.Visible = False
+            Me.plEncabezado.Visible = True
+            Me.plGenerales.Visible = True
+            Me.gvProgramaDistribucion.DataSource = ds
+            Me.gvProgramaDistribucion.DataBind()
+            Me.gvProgramaDistribucion.Columns(0).Visible = False
+        End If
+    End Sub
+
+    Protected Sub ddlESTABLECIMIENTOS1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ddlESTABLECIMIENTOS1.SelectedIndexChanged
+        RecuperarAlmacenEstablecimiento(Me.ddlESTABLECIMIENTOS1.SelectedValue)
+    End Sub
+
+    Protected Sub btnActivarFiltro_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnActivarFiltro.Click
+        Limpiar()
+        If btnActivarFiltro.Text = "Activar filtro para selección" Then
+            Me.plFiltroSeleccion.Visible = True
+            Me.ddlTIPOSUMINISTROS1.Recuperar()
+            Me.ddlGRUPOS1.RecuperarListaFiltrada(Me.ddlTIPOSUMINISTROS1.SelectedValue)
+            Me.ddlSUBGRUPOS1.RecuperarListaFiltrada(Me.ddlGRUPOS1.SelectedValue)
+            Me.ddlCATALOGOPRODUCTOS1.RecuperarProductosConExistencia(Me.IDALMACEN, Me.ddlSUBGRUPOS1.SelectedValue)
+            btnActivarFiltro.Text = "Ocultar filtro para selección"
+        Else
+            Me.rdblCriterio.SelectedValue = 0
+            Me.ddlCATALOGOPRODUCTOS1.Visible = False
+            Me.txtProducto.Visible = True
+            Me.btnBuscar.Visible = True
+            'Me.btnActivarFiltro.Visible = False
+            Me.plFiltroSeleccion.Visible = False
+            Me.ddlCATALOGOPRODUCTOS1.RecuperarProductosConExistencia(Me.IDALMACEN)
+        End If
+    End Sub
+
+    Protected Sub ddlTIPOSUMINISTROS1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ddlTIPOSUMINISTROS1.SelectedIndexChanged
+        Me.ddlGRUPOS1.RecuperarListaFiltrada(Me.ddlTIPOSUMINISTROS1.SelectedValue)
+        Me.ddlSUBGRUPOS1.RecuperarListaFiltrada(Me.ddlGRUPOS1.SelectedValue)
+        Me.ddlCATALOGOPRODUCTOS1.RecuperarProductosConExistencia(Me.IDALMACEN, Me.ddlSUBGRUPOS1.SelectedValue)
+    End Sub
+
+    Protected Sub ddlGRUPOS1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ddlGRUPOS1.SelectedIndexChanged
+        Me.ddlSUBGRUPOS1.RecuperarListaFiltrada(Me.ddlGRUPOS1.SelectedValue)
+        Me.ddlCATALOGOPRODUCTOS1.RecuperarProductosConExistencia(Me.IDALMACEN, Me.ddlSUBGRUPOS1.SelectedValue)
+    End Sub
+
+    Protected Sub ddlSUBGRUPOS1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ddlSUBGRUPOS1.SelectedIndexChanged
+        Me.ddlCATALOGOPRODUCTOS1.RecuperarProductosConExistencia(Me.IDALMACEN, Me.ddlSUBGRUPOS1.SelectedValue)
+    End Sub
+
+    Private Sub CargarDDLs()
+        Me.ddlSUMINISTROS1.RecuperarOrdenadaPorCorrelativo()
+
+        Me.ddlTIPOMOVIMIENTOS1.Recuperar(eTIPOTRANSACCION.Salida)
+
+        If Session.Item("idTipoEstablecimiento") = 3 Or Session.Item("idTipoEstablecimiento") = 8 Then
+            Me.ddlESTABLECIMIENTOS1.RecuperarLugarEntregaHospital(Me.IDALMACEN, IIf(Me.cbVerTodos.Checked, 1, 0))
+            RecuperarAlmacenEstablecimiento(0)
+            joker = 1
+        Else
+            Me.ddlESTABLECIMIENTOS1.RecuperarEstablecimientosPorZonaAlmancen(Me.IDALMACEN, IIf(Me.cbVerTodos.Checked, 1, 0))
+            RecuperarAlmacenEstablecimiento(Me.ddlESTABLECIMIENTOS1.SelectedValue)
+        End If
+
+        Me.ddlTIPOIDENTIFICACION1.Recuperar()
+    End Sub
+
+    Protected Sub gvLotes_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles gvLotes.RowDataBound
+        If e.Row.RowType = DataControlRowType.DataRow Then
+
+            e.Row.Attributes.Add("id", e.Row.ClientID)
+
+            Dim nb As eWorld.UI.NumericBox = CType(e.Row.FindControl("nbCantidad"), eWorld.UI.NumericBox)
+
+            nb.Attributes.Add("onFocus", e.Row.ClientID + ".className = 'GridListHighLight'")
+
+            Select Case e.Row.RowState
+                Case DataControlRowState.Normal
+                    nb.Attributes.Add("onBlur", e.Row.ClientID + ".className = '" + sender.RowStyle.CssClass + "'")
+                Case DataControlRowState.Alternate
+                    nb.Attributes.Add("onBlur", e.Row.ClientID + ".className = '" + sender.AlternatingRowStyle.CssClass + "'")
+                Case DataControlRowState.Selected
+            End Select
+        End If
+    End Sub
+
+    Dim Total As Decimal = 0
+
+    Protected Sub gvLista_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles gvLista.RowDataBound
+
+        If e.Row.RowType = DataControlRowType.DataRow Then
+            Total += Convert.ToDecimal(DataBinder.Eval(e.Row.DataItem, "TOTAL"))
+        ElseIf e.Row.RowType = DataControlRowType.Footer Then
+            e.Row.Cells(8).Text = "Total:"
+            e.Row.Cells(8).HorizontalAlign = HorizontalAlign.Right
+            e.Row.Cells(9).Text = Total.ToString("c4")
+            e.Row.Cells(9).HorizontalAlign = HorizontalAlign.Right
+        End If
+
+    End Sub
+
+    Protected Sub gvLista_RowDeleting(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewDeleteEventArgs) Handles gvLista.RowDeleting
+
+        'DETALLEMOVIMIENTOS
+        Dim eDM As New DETALLEMOVIMIENTOS
+        eDM.IDESTABLECIMIENTO = Session.Item("IdEstablecimiento")
+        eDM.IDTIPOTRANSACCION = eTIPOTRANSACCION.Salida
+        eDM.IDMOVIMIENTO = Me.IDMOVIMIENTO
+        eDM.IDDETALLEMOVIMIENTO = gvLista.DataKeys(e.RowIndex).Values.Item("IDDETALLEMOVIMIENTO")
+
+        eDM.IDALMACEN = Me.IDALMACEN
+        eDM.IDLOTE = gvLista.DataKeys(e.RowIndex).Values.Item("IDLOTE")
+        eDM.CANTIDAD = gvLista.DataKeys(e.RowIndex).Values.Item("CANTIDAD")
+        eDM.AUUSUARIOMODIFICACION = HttpContext.Current.User.Identity.Name
+        eDM.AUFECHAMODIFICACION = Now
+
+        Dim OPERACIONCANTIDADDISPONIBLE, OPERACIONCANTIDADNODISPONIBLE, OPERACIONCANTIDADVENCIDA, OPERACIONCANTIDADTEMPORAL As Int16
+
+        Select Case Me.ddlTIPOMOVIMIENTOS1.SelectedValue
+            Case 3 'Buscar solamente lotes con cantidad vencidas.
+                OPERACIONCANTIDADVENCIDA = 1
+            Case 4 'Buscar solamante lotes con cantidad no disponible.
+                OPERACIONCANTIDADNODISPONIBLE = 1
+            Case 5 'Buscar solamente lotes con cantidad en almacenamiento temporal.
+                OPERACIONCANTIDADTEMPORAL = 1
+            Case Else 'Buscar solamente lotes con cantidad disponible.
+                OPERACIONCANTIDADDISPONIBLE = 1
+        End Select
+
+
+        Dim cDM As New cDETALLEMOVIMIENTOS
+        cDM.EliminarLoteDespacho(eDM, OPERACIONCANTIDADDISPONIBLE, OPERACIONCANTIDADNODISPONIBLE, 2, OPERACIONCANTIDADVENCIDA, OPERACIONCANTIDADTEMPORAL)
+
+        Dim ds As Data.DataSet
+        ds = cDM.ObtenerDetalleMovimientosDS(eDM.IDESTABLECIMIENTO, eDM.IDTIPOTRANSACCION, eDM.IDMOVIMIENTO)
+
+        Me.gvLista.DataSource = ds
+        Me.gvLista.DataBind()
+
+        If Me.gvLista.Rows.Count = 0 Then
+            Me.ddlSUMINISTROS1.Enabled = True
+        End If
+
+        Limpiar(False)
+        If Me.txtProducto.Visible Then Me.txtProducto.Focus()
+
+    End Sub
+
+    Protected Sub lnkMenu_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles lnkMenu.Click
+        If Me.gvLista.Rows.Count > 0 And Me.IDMOVIMIENTO = 0 Then
+            Me.MsgBox1.ShowConfirm("El vale no ha sido guardado. ¿Confirma que desea salir sin guardar?", "s", Cooperator.Framework.Web.Controls.ConfirmOption.PostBackOnYes_NoActionOnNo, Cooperator.Framework.Web.Controls.DefaultButton.No)
+        Else
+            Response.Redirect("~/FrmPrincipal.aspx", False)
+        End If
+    End Sub
+
+    Private Sub RecuperarAlmacenEstablecimiento(ByVal IDESTABLECIMIENTO As Integer)
+
+        If Session.Item("idTipoEstablecimiento") = 3 Or Session.Item("idTipoEstablecimiento") = 8 Then
+            If Not Me.cbVerTodos.Checked Then
+                joker = 1
+                Me.ddlALMACENES1.RecuperarAlmacenEstablecimiento(0)
+            Else
+                joker = 0
+                Me.ddlALMACENES1.RecuperarAlmacenEstablecimiento(IDESTABLECIMIENTO)
+            End If
+
+        Else
+            joker = 0
+            Me.ddlALMACENES1.RecuperarAlmacenEstablecimiento(IDESTABLECIMIENTO)
+        End If
+
+        If Me.ddlALMACENES1.Items.Count = 0 Then
+            Me.ddlALMACENES1.Visible = False
+            Me.lblNoAlmacenAsociado.Visible = True
+            Me.cpFechaDespacho.Focus()
+        Else
+            Me.ddlALMACENES1.Visible = True
+            Me.lblNoAlmacenAsociado.Visible = False
+            If Me.ddlALMACENES1.Items.Count = 1 Then
+                Me.cpFechaDespacho.Focus()
+            Else
+                Me.ddlALMACENES1.Focus()
+            End If
+        End If
+
+    End Sub
+
+    Private Sub Buscar(ByVal IDPRODUCTO As Integer, Optional ByVal CODIGO As String = "0")
+
+        Dim iTipo As Int16 = 0
+        Select Case Me.ddlTIPOMOVIMIENTOS1.SelectedValue
+            Case 1 'Buscar solamente lotes con cantidad disponible.
+                iTipo = 1
+            Case 2 'Buscar lotes con cantidad disponible o vencida
+                iTipo = 6
+            Case 3 'Buscar solamente lotes con cantidad vencidas.
+                iTipo = 3
+            Case 4 'Buscar solamante lotes con cantidad no disponible.
+                iTipo = 2
+            Case 5 'Buscar solamente lotes con cantidad en almacenamiento temporal.
+                iTipo = 5
+        End Select
+
+        Dim IDSUMINISTRO As Integer
+        IDSUMINISTRO = Me.ddlSUMINISTROS1.SelectedValue
+
+        Dim cL As New cLOTES
+
+        Dim ds As Data.DataSet
+        ds = cL.ObtenerDsLoteFiltrado2(Me.IDALMACEN, IDSUMINISTRO, IDPRODUCTO, CODIGO, iTipo)
+
+        If ds Is Nothing Then
+            MsgBox1.ShowAlert("No se encontró el producto.", "w", Cooperator.Framework.Web.Controls.AlertOption.NoAction, Cooperator.Framework.Web.Controls.AlertType.Information)
+            If Me.txtProducto.Visible Then Me.txtProducto.Focus()
+        ElseIf ds.Tables(0).Rows.Count = 0 Then
+            MsgBox1.ShowAlert("No se encontró ningún lote disponible para este producto.", "w", Cooperator.Framework.Web.Controls.AlertOption.NoAction, Cooperator.Framework.Web.Controls.AlertType.Information)
+            If Me.txtProducto.Visible Then Me.txtProducto.Focus()
+        Else
+            gvLotes.DataSource = ds
+            gvLotes.DataBind()
+
+            Me.plDatosProducto.Visible = True
+
+            Me.lblCORRPRODUCTO.Text = Me.gvLotes.DataKeys(0).Values.Item("CORRPRODUCTO")
+            Me.lblCORRPRODUCTO.Visible = True
+            Me.lblDESCLARGO.Text = Me.gvLotes.DataKeys(0).Values.Item("DESCLARGO")
+            Me.lblDESCLARGO.Visible = True
+
+            Me.gvLotes.Rows(0).Focus()
+
+        End If
+
+    End Sub
+
+    Protected Sub DeshabilitarDobleClickBotones()
+        btnAgregarLote.OnClientClick = "if(typeof(Page_ClientValidate)=='function'){if(Page_ClientValidate('" + btnAgregarLote.ValidationGroup + "')==false){return;}}this.disabled=true;" + Page.ClientScript.GetPostBackEventReference(btnAgregarLote, Nothing) + ";"
+        btnGuardar.OnClientClick = "if(typeof(Page_ClientValidate)=='function'){if(Page_ClientValidate('" + btnGuardar.ValidationGroup + "')==false){return;}}this.disabled=true;" + Page.ClientScript.GetPostBackEventReference(btnGuardar, Nothing) + ";"
+        btnCerrar.OnClientClick = "if(!confirm('Si cierra el documento, este ya no podrá ser modificado, ¿desea continuar?')) return false; if(typeof(Page_ClientValidate)=='function'){if(Page_ClientValidate('" + btnCerrar.ValidationGroup + "')==false){return;}}this.disabled=true;" + Page.ClientScript.GetPostBackEventReference(btnCerrar, Nothing) + ";"
+        'btnImprimir.OnClientClick = "if(typeof(Page_ClientValidate)=='function'){if(Page_ClientValidate()==false){return;}}this.disabled=true;" + Page.ClientScript.GetPostBackEventReference(btnCerrarConteo, Nothing) + ";"
+    End Sub
+
+
+    Protected Sub cbVerTodos_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cbVerTodos.CheckedChanged
+
+        If cbVerTodos.Checked Then
+            Me.ddlESTABLECIMIENTOS1.RecuperarEstablecimientosPorZonaAlmancen(Me.IDALMACEN, IIf(Me.cbVerTodos.Checked, 1, 0))
+            RecuperarAlmacenEstablecimiento(Me.ddlESTABLECIMIENTOS1.SelectedValue)
+            joker = 0
+        Else
+            If Session.Item("idTipoEstablecimiento") = 3 Or Session.Item("idTipoEstablecimiento") = 8 Then
+                Me.ddlESTABLECIMIENTOS1.RecuperarLugarEntregaHospital(Me.IDALMACEN, IIf(Me.cbVerTodos.Checked, 1, 0))
+                RecuperarAlmacenEstablecimiento(0)
+                joker = 1
+            Else
+                Me.ddlESTABLECIMIENTOS1.RecuperarEstablecimientosPorZonaAlmancen(Me.IDALMACEN, IIf(Me.cbVerTodos.Checked, 1, 0))
+                RecuperarAlmacenEstablecimiento(Me.ddlESTABLECIMIENTOS1.SelectedValue)
+                joker = 0
+            End If
+        End If
+
+    End Sub
+
+    Protected Sub ddlSUMINISTROS1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ddlSUMINISTROS1.SelectedIndexChanged
+        RestablecerCriterio()
+    End Sub
+
+
+
+End Class

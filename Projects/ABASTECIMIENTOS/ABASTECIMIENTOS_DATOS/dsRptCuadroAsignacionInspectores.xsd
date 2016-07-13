@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsRptNotificacionLotes" targetNamespace="http://tempuri.org/dsRptNotificacionLotes.xsd" xmlns:mstns="http://tempuri.org/dsRptNotificacionLotes.xsd" xmlns="http://tempuri.org/dsRptNotificacionLotes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsRptNotificacionLotes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsRptNotificacionLotes" msprop:Generator_DataSetName="dsRptNotificacionLotes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SAB_LAB_INFORMEMUESTRAS" msprop:Generator_UserTableName="SAB_LAB_INFORMEMUESTRAS" msprop:Generator_RowDeletedName="SAB_LAB_INFORMEMUESTRASRowDeleted" msprop:Generator_RowChangedName="SAB_LAB_INFORMEMUESTRASRowChanged" msprop:Generator_RowClassName="SAB_LAB_INFORMEMUESTRASRow" msprop:Generator_RowChangingName="SAB_LAB_INFORMEMUESTRASRowChanging" msprop:Generator_RowEvArgName="SAB_LAB_INFORMEMUESTRASRowChangeEvent" msprop:Generator_RowEvHandlerName="SAB_LAB_INFORMEMUESTRASRowChangeEventHandler" msprop:Generator_TableClassName="SAB_LAB_INFORMEMUESTRASDataTable" msprop:Generator_TableVarName="tableSAB_LAB_INFORMEMUESTRAS" msprop:Generator_RowDeletingName="SAB_LAB_INFORMEMUESTRASRowDeleting" msprop:Generator_TablePropName="SAB_LAB_INFORMEMUESTRAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDINFORME" msprop:Generator_UserColumnName="IDINFORME" msprop:Generator_ColumnVarNameInTable="columnIDINFORME" msprop:Generator_ColumnPropNameInRow="IDINFORME" msprop:Generator_ColumnPropNameInTable="IDINFORMEColumn" type="xs:int" />
+              <xs:element name="IDPROVEEDOR" msprop:Generator_UserColumnName="IDPROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnIDPROVEEDOR" msprop:Generator_ColumnPropNameInRow="IDPROVEEDOR" msprop:Generator_ColumnPropNameInTable="IDPROVEEDORColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="RENGLON" msprop:Generator_UserColumnName="RENGLON" msprop:Generator_ColumnVarNameInTable="columnRENGLON" msprop:Generator_ColumnPropNameInRow="RENGLON" msprop:Generator_ColumnPropNameInTable="RENGLONColumn" type="xs:int" />
+              <xs:element name="NOMBREMEDICAMENTO" msprop:Generator_UserColumnName="NOMBREMEDICAMENTO" msprop:Generator_ColumnVarNameInTable="columnNOMBREMEDICAMENTO" msprop:Generator_ColumnPropNameInRow="NOMBREMEDICAMENTO" msprop:Generator_ColumnPropNameInTable="NOMBREMEDICAMENTOColumn"/>
+              <xs:element name="PROVEEDOR" msprop:Generator_UserColumnName="PROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnPROVEEDOR" msprop:Generator_ColumnPropNameInRow="PROVEEDOR" msprop:Generator_ColumnPropNameInTable="PROVEEDORColumn" minOccurs="0"/>
+              <xs:element name="LOTE" msprop:Generator_UserColumnName="LOTE" msprop:Generator_ColumnVarNameInTable="columnLOTE" msprop:Generator_ColumnPropNameInRow="LOTE" msprop:Generator_ColumnPropNameInTable="LOTEColumn"/>
+              <xs:element name="FECHAFABRICACION" msprop:Generator_UserColumnName="FECHAFABRICACION" msprop:Generator_ColumnVarNameInTable="columnFECHAFABRICACION" msprop:Generator_ColumnPropNameInRow="FECHAFABRICACION" msprop:Generator_ColumnPropNameInTable="FECHAFABRICACIONColumn" type="xs:dateTime" />
+              <xs:element name="FECHAVENCIMIENTO" msprop:Generator_UserColumnName="FECHAVENCIMIENTO" msprop:Generator_ColumnVarNameInTable="columnFECHAVENCIMIENTO" msprop:Generator_ColumnPropNameInRow="FECHAVENCIMIENTO" msprop:Generator_ColumnPropNameInTable="FECHAVENCIMIENTOColumn" type="xs:dateTime" />
+              <xs:element name="NUMEROUNIDADES" msprop:Generator_UserColumnName="NUMEROUNIDADES" msprop:Generator_ColumnVarNameInTable="columnNUMEROUNIDADES" msprop:Generator_ColumnPropNameInRow="NUMEROUNIDADES" msprop:Generator_ColumnPropNameInTable="NUMEROUNIDADESColumn" type="xs:decimal" />
+              <xs:element name="IDINSPECTOR" msprop:Generator_UserColumnName="IDINSPECTOR" msprop:Generator_ColumnVarNameInTable="columnIDINSPECTOR" msprop:Generator_ColumnPropNameInRow="IDINSPECTOR" msprop:Generator_ColumnPropNameInTable="IDINSPECTORColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FECHANOTIFICACION" msprop:Generator_UserColumnName="FECHANOTIFICACION" msprop:Generator_ColumnVarNameInTable="columnFECHANOTIFICACION" msprop:Generator_ColumnPropNameInRow="FECHANOTIFICACION" msprop:Generator_ColumnPropNameInTable="FECHANOTIFICACIONColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NUMERONOTIFICACION" msprop:Generator_UserColumnName="NUMERONOTIFICACION" msprop:Generator_ColumnVarNameInTable="columnNUMERONOTIFICACION" msprop:Generator_ColumnPropNameInRow="NUMERONOTIFICACION" msprop:Generator_ColumnPropNameInTable="NUMERONOTIFICACIONColumn" minOccurs="0"/>
+              <xs:element name="CANTIDADAENTREGAR" msprop:Generator_UserColumnName="CANTIDADAENTREGAR" msprop:Generator_ColumnVarNameInTable="columnCANTIDADAENTREGAR" msprop:Generator_ColumnPropNameInRow="CANTIDADAENTREGAR" msprop:Generator_ColumnPropNameInTable="CANTIDADAENTREGARColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NOMBREINSPECTOR" msprop:Generator_UserColumnName="NOMBREINSPECTOR" msprop:Generator_ColumnVarNameInTable="columnNOMBREINSPECTOR" msprop:Generator_ColumnPropNameInRow="NOMBREINSPECTOR" msprop:Generator_ColumnPropNameInTable="NOMBREINSPECTORColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CODIGOLICITACION" msprop:Generator_UserColumnName="CODIGOLICITACION" msprop:Generator_ColumnPropNameInRow="CODIGOLICITACION" msprop:Generator_ColumnVarNameInTable="columnCODIGOLICITACION" msprop:Generator_ColumnPropNameInTable="CODIGOLICITACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UM" msprop:Generator_UserColumnName="UM" msprop:Generator_ColumnPropNameInRow="UM" msprop:Generator_ColumnVarNameInTable="columnUM" msprop:Generator_ColumnPropNameInTable="UMColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

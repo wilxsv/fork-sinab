@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dstRptExamenFinanciero" targetNamespace="http://tempuri.org/dstRptExamenFinanciero.xsd" xmlns:mstns="http://tempuri.org/dstRptExamenFinanciero.xsd" xmlns="http://tempuri.org/dstRptExamenFinanciero.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dstRptExamenFinanciero" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dstRptExamenFinanciero" msprop:Generator_DataSetName="dstRptExamenFinanciero">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" minOccurs="0" />
+              <xs:element name="CODIGOLICITACION" msprop:Generator_UserColumnName="CODIGOLICITACION" msprop:Generator_ColumnVarNameInTable="columnCODIGOLICITACION" msprop:Generator_ColumnPropNameInRow="CODIGOLICITACION" msprop:Generator_ColumnPropNameInTable="CODIGOLICITACIONColumn" minOccurs="0" />
+              <xs:element name="TITULOLICITACION" msprop:Generator_UserColumnName="TITULOLICITACION" msprop:Generator_ColumnVarNameInTable="columnTITULOLICITACION" msprop:Generator_ColumnPropNameInRow="TITULOLICITACION" msprop:Generator_ColumnPropNameInTable="TITULOLICITACIONColumn" minOccurs="0" />
+              <xs:element name="ORDENLLEGADA" msprop:Generator_UserColumnName="ORDENLLEGADA" msprop:Generator_ColumnVarNameInTable="columnORDENLLEGADA" msprop:Generator_ColumnPropNameInRow="ORDENLLEGADA" msprop:Generator_ColumnPropNameInTable="ORDENLLEGADAColumn" type="xs:int" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" />
+              <xs:element name="ACTIVOCIRCULANTE" msprop:Generator_UserColumnName="ACTIVOCIRCULANTE" msprop:Generator_ColumnVarNameInTable="columnACTIVOCIRCULANTE" msprop:Generator_ColumnPropNameInRow="ACTIVOCIRCULANTE" msprop:Generator_ColumnPropNameInTable="ACTIVOCIRCULANTEColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PASIVOCIRCULANTE" msprop:Generator_UserColumnName="PASIVOCIRCULANTE" msprop:Generator_ColumnVarNameInTable="columnPASIVOCIRCULANTE" msprop:Generator_ColumnPropNameInRow="PASIVOCIRCULANTE" msprop:Generator_ColumnPropNameInTable="PASIVOCIRCULANTEColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PASIVOTOTAL" msprop:Generator_UserColumnName="PASIVOTOTAL" msprop:Generator_ColumnVarNameInTable="columnPASIVOTOTAL" msprop:Generator_ColumnPropNameInRow="PASIVOTOTAL" msprop:Generator_ColumnPropNameInTable="PASIVOTOTALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ACTIVOTOTAL" msprop:Generator_UserColumnName="ACTIVOTOTAL" msprop:Generator_ColumnVarNameInTable="columnACTIVOTOTAL" msprop:Generator_ColumnPropNameInRow="ACTIVOTOTAL" msprop:Generator_ColumnPropNameInTable="ACTIVOTOTALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="REFERENCIAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="REFERENCIAS" msprop:Generator_ColumnVarNameInTable="columnREFERENCIAS" msprop:Generator_ColumnPropNameInRow="REFERENCIAS" msprop:Generator_ColumnPropNameInTable="REFERENCIASColumn" minOccurs="0" />
+              <xs:element name="OBSERVACIONDOCUMENTO" msprop:Generator_UserColumnName="OBSERVACIONDOCUMENTO" msprop:Generator_ColumnVarNameInTable="columnOBSERVACIONDOCUMENTO" msprop:Generator_ColumnPropNameInRow="OBSERVACIONDOCUMENTO" msprop:Generator_ColumnPropNameInTable="OBSERVACIONDOCUMENTOColumn" minOccurs="0" />
+              <xs:element name="DESCRIPCIONLICITACION" msprop:Generator_UserColumnName="DESCRIPCIONLICITACION" msprop:Generator_ColumnPropNameInRow="DESCRIPCIONLICITACION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCIONLICITACION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONLICITACIONColumn" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

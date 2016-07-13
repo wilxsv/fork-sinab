@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSProductosContratadosProgramacion" targetNamespace="http://tempuri.org/DSProductosContratadosProgramacion.xsd" xmlns:mstns="http://tempuri.org/DSProductosContratadosProgramacion.xsd" xmlns="http://tempuri.org/DSProductosContratadosProgramacion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="abastecimientoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="abastecimientoConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.abastecimientoConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSProductosContratadosProgramacion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DSProductosContratadosProgramacion" msprop:Generator_UserDSName="DSProductosContratadosProgramacion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsproductoscontratadosprogramacion" msprop:Generator_TableClassName="dsproductoscontratadosprogramacionDataTable" msprop:Generator_TableVarName="tabledsproductoscontratadosprogramacion" msprop:Generator_RowChangedName="dsproductoscontratadosprogramacionRowChanged" msprop:Generator_TablePropName="_dsproductoscontratadosprogramacion" msprop:Generator_RowDeletingName="dsproductoscontratadosprogramacionRowDeleting" msprop:Generator_RowChangingName="dsproductoscontratadosprogramacionRowChanging" msprop:Generator_RowEvHandlerName="dsproductoscontratadosprogramacionRowChangeEventHandler" msprop:Generator_RowDeletedName="dsproductoscontratadosprogramacionRowDeleted" msprop:Generator_RowClassName="dsproductoscontratadosprogramacionRow" msprop:Generator_UserTableName="dsproductoscontratadosprogramacion" msprop:Generator_RowEvArgName="dsproductoscontratadosprogramacionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDPROGRAMACION" msprop:Generator_ColumnVarNameInTable="columnIDPROGRAMACION" msprop:Generator_ColumnPropNameInRow="IDPROGRAMACION" msprop:Generator_ColumnPropNameInTable="IDPROGRAMACIONColumn" msprop:Generator_UserColumnName="IDPROGRAMACION" type="xs:int" minOccurs="0" />
+              <xs:element name="CORRPRODUCTO" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="CORRPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnCORRPRODUCTO" msprop:Generator_ColumnPropNameInTable="CORRPRODUCTOColumn" msprop:Generator_UserColumnName="CORRPRODUCTO" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCLARGO" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="DESCLARGO" msprop:Generator_ColumnVarNameInTable="columnDESCLARGO" msprop:Generator_ColumnPropNameInTable="DESCLARGOColumn" msprop:Generator_UserColumnName="DESCLARGO" type="xs:string" minOccurs="0" />
+              <xs:element name="UNIDADMEDIDA" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="UNIDADMEDIDA" msprop:Generator_ColumnVarNameInTable="columnUNIDADMEDIDA" msprop:Generator_ColumnPropNameInTable="UNIDADMEDIDAColumn" msprop:Generator_UserColumnName="UNIDADMEDIDA" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE" type="xs:string" minOccurs="0" />
+              <xs:element name="CONSUMOPROMEDIOAJUSTADO" msprop:Generator_ColumnVarNameInTable="columnCONSUMOPROMEDIOAJUSTADO" msprop:Generator_ColumnPropNameInRow="CONSUMOPROMEDIOAJUSTADO" msprop:Generator_ColumnPropNameInTable="CONSUMOPROMEDIOAJUSTADOColumn" msprop:Generator_UserColumnName="CONSUMOPROMEDIOAJUSTADO" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="CANTIDADCOMPRAR" msprop:Generator_ColumnVarNameInTable="columnCANTIDADCOMPRAR" msprop:Generator_ColumnPropNameInRow="CANTIDADCOMPRAR" msprop:Generator_ColumnPropNameInTable="CANTIDADCOMPRARColumn" msprop:Generator_UserColumnName="CANTIDADCOMPRAR" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="CANTIDADCOMPRARAJUSTADA" msprop:Generator_ColumnVarNameInTable="columnCANTIDADCOMPRARAJUSTADA" msprop:Generator_ColumnPropNameInRow="CANTIDADCOMPRARAJUSTADA" msprop:Generator_ColumnPropNameInTable="CANTIDADCOMPRARAJUSTADAColumn" msprop:Generator_UserColumnName="CANTIDADCOMPRARAJUSTADA" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="Existencia" msprop:Generator_ColumnVarNameInTable="columnexistencia" msprop:Generator_ColumnPropNameInRow="existencia" msprop:Generator_ColumnPropNameInTable="existenciaColumn" msprop:Generator_UserColumnName="Existencia" type="xs:decimal" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://intranet.minsal.gob.sv/wess/arthur.asmx?wsdl" docRef="http://intranet.minsal.gob.sv/wess/arthur.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://intranet.minsal.gob.sv/wess/arthur.asmx" xmlns:q1="http://minsal.gob.sv/wess" binding="q1:ARTHUR_ServicesSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://intranet.minsal.gob.sv/wess/arthur.asmx" xmlns:q2="http://minsal.gob.sv/wess" binding="q2:ARTHUR_ServicesSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

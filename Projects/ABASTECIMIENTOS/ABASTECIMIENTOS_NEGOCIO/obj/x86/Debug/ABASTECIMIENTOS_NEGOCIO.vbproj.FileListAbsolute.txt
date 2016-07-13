@@ -1,0 +1,56 @@
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_NEGOCIO.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_NEGOCIO.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_DATOS.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_ENTIDADES.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\Microsoft.ApplicationBlocks.ExceptionManagement.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\Microsoft.ApplicationBlocks.ExceptionManagement.Interfaces.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_DATOS.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_ENTIDADES.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.vbprojResolveAssemblyReference.cache
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS.NEGOCIO.Resources.resources
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.vbproj.GenerateResource.Cache
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.pdb
+E:\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_NEGOCIO.dll
+E:\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_NEGOCIO.pdb
+E:\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_DATOS.dll
+E:\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_ENTIDADES.dll
+E:\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\Microsoft.ApplicationBlocks.ExceptionManagement.dll
+E:\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\Microsoft.ApplicationBlocks.Data.dll
+E:\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\Microsoft.ApplicationBlocks.ExceptionManagement.Interfaces.dll
+E:\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_DATOS.pdb
+E:\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_ENTIDADES.pdb
+E:\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.vbprojResolveAssemblyReference.cache
+E:\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS.NEGOCIO.Resources.resources
+E:\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.vbproj.GenerateResource.Cache
+E:\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.dll
+E:\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_NEGOCIO.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_NEGOCIO.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_DATOS.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_ENTIDADES.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\Microsoft.ApplicationBlocks.ExceptionManagement.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\Microsoft.ApplicationBlocks.ExceptionManagement.Interfaces.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_DATOS.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_ENTIDADES.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.vbprojResolveAssemblyReference.cache
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS.NEGOCIO.Resources.resources
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.vbproj.GenerateResource.Cache
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_NEGOCIO.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_NEGOCIO.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_DATOS.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_ENTIDADES.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\Microsoft.ApplicationBlocks.ExceptionManagement.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\Microsoft.ApplicationBlocks.ExceptionManagement.Interfaces.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_DATOS.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\bin\x86\Debug\ABASTECIMIENTOS_ENTIDADES.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.vbprojResolveAssemblyReference.cache
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS.NEGOCIO.Resources.resources
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.vbproj.GenerateResource.Cache
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\obj\x86\Debug\ABASTECIMIENTOS_NEGOCIO.pdb

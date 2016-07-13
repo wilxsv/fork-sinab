@@ -1,0 +1,33 @@
+﻿
+Partial Class FrmReporteExistenciaActualTipoProducto
+    Inherits System.Web.UI.Page
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+        If Not IsPostBack Then
+
+            Me.Master.ControlMenu.Visible = False
+
+            Me.ucFiltrosReportesAlmacen1.VerDocumento = ""
+            Me.ucFiltrosReportesAlmacen1.VerGrupoFuenteFinanciamiento = True
+            Me.ucFiltrosReportesAlmacen1.VerFuenteFinanciamiento = True
+            Me.ucFiltrosReportesAlmacen1.VerResponsableDistribucion = True
+            Me.ucFiltrosReportesAlmacen1.VerProducto = True
+            Me.ucFiltrosReportesAlmacen1.IniciarDatos()
+        End If
+
+    End Sub
+
+    Protected Sub lnkMenu_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles lnkMenu.Click
+        Response.Redirect("~/FrmPrincipal.aspx", False)
+    End Sub
+
+    Protected Sub ucFiltrosReportesAlmacen1_Consultar() Handles ucFiltrosReportesAlmacen1.Consultar
+        With ucFiltrosReportesAlmacen1
+            Dim cad = String.Format("/Reportes/FrmRptExistenciasPorProductoAlmacen.aspx?idA={0}&idP={1}&C={2}&idFF={3}&idGF={4}&idRD={5}", Session("IdAlmacen"), .IDPRODUCTO, .PRODUCTO, .IDFUENTEFINANCIAMIENTO, .IDGRUPOFUENTEFINANCIAMIENTO, .IDRESPONSABLEDISTRIBUCION)
+            SINAB_Utils.Utils.MostrarVentana(cad)
+        End With
+        Dim s As New StringBuilder
+    End Sub
+
+End Class

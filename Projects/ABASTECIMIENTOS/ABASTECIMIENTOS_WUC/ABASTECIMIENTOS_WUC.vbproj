@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3AA39EBA-95B5-490F-8AA1-BC54E9F476DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ABASTECIMIENTOS.WUC</RootNamespace>
+    <AssemblyName>ABASTECIMIENTOS_WUC</AssemblyName>
+    <MyType>WebControl</MyType>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\ABASTECIMIENTOS_WUC.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ABASTECIMIENTOS_WUC.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ABASTECIMIENTOS.ENTIDADES" />
+    <Import Include="ABASTECIMIENTOS.NEGOCIO" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Data" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ddlADJUDICACION.vb" />
+    <Compile Include="ddlAJUSTE.vb" />
+    <Compile Include="ddlALMACENES.vb" />
+    <Compile Include="ddlALMACENES.xt.vb" />
+    <Compile Include="ddlALMACENESENTREGAADJUDICACION.vb" />
+    <Compile Include="ddlALMACENESENTREGACONTRATOS.vb" />
+    <Compile Include="ddlALMACENESESTABLECIMIENTOS.vb" />
+    <Compile Include="ddlAMPLIACIONCONTRATO.vb" />
+    <Compile Include="ddlASESORIAPREDEFINIDA.vb" />
+    <Compile Include="ddlCALIFICACIONCALIDADPROVEEDORES.vb" />
+    <Compile Include="ddlCALIFICACIONPROVEEDORES.vb" />
+    <Compile Include="ddlCALIFICACIONRENGLONOFERTAS.vb" />
+    <Compile Include="ddlCARGADATOSSIM.vb" />
+    <Compile Include="ddlCARGOS.vb" />
+    <Compile Include="ddlCARGOS.xt.vb" />
+    <Compile Include="ddlCATALOGOPRODUCTOS.vb" />
+    <Compile Include="ddlCATALOGOPRODUCTOS.xt.vb" />
+    <Compile Include="ddlCLAUSULAS.vb" />
+    <Compile Include="ddlCLAUSULASCONTRATOS.vb" />
+    <Compile Include="ddlCLAUSULASPLANTILLA.vb" />
+    <Compile Include="ddlCOMISIONESEVALUADORAS.vb" />
+    <Compile Include="ddlCOMISIONPROCESOCOMPRA.vb" />
+    <Compile Include="ddlCONSUMOS.vb" />
+    <Compile Include="ddlCONTRATOS.vb" />
+    <Compile Include="ddlCORRECCIONESALMACENES.vb" />
+    <Compile Include="ddlCRITERIOPROCESOCOMPRA.vb" />
+    <Compile Include="ddlCRITERIOSEVALUACION.vb" />
+    <Compile Include="ddlCRITERIOSPLANTILLAS.vb" />
+    <Compile Include="ddlDEPARTAMENTOS.vb" />
+    <Compile Include="ddlDEPENDENCIAESTABLECIMIENTOS.vb" />
+    <Compile Include="ddlDEPENDENCIAESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="ddlDEPENDENCIAS.vb" />
+    <Compile Include="ddlDEPENDENCIAS.xt.vb" />
+    <Compile Include="ddlDETALLEALMACENESENTREGACONTRATOS.vb" />
+    <Compile Include="ddlDETALLECOMISIONEVALUADORA.vb" />
+    <Compile Include="ddlDETALLECONSUMOS.vb" />
+    <Compile Include="ddlDETALLEENTREGAS.vb" />
+    <Compile Include="ddlDETALLEENTREGASPROCESOCOMPRA.vb" />
+    <Compile Include="ddlDETALLEINVENTARIO.vb" />
+    <Compile Include="ddlDETALLEMODIFICATIVA.vb" />
+    <Compile Include="ddlDETALLEMULTASCONTRATOS.vb" />
+    <Compile Include="ddlDETALLENECESIDADESTABLECIMIENTOS.vb" />
+    <Compile Include="ddlDETALLEOFERTA.vb" />
+    <Compile Include="ddlDETALLEPROCESOCOMPRA.vb" />
+    <Compile Include="ddlDETALLERECETA.vb" />
+    <Compile Include="ddlDETALLESOLICITUDES.vb" />
+    <Compile Include="ddlDOCUMENTOSBASE.vb" />
+    <Compile Include="ddlDOCUMENTOSBASEPLANTILLA.vb" />
+    <Compile Include="ddlDOCUMENTOSOFERTA.vb" />
+    <Compile Include="ddlDOCUMENTOSPROCESOSCOMPRA.vb" />
+    <Compile Include="ddlEMPLEADOS.vb" />
+    <Compile Include="ddlEMPLEADOS.xt.vb" />
+    <Compile Include="ddlEMPLEADOSALMACEN.vb" />
+    <Compile Include="ddlEMPLEADOSALMACEN.xt.vb" />
+    <Compile Include="ddlENTREGAADJUDICACION.vb" />
+    <Compile Include="ddlENTREGABASES.vb" />
+    <Compile Include="ddlENTREGACONTRATO.vb" />
+    <Compile Include="ddlENTREGAMODIFICATIVA.vb" />
+    <Compile Include="ddlENTREGAPROCESOCOMPRA.vb" />
+    <Compile Include="ddlESPECIFICOSGASTO.vb" />
+    <Compile Include="ddlESTABLECIMIENTOS.vb" />
+    <Compile Include="ddlESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="ddlESTADOPROCESOSCOMPRAS.vb" />
+    <Compile Include="ddlESTADOS.vb" />
+    <Compile Include="ddlESTADOS.xt.vb" />
+    <Compile Include="ddlESTADOSCALIFICACIONES.vb" />
+    <Compile Include="ddlESTADOSCONSUMOS.vb" />
+    <Compile Include="ddlESTADOSCONTRATOS.vb" />
+    <Compile Include="ddlESTADOSGARANTIAS.vb" />
+    <Compile Include="ddlESTADOSMOVIMIENTOS.vb" />
+    <Compile Include="ddlESTADOSNECESIDADES.vb" />
+    <Compile Include="ddlETIQUETASCAMPOS.vb" />
+    <Compile Include="ddlEXAMENOFERTA.vb" />
+    <Compile Include="ddlEXAMENRENGLON.vb" />
+    <Compile Include="ddlEXISTENCIASALMACENES.vb" />
+    <Compile Include="ddlFECHACONTEOS.vb" />
+    <Compile Include="ddlFUENTEFINANCIAMIENTOS.vb" />
+    <Compile Include="ddlFUENTEFINANCIAMIENTOSCONTRATOS.vb" />
+    <Compile Include="ddlFUENTEFINANCIAMIENTOSCONTRATOS.xt.vb" />
+    <Compile Include="ddlFUENTEFINANCIAMIENTOSNECESIDADES.vb" />
+    <Compile Include="ddlFUENTEFINANCIAMIENTOSOLICITUDES.vb" />
+    <Compile Include="ddlGARANTIASCONTRATOS.vb" />
+    <Compile Include="ddlGRUPOS.vb" />
+    <Compile Include="ddlGRUPOS.xt.vb" />
+    <Compile Include="ddlGRUPOSFUENTEFINANCIAMIENTO.vb" />
+    <Compile Include="ddlHISTORICOESTADOSNECESIDADES.vb" />
+    <Compile Include="ddlHISTORICOESTADOSPROCESOS.vb" />
+    <Compile Include="ddlHISTORICOESTADOSSOLICITUDES.vb" />
+    <Compile Include="ddlHISTORICOPRECIOS.vb" />
+    <Compile Include="ddlINFORMEMUESTRAS.vb" />
+    <Compile Include="ddlINFORMEMUESTRAS.xt.vb" />
+    <Compile Include="ddlINFORMESNOACEPTACION.vb" />
+    <Compile Include="ddlINSTITUCIONES.vb" />
+    <Compile Include="ddlINVENTARIO.vb" />
+    <Compile Include="ddlLOTES.vb" />
+    <Compile Include="ddlLOTES.xt.vb" />
+    <Compile Include="ddlLOTESNOACEPTACION.vb" />
+    <Compile Include="ddlMODALIDADESCOMPRA.vb" />
+    <Compile Include="ddlMODIFICATIVASCONTRATO.vb" />
+    <Compile Include="ddlMODIFICATIVASCONTRATOPRODUCTO.vb" />
+    <Compile Include="ddlMOTIVOSNOACEPTACION.vb" />
+    <Compile Include="ddlMULTASCONTRATOS.vb" />
+    <Compile Include="ddlMUNICIPIOS.vb" />
+    <Compile Include="ddlMUNICIPIOS.xt.vb" />
+    <Compile Include="ddlNECESIDADESSOLICITUD.vb" />
+    <Compile Include="ddlNECESIDADESTABLECIMIENTOS.vb" />
+    <Compile Include="ddlNIVELESUSO.vb" />
+    <Compile Include="ddlNIVELESUSOESTABLECIMIENTOS.vb" />
+    <Compile Include="ddlNOTASACEPTACION.vb" />
+    <Compile Include="ddlNOTASINCUMPLIMIENTO.vb" />
+    <Compile Include="ddlNOTASINCUMPLIMIENTOCONTRATO.vb" />
+    <Compile Include="ddlOBSERVACIONDETALLENECESIDAD.vb" />
+    <Compile Include="ddlOBSERVACIONPROCESOSCOMPRAS.vb" />
+    <Compile Include="ddlOBSERVACIONSOLICITUDES.vb" />
+    <Compile Include="ddlOFERTAPROCESOCOMPRA.vb" />
+    <Compile Include="ddlOPCIONESSISTEMA.vb" />
+    <Compile Include="ddlOPCIONESSISTEMA.xt.vb" />
+    <Compile Include="ddlOPCIONESSISTEMAROLES.vb" />
+    <Compile Include="ddlORDENSINCRONIZACION.vb" />
+    <Compile Include="ddLOTESXPRODUCTO.vb" />
+    <Compile Include="ddlPLANTILLAPROCESOCOMPRA.vb" />
+    <Compile Include="ddlPLANTILLAS.vb" />
+    <Compile Include="ddlPLANTILLASCONTRATO.vb" />
+    <Compile Include="ddlPORCENTAJESMULTAS.vb" />
+    <Compile Include="ddlPROCESOCOMPRAS.vb" />
+    <Compile Include="ddlPRODUCTOSCONTRATO.vb" />
+    <Compile Include="ddlPRODUCTOSESTABLECIMIENTOS.vb" />
+    <Compile Include="ddlPRODUCTOSPROGRAMAS.vb" />
+    <Compile Include="ddlPROGRAMADISTRIBUCION.vb" />
+    <Compile Include="ddlPROGRAMAS.vb" />
+    <Compile Include="ddlPROPUESTASDISPONIBLES.vb" />
+    <Compile Include="ddlPROVEEDORES.vb" />
+    <Compile Include="ddlPROVEEDORES.xt.vb" />
+    <Compile Include="ddlQUEDANS.vb" />
+    <Compile Include="ddlRECEPCIONOFERTAS.vb" />
+    <Compile Include="ddlRECETAS.vb" />
+    <Compile Include="ddlRECIBOSRECEPCION.vb" />
+    <Compile Include="ddlRECURSOSREVISION.vb" />
+    <Compile Include="ddlREPRESENTANTEAPERTURAPROCESOS.vb" />
+    <Compile Include="ddlRESPONSABLEDISTRIBUCION.vb" />
+    <Compile Include="ddlRESPONSABLEDISTRIBUCIONCONTRATO.vb" />
+    <Compile Include="ddlRESPONSABLEDISTRIBUCIONCONTRATO.xt.vb" />
+    <Compile Include="ddlROLES.vb" />
+    <Compile Include="ddlROLES.xt.vb" />
+    <Compile Include="ddlROLESUSUARIOS.vb" />
+    <Compile Include="ddlSERVICIOSHOSPITALARIOS.vb" />
+    <Compile Include="ddlSOLICITUDES.vb" />
+    <Compile Include="ddlSOLICITUDESPROCESOCOMPRAS.vb" />
+    <Compile Include="ddlSUBGRUPOS.vb" />
+    <Compile Include="ddlSUBGRUPOS.xt.vb" />
+    <Compile Include="ddlSUMINISTRODEPENDENCIAS.vb" />
+    <Compile Include="ddlSUMINISTROS.vb" />
+    <Compile Include="ddlSUMINISTROS.xt.vb" />
+    <Compile Include="ddlTIPOCOMPRAS.vb" />
+    <Compile Include="ddlTIPOCOMPRAS.xt.vb" />
+    <Compile Include="ddlTIPOCRITERIO.vb" />
+    <Compile Include="ddlTIPODOCUMENTOBASE.vb" />
+    <Compile Include="ddlTIPODOCUMENTOCONTRATO.vb" />
+    <Compile Include="ddlTIPODOCUMENTOCONTRATO.xt.vb" />
+    <Compile Include="ddlTIPODOCUMENTORECEPCION.vb" />
+    <Compile Include="ddlTIPODOCUMENTOREFERENCIAS.vb" />
+    <Compile Include="ddlTIPOESTABLECIMIENTOS.vb" />
+    <Compile Include="ddlTIPOESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="ddlTIPOGARANTIAS.vb" />
+    <Compile Include="ddlTIPOIDENTIFICACION.vb" />
+    <Compile Include="ddlTIPOINFORMES.vb" />
+    <Compile Include="ddlTIPOMOVIMIENTOS.vb" />
+    <Compile Include="ddlTIPOSUMINISTROS.vb" />
+    <Compile Include="ddlTIPOTRANSACCIONES.vb" />
+    <Compile Include="ddlUBICACIONESPRODUCTOS.vb" />
+    <Compile Include="ddlUNIDADMEDIDAS.vb" />
+    <Compile Include="ddlUNIDADMEDIDAS.xt.vb" />
+    <Compile Include="ddlUNIDADMEDIDASUMINISTROS.vb" />
+    <Compile Include="ddlUSUARIOS.vb" />
+    <Compile Include="ddlUSUARIOS.xt.vb" />
+    <Compile Include="ddlVALESSALIDA.vb" />
+    <Compile Include="ddlZONAS.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABASTECIMIENTOS_ENTIDADES\ABASTECIMIENTOS_ENTIDADES.vbproj">
+      <Project>{7DE8CDB0-4460-4276-A16C-BFB144140F50}</Project>
+      <Name>ABASTECIMIENTOS_ENTIDADES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABASTECIMIENTOS_NEGOCIO\ABASTECIMIENTOS_NEGOCIO.vbproj">
+      <Project>{0430770D-9781-44BF-94E7-4624541E4963}</Project>
+      <Name>ABASTECIMIENTOS_NEGOCIO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsRPTDistroLotesMonto" targetNamespace="http://tempuri.org/DsRPTDistroLotesMonto.xsd" xmlns:mstns="http://tempuri.org/DsRPTDistroLotesMonto.xsd" xmlns="http://tempuri.org/DsRPTDistroLotesMonto.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsRPTDistroLotesMonto" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsRPTDistroLotesMonto" msprop:Generator_DataSetName="DsRPTDistroLotesMonto">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTDistroLotesMonto" msprop:Generator_UserTableName="DTDistroLotesMonto" msprop:Generator_RowDeletedName="DTDistroLotesMontoRowDeleted" msprop:Generator_RowChangedName="DTDistroLotesMontoRowChanged" msprop:Generator_RowClassName="DTDistroLotesMontoRow" msprop:Generator_RowChangingName="DTDistroLotesMontoRowChanging" msprop:Generator_RowEvArgName="DTDistroLotesMontoRowChangeEvent" msprop:Generator_RowEvHandlerName="DTDistroLotesMontoRowChangeEventHandler" msprop:Generator_TableClassName="DTDistroLotesMontoDataTable" msprop:Generator_TableVarName="tableDTDistroLotesMonto" msprop:Generator_RowDeletingName="DTDistroLotesMontoRowDeleting" msprop:Generator_TablePropName="DTDistroLotesMonto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDDISTRIBUCION" msprop:Generator_UserColumnName="IDDISTRIBUCION" msprop:Generator_ColumnVarNameInTable="columnIDDISTRIBUCION" msprop:Generator_ColumnPropNameInRow="IDDISTRIBUCION" msprop:Generator_ColumnPropNameInTable="IDDISTRIBUCIONColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDESTABLECIMIENTO" msprop:Generator_UserColumnName="IDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="IDESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnIDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="IDESTABLECIMIENTOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PERIODO" msprop:Generator_UserColumnName="PERIODO" msprop:Generator_ColumnVarNameInTable="columnPERIODO" msprop:Generator_ColumnPropNameInRow="PERIODO" msprop:Generator_ColumnPropNameInTable="PERIODOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SUMINISTRO" msprop:Generator_UserColumnName="SUMINISTRO" msprop:Generator_ColumnVarNameInTable="columnSUMINISTRO" msprop:Generator_ColumnPropNameInRow="SUMINISTRO" msprop:Generator_ColumnPropNameInTable="SUMINISTROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ESTABLECIMIENTO" msprop:Generator_UserColumnName="ESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="Establecimiento" msprop:Generator_ColumnVarNameInTable="columnEstablecimiento" msprop:Generator_ColumnPropNameInTable="EstablecimientoColumn" type="xs:string" />
+              <xs:element name="ESTABLECIMIENTODISTRIBUCION" msprop:Generator_UserColumnName="ESTABLECIMIENTODISTRIBUCION" msprop:Generator_ColumnPropNameInRow="ESTABLECIMIENTODISTRIBUCION" msprop:Generator_ColumnVarNameInTable="columnESTABLECIMIENTODISTRIBUCION" msprop:Generator_ColumnPropNameInTable="ESTABLECIMIENTODISTRIBUCIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CANTIDAD" msprop:Generator_UserColumnName="CANTIDAD" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD" msprop:Generator_ColumnPropNameInRow="CANTIDAD" msprop:Generator_ColumnPropNameInTable="CANTIDADColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MONTO" msprop:Generator_UserColumnName="MONTO" msprop:Generator_ColumnVarNameInTable="columnMONTO" msprop:Generator_ColumnPropNameInRow="MONTO" msprop:Generator_ColumnPropNameInTable="MONTOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IDPRODUCTO" msprop:Generator_UserColumnName="IDPRODUCTO" msprop:Generator_ColumnPropNameInRow="IDPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnIDPRODUCTO" msprop:Generator_ColumnPropNameInTable="IDPRODUCTOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CORRPRODUCTO" msprop:Generator_UserColumnName="CORRPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnCORRPRODUCTO" msprop:Generator_ColumnPropNameInRow="CORRPRODUCTO" msprop:Generator_ColumnPropNameInTable="CORRPRODUCTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCPRODUCTO" msprop:Generator_UserColumnName="DESCPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnDESCPRODUCTO" msprop:Generator_ColumnPropNameInRow="DESCPRODUCTO" msprop:Generator_ColumnPropNameInTable="DESCPRODUCTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MEDIDAPRODUCTO" msprop:Generator_UserColumnName="MEDIDAPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnMEDIDAPRODUCTO" msprop:Generator_ColumnPropNameInRow="MEDIDAPRODUCTO" msprop:Generator_ColumnPropNameInTable="MEDIDAPRODUCTOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

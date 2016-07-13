@@ -1,0 +1,224 @@
+<%@ Page Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false"
+  CodeFile="frmMantProgramacionProducto.aspx.vb" Inherits="URMIM_frmMantProgramacionProducto"
+  MaintainScrollPositionOnPostback="true" %>
+
+<%@ Register Assembly="eWorld.UI" Namespace="eWorld.UI" TagPrefix="ew" %>
+<%@ Register Src="~/Controles/ucFiltrarDatos2.ascx" TagName="ucFiltrarDatos" TagPrefix="uc1" %>
+<%@ MasterType VirtualPath="~/MasterPage.master" %>
+<%@ Register TagPrefix="uc1" TagName="ucBarraNavegacion" Src="~/Controles/ucBarraNavegacion.ascx" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<%@ Register Assembly="ABASTECIMIENTOS_WUC" Namespace="ABASTECIMIENTOS.WUC" TagPrefix="cc1" %>
+<%@ Register Assembly="Cooperator.Framework.Web" Namespace="Cooperator.Framework.Web.Controls"
+  TagPrefix="nds" %>
+  
+<asp:Content ID="Content1" ContentPlaceHolderID="PageContent" runat="Server">
+  <table class="CenteredTable" style="width: 100%;">
+    <tr>
+      <td class="LinkMenuRuta">
+        &nbsp;<asp:LinkButton ID="lnkMenu" runat="server" Text="Menú" CausesValidation="False" />
+        URMIM -> Programación de Compras</td>
+    </tr>
+    <tr>
+      <td>
+        <uc1:ucBarraNavegacion ID="ucBarraNavegacion1" runat="server" />
+      </td>
+    </tr>
+    <tr>
+      <td style="width:100%; border-bottom: solid 1px #CCCCCC;" align="left"   >
+        <table style="width:100%" cellpadding="3" cellspacing="3"  >
+          <tr>
+            <td width="90px">
+              Hosp./Región:
+            </td>
+            <td>
+              <asp:DropDownList ID="cboEstablecimientos" runat="server" AppendDataBoundItems="True" Font-Size="12px" Width="450px"   />
+              &nbsp;<asp:Button ID="btnAceptar" runat="server" Text="Consultar" Width="72px" />  
+              &nbsp;<asp:Button ID="btnCancelar" runat="server" Enabled="False" Text="Cancelar" Width="72px" />
+            </td>
+          </tr>
+        </table> 
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+      <asp:Label runat="server" ID="lblEstadoPC" Visible="false"></asp:Label>
+      <asp:Label runat="server" ID="lblTextoPC" Visible="true" ForeColor="darkred"></asp:Label>  
+      <br /><br />
+      <uc1:ucFiltrarDatos ID="ucFiltrarDatos1" runat="server" Visible="false"/>
+        <asp:UpdatePanel ID="updatePanel" runat="server" UpdateMode="Conditional">
+          <ContentTemplate>
+            <asp:Panel ID="pnlGrid" runat="server" CssClass="ScrollPanel" ScrollBars="Auto">
+              <asp:GridView ID="gvLista" runat="server" CssClass="Grid" DataKeyNames="IDPROGRAMACION, IDPRODUCTO, IDESTABLECIMIENTO, NOOBSERVACION1"
+                GridLines="Both" CellPadding="4" Width="950px" AutoGenerateColumns="False" AllowPaging="True">
+                <RowStyle CssClass="GridListItemSmaller"></RowStyle>
+                <Columns>
+                  <asp:BoundField DataField="CORRPRODUCTO" HeaderText="C&#243;digo">
+                    <HeaderStyle HorizontalAlign="Left" Width="60px"></HeaderStyle>
+                    <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                  </asp:BoundField>
+                  <asp:BoundField DataField="DESCLARGO" HeaderText="Descripci&#243;n">
+                    <HeaderStyle HorizontalAlign="Left" Width="350px"></HeaderStyle>
+                    <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                  </asp:BoundField>
+                  <asp:BoundField DataField="DESCRIPCION" HeaderText="U/M">
+                    <HeaderStyle HorizontalAlign="center" Width="30px"></HeaderStyle>
+                    <ItemStyle HorizontalAlign="center"></ItemStyle>
+                  </asp:BoundField>
+                  <asp:BoundField DataField="PRECIO" DataFormatString="{0:c}" HeaderText="Precio">
+                    <HeaderStyle HorizontalAlign="Right"></HeaderStyle>
+                    <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                  </asp:BoundField>
+                  <asp:BoundField DataField="CONSUMOPROMEDIO" HeaderText="CPM">
+                    <HeaderStyle HorizontalAlign="Right"></HeaderStyle>
+                    <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                  </asp:BoundField>
+                  <asp:BoundField DataField="CONSUMOPROMEDIOAJUSTADO" HeaderText="CPM Ajustado">
+                    <HeaderStyle HorizontalAlign="Right"></HeaderStyle>
+                    <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                  </asp:BoundField>
+                  <asp:BoundField DataField="CANTIDADREGION" HeaderText="Existencia en Estab.">
+                    <HeaderStyle HorizontalAlign="Right"></HeaderStyle>
+                    <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                  </asp:BoundField>
+                  <asp:BoundField DataField="CANTIDADALMACEN" HeaderText="Invent Alm. Regional">
+                    <HeaderStyle HorizontalAlign="Right"></HeaderStyle>
+                    <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                  </asp:BoundField>
+                  <asp:BoundField DataField="COMPRATRANSITO" HeaderText="Compras en Tr&#225;nsito">
+                    <HeaderStyle HorizontalAlign="Right"></HeaderStyle>
+                    <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                  </asp:BoundField>
+                  <asp:BoundField DataField="COBERTURA" HeaderText="Cobert.">
+                    <HeaderStyle HorizontalAlign="Right"></HeaderStyle>
+                    <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                  </asp:BoundField>
+                  <asp:BoundField DataField="CANTIDADCOMPRAR" HeaderText="Cantidad a Comprar">
+                    <HeaderStyle HorizontalAlign="Right"></HeaderStyle>
+                    <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                  </asp:BoundField>
+                  <asp:BoundField DataField="MONTOTOTAL" DataFormatString="{0:c}" HeaderText="Monto Total">
+                    <HeaderStyle HorizontalAlign="Right"></HeaderStyle>
+                    <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                  </asp:BoundField>
+                  <asp:TemplateField>
+                    <ItemTemplate>
+                      <asp:ImageButton runat="server" ID="btnCom" ImageUrl="../imagenes/information.png" Visible="false" AlternateText="Consultar" CommandName="Delete"
+                  CausesValidation="False" />  
+                    </ItemTemplate>
+                    <HeaderStyle HorizontalAlign="Center" Width="35px"></HeaderStyle>
+                    <ItemStyle HorizontalAlign="Center" BorderColor="#E0E0E0"></ItemStyle>
+                  </asp:TemplateField>
+                  <asp:TemplateField>
+                    <ItemTemplate>
+                      <asp:ImageButton ID="BtnViewDetails" runat="server" AlternateText="Observaciones"
+                        ImageUrl="../imagenes/note_add.png" OnClick="BtnViewDetails_Click "/>
+                    </ItemTemplate>
+                    <HeaderStyle HorizontalAlign="Center" Width="35px"></HeaderStyle>
+                    <ItemStyle HorizontalAlign="Center" BorderColor="#E0E0E0"></ItemStyle>
+                  </asp:TemplateField>
+                </Columns>
+                <FooterStyle CssClass="GridListFooter"></FooterStyle>
+                <PagerStyle CssClass="GridListPager"></PagerStyle>
+                <EmptyDataTemplate>
+                  No se han definido productos para la programación.
+                </EmptyDataTemplate>
+                <SelectedRowStyle CssClass="GridListSelectedItem"></SelectedRowStyle>
+                <HeaderStyle CssClass="GridListHeaderSmaller"></HeaderStyle>
+                <EditRowStyle CssClass="GridListEditItemSmaller"></EditRowStyle>
+                <AlternatingRowStyle CssClass="GridListAlternatingItemSmaller"></AlternatingRowStyle>
+              </asp:GridView>
+            </asp:Panel>
+          </ContentTemplate>
+        </asp:UpdatePanel>
+      </td>
+    </tr>
+  </table>
+  <table width="100%">
+    <tr>
+      <td align="right" >
+        <asp:Panel runat="server" id="pnlMT" Visible ="false" Width="100%" >
+        Monto Total Calculado para el Establecimiento: $<asp:Label runat="server" id="lblMT" />
+        </asp:Panel> 
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: left; width: 85%">
+      
+       <asp:Panel runat="server" id="pnlRpts" Visible ="false" Width="100%" >
+       <asp:Button runat="server" ID="btnRpt1" Text="Reporte de Programacion" Width="155px"
+          Font-Size="12px" />
+        &nbsp;
+        <asp:Button runat="server" ID="btnRpt2" Text="Reporte VEN" Width="155px" Font-Size="12px" />
+        &nbsp;
+        <asp:Button runat="server" ID="btnRpt3" Text="Reporte ABC" Width="155px" Font-Size="12px" />
+        &nbsp;
+        <asp:Button runat="server" ID="btnRpt4" Text="Desabastecimiento. Proy." Width="155px"
+          Font-Size="12px" /><br /><br />
+        <asp:Button runat="server" ID="btnRpt5" Text="Reporte de Observaciones" Width="155px"
+          Font-Size="12px" />
+       </asp:Panel>  
+      
+      </td>
+    </tr>
+   
+  </table>
+  <asp:Button ID="btnShowPopup" runat="server" Style="display: none" />
+  <ajaxToolkit:ModalPopupExtender ID="mdlPopup" runat="server" TargetControlID="btnShowPopup"
+    PopupControlID="pnlPopup" CancelControlID="btnClose" BackgroundCssClass="modalBackground" />
+  <asp:Panel ID="pnlPopup" runat="server" Width="600px" Style="display: none"
+    BackColor="white">
+    <asp:UpdatePanel ID="updPnlCustomerDetail" runat="server" UpdateMode="Conditional">
+      <ContentTemplate>
+        <div align="center">
+          <asp:Label ID="lblCustomerDetail" runat="server" Text="Observación a producto"
+            BackColor="Navy" ForeColor="white" Width="100%" />
+          <asp:Label ID="lblIdPrograma" runat="server" Text="" Visible="false" />
+          <asp:Label ID="lblIdProducto" runat="server" Text="" Visible="false" />
+          <asp:Label ID="lblIdEst" runat="server" Text="" Visible="false" />
+          <table width="100%" cellpadding="3" cellspacing="3"  >
+              <tr>
+                <td width="90px" align="left" valign="top">
+                  <asp:Label runat="server" id="Label1" Font-Size="10px" Text="Establecimiento:"   />
+                </td>
+                <td align="left">
+                  <asp:Label runat="server" id="lblNomEst" Font-Size="10px"  />
+                </td>
+              </tr>
+              <tr>
+                <td align="left">
+                  <asp:Label runat="server" id="Label2" Font-Size="10px" Text="Código - U/M:"   />
+                </td>
+                <td align="left">
+                  <asp:Label runat="server" id="lblCodProd" Font-Size="10px" />&nbsp;-&nbsp;<asp:Label runat="server" id="lblUM" Font-Size="10px" />
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" align="left">
+                  <asp:Label runat="server" id="Label3" Font-Size="10px" Text="Producto:"   />
+                </td>
+                <td align="left">
+                  <asp:Label runat="server" id="lblNomProd" Font-Size="10px" />
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" align="left">
+                  <asp:Label runat="server" id="Label4" Font-Size="10px" Text="Observación:"   />
+                </td>
+                <td align="left">
+                  <asp:TextBox ID="txtObservacion" runat="server" MaxLength="500" Width="446px" Rows="4" TextMode="MultiLine" />
+                </td>
+              </tr>
+          </table>
+        </div>
+        <div align="right" style="width: 95%">
+          <br />
+          <asp:Button ID="btnSave" runat="server" Text="Guardar" OnClick="btnSave_Click" Width="150px" />
+          <asp:Button ID="btnClose" runat="server" Text="Cerrar" Width="150px" OnClick="btnClose_Click" />
+          <br />
+          <asp:Label ID="lblError" runat="server" Text="" Font-Size="Small" ForeColor="red" />
+        </div>
+        <br />
+      </ContentTemplate>
+    </asp:UpdatePanel>
+  </asp:Panel>
+</asp:Content>

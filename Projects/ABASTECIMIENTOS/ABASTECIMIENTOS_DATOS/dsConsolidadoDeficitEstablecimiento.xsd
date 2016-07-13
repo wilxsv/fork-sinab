@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsConsolidadoDeficitEstablecimiento" targetNamespace="http://tempuri.org/dsConsolidadoDeficitEstablecimiento.xsd" xmlns:mstns="http://tempuri.org/dsConsolidadoDeficitEstablecimiento.xsd" xmlns="http://tempuri.org/dsConsolidadoDeficitEstablecimiento.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsConsolidadoDeficitEstablecimiento" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsConsolidadoDeficitEstablecimiento" msprop:Generator_DataSetName="dsConsolidadoDeficitEstablecimiento">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsConsolidadoDeficitNacional" msprop:Generator_UserTableName="dsConsolidadoDeficitNacional" msprop:Generator_RowDeletedName="dsConsolidadoDeficitNacionalRowDeleted" msprop:Generator_RowChangedName="dsConsolidadoDeficitNacionalRowChanged" msprop:Generator_RowClassName="dsConsolidadoDeficitNacionalRow" msprop:Generator_RowChangingName="dsConsolidadoDeficitNacionalRowChanging" msprop:Generator_RowEvArgName="dsConsolidadoDeficitNacionalRowChangeEvent" msprop:Generator_RowEvHandlerName="dsConsolidadoDeficitNacionalRowChangeEventHandler" msprop:Generator_TableClassName="dsConsolidadoDeficitNacionalDataTable" msprop:Generator_TableVarName="tabledsConsolidadoDeficitNacional" msprop:Generator_RowDeletingName="dsConsolidadoDeficitNacionalRowDeleting" msprop:Generator_TablePropName="dsConsolidadoDeficitNacional">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDESTABLECIMIENTO" msprop:Generator_UserColumnName="IDESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnIDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="IDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="IDESTABLECIMIENTOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDNECESIDAD" msprop:Generator_UserColumnName="IDNECESIDAD" msprop:Generator_ColumnPropNameInRow="IDNECESIDAD" msprop:Generator_ColumnVarNameInTable="columnIDNECESIDAD" msprop:Generator_ColumnPropNameInTable="IDNECESIDADColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="IDPRODUCTO" msprop:Generator_UserColumnName="IDPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnIDPRODUCTO" msprop:Generator_ColumnPropNameInRow="IDPRODUCTO" msprop:Generator_ColumnPropNameInTable="IDPRODUCTOColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="IDUNIDADMEDIDA" msprop:Generator_UserColumnName="IDUNIDADMEDIDA" msprop:Generator_ColumnVarNameInTable="columnIDUNIDADMEDIDA" msprop:Generator_ColumnPropNameInRow="IDUNIDADMEDIDA" msprop:Generator_ColumnPropNameInTable="IDUNIDADMEDIDAColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="CONSUMOANUAL" msprop:Generator_UserColumnName="CONSUMOANUAL" msprop:Generator_ColumnVarNameInTable="columnCONSUMOANUAL" msprop:Generator_ColumnPropNameInRow="CONSUMOANUAL" msprop:Generator_ColumnPropNameInTable="CONSUMOANUALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DEMANDAINSATISFECHA" msprop:Generator_UserColumnName="DEMANDAINSATISFECHA" msprop:Generator_ColumnVarNameInTable="columnDEMANDAINSATISFECHA" msprop:Generator_ColumnPropNameInRow="DEMANDAINSATISFECHA" msprop:Generator_ColumnPropNameInTable="DEMANDAINSATISFECHAColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RESERVAESTABLECIMIENTO" msprop:Generator_UserColumnName="RESERVAESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnRESERVAESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="RESERVAESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="RESERVAESTABLECIMIENTOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RESERVATOTAL" msprop:Generator_UserColumnName="RESERVATOTAL" msprop:Generator_ColumnVarNameInTable="columnRESERVATOTAL" msprop:Generator_ColumnPropNameInRow="RESERVATOTAL" msprop:Generator_ColumnPropNameInTable="RESERVATOTALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EXISTENCIAESTIMADA" msprop:Generator_UserColumnName="EXISTENCIAESTIMADA" msprop:Generator_ColumnVarNameInTable="columnEXISTENCIAESTIMADA" msprop:Generator_ColumnPropNameInRow="EXISTENCIAESTIMADA" msprop:Generator_ColumnPropNameInTable="EXISTENCIAESTIMADAColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PRECIOUNITARIO" msprop:Generator_UserColumnName="PRECIOUNITARIO" msprop:Generator_ColumnPropNameInRow="PRECIOUNITARIO" msprop:Generator_ColumnVarNameInTable="columnPRECIOUNITARIO" msprop:Generator_ColumnPropNameInTable="PRECIOUNITARIOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NECESIDADREAL" msprop:Generator_UserColumnName="NECESIDADREAL" msprop:Generator_ColumnVarNameInTable="columnNECESIDADREAL" msprop:Generator_ColumnPropNameInRow="NECESIDADREAL" msprop:Generator_ColumnPropNameInTable="NECESIDADREALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NECESIDADAJUSTADA" msprop:Generator_UserColumnName="NECESIDADAJUSTADA" msprop:Generator_ColumnVarNameInTable="columnNECESIDADAJUSTADA" msprop:Generator_ColumnPropNameInRow="NECESIDADAJUSTADA" msprop:Generator_ColumnPropNameInTable="NECESIDADAJUSTADAColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NECESIDADFINAL" msprop:Generator_UserColumnName="NECESIDADFINAL" msprop:Generator_ColumnVarNameInTable="columnNECESIDADFINAL" msprop:Generator_ColumnPropNameInRow="NECESIDADFINAL" msprop:Generator_ColumnPropNameInTable="NECESIDADFINALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOTAL" msprop:Generator_UserColumnName="TOTAL" msprop:Generator_ColumnVarNameInTable="columnTOTAL" msprop:Generator_ColumnPropNameInRow="TOTAL" msprop:Generator_ColumnPropNameInTable="TOTALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PRESUPUESTOREAL" msprop:Generator_UserColumnName="PRESUPUESTOREAL" msprop:Generator_ColumnPropNameInRow="PRESUPUESTOREAL" msprop:Generator_ColumnVarNameInTable="columnPRESUPUESTOREAL" msprop:Generator_ColumnPropNameInTable="PRESUPUESTOREALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PRESUPUESTOAJUSTADO" msprop:Generator_UserColumnName="PRESUPUESTOAJUSTADO" msprop:Generator_ColumnPropNameInRow="PRESUPUESTOAJUSTADO" msprop:Generator_ColumnVarNameInTable="columnPRESUPUESTOAJUSTADO" msprop:Generator_ColumnPropNameInTable="PRESUPUESTOAJUSTADOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PRESUPUESTOFINAL" msprop:Generator_UserColumnName="PRESUPUESTOFINAL" msprop:Generator_ColumnPropNameInRow="PRESUPUESTOFINAL" msprop:Generator_ColumnVarNameInTable="columnPRESUPUESTOFINAL" msprop:Generator_ColumnPropNameInTable="PRESUPUESTOFINALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PRESUPUESTOARTICULO" msprop:Generator_UserColumnName="PRESUPUESTOARTICULO" msprop:Generator_ColumnPropNameInRow="PRESUPUESTOARTICULO" msprop:Generator_ColumnVarNameInTable="columnPRESUPUESTOARTICULO" msprop:Generator_ColumnPropNameInTable="PRESUPUESTOARTICULOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PRESUPUESTOARTICULOAJUSTADO" msprop:Generator_UserColumnName="PRESUPUESTOARTICULOAJUSTADO" msprop:Generator_ColumnPropNameInRow="PRESUPUESTOARTICULOAJUSTADO" msprop:Generator_ColumnVarNameInTable="columnPRESUPUESTOARTICULOAJUSTADO" msprop:Generator_ColumnPropNameInTable="PRESUPUESTOARTICULOAJUSTADOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PRESUPUESTOARTICULOFINAL" msprop:Generator_UserColumnName="PRESUPUESTOARTICULOFINAL" msprop:Generator_ColumnPropNameInRow="PRESUPUESTOARTICULOFINAL" msprop:Generator_ColumnVarNameInTable="columnPRESUPUESTOARTICULOFINAL" msprop:Generator_ColumnPropNameInTable="PRESUPUESTOARTICULOFINALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COSTOTOTALREAL" msprop:Generator_UserColumnName="COSTOTOTALREAL" msprop:Generator_ColumnPropNameInRow="COSTOTOTALREAL" msprop:Generator_ColumnVarNameInTable="columnCOSTOTOTALREAL" msprop:Generator_ColumnPropNameInTable="COSTOTOTALREALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COSTOTOTALAJUSTADO" msprop:Generator_UserColumnName="COSTOTOTALAJUSTADO" msprop:Generator_ColumnPropNameInRow="COSTOTOTALAJUSTADO" msprop:Generator_ColumnVarNameInTable="columnCOSTOTOTALAJUSTADO" msprop:Generator_ColumnPropNameInTable="COSTOTOTALAJUSTADOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CORRPRODUCTO" msprop:Generator_UserColumnName="CORRPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnCORRPRODUCTO" msprop:Generator_ColumnPropNameInRow="CORRPRODUCTO" msprop:Generator_ColumnPropNameInTable="CORRPRODUCTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCPRODUCTO" msprop:Generator_UserColumnName="DESCPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnDESCPRODUCTO" msprop:Generator_ColumnPropNameInRow="DESCPRODUCTO" msprop:Generator_ColumnPropNameInTable="DESCPRODUCTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCLARGO" msprop:Generator_UserColumnName="DESCLARGO" msprop:Generator_ColumnVarNameInTable="columnDESCLARGO" msprop:Generator_ColumnPropNameInRow="DESCLARGO" msprop:Generator_ColumnPropNameInTable="DESCLARGOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDGRUPO" msprop:Generator_UserColumnName="IDGRUPO" msprop:Generator_ColumnVarNameInTable="columnIDGRUPO" msprop:Generator_ColumnPropNameInRow="IDGRUPO" msprop:Generator_ColumnPropNameInTable="IDGRUPOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDSUBGRUPO" msprop:Generator_UserColumnName="IDSUBGRUPO" msprop:Generator_ColumnVarNameInTable="columnIDSUBGRUPO" msprop:Generator_ColumnPropNameInRow="IDSUBGRUPO" msprop:Generator_ColumnPropNameInTable="IDSUBGRUPOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="UNIDAD" msprop:Generator_UserColumnName="UNIDAD" msprop:Generator_ColumnVarNameInTable="columnUNIDAD" msprop:Generator_ColumnPropNameInRow="UNIDAD" msprop:Generator_ColumnPropNameInTable="UNIDADColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

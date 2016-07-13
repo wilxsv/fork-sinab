@@ -1,0 +1,1638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC64486C-763D-48FB-A6B3-DCE891B705E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ABASTECIMIENTOS.DATOS</RootNamespace>
+    <AssemblyName>ABASTECIMIENTOS_DATOS</AssemblyName>
+    <MyType>Windows</MyType>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\ABASTECIMIENTOS_DATOS.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ABASTECIMIENTOS_DATOS.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\..\..\External Assemblies\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ABASTECIMIENTOS.ENTIDADES" />
+    <Import Include="Microsoft.ApplicationBlocks" />
+    <Import Include="Microsoft.ApplicationBlocks.Data" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.SqlClient" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbACCESOS.vb" />
+    <Compile Include="dbACLARACIONES.vb" />
+    <Compile Include="dbADENDAS.vb" />
+    <Compile Include="dbADENDAS.xt.vb" />
+    <Compile Include="dbADJUDICACION.vb" />
+    <Compile Include="dbADJUDICACION.xt.vb" />
+    <Compile Include="dbAJUSTE.vb" />
+    <Compile Include="dbAJUSTE.xt.vb" />
+    <Compile Include="dbALMACENES.vb" />
+    <Compile Include="dbALMACENES.xt.vb" />
+    <Compile Include="dbALMACENESENTREGAADJUDICACION.vb" />
+    <Compile Include="dbALMACENESENTREGAADJUDICACION.xt.vb" />
+    <Compile Include="dbALMACENESENTREGACONTRATOS.vb" />
+    <Compile Include="dbALMACENESENTREGACONTRATOS.xt.vb" />
+    <Compile Include="dbALMACENESENTREGAMODIFICATIVA.vb" />
+    <Compile Include="dbALMACENESENTREGASOLICITUD.vb" />
+    <Compile Include="dbALMACENESENTREGASOLICITUD.xt.vb" />
+    <Compile Include="dbALMACENESESTABLECIMIENTOS.vb" />
+    <Compile Include="dbALMACENESESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="dbALTERNATIVASPRODUCTO.vb" />
+    <Compile Include="dbALTERNATIVASPRODUCTO.xt.vb" />
+    <Compile Include="dbAMPLIACIONCONTRATO.vb" />
+    <Compile Include="dbAMPLIACIONCONTRATO.xt.vb" />
+    <Compile Include="dbANALISTAPROVEEDORES.vb" />
+    <Compile Include="dbANALISTAPROVEEDORES.xt.vb" />
+    <Compile Include="dbASESORIAPREDEFINIDA.vb" />
+    <Compile Include="dbASESORIAPREDEFINIDA.xt.vb" />
+    <Compile Include="dbAspectoCP.vb" />
+    <Compile Include="dbBase.vb" />
+    <Compile Include="dbCALIFICACIONCALIDADPROVEEDORES.vb" />
+    <Compile Include="dbCALIFICACIONPROVEEDORES.vb" />
+    <Compile Include="dbCALIFICACIONPROVEEDORES.xt.vb" />
+    <Compile Include="dbCALIFICACIONRENGLONOFERTAS.vb" />
+    <Compile Include="dbCALIFICACIONRENGLONOFERTAS.xt.vb" />
+    <Compile Include="dbCANCELACIONLOTE.vb" />
+    <Compile Include="dbCANCELACIONLOTE.xt.vb" />
+    <Compile Include="dbCANCELACIONPRODUCTO.vb" />
+    <Compile Include="dbCANCELACIONPRODUCTO.xt.vb" />
+    <Compile Include="dbCARGADATOSSIM.vb" />
+    <Compile Include="dbCARGADATOSSIM.xt.vb" />
+    <Compile Include="dbCARGOS.vb" />
+    <Compile Include="dbCARGOS.xt.vb" />
+    <Compile Include="dbCATALOGOPRODUCTOS.vb" />
+    <Compile Include="dbCATALOGOPRODUCTOS.xt.vb" />
+    <Compile Include="dbCAUSALESCG.vb" />
+    <Compile Include="dbCLAUSULAS.vb" />
+    <Compile Include="dbCLAUSULAS.xt.vb" />
+    <Compile Include="dbCLAUSULASCONTRATOS.vb" />
+    <Compile Include="dbCLAUSULASCONTRATOS.xt.vb" />
+    <Compile Include="dbCLAUSULASPLANTILLA.vb" />
+    <Compile Include="dbCLAUSULASPLANTILLA.xt.vb" />
+    <Compile Include="dbCOMISIONESEVALUADORAS.vb" />
+    <Compile Include="dbCOMISIONESEVALUADORAS.xt.vb" />
+    <Compile Include="dbCOMISIONPROCESOCOMPRA.vb" />
+    <Compile Include="dbCOMISIONPROCESOCOMPRA.xt.vb" />
+    <Compile Include="dbCONSUMOS.vb" />
+    <Compile Include="dbCONSUMOS.xt.vb" />
+    <Compile Include="dbCONTRATOS.vb" />
+    <Compile Include="dbCONTRATOS.xt.vb" />
+    <Compile Include="dbCONTRATOSPROCESOCOMPRA.vb" />
+    <Compile Include="dbCONTRATOSPROCESOCOMPRA.xt.vb" />
+    <Compile Include="dbCORRECCIONESALMACENES.vb" />
+    <Compile Include="dbCORRECCIONESALMACENES.xt.vb" />
+    <Compile Include="dbCRITERIOPROCESOCOMPRA.vb" />
+    <Compile Include="dbCRITERIOPROCESOCOMPRA.xt.vb" />
+    <Compile Include="dbCRITERIOSEVALUACION.vb" />
+    <Compile Include="dbCRITERIOSEVALUACION.xt.vb" />
+    <Compile Include="dbCRITERIOSPLANTILLAS.vb" />
+    <Compile Include="dbCRITERIOSPLANTILLAS.xt.vb" />
+    <Compile Include="dbDEPARTAMENTOS.vb" />
+    <Compile Include="dbDEPARTAMENTOS.xt.vb" />
+    <Compile Include="dbDEPENDENCIAESTABLECIMIENTOS.vb" />
+    <Compile Include="dbDEPENDENCIAESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="dbDEPENDENCIAS.vb" />
+    <Compile Include="dbDEPENDENCIAS.xt.vb" />
+    <Compile Include="dbDETALLEALMACENESENTREGACONTRATOS.vb" />
+    <Compile Include="dbDETALLECANCELACIONPRODUCTO.vb" />
+    <Compile Include="dbDETALLECANCELACIONPRODUCTO.xt.vb" />
+    <Compile Include="dbDETALLECOMISIONEVALUADORA.vb" />
+    <Compile Include="dbDETALLECOMISIONEVALUADORA.xt.vb" />
+    <Compile Include="dbDETALLECONSUMOS.vb" />
+    <Compile Include="dbDETALLECONSUMOS.xt.vb" />
+    <Compile Include="dbDETALLEENTREGAS.vb" />
+    <Compile Include="dbDETALLEENTREGAS.xt.vb" />
+    <Compile Include="dbDETALLEENTREGASPROCESOCOMPRA.vb" />
+    <Compile Include="dbDETALLEENTREGASPROCESOCOMPRA.xt.vb" />
+    <Compile Include="dbDETALLEINVENTARIO.vb" />
+    <Compile Include="dbDETALLEINVENTARIO.xt.vb" />
+    <Compile Include="dbDETALLEINVENTARIOINICIAL.vb" />
+    <Compile Include="dbDETALLEINVENTARIOINICIAL.xt.vb" />
+    <Compile Include="dbDETALLEMODIFICATIVA.vb" />
+    <Compile Include="dbDETALLEMOVIMIENTOS.vb" />
+    <Compile Include="dbDETALLEMOVIMIENTOS.xt.vb" />
+    <Compile Include="dbDETALLEMULTASCONTRATOS.vb" />
+    <Compile Include="dbDETALLENECESIDADESTABLECIMIENTOS.vb" />
+    <Compile Include="dbDETALLENECESIDADESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="dbDETALLENOTAINCUMPLIMIENTOCONTRATO.vb" />
+    <Compile Include="dbDETALLEOFERTA.vb" />
+    <Compile Include="dbDETALLEOFERTA.xt.vb" />
+    <Compile Include="dbDETALLEPLANTILLAPROCESOCOMPRA.vb" />
+    <Compile Include="dbDETALLEPLANTILLAPROCESOCOMPRA.xt.vb" />
+    <Compile Include="dbDETALLEPROCESOCOMPRA.vb" />
+    <Compile Include="dbDETALLEPROCESOCOMPRA.xt.vb" />
+    <Compile Include="dbDETALLERECETA.vb" />
+    <Compile Include="dbDETALLERECETA.xt.vb" />
+    <Compile Include="dbDETALLESOLICITUDES.vb" />
+    <Compile Include="dbDETALLESOLICITUDES.xt.vb" />
+    <Compile Include="dbDISTRIBUCION.vb" />
+    <Compile Include="dbDISTRIBUCIONDETALLE.vb" />
+    <Compile Include="dbDISTRIBUCIONPRODUCTO.vb" />
+    <Compile Include="dbDOCUMENTOSBASE.vb" />
+    <Compile Include="dbDOCUMENTOSBASE.xt.vb" />
+    <Compile Include="dbDOCUMENTOSBASEPLANTILLA.vb" />
+    <Compile Include="dbDOCUMENTOSBASEPLANTILLA.xt.vb" />
+    <Compile Include="dbDOCUMENTOSOFERTA.vb" />
+    <Compile Include="dbDOCUMENTOSOFERTA.xt.vb" />
+    <Compile Include="dbDOCUMENTOSPROCESOSCOMPRA.vb" />
+    <Compile Include="dbDOCUMENTOSPROCESOSCOMPRA.xt.vb" />
+    <Compile Include="dbEMPLEADOS.vb" />
+    <Compile Include="dbEMPLEADOS.xt.vb" />
+    <Compile Include="dbEMPLEADOSALMACEN.vb" />
+    <Compile Include="dbEMPLEADOSALMACEN.xt.vb" />
+    <Compile Include="dbEntidadCG.vb" />
+    <Compile Include="dbENTREGAADJUDICACION.vb" />
+    <Compile Include="dbENTREGAADJUDICACION.xt.vb" />
+    <Compile Include="dbENTREGABASES.vb" />
+    <Compile Include="dbENTREGABASES.xt.vb" />
+    <Compile Include="dbENTREGACONTRATO.vb" />
+    <Compile Include="dbENTREGACONTRATO.xt.vb" />
+    <Compile Include="dbENTREGAMODIFICATIVA.vb" />
+    <Compile Include="dbENTREGAPROCESOCOMPRA.vb" />
+    <Compile Include="dbENTREGAPROCESOCOMPRA.xt.vb" />
+    <Compile Include="dbENTREGASOLICITUDES.vb" />
+    <Compile Include="dbENTREGASOLICITUDES.xt.vb" />
+    <Compile Include="dbESPECIFICOGASTO.vb" />
+    <Compile Include="dbESTABLECIMIENTOS.vb" />
+    <Compile Include="dbESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="dbESTADOPROCESOSCOMPRAS.vb" />
+    <Compile Include="dbESTADOS.vb" />
+    <Compile Include="dbESTADOS.xt.vb" />
+    <Compile Include="dbESTADOSCALIFICACIONES.vb" />
+    <Compile Include="dbESTADOSCONSUMOS.vb" />
+    <Compile Include="dbESTADOSCONTRATOS.vb" />
+    <Compile Include="dbESTADOSGARANTIAS.vb" />
+    <Compile Include="dbESTADOSMOVIMIENTOS.vb" />
+    <Compile Include="dbESTADOSNECESIDADES.vb" />
+    <Compile Include="dbETIQUETASCAMPOS.vb" />
+    <Compile Include="dbETIQUETASCAMPOS.xt.vb" />
+    <Compile Include="dbETIQUETASCLAUSULAS.vb" />
+    <Compile Include="dbETIQUETASCLAUSULAS.xt.vb" />
+    <Compile Include="dbEXAMENOFERTA.vb" />
+    <Compile Include="dbEXAMENOFERTA.xt.vb" />
+    <Compile Include="dbEXAMENRENGLON.vb" />
+    <Compile Include="dbEXAMENRENGLON.xt.vb" />
+    <Compile Include="dbEXISTENCIASALMACENES.vb" />
+    <Compile Include="dbEXISTENCIASALMACENES.xt.vb" />
+    <Compile Include="dbFECHACONTEOS.vb" />
+    <Compile Include="dbFUENTEFINANCIAMIENTOS.vb" />
+    <Compile Include="dbFUENTEFINANCIAMIENTOS.xt.vb" />
+    <Compile Include="dbFUENTEFINANCIAMIENTOSCONTRATOS.vb" />
+    <Compile Include="dbFUENTEFINANCIAMIENTOSCONTRATOS.xt.vb" />
+    <Compile Include="dbFUENTEFINANCIAMIENTOSNECESIDADES.vb" />
+    <Compile Include="dbFUENTEFINANCIAMIENTOSOLICITUDES.vb" />
+    <Compile Include="dbFUENTEFINANCIAMIENTOSOLICITUDES.xt.vb" />
+    <Compile Include="dbGARANTIASCONTRATOS.vb" />
+    <Compile Include="dbGARANTIASCONTRATOS.xt.vb" />
+    <Compile Include="dbGRUPOS.vb" />
+    <Compile Include="dbGRUPOS.xt.vb" />
+    <Compile Include="dbGRUPOSFUENTEFINANCIAMIENTO.vb" />
+    <Compile Include="dbGRUPOSREQTECNICOS.vb" />
+    <Compile Include="dbHISTORICOESTADOSNECESIDADES.vb" />
+    <Compile Include="dbHISTORICOESTADOSPROCESOS.vb" />
+    <Compile Include="dbHISTORICOESTADOSSOLICITUDES.vb" />
+    <Compile Include="dbHISTORICONOTIFICACION.vb" />
+    <Compile Include="dbHISTORICOPRECIOS.vb" />
+    <Compile Include="dbHISTORICOPRECIOS.xt.vb" />
+    <Compile Include="dbINCUMPLIMIENTO.vb" />
+    <Compile Include="dbIndices.vb" />
+    <Compile Include="dbINFORMEMUESTRAS.vb" />
+    <Compile Include="dbINFORMEMUESTRAS.xt.vb" />
+    <Compile Include="dbINFORMESNOACEPTACION.vb" />
+    <Compile Include="dbINFORMESNOACEPTACION.xt.vb" />
+    <Compile Include="dbINSTITUCIONES.vb" />
+    <Compile Include="dbINSTITUCIONES.xt.vb" />
+    <Compile Include="dbINVENTARIO.vb" />
+    <Compile Include="dbINVENTARIO.xt.vb" />
+    <Compile Include="dbINVENTARIOINICIAL.vb" />
+    <Compile Include="dbINVENTARIOINICIAL.xt.vb" />
+    <Compile Include="dbListaCP.vb" />
+    <Compile Include="dbLogo.vb" />
+    <Compile Include="dbLOTES.vb" />
+    <Compile Include="dbLOTES.xt.vb" />
+    <Compile Include="dbLOTESNOACEPTACION.vb" />
+    <Compile Include="dbMENSAJES.vb" />
+    <Compile Include="dbMENSAJES.xt.vb" />
+    <Compile Include="dbMODALIDADCOMPRACG.vb" />
+    <Compile Include="dbMODALIDADESCOMPRA.vb" />
+    <Compile Include="dbMODALIDADESCOMPRA.xt.vb" />
+    <Compile Include="dbMODIFICATIVASCONTRATO.vb" />
+    <Compile Include="dbMODIFICATIVASCONTRATO.xt.vb" />
+    <Compile Include="dbMODIFICATIVASCONTRATOPRODUCTO.vb" />
+    <Compile Include="dbMODIFICATIVASCONTRATOPRODUCTO.xt.vb" />
+    <Compile Include="dbMOTIVOSNOACEPTACION.vb" />
+    <Compile Include="dbMOTIVOSNOACEPTACION.xt.vb" />
+    <Compile Include="dbMOTIVOSNOACEPTACIONINFORME.vb" />
+    <Compile Include="dbMOTIVOSNOACEPTACIONINFORME.xt.vb" />
+    <Compile Include="dbMOVIMIENTOS.vb" />
+    <Compile Include="dbMOVIMIENTOS.xt.vb" />
+    <Compile Include="dbMULTASCONTRATOS.vb" />
+    <Compile Include="dbMULTASCONTRATOS.xt.vb" />
+    <Compile Include="dbMUNICIPIOS.vb" />
+    <Compile Include="dbMUNICIPIOS.xt.vb" />
+    <Compile Include="dbNECESIDADESSOLICITUD.vb" />
+    <Compile Include="dbNECESIDADESSOLICITUD.xt.vb" />
+    <Compile Include="dbNECESIDADESTABLECIMIENTOS.vb" />
+    <Compile Include="dbNECESIDADESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="dbNIVELESUSO.vb" />
+    <Compile Include="dbNIVELESUSO.xt.vb" />
+    <Compile Include="dbNIVELESUSOESTABLECIMIENTOS.vb" />
+    <Compile Include="dbNIVELESUSOESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="dbNOTASACEPTACION.vb" />
+    <Compile Include="dbNOTASACEPTACION.xt.vb" />
+    <Compile Include="dbNOTASINCUMPLIMIENTO.vb" />
+    <Compile Include="dbNOTASINCUMPLIMIENTO.xt.vb" />
+    <Compile Include="dbNOTASINCUMPLIMIENTOCONTRATO.vb" />
+    <Compile Include="dbNOTASINCUMPLIMIENTOCONTRATO.xt.vb" />
+    <Compile Include="dbOBSERVACIONDETALLENECESIDAD.vb" />
+    <Compile Include="dbOBSERVACIONDETALLENECESIDAD.xt.vb" />
+    <Compile Include="dbOBSERVACIONPROCESOSCOMPRAS.vb" />
+    <Compile Include="dbOBSERVACIONSOLICITUDES.vb" />
+    <Compile Include="dbOFERTAPROCESOCOMPRA.vb" />
+    <Compile Include="dbOFERTAPROCESOCOMPRA.xt.vb" />
+    <Compile Include="dbOPCIONESSISTEMA.vb" />
+    <Compile Include="dbOPCIONESSISTEMA.xt.vb" />
+    <Compile Include="dbOPCIONESSISTEMAROLES.vb" />
+    <Compile Include="dbOPCIONESSISTEMAROLES.xt.vb" />
+    <Compile Include="dbORDENSINCRONIZACION.vb" />
+    <Compile Include="dbPLANTILLAPROCESOCOMPRA.vb" />
+    <Compile Include="dbPLANTILLAPROCESOCOMPRA.xt.vb" />
+    <Compile Include="dbPLANTILLAS.vb" />
+    <Compile Include="dbPLANTILLAS.xt.vb" />
+    <Compile Include="dbPLANTILLASCONTRATO.vb" />
+    <Compile Include="dbPLANTILLASCONTRATO.xt.vb" />
+    <Compile Include="dbPLANTILLASMULTAS.vb" />
+    <Compile Include="dbPORCENTAJESMULTAS.vb" />
+    <Compile Include="dbPROCESOCOMPRAS.vb" />
+    <Compile Include="dbPROCESOCOMPRAS.xt.vb" />
+    <Compile Include="dbPROCESOCOMPRASIGUIENTEESTADO.vb" />
+    <Compile Include="dbProcesoCP.vb" />
+    <Compile Include="dbPRODUCTOSCONTRATO.vb" />
+    <Compile Include="dbPRODUCTOSCONTRATO.xt.vb" />
+    <Compile Include="dbPRODUCTOSESTABLECIMIENTOS.vb" />
+    <Compile Include="dbPRODUCTOSPROGRAMAS.vb" />
+    <Compile Include="dbPRODUCTOSPROGRAMAS.xt.vb" />
+    <Compile Include="dbPROGRAMACION.vb" />
+    <Compile Include="dbPROGRAMACIONPRODUCTO.vb" />
+    <Compile Include="dbPROGRAMADISTRIBUCION.vb" />
+    <Compile Include="dbPROGRAMADISTRIBUCION.xt.vb" />
+    <Compile Include="dbPROGRAMAS.vb" />
+    <Compile Include="dbPROGRAMAS.xt.vb" />
+    <Compile Include="dbPROVEEDORES.vb" />
+    <Compile Include="dbPROVEEDORES.xt.vb" />
+    <Compile Include="dbPROVEEDORESCG.vb" />
+    <Compile Include="dbQUEDANS.vb" />
+    <Compile Include="dbQUEDANS.xt.vb" />
+    <Compile Include="dbRECEPCIONOFERTAS.vb" />
+    <Compile Include="dbRECEPCIONOFERTAS.xt.vb" />
+    <Compile Include="dbRECETAS.vb" />
+    <Compile Include="dbRECETAS.xt.vb" />
+    <Compile Include="dbRECIBOSRECEPCION.vb" />
+    <Compile Include="dbRECIBOSRECEPCION.xt.vb" />
+    <Compile Include="dbRECURSOSREVISION.vb" />
+    <Compile Include="dbRECURSOSREVISION.xt.vb" />
+    <Compile Include="dbREGISTROGARANTIASCG.vb" />
+    <Compile Include="dbRegistroProveedores.vb" />
+    <Compile Include="dbREPRESENTANTEAPERTURAPROCESOS.vb" />
+    <Compile Include="dbREPRESENTANTEAPERTURAPROCESOS.xt.vb" />
+    <Compile Include="dbRESPONSABLEDISTRIBUCION.vb" />
+    <Compile Include="dbRESPONSABLEDISTRIBUCION.xt.vb" />
+    <Compile Include="dbRESPONSABLEDISTRIBUCIONCONTRATO.vb" />
+    <Compile Include="dbRESPONSABLEDISTRIBUCIONCONTRATO.xt.vb" />
+    <Compile Include="dbROLES.vb" />
+    <Compile Include="dbROLES.xt.vb" />
+    <Compile Include="dbROLESUSUARIOS.vb" />
+    <Compile Include="dbROLESUSUARIOS.xt.vb" />
+    <Compile Include="dbSERVICIOSHOSPITALARIOS.vb" />
+    <Compile Include="dbSERVICIOSHOSPITALARIOS.xt.vb" />
+    <Compile Include="dbSIMDETALLERECETAS.vb" />
+    <Compile Include="dbSIMMEDICOS.vb" />
+    <Compile Include="dbSIMRECETAS.vb" />
+    <Compile Include="dbSIMSERVICIOS.vb" />
+    <Compile Include="dbSOLICITUDES.vb" />
+    <Compile Include="dbSOLICITUDES.xt.vb" />
+    <Compile Include="dbSOLICITUDESPROCESOCOMPRAS.vb" />
+    <Compile Include="dbSOLICITUDESPROCESOCOMPRAS.xt.vb" />
+    <Compile Include="dbSUBGRUPOS.vb" />
+    <Compile Include="dbSUBGRUPOS.xt.vb" />
+    <Compile Include="dbSUMINISTRODEPENDENCIAS.vb" />
+    <Compile Include="dbSUMINISTRODEPENDENCIAS.xt.vb" />
+    <Compile Include="dbSUMINISTROS.vb" />
+    <Compile Include="dbSUMINISTROS.xt.vb" />
+    <Compile Include="dbSUMINISTROSHOMOGENEOS.vb" />
+    <Compile Include="dbTIPOCOMPRAS.vb" />
+    <Compile Include="dbTIPOCOMPRAS.xt.vb" />
+    <Compile Include="dbTIPOCRITERIO.vb" />
+    <Compile Include="dbTIPOCRITERIO.xt.vb" />
+    <Compile Include="dbTIPODOCUMENTOBASE.vb" />
+    <Compile Include="dbTIPODOCUMENTOBASE.xt.vb" />
+    <Compile Include="dbTIPODOCUMENTOCONTRATO.vb" />
+    <Compile Include="dbTIPODOCUMENTOCONTRATO.xt.vb" />
+    <Compile Include="dbTIPODOCUMENTORECEPCION.vb" />
+    <Compile Include="dbTIPODOCUMENTOREFERENCIAS.vb" />
+    <Compile Include="dbTIPODOCUMENTOREFERENCIAS.xt.vb" />
+    <Compile Include="dbTIPOESTABLECIMIENTOS.vb" />
+    <Compile Include="dbTIPOESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="dbTIPOGARANTIAS.vb" />
+    <Compile Include="dbTIPOIDENTIFICACION.vb" />
+    <Compile Include="dbTIPOINFORMES.vb" />
+    <Compile Include="dbTIPOMOVIMIENTOS.vb" />
+    <Compile Include="dbTIPOSDOCUMENTOSCG.vb" />
+    <Compile Include="dbTIPOSUMINISTROS.vb" />
+    <Compile Include="dbTIPOSUMINISTROS.xt.vb" />
+    <Compile Include="dbTIPOTRANSACCIONES.vb" />
+    <Compile Include="dbUBICACIONESPRODUCTOS.vb" />
+    <Compile Include="dbUBICACIONESPRODUCTOS.xt.vb" />
+    <Compile Include="dbUNIDADMEDIDAS.vb" />
+    <Compile Include="dbUNIDADMEDIDAS.xt.vb" />
+    <Compile Include="dbUNIDADMEDIDASUMINISTROS.vb" />
+    <Compile Include="dbUSUARIOS.vb" />
+    <Compile Include="dbUSUARIOS.xt.vb" />
+    <Compile Include="dbVALESSALIDA.vb" />
+    <Compile Include="dbVALESSALIDA.xt.vb" />
+    <Compile Include="dbZONAS.vb" />
+    <Compile Include="DistributedTransaction.vb" />
+    <Compile Include="dsCATALOGOPRODUCTOS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCATALOGOPRODUCTOS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsIndices.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsIndices.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsInformeMuestras.vb">
+      <DependentUpon>dsInformeMuestras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsLogo.Designer.vb">
+      <DependentUpon>dsLogo.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="dsLogo.vb">
+      <DependentUpon>dsLogo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsNivelAbastecimiento.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNivelAbastecimiento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsRptCertificacionProductos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRptCertificacionProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsRptDistribucionInicio.Designer.vb">
+      <DependentUpon>dsRptDistribucionInicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dsRptDistribucionInicio.vb">
+      <DependentUpon>dsRptDistribucionInicio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsRPTDistroLotesMonto.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsRPTDistroLotesMonto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsRPTDistroLotesMonto.vb">
+      <DependentUpon>DsRPTDistroLotesMonto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsRptNivelAbasProd.Designer.vb">
+      <DependentUpon>dsRptNivelAbasProd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dsRptNivelAbasProd.vb">
+      <DependentUpon>dsRptNivelAbasProd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsRptProgramacion.vb">
+      <DependentUpon>dsRptProgramacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsrptSSR_PORCENTAJES.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsrptSSR_PORCENTAJES.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dstrptSolicitudCompra.vb">
+      <DependentUpon>dstrptSolicitudCompra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dsCATALOGOPRODUCTOS.xsc">
+      <DependentUpon>dsCATALOGOPRODUCTOS.xsd</DependentUpon>
+    </None>
+    <None Include="dsCATALOGOPRODUCTOS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCATALOGOPRODUCTOS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsCATALOGOPRODUCTOS.xss">
+      <DependentUpon>dsCATALOGOPRODUCTOS.xsd</DependentUpon>
+    </None>
+    <None Include="dsIndices.xsc">
+      <DependentUpon>dsIndices.xsd</DependentUpon>
+    </None>
+    <None Include="dsIndices.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsIndices.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsIndices.xss">
+      <DependentUpon>dsIndices.xsd</DependentUpon>
+    </None>
+    <None Include="dsNivelAbastecimiento.xsc">
+      <DependentUpon>dsNivelAbastecimiento.xsd</DependentUpon>
+    </None>
+    <None Include="dsNivelAbastecimiento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsNivelAbastecimiento.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsNivelAbastecimiento.xss">
+      <DependentUpon>dsNivelAbastecimiento.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptCertificacionProductos.xsc">
+      <DependentUpon>dsRptCertificacionProductos.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptCertificacionProductos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRptCertificacionProductos.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsRptCertificacionProductos.xss">
+      <DependentUpon>dsRptCertificacionProductos.xsd</DependentUpon>
+    </None>
+    <None Include="DsRPTDistroLotesMonto.xsc">
+      <DependentUpon>DsRPTDistroLotesMonto.xsd</DependentUpon>
+    </None>
+    <None Include="DsRPTDistroLotesMonto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsRPTDistroLotesMonto.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DsRPTDistroLotesMonto.xss">
+      <DependentUpon>DsRPTDistroLotesMonto.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptGarantia.xsc">
+      <DependentUpon>dsRptGarantia.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptGarantia.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptGarantia.xss">
+      <DependentUpon>dsRptGarantia.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptNivelAbasProd.xsc">
+      <DependentUpon>dsRptNivelAbasProd.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptNivelAbasProd.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptNivelAbasProd.xss">
+      <DependentUpon>dsRptNivelAbasProd.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptRegProveedores.xsc">
+      <DependentUpon>dsRptRegProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptRegProveedores.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptRegProveedores.xss">
+      <DependentUpon>dsRptRegProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="dsrptSSR_PORCENTAJES.xsc">
+      <DependentUpon>dsrptSSR_PORCENTAJES.xsd</DependentUpon>
+    </None>
+    <None Include="dsrptSSR_PORCENTAJES.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsrptSSR_PORCENTAJES.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsrptSSR_PORCENTAJES.xss">
+      <DependentUpon>dsrptSSR_PORCENTAJES.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptUbicacionProductos.xsc">
+      <DependentUpon>dsRptUbicacionProductos.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptUbicacionProductos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptUbicacionProductos.xss">
+      <DependentUpon>dsRptUbicacionProductos.xsd</DependentUpon>
+    </None>
+    <None Include="dsrrptResolucionAdjudicacion2.xsc">
+      <DependentUpon>dsrrptResolucionAdjudicacion2.xsd</DependentUpon>
+    </None>
+    <None Include="dsrrptResolucionAdjudicacion2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsrrptResolucionAdjudicacion2.xss">
+      <DependentUpon>dsrrptResolucionAdjudicacion2.xsd</DependentUpon>
+    </None>
+    <None Include="dsValorizacionPorRenglonSinComision2.xsc">
+      <DependentUpon>dsValorizacionPorRenglonSinComision2.xsd</DependentUpon>
+    </None>
+    <None Include="dsValorizacionPorRenglonSinComision2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsValorizacionPorRenglonSinComision2.xss">
+      <DependentUpon>dsValorizacionPorRenglonSinComision2.xsd</DependentUpon>
+    </None>
+    <None Include="dsExistenciasAlm.xsc">
+      <DependentUpon>dsExistenciasAlm.xsd</DependentUpon>
+    </None>
+    <None Include="dsExistenciasAlm.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsExistenciasAlm.xss">
+      <DependentUpon>dsExistenciasAlm.xsd</DependentUpon>
+    </None>
+    <None Include="dsExistenciasAlmacenHospital.xsc">
+      <DependentUpon>dsExistenciasAlmacenHospital.xsd</DependentUpon>
+    </None>
+    <None Include="dsExistenciasAlmacenHospital.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsExistenciasAlmacenHospital.xss">
+      <DependentUpon>dsExistenciasAlmacenHospital.xsd</DependentUpon>
+    </None>
+    <None Include="dsConsumo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsLogo.xsc">
+      <DependentUpon>dsLogo.xsd</DependentUpon>
+    </None>
+    <None Include="dsLogo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLogo.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsLogo.xss">
+      <DependentUpon>dsLogo.xsd</DependentUpon>
+    </None>
+    <None Include="dsNotificacionAdjudicacion.xsc">
+      <DependentUpon>dsNotificacionAdjudicacion.xsd</DependentUpon>
+    </None>
+    <None Include="dsNotificacionAdjudicacion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsNotificacionAdjudicacion.xss">
+      <DependentUpon>dsNotificacionAdjudicacion.xsd</DependentUpon>
+    </None>
+    <None Include="dsAVISO.xsc">
+      <DependentUpon>dsAVISO.xsd</DependentUpon>
+    </None>
+    <None Include="dsAVISO.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsAVISO.xss">
+      <DependentUpon>dsAVISO.xsd</DependentUpon>
+    </None>
+    <None Include="dsCancelacionesPorRenglon.xsc">
+      <DependentUpon>dsCancelacionesPorRenglon.xsd</DependentUpon>
+    </None>
+    <None Include="dsCancelacionesPorRenglon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsCancelacionesPorRenglon.xss">
+      <DependentUpon>dsCancelacionesPorRenglon.xsd</DependentUpon>
+    </None>
+    <None Include="dsCorreccionExistencias.xsc">
+      <DependentUpon>dsCorreccionExistencias.xsd</DependentUpon>
+    </None>
+    <None Include="dsCorreccionExistencias.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsCorreccionExistencias.xss">
+      <DependentUpon>dsCorreccionExistencias.xsd</DependentUpon>
+    </None>
+    <None Include="dsCuadroDistribucion.xsc">
+      <DependentUpon>dsCuadroDistribucion.xsd</DependentUpon>
+    </None>
+    <None Include="dsCuadroDistribucion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsCuadroDistribucion.xss">
+      <DependentUpon>dsCuadroDistribucion.xsd</DependentUpon>
+    </None>
+    <None Include="dsDatosVariablesPC.xsc">
+      <DependentUpon>dsDatosVariablesPC.xsd</DependentUpon>
+    </None>
+    <None Include="dsDatosVariablesPC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsDatosVariablesPC.xss">
+      <DependentUpon>dsDatosVariablesPC.xsd</DependentUpon>
+    </None>
+    <None Include="dsDesiertosNoAdjudicados.xsc">
+      <DependentUpon>dsDesiertosNoAdjudicados.xsd</DependentUpon>
+    </None>
+    <None Include="dsDesiertosNoAdjudicados.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsDesiertosNoAdjudicados.xss">
+      <DependentUpon>dsDesiertosNoAdjudicados.xsd</DependentUpon>
+    </None>
+    <None Include="dsDocumentacionFaltante.xsc">
+      <DependentUpon>dsDocumentacionFaltante.xsd</DependentUpon>
+    </None>
+    <None Include="dsDocumentacionFaltante.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsDocumentacionFaltante.xss">
+      <DependentUpon>dsDocumentacionFaltante.xsd</DependentUpon>
+    </None>
+    <None Include="dsExistenciasAlmacenes.xsc">
+      <DependentUpon>dsExistenciasAlmacenes.xsd</DependentUpon>
+    </None>
+    <None Include="dsExistenciasAlmacenes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsExistenciasAlmacenes.xss">
+      <DependentUpon>dsExistenciasAlmacenes.xsd</DependentUpon>
+    </None>
+    <None Include="dsInformeMuestras.xsc">
+      <DependentUpon>dsInformeMuestras.xsd</DependentUpon>
+    </None>
+    <None Include="dsInformeMuestras.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsInformeMuestras.xss">
+      <DependentUpon>dsInformeMuestras.xsd</DependentUpon>
+    </None>
+    <None Include="dsInformeMuestrasAceptacion.xsc">
+      <DependentUpon>dsInformeMuestrasAceptacion.xsd</DependentUpon>
+    </None>
+    <None Include="dsInformeMuestrasAceptacion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsInformeMuestrasAceptacion.xss">
+      <DependentUpon>dsInformeMuestrasAceptacion.xsd</DependentUpon>
+    </None>
+    <None Include="dsOficiosAdjudicacion.xsc">
+      <DependentUpon>dsOficiosAdjudicacion.xsd</DependentUpon>
+    </None>
+    <None Include="dsOficiosAdjudicacion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsOficiosAdjudicacion.xss">
+      <DependentUpon>dsOficiosAdjudicacion.xsd</DependentUpon>
+    </None>
+    <None Include="dsOpcionesRoles.xsc">
+      <DependentUpon>dsOpcionesRoles.xsd</DependentUpon>
+    </None>
+    <None Include="dsOpcionesRoles.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsOpcionesRoles.xss">
+      <DependentUpon>dsOpcionesRoles.xsd</DependentUpon>
+    </None>
+    <None Include="dsOpcionesSistema.xsc">
+      <DependentUpon>dsOpcionesSistema.xsd</DependentUpon>
+    </None>
+    <None Include="dsOpcionesSistema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsOpcionesSistema.xss">
+      <DependentUpon>dsOpcionesSistema.xsd</DependentUpon>
+    </None>
+    <None Include="dsProgramacionObservacion.xsc">
+      <DependentUpon>dsProgramacionObservacion.xsd</DependentUpon>
+    </None>
+    <None Include="dsProgramacionObservacion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsProgramacionObservacion.xss">
+      <DependentUpon>dsProgramacionObservacion.xsd</DependentUpon>
+    </None>
+    <None Include="dsProgramacionPrecios.xsc">
+      <DependentUpon>dsProgramacionPrecios.xsd</DependentUpon>
+    </None>
+    <None Include="dsProgramacionPrecios.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsProgramacionPrecios.xss">
+      <DependentUpon>dsProgramacionPrecios.xsd</DependentUpon>
+    </None>
+    <None Include="dsProveedoresRetiroBases.xsc">
+      <DependentUpon>dsProveedoresRetiroBases.xsd</DependentUpon>
+    </None>
+    <None Include="dsProveedoresRetiroBases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsProveedoresRetiroBases.xss">
+      <DependentUpon>dsProveedoresRetiroBases.xsd</DependentUpon>
+    </None>
+    <None Include="dsRemisionInforme.xsc">
+      <DependentUpon>dsRemisionInforme.xsd</DependentUpon>
+    </None>
+    <None Include="dsRemisionInforme.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRemisionInforme.xss">
+      <DependentUpon>dsRemisionInforme.xsd</DependentUpon>
+    </None>
+    <None Include="dsRenglonesPorEstablecimiento.xsc">
+      <DependentUpon>dsRenglonesPorEstablecimiento.xsd</DependentUpon>
+    </None>
+    <None Include="dsRenglonesPorEstablecimiento.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRenglonesPorEstablecimiento.xss">
+      <DependentUpon>dsRenglonesPorEstablecimiento.xsd</DependentUpon>
+    </None>
+    <None Include="dsRolesUsuarios.xsc">
+      <DependentUpon>dsRolesUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="dsRolesUsuarios.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRolesUsuarios.xss">
+      <DependentUpon>dsRolesUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptAnexo1.xsc">
+      <DependentUpon>dsRptAnexo1.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptAnexo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptAnexo1.xss">
+      <DependentUpon>dsRptAnexo1.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptBitacoraSaB.xsc">
+      <DependentUpon>dsRptBitacoraSaB.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptBitacoraSaB.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptBitacoraSaB.xss">
+      <DependentUpon>dsRptBitacoraSaB.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptCapturaCEHospitales.xsc">
+      <DependentUpon>dsRptCapturaCEHospitales.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptCapturaCEHospitales.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptCapturaCEHospitales.xss">
+      <DependentUpon>dsRptCapturaCEHospitales.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptComprasEnTransito.xsc">
+      <DependentUpon>dsRptComprasEnTransito.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptComprasEnTransito.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptComprasEnTransito.xss">
+      <DependentUpon>dsRptComprasEnTransito.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptConsumoInventario.xsc">
+      <DependentUpon>dsRptConsumoInventario.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptConsumoInventario.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptConsumoInventario.xss">
+      <DependentUpon>dsRptConsumoInventario.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptContabilidadAlmacen.xsc">
+      <DependentUpon>dsRptContabilidadAlmacen.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptContabilidadAlmacen.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptContabilidadAlmacen.xss">
+      <DependentUpon>dsRptContabilidadAlmacen.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptCriticos.xsc">
+      <DependentUpon>dsRptCriticos.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptCriticos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptCriticos.xss">
+      <DependentUpon>dsRptCriticos.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptDemandaInsatisfecha.xsc">
+      <DependentUpon>dsRptDemandaInsatisfecha.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptDemandaInsatisfecha.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptDemandaInsatisfecha.xss">
+      <DependentUpon>dsRptDemandaInsatisfecha.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptDespachosMensuales.xsc">
+      <DependentUpon>dsRptDespachosMensuales.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptDespachosMensuales.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptDespachosMensuales.xss">
+      <DependentUpon>dsRptDespachosMensuales.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptDistribucionAdjudicadoXProveedor.xsc">
+      <DependentUpon>dsRptDistribucionAdjudicadoXProveedor.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptDistribucionAdjudicadoXProveedor.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptDistribucionAdjudicadoXProveedor.xss">
+      <DependentUpon>dsRptDistribucionAdjudicadoXProveedor.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptDistribucionInicio.xsc">
+      <DependentUpon>dsRptDistribucionInicio.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptDistribucionInicio.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptDistribucionInicio.xss">
+      <DependentUpon>dsRptDistribucionInicio.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptExistencias.xsc">
+      <DependentUpon>dsRptExistencias.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptExistencias.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptExistencias.xss">
+      <DependentUpon>dsRptExistencias.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptGarantias.xsc">
+      <DependentUpon>dsRptGarantias.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptGarantias.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptGarantias.xss">
+      <DependentUpon>dsRptGarantias.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptHojaCalculos.xsc">
+      <DependentUpon>dsRptHojaCalculos.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptHojaCalculos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptHojaCalculos.xss">
+      <DependentUpon>dsRptHojaCalculos.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptIngresoUsuarios.xsc">
+      <DependentUpon>dsRptIngresoUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptIngresoUsuarios.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptIngresoUsuarios.xss">
+      <DependentUpon>dsRptIngresoUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptNotasInvitacionLG.xsc">
+      <DependentUpon>dsRptNotasInvitacionLG.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptNotasInvitacionLG.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptNotasInvitacionLG.xss">
+      <DependentUpon>dsRptNotasInvitacionLG.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptOfertaEconomicaProveedor.xsc">
+      <DependentUpon>dsRptOfertaEconomicaProveedor.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptOfertaEconomicaProveedor.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptOfertaEconomicaProveedor.xss">
+      <DependentUpon>dsRptOfertaEconomicaProveedor.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptProgramacion.xsc">
+      <DependentUpon>dsRptProgramacion.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptProgramacion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptProgramacion.xss">
+      <DependentUpon>dsRptProgramacion.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptProgramacionalaFecha.xsc">
+      <DependentUpon>dsRptProgramacionalaFecha.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptProgramacionalaFecha.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptProgramacionalaFecha.xss">
+      <DependentUpon>dsRptProgramacionalaFecha.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptProveedoresAfectados.xsc">
+      <DependentUpon>dsRptProveedoresAfectados.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptProveedoresAfectados.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptProveedoresAfectados.xss">
+      <DependentUpon>dsRptProveedoresAfectados.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptProximoAVencer.xsc">
+      <DependentUpon>dsRptProximoAVencer.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptProximoAVencer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptProximoAVencer.xss">
+      <DependentUpon>dsRptProximoAVencer.xsd</DependentUpon>
+    </None>
+    <None Include="dsSolicitudCompraUACI.xsc">
+      <DependentUpon>dsSolicitudCompraUACI.xsd</DependentUpon>
+    </None>
+    <None Include="dsSolicitudCompraUACI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsSolicitudCompraUACI.xss">
+      <DependentUpon>dsSolicitudCompraUACI.xsd</DependentUpon>
+    </None>
+    <None Include="dstAmpliacionContrato.xsc">
+      <DependentUpon>dstAmpliacionContrato.xsd</DependentUpon>
+    </None>
+    <None Include="dstAmpliacionContrato.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstAmpliacionContrato.xss">
+      <DependentUpon>dstAmpliacionContrato.xsd</DependentUpon>
+    </None>
+    <None Include="dstExamenRenglonGeneral.xsc">
+      <DependentUpon>dstExamenRenglonGeneral.xsd</DependentUpon>
+    </None>
+    <None Include="dstExamenRenglonGeneral.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstExamenRenglonGeneral.xss">
+      <DependentUpon>dstExamenRenglonGeneral.xsd</DependentUpon>
+    </None>
+    <None Include="dstIngresosGenerales.xsc">
+      <DependentUpon>dstIngresosGenerales.xsd</DependentUpon>
+    </None>
+    <None Include="dstIngresosGenerales.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstIngresosGenerales.xss">
+      <DependentUpon>dstIngresosGenerales.xsd</DependentUpon>
+    </None>
+    <None Include="dsConsolidadoDeficit.xsc">
+      <DependentUpon>dsConsolidadoDeficit.xsd</DependentUpon>
+    </None>
+    <None Include="dsConsolidadoDeficit.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsConsolidadoDeficit.xss">
+      <DependentUpon>dsConsolidadoDeficit.xsd</DependentUpon>
+    </None>
+    <None Include="dsConsolidadoDeficitEstablecimiento.xsc">
+      <DependentUpon>dsConsolidadoDeficitEstablecimiento.xsd</DependentUpon>
+    </None>
+    <None Include="dsConsolidadoDeficitEstablecimiento.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsConsolidadoDeficitEstablecimiento.xss">
+      <DependentUpon>dsConsolidadoDeficitEstablecimiento.xsd</DependentUpon>
+    </None>
+    <None Include="dsConsolidadoDeficitNacional.xsc">
+      <DependentUpon>dsConsolidadoDeficitNacional.xsd</DependentUpon>
+    </None>
+    <None Include="dsConsolidadoDeficitNacional.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsConsolidadoDeficitNacional.xss">
+      <DependentUpon>dsConsolidadoDeficitNacional.xsd</DependentUpon>
+    </None>
+    <None Include="dsConsolidadoDistribucion.xsc">
+      <DependentUpon>dsConsolidadoDistribucion.xsd</DependentUpon>
+    </None>
+    <None Include="dsConsolidadoDistribucion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsConsolidadoDistribucion.xss">
+      <DependentUpon>dsConsolidadoDistribucion.xsd</DependentUpon>
+    </None>
+    <None Include="dsConsolidadoEstimaciones.xsc">
+      <DependentUpon>dsConsolidadoEstimaciones.xsd</DependentUpon>
+    </None>
+    <None Include="dsConsolidadoEstimaciones.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsConsolidadoEstimaciones.xss">
+      <DependentUpon>dsConsolidadoEstimaciones.xsd</DependentUpon>
+    </None>
+    <None Include="dsConsolidarDatos.xsc">
+      <DependentUpon>dsConsolidarDatos.xsd</DependentUpon>
+    </None>
+    <None Include="dsConsolidarDatos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsConsolidarDatos.xss">
+      <DependentUpon>dsConsolidarDatos.xsd</DependentUpon>
+    </None>
+    <None Include="dsContratosNoUACI.xsc">
+      <DependentUpon>dsContratosNoUACI.xsd</DependentUpon>
+    </None>
+    <None Include="dsContratosNoUACI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsContratosNoUACI.xss">
+      <DependentUpon>dsContratosNoUACI.xsd</DependentUpon>
+    </None>
+    <None Include="dsDevolucionEstablecimiento.xsc">
+      <DependentUpon>dsDevolucionEstablecimiento.xsd</DependentUpon>
+    </None>
+    <None Include="dsDevolucionEstablecimiento.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsDevolucionEstablecimiento.xss">
+      <DependentUpon>dsDevolucionEstablecimiento.xsd</DependentUpon>
+    </None>
+    <None Include="dsInformeNoAceptacion.xsc">
+      <DependentUpon>dsInformeNoAceptacion.xsd</DependentUpon>
+    </None>
+    <None Include="dsInformeNoAceptacion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsInformeNoAceptacion.xss">
+      <DependentUpon>dsInformeNoAceptacion.xsd</DependentUpon>
+    </None>
+    <None Include="dsMovimientos.xsc">
+      <DependentUpon>dsMovimientos.xsd</DependentUpon>
+    </None>
+    <None Include="dsMovimientos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsMovimientos.xss">
+      <DependentUpon>dsMovimientos.xsd</DependentUpon>
+    </None>
+    <None Include="dsMovimientosKardex.xsc">
+      <DependentUpon>dsMovimientosKardex.xsd</DependentUpon>
+    </None>
+    <None Include="dsMovimientosKardex.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsMovimientosKardex.xss">
+      <DependentUpon>dsMovimientosKardex.xsd</DependentUpon>
+    </None>
+    <None Include="dsProyectarPrecios.xsc">
+      <DependentUpon>dsProyectarPrecios.xsd</DependentUpon>
+    </None>
+    <None Include="dsProyectarPrecios.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsProyectarPrecios.xss">
+      <DependentUpon>dsProyectarPrecios.xsd</DependentUpon>
+    </None>
+    <None Include="dsReciboRecepcion.xsc">
+      <DependentUpon>dsReciboRecepcion.xsd</DependentUpon>
+    </None>
+    <None Include="dsReciboRecepcion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsReciboRecepcion.xss">
+      <DependentUpon>dsReciboRecepcion.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptComision.xsc">
+      <DependentUpon>dsRptComision.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptComision.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptComision.xss">
+      <DependentUpon>dsRptComision.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptContratosOtrosDoc.xsc">
+      <DependentUpon>dsRptContratosOtrosDoc.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptContratosOtrosDoc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptContratosOtrosDoc.xss">
+      <DependentUpon>dsRptContratosOtrosDoc.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptCuadroEvTF.xsc">
+      <DependentUpon>dsRptCuadroEvTF.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptCuadroEvTF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptCuadroEvTF.xss">
+      <DependentUpon>dsRptCuadroEvTF.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptIngresoGral.xsc">
+      <DependentUpon>dsRptIngresoGral.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptIngresoGral.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptIngresoGral.xss">
+      <DependentUpon>dsRptIngresoGral.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptProveedoresContratados.xsc">
+      <DependentUpon>dsRptProveedoresContratados.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptProveedoresContratados.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsRptProveedoresContratados.xss">
+      <DependentUpon>dsRptProveedoresContratados.xsd</DependentUpon>
+    </None>
+    <None Include="dsrRptQuedan.xsc">
+      <DependentUpon>dsrRptQuedan.xsd</DependentUpon>
+    </None>
+    <None Include="dsrRptQuedan.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsrRptQuedan.xss">
+      <DependentUpon>dsrRptQuedan.xsd</DependentUpon>
+    </None>
+    <None Include="dsrrptResolucionAdjudicacion.xsc">
+      <DependentUpon>dsrrptResolucionAdjudicacion.xsd</DependentUpon>
+    </None>
+    <None Include="dsrrptResolucionAdjudicacion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsrrptResolucionAdjudicacion.xss">
+      <DependentUpon>dsrrptResolucionAdjudicacion.xsd</DependentUpon>
+    </None>
+    <None Include="dstDetalleSolicitud.xsc">
+      <DependentUpon>dstDetalleSolicitud.xsd</DependentUpon>
+    </None>
+    <None Include="dstDetalleSolicitud.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstDetalleSolicitud.xss">
+      <DependentUpon>dstDetalleSolicitud.xsd</DependentUpon>
+    </None>
+    <None Include="dstEstGerencialComprasTransito.xsc">
+      <DependentUpon>dstEstGerencialComprasTransito.xsd</DependentUpon>
+    </None>
+    <None Include="dstEstGerencialComprasTransito.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstEstGerencialComprasTransito.xss">
+      <DependentUpon>dstEstGerencialComprasTransito.xsd</DependentUpon>
+    </None>
+    <None Include="dstExamenRenglonEP.xsc">
+      <DependentUpon>dstExamenRenglonEP.xsd</DependentUpon>
+    </None>
+    <None Include="dstExamenRenglonEP.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstExamenRenglonEP.xss">
+      <DependentUpon>dstExamenRenglonEP.xsd</DependentUpon>
+    </None>
+    <None Include="dstGenerico.xsc">
+      <DependentUpon>dstGenerico.xsd</DependentUpon>
+    </None>
+    <None Include="dstGenerico.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstGenerico.xss">
+      <DependentUpon>dstGenerico.xsd</DependentUpon>
+    </None>
+    <None Include="dstObservacionesNecesidades.xsc">
+      <DependentUpon>dstObservacionesNecesidades.xsd</DependentUpon>
+    </None>
+    <None Include="dstObservacionesNecesidades.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstObservacionesNecesidades.xss">
+      <DependentUpon>dstObservacionesNecesidades.xsd</DependentUpon>
+    </None>
+    <None Include="dstReporte.xsc">
+      <DependentUpon>dstReporte.xsd</DependentUpon>
+    </None>
+    <None Include="dstReporte.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstReporte.xss">
+      <DependentUpon>dstReporte.xsd</DependentUpon>
+    </None>
+    <None Include="dstReportes.xsc">
+      <DependentUpon>dstReportes.xsd</DependentUpon>
+    </None>
+    <None Include="dstReportes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstReportes.xss">
+      <DependentUpon>dstReportes.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptAdenda.xsc">
+      <DependentUpon>dstRptAdenda.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptAdenda.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptAdenda.xss">
+      <DependentUpon>dstRptAdenda.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptAjusteInventario.xsc">
+      <DependentUpon>dstRptAjusteInventario.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptAjusteInventario.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptAjusteInventario.xss">
+      <DependentUpon>dstRptAjusteInventario.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptConsumo.xsc">
+      <DependentUpon>dstrptConsumo.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptConsumo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstrptConsumo.xss">
+      <DependentUpon>dstrptConsumo.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptDistribucionSolicitud.xsc">
+      <DependentUpon>dstRptDistribucionSolicitud.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptDistribucionSolicitud.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptDistribucionSolicitud.xss">
+      <DependentUpon>dstRptDistribucionSolicitud.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptDocumentacionFaltanteOfertante.xsc">
+      <DependentUpon>dstrptDocumentacionFaltanteOfertante.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptDocumentacionFaltanteOfertante.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstrptDocumentacionFaltanteOfertante.xss">
+      <DependentUpon>dstrptDocumentacionFaltanteOfertante.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptDocumentacionFaltanteRenglon.xsc">
+      <DependentUpon>dstrptDocumentacionFaltanteRenglon.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptDocumentacionFaltanteRenglon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstrptDocumentacionFaltanteRenglon.xss">
+      <DependentUpon>dstrptDocumentacionFaltanteRenglon.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptDocumentosOferta.xsc">
+      <DependentUpon>dstRptDocumentosOferta.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptDocumentosOferta.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptDocumentosOferta.xss">
+      <DependentUpon>dstRptDocumentosOferta.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptExamenEvalFinanciero.xsc">
+      <DependentUpon>dstRptExamenEvalFinanciero.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptExamenEvalFinanciero.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptExamenEvalFinanciero.xss">
+      <DependentUpon>dstRptExamenEvalFinanciero.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptExamenFinanciero.xsc">
+      <DependentUpon>dstRptExamenFinanciero.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptExamenFinanciero.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptExamenFinanciero.xss">
+      <DependentUpon>dstRptExamenFinanciero.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptGerencialesEstablecimiento.xsc">
+      <DependentUpon>dstRptGerencialesEstablecimiento.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptGerencialesEstablecimiento.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptGerencialesEstablecimiento.xss">
+      <DependentUpon>dstRptGerencialesEstablecimiento.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptGerencialesLentoMovimiento.xsc">
+      <DependentUpon>dstRptGerencialesLentoMovimiento.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptGerencialesLentoMovimiento.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptGerencialesLentoMovimiento.xss">
+      <DependentUpon>dstRptGerencialesLentoMovimiento.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptGerencialEstabInventario.xsc">
+      <DependentUpon>dstRptGerencialEstabInventario.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptGerencialEstabInventario.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptGerencialEstabInventario.xss">
+      <DependentUpon>dstRptGerencialEstabInventario.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptHojaAnalisis.xsc">
+      <DependentUpon>dstrptHojaAnalisis.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptHojaAnalisis.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstrptHojaAnalisis.xss">
+      <DependentUpon>dstrptHojaAnalisis.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptInventarioFisico.xsc">
+      <DependentUpon>dstRptInventarioFisico.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptInventarioFisico.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptInventarioFisico.xss">
+      <DependentUpon>dstRptInventarioFisico.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptMedicamentosSHospMedico.xsc">
+      <DependentUpon>dstrptMedicamentosSHospMedico.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptMedicamentosSHospMedico.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstrptMedicamentosSHospMedico.xss">
+      <DependentUpon>dstrptMedicamentosSHospMedico.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptMonitoreoEjecucionP.xsc">
+      <DependentUpon>dstRptMonitoreoEjecucionP.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptMonitoreoEjecucionP.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptMonitoreoEjecucionP.xss">
+      <DependentUpon>dstRptMonitoreoEjecucionP.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptMultas.xsc">
+      <DependentUpon>dstRptMultas.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptMultas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptMultas.xss">
+      <DependentUpon>dstRptMultas.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptNecesidades.xsc">
+      <DependentUpon>dstrptNecesidades.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptNecesidades.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstrptNecesidades.xss">
+      <DependentUpon>dstrptNecesidades.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptNotaIncumplimientoContrato.xsc">
+      <DependentUpon>dstRptNotaIncumplimientoContrato.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptNotaIncumplimientoContrato.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptNotaIncumplimientoContrato.xss">
+      <DependentUpon>dstRptNotaIncumplimientoContrato.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptProductosConsumidosSHosp.xsc">
+      <DependentUpon>dstrptProductosConsumidosSHosp.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptProductosConsumidosSHosp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstrptProductosConsumidosSHosp.xss">
+      <DependentUpon>dstrptProductosConsumidosSHosp.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptProveedoresAdjudicados.xsc">
+      <DependentUpon>dstRptProveedoresAdjudicados.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptProveedoresAdjudicados.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptProveedoresAdjudicados.xss">
+      <DependentUpon>dstRptProveedoresAdjudicados.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptReportContable.xsc">
+      <DependentUpon>dstrptReportContable.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptReportContable.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstrptReportContable.xss">
+      <DependentUpon>dstrptReportContable.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptSolicitudCompra.xsc">
+      <DependentUpon>dstrptSolicitudCompra.xsd</DependentUpon>
+    </None>
+    <None Include="dstrptSolicitudCompra.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstrptSolicitudCompra.xss">
+      <DependentUpon>dstrptSolicitudCompra.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptUfiConsultaPEP.xsc">
+      <DependentUpon>dstRptUfiConsultaPEP.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptUfiConsultaPEP.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptUfiConsultaPEP.xss">
+      <DependentUpon>dstRptUfiConsultaPEP.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptUfiDistribucionPresupuestaria.xsc">
+      <DependentUpon>dstRptUfiDistribucionPresupuestaria.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptUfiDistribucionPresupuestaria.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptUfiDistribucionPresupuestaria.xss">
+      <DependentUpon>dstRptUfiDistribucionPresupuestaria.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptUfiSituacionCompromiso.xsc">
+      <DependentUpon>dstRptUfiSituacionCompromiso.xsd</DependentUpon>
+    </None>
+    <None Include="dstRptUfiSituacionCompromiso.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstRptUfiSituacionCompromiso.xss">
+      <DependentUpon>dstRptUfiSituacionCompromiso.xsd</DependentUpon>
+    </None>
+    <None Include="dstSolicProceCompr.xsc">
+      <DependentUpon>dstSolicProceCompr.xsd</DependentUpon>
+    </None>
+    <None Include="dstSolicProceCompr.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstSolicProceCompr.xss">
+      <DependentUpon>dstSolicProceCompr.xsd</DependentUpon>
+    </None>
+    <None Include="dsUsuariosSistema.xsc">
+      <DependentUpon>dsUsuariosSistema.xsd</DependentUpon>
+    </None>
+    <None Include="dsUsuariosSistema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsUsuariosSistema.xss">
+      <DependentUpon>dsUsuariosSistema.xsd</DependentUpon>
+    </None>
+    <None Include="dsValeSalida.xsc">
+      <DependentUpon>dsValeSalida.xsd</DependentUpon>
+    </None>
+    <None Include="dsValeSalida.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsValeSalida.xss">
+      <DependentUpon>dsValeSalida.xsd</DependentUpon>
+    </None>
+    <None Include="dsValorizacionPorRenglon.xsc">
+      <DependentUpon>dsValorizacionPorRenglon.xsd</DependentUpon>
+    </None>
+    <None Include="dsValorizacionPorRenglon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsValorizacionPorRenglon.xss">
+      <DependentUpon>dsValorizacionPorRenglon.xsd</DependentUpon>
+    </None>
+    <None Include="dsValorizacionPorRenglon2.xsc">
+      <DependentUpon>dsValorizacionPorRenglon2.xsd</DependentUpon>
+    </None>
+    <None Include="dsValorizacionPorRenglon2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsValorizacionPorRenglon2.xss">
+      <DependentUpon>dsValorizacionPorRenglon2.xsd</DependentUpon>
+    </None>
+    <None Include="dsValorizacionPorRenglonSinComision.xsc">
+      <DependentUpon>dsValorizacionPorRenglonSinComision.xsd</DependentUpon>
+    </None>
+    <None Include="dsValorizacionPorRenglonSinComision.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsValorizacionPorRenglonSinComision.xss">
+      <DependentUpon>dsValorizacionPorRenglonSinComision.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABASTECIMIENTOS_ENTIDADES\ABASTECIMIENTOS_ENTIDADES.vbproj">
+      <Project>{7DE8CDB0-4460-4276-A16C-BFB144140F50}</Project>
+      <Name>ABASTECIMIENTOS_ENTIDADES</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dsNivelAbastecimiento.Designer.vb.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

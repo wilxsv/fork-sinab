@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A665511-69F3-4C89-8C86-0455DCAA1B89}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SINAB_Entidades</RootNamespace>
+    <AssemblyName>SINAB_Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\SINAB_Entidades.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\SINAB_Entidades.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\AlmacenHelpers\Almacen.cs" />
+    <Compile Include="Helpers\AlmacenHelpers\CuadroBasico.cs" />
+    <Compile Include="Helpers\AlmacenHelpers\InformeNoAceptacion.cs" />
+    <Compile Include="Helpers\AlmacenHelpers\ProductoAlmacen.cs" />
+    <Compile Include="Helpers\AlmacenHelpers\ProductoSinExistencia.cs" />
+    <Compile Include="Helpers\AlmacenHelpers\TransaccionesSiap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\CatalogoHelpers\Almacenes.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\DocumentoBase.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\Empleados.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\Grupos.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\Programas.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\SubGrupos.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\UnidadMedida.cs" />
+    <Compile Include="Helpers\CertificacionHelpers\Aspectos.cs" />
+    <Compile Include="Helpers\CertificacionHelpers\AspectosProductos.cs" />
+    <Compile Include="Helpers\CertificacionHelpers\Paises.cs" />
+    <Compile Include="Helpers\CertificacionHelpers\ProcesosCertificacion.cs" />
+    <Compile Include="Helpers\CertificacionHelpers\EstadoProductos.cs" />
+    <Compile Include="Helpers\CertificacionHelpers\Listas.cs" />
+    <Compile Include="Helpers\CertificacionHelpers\Procesos.cs" />
+    <Compile Include="Helpers\CertificacionHelpers\Productos.cs" />
+    <Compile Include="Helpers\CertificacionHelpers\ProductosProveedores.cs" />
+    <Compile Include="Helpers\CertificacionHelpers\ProveedoresProceso.cs" />
+    <Compile Include="Helpers\ConsumoHelpers\Consumo.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\AdministradoresContrato.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\AlmacenesEntrega.cs" />
+    <Compile Include="Helpers\AlmacenHelpers\RecibosRecepcion.cs" />
+    <Compile Include="Helpers\AlmacenHelpers\UbicacionesProductos.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\Establecimientos.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\AlmacenesEntregaSolicitud.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\CifradoProductoSolicitud.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\DetalleSolicitudes.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\DistribucionEstablecimiento.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\DistribucionFechaEntrega.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\DistribucionProductosLote.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\ProductoSolicitud.cs" />
+    <Compile Include="Helpers\LabHelpres\HistoricoNotificacion.cs" />
+    <Compile Include="Helpers\LabHelpres\Notificaciones.cs" />
+    <Compile Include="Helpers\UACIHelpers\Adjudicacion.cs" />
+    <Compile Include="Helpers\UACIHelpers\ContratosAdjudicados.cs" />
+    <Compile Include="Helpers\UACIHelpers\ContratosProcesoCompra.cs" />
+    <Compile Include="Helpers\UACIHelpers\DetalleOferta.cs" />
+    <Compile Include="Helpers\UACIHelpers\DocumentosProcesoCompra.cs" />
+    <Compile Include="Helpers\UACIHelpers\EntregaBases.cs" />
+    <Compile Include="Helpers\UACIHelpers\OfertaProcesoCompra.cs" />
+    <Compile Include="Helpers\UACIHelpers\RecepcionOferta.cs" />
+    <Compile Include="Helpers\UACIHelpers\RenglonesAdjudicados.cs" />
+    <Compile Include="Helpers\URMIMHelpers\Programacion.cs" />
+    <Compile Include="sce.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sce.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Tipos\ActaRecepcion.cs" />
+    <Compile Include="Tipos\BaseAdministradores.cs" />
+    <Compile Include="Tipos\BaseAlmacen.cs" />
+    <Compile Include="Tipos\BaseAlmacenesEntregaSolicitud.cs" />
+    <Compile Include="Tipos\BaseAspecto.cs" />
+    <Compile Include="Tipos\BaseAspectoProducto.cs" />
+    <Compile Include="Tipos\BaseCifrados.cs" />
+    <Compile Include="Tipos\BaseContratoAdjudicado.cs" />
+    <Compile Include="Tipos\BaseContratos.cs" />
+    <Compile Include="Tipos\BaseDetalleProcesoCompra.cs" />
+    <Compile Include="Tipos\BaseDetalleSolicitud.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\Distribucion.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\DistribucionProductos.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\Entregas.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\SolicitudesProcesoCompras.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\Proveedores.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\ResponsablesDistribucion.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\TiposCompra.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\TiposDocumentoRecepcion.cs" />
+    <Compile Include="Helpers\UACIHelpers\AlmacenesEntregaContrato.cs" />
+    <Compile Include="Helpers\UACIHelpers\FuentesFinanciamiento.cs" />
+    <Compile Include="Helpers\UACIHelpers\ProductoContrato.cs" />
+    <Compile Include="Helpers\UACIHelpers\EntregasContrato.cs" />
+    <Compile Include="Helpers\UACIHelpers\ResponsablesDistribucion.cs" />
+    <Compile Include="Helpers\UACIHelpers\DetalleEntregasProcesoCompra.cs" />
+    <Compile Include="Helpers\UACIHelpers\DetalleProcesoCompras.cs" />
+    <Compile Include="Helpers\UACIHelpers\EntregasProcesoCompra.cs" />
+    <Compile Include="Helpers\UACIHelpers\ModalidadesCompra.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\TiposDocumentoContrato.cs" />
+    <Compile Include="Helpers\UACIHelpers\ObservacionProcesoCompras.cs" />
+    <Compile Include="Helpers\UACIHelpers\ProgramaDistribucion.cs" />
+    <Compile Include="Extenders.cs" />
+    <Compile Include="Tipos\BaseEntregaContratos.cs" />
+    <Compile Include="Tipos\BaseEstadoProducto.cs" />
+    <Compile Include="Tipos\BaseInformeMuestra.cs" />
+    <Compile Include="Tipos\BaseInformeNoAceptacion.cs" />
+    <Compile Include="Tipos\BaseLista.cs" />
+    <Compile Include="Tipos\BasePlantillaDocumentoProcesoCompra.cs" />
+    <Compile Include="Tipos\BaseProceso.cs" />
+    <Compile Include="Tipos\BaseProcesoCompra.cs" />
+    <Compile Include="Tipos\BaseProductoAlmacen.cs" />
+    <Compile Include="Tipos\BaseProductos.cs" />
+    <Compile Include="Helpers\UACIHelpers\Contratos.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\Solicitud.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\EstablecimientoHelpers\Solicitudes.cs" />
+    <Compile Include="Helpers\UACIHelpers\ProcesoCompras.cs" />
+    <Compile Include="Tipos\BaseAlmacenesEntregaContrato.cs" />
+    <Compile Include="Tipos\BaseProductoSolicitud.cs" />
+    <Compile Include="Tipos\BaseProductosProveedores.cs" />
+    <Compile Include="Tipos\BaseProveedorAdjudicado.cs" />
+    <Compile Include="Tipos\ConsultaSolicitudes.cs" />
+    <Compile Include="Helpers\Productos.cs" />
+    <Compile Include="ObjectQueryExtensions.cs" />
+    <Compile Include="Helpers\AlmacenHelpers\DetallesMovimiento.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\EntregaSolicitudes.cs" />
+    <Compile Include="Helpers\AlmacenHelpers\LugaresEntrega.cs" />
+    <Compile Include="Helpers\EstablecimientoHelpers\SolicitudesFuentesFinanciamiento.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\SuministroDependencias.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\TiposIdentificacion.cs" />
+    <Compile Include="Tipos\DetalleProductosMovimiento.cs" />
+    <Compile Include="Tipos\EncabezadoProcesoCompra.cs" />
+    <Compile Include="Tipos\GenericObjectList.cs" />
+    <Compile Include="Tipos\ListaProceso.cs" />
+    <Compile Include="Tipos\LotesFiltrados.cs" />
+    <Compile Include="Tipos\Documento.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\Documentos.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\FuentesFinanciamiento.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\GuardaAlmacen.cs" />
+    <Compile Include="Helpers\Miembresia.cs" />
+    <Compile Include="Tipos\OperacionesLotes.cs" />
+    <Compile Include="Tipos\Requisicion.cs" />
+    <Compile Include="Helpers\FarmaciaHelpers\Requisiciones.cs" />
+    <Compile Include="Tipos\RequisicionItem.cs" />
+    <Compile Include="Tipos\Usuario.cs" />
+    <Compile Include="EnumHelpers.cs" />
+    <Compile Include="Helpers\AlmacenHelpers\Lotes.cs" />
+    <Compile Include="Helpers\AlmacenHelpers\Movimientos.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\Suministros.cs" />
+    <Compile Include="Helpers\CatalogoHelpers\TiposMovimiento.cs" />
+    <Compile Include="Helpers\AlmacenHelpers\ValesSalida.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Segabas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Segabas.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Sinab.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sinab.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Tipos\BaseRecepcionOferta.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Sinab.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Sinab.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Segabas.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Segabas.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="sce.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>sce.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SINAB_Utils\SINAB_Utils.csproj">
+      <Project>{240ed102-3556-4373-9f56-1d5f9b4838df}</Project>
+      <Name>SINAB_Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

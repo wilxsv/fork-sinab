@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsLogo" targetNamespace="http://tempuri.org/dsLogo.xsd" xmlns:mstns="http://tempuri.org/dsLogo.xsd" xmlns="http://tempuri.org/dsLogo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=.\SQLEXPRESS;Initial Catalog=abastecimiento;Integrated Security=True" IsAppSettingsProperty="False" Modifier="Assembly" Name="vss000\sqlexpress.abastecimiento.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsLogo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsLogo" msprop:Generator_DataSetName="dsLogo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GetLogo" msprop:Generator_UserTableName="GetLogo" msprop:Generator_RowDeletedName="GetLogoRowDeleted" msprop:Generator_TableClassName="GetLogoDataTable" msprop:Generator_RowChangedName="GetLogoRowChanged" msprop:Generator_RowClassName="GetLogoRow" msprop:Generator_RowChangingName="GetLogoRowChanging" msprop:Generator_RowEvArgName="GetLogoRowChangeEvent" msprop:Generator_RowEvHandlerName="GetLogoRowChangeEventHandler" msprop:Generator_TablePropName="GetLogo" msprop:Generator_TableVarName="tableGetLogo" msprop:Generator_RowDeletingName="GetLogoRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDInfoReporte" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="IDInfoReporte" msprop:Generator_ColumnPropNameInRow="IDInfoReporte" msprop:Generator_ColumnVarNameInTable="columnIDInfoReporte" msprop:Generator_ColumnPropNameInTable="IDInfoReporteColumn" type="xs:int" />
+              <xs:element name="IDEstablecimiento" msprop:Generator_UserColumnName="IDEstablecimiento" msprop:Generator_ColumnPropNameInRow="IDEstablecimiento" msprop:Generator_ColumnVarNameInTable="columnIDEstablecimiento" msprop:Generator_ColumnPropNameInTable="IDEstablecimientoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Encabezado" msprop:Generator_UserColumnName="Encabezado" msprop:Generator_ColumnPropNameInRow="Encabezado" msprop:Generator_ColumnVarNameInTable="columnEncabezado" msprop:Generator_ColumnPropNameInTable="EncabezadoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NombreCorto" msprop:Generator_UserColumnName="NombreCorto" msprop:Generator_ColumnPropNameInRow="NombreCorto" msprop:Generator_ColumnVarNameInTable="columnNombreCorto" msprop:Generator_ColumnPropNameInTable="NombreCortoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DireccionAlt" msprop:Generator_UserColumnName="DireccionAlt" msprop:Generator_ColumnPropNameInRow="DireccionAlt" msprop:Generator_ColumnVarNameInTable="columnDireccionAlt" msprop:Generator_ColumnPropNameInTable="DireccionAltColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InformacionAdicional" msprop:Generator_UserColumnName="InformacionAdicional" msprop:Generator_ColumnPropNameInRow="InformacionAdicional" msprop:Generator_ColumnVarNameInTable="columnInformacionAdicional" msprop:Generator_ColumnPropNameInTable="InformacionAdicionalColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dependencia" msprop:Generator_UserColumnName="Dependencia" msprop:Generator_ColumnPropNameInRow="Dependencia" msprop:Generator_ColumnVarNameInTable="columnDependencia" msprop:Generator_ColumnPropNameInTable="DependenciaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fechaCreacion" msprop:Generator_UserColumnName="fechaCreacion" msprop:Generator_ColumnPropNameInRow="fechaCreacion" msprop:Generator_ColumnVarNameInTable="columnfechaCreacion" msprop:Generator_ColumnPropNameInTable="fechaCreacionColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DIRECCION" msprop:Generator_UserColumnName="DIRECCION" msprop:Generator_ColumnPropNameInRow="DIRECCION" msprop:Generator_ColumnVarNameInTable="columnDIRECCION" msprop:Generator_ColumnPropNameInTable="DIRECCIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GetLogo" />
+      <xs:field xpath="mstns:IDInfoReporte" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

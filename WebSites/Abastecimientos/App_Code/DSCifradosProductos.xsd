@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSCifradosProductos" targetNamespace="http://tempuri.org/DSCifradosProductos.xsd" xmlns:mstns="http://tempuri.org/DSCifradosProductos.xsd" xmlns="http://tempuri.org/DSCifradosProductos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSCifradosProductos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DSCifradosProductos" msprop:Generator_UserDSName="DSCifradosProductos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CifradosProducto" msprop:Generator_TableClassName="CifradosProductoDataTable" msprop:Generator_TableVarName="tableCifradosProducto" msprop:Generator_TablePropName="CifradosProducto" msprop:Generator_RowDeletingName="CifradosProductoRowDeleting" msprop:Generator_RowChangingName="CifradosProductoRowChanging" msprop:Generator_RowEvHandlerName="CifradosProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="CifradosProductoRowDeleted" msprop:Generator_UserTableName="CifradosProducto" msprop:Generator_RowChangedName="CifradosProductoRowChanged" msprop:Generator_RowEvArgName="CifradosProductoRowChangeEvent" msprop:Generator_RowClassName="CifradosProductoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Renglon" msprop:Generator_ColumnVarNameInTable="columnRenglon" msprop:Generator_ColumnPropNameInRow="Renglon" msprop:Generator_ColumnPropNameInTable="RenglonColumn" msprop:Generator_UserColumnName="Renglon" type="xs:int" minOccurs="0" />
+              <xs:element name="CorrProducto" msprop:Generator_ColumnVarNameInTable="columnCorrProducto" msprop:Generator_ColumnPropNameInRow="CorrProducto" msprop:Generator_ColumnPropNameInTable="CorrProductoColumn" msprop:Generator_UserColumnName="CorrProducto" type="xs:string" minOccurs="0" />
+              <xs:element name="UnidadMedida" msprop:Generator_ColumnVarNameInTable="columnUnidadMedida" msprop:Generator_ColumnPropNameInRow="UnidadMedida" msprop:Generator_ColumnPropNameInTable="UnidadMedidaColumn" msprop:Generator_UserColumnName="UnidadMedida" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NumeroEntrega" msprop:Generator_ColumnVarNameInTable="columnNumeroEntrega" msprop:Generator_ColumnPropNameInRow="NumeroEntrega" msprop:Generator_ColumnPropNameInTable="NumeroEntregaColumn" msprop:Generator_UserColumnName="NumeroEntrega" type="xs:int" minOccurs="0" />
+              <xs:element name="Cifrado" msprop:Generator_ColumnVarNameInTable="columnCifrado" msprop:Generator_ColumnPropNameInRow="Cifrado" msprop:Generator_ColumnPropNameInTable="CifradoColumn" msprop:Generator_UserColumnName="Cifrado" type="xs:string" minOccurs="0" />
+              <xs:element name="CifradoCantidad" msprop:Generator_ColumnVarNameInTable="columnCifradoCantidad" msprop:Generator_ColumnPropNameInRow="CifradoCantidad" msprop:Generator_ColumnPropNameInTable="CifradoCantidadColumn" msprop:Generator_UserColumnName="CifradoCantidad" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CifradoMonto" msprop:Generator_ColumnVarNameInTable="columnCifradoMonto" msprop:Generator_ColumnPropNameInRow="CifradoMonto" msprop:Generator_ColumnPropNameInTable="CifradoMontoColumn" msprop:Generator_UserColumnName="CifradoMonto" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DescLargo" msprop:Generator_ColumnVarNameInTable="columnDescLargo" msprop:Generator_ColumnPropNameInRow="DescLargo" msprop:Generator_ColumnPropNameInTable="DescLargoColumn" msprop:Generator_UserColumnName="DescLargo" type="xs:string" minOccurs="0" />
+              <xs:element name="Monto" msprop:Generator_ColumnVarNameInTable="columnMonto" msprop:Generator_ColumnPropNameInRow="Monto" msprop:Generator_ColumnPropNameInTable="MontoColumn" msprop:Generator_UserColumnName="Monto" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

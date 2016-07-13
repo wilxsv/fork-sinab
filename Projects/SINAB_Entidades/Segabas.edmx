@@ -1,0 +1,663 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="segabas2Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="segabas2ModelStoreContainer">
+          <EntitySet Name="SABREDIRECT" EntityType="segabas2Model.Store.SABREDIRECT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SEGACCESOS" EntityType="segabas2Model.Store.SEGACCESOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SEGOPCIONESSISTEMA" EntityType="segabas2Model.Store.SEGOPCIONESSISTEMA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SEGOPCIONESSISTEMAROLES" EntityType="segabas2Model.Store.SEGOPCIONESSISTEMAROLES" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SEGROLES" EntityType="segabas2Model.Store.SEGROLES" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SEGROLESUSUARIOS" EntityType="segabas2Model.Store.SEGROLESUSUARIOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SEGUSUARIOS" EntityType="segabas2Model.Store.SEGUSUARIOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="vv_OPCIONESUSUARIOSROL" EntityType="segabas2Model.Store.vv_OPCIONESUSUARIOSROL" store:Type="Views" store:Schema="dbo" store:Name="vv_OPCIONESUSUARIOSROL">
+            <DefiningQuery>SELECT 
+      [vv_OPCIONESUSUARIOSROL].[IDUSUARIO] AS [IDUSUARIO], 
+      [vv_OPCIONESUSUARIOSROL].[USUARIO] AS [USUARIO], 
+      [vv_OPCIONESUSUARIOSROL].[IDROL] AS [IDROL], 
+      [vv_OPCIONESUSUARIOSROL].[NOMBRE] AS [NOMBRE], 
+      [vv_OPCIONESUSUARIOSROL].[IDOPCIONSISTEMA] AS [IDOPCIONSISTEMA], 
+      [vv_OPCIONESUSUARIOSROL].[DESCRIPCION] AS [DESCRIPCION], 
+      [vv_OPCIONESUSUARIOSROL].[URL] AS [URL], 
+      [vv_OPCIONESUSUARIOSROL].[ESTAHABILITADO] AS [ESTAHABILITADO], 
+      [vv_OPCIONESUSUARIOSROL].[IDPADRE] AS [IDPADRE], 
+      [vv_OPCIONESUSUARIOSROL].[ORDEN] AS [ORDEN]
+      FROM [dbo].[vv_OPCIONESUSUARIOSROL] AS [vv_OPCIONESUSUARIOSROL]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FKSEGOPCIONESSISTEMA_IDOPCIONSISTEMA" Association="segabas2Model.Store.FKSEGOPCIONESSISTEMA_IDOPCIONSISTEMA">
+            <End Role="SEGOPCIONESSISTEMA" EntitySet="SEGOPCIONESSISTEMA" />
+            <End Role="SEGOPCIONESSISTEMAROLES" EntitySet="SEGOPCIONESSISTEMAROLES" />
+          </AssociationSet>
+          <AssociationSet Name="FKSEGOPCIONESSISTEMA_IDPADRE" Association="segabas2Model.Store.FKSEGOPCIONESSISTEMA_IDPADRE">
+            <End Role="SEGOPCIONESSISTEMA" EntitySet="SEGOPCIONESSISTEMA" />
+            <End Role="SEGOPCIONESSISTEMA1" EntitySet="SEGOPCIONESSISTEMA" />
+          </AssociationSet>
+          <AssociationSet Name="FKSEGROLES_IDROL" Association="segabas2Model.Store.FKSEGROLES_IDROL">
+            <End Role="SEGROLES" EntitySet="SEGROLES" />
+            <End Role="SEGROLESUSUARIOS" EntitySet="SEGROLESUSUARIOS" />
+          </AssociationSet>
+          <AssociationSet Name="FKSEGROLES_IDROL2" Association="segabas2Model.Store.FKSEGROLES_IDROL2">
+            <End Role="SEGROLES" EntitySet="SEGROLES" />
+            <End Role="SEGOPCIONESSISTEMAROLES" EntitySet="SEGOPCIONESSISTEMAROLES" />
+          </AssociationSet>
+          <AssociationSet Name="FKSEGROLES_IDUSUARIO" Association="segabas2Model.Store.FKSEGROLES_IDUSUARIO">
+            <End Role="SEGUSUARIOS" EntitySet="SEGUSUARIOS" />
+            <End Role="SEGROLESUSUARIOS" EntitySet="SEGROLESUSUARIOS" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="SABREDIRECT">
+          <Key>
+            <PropertyRef Name="IDREDIRECT" />
+          </Key>
+          <Property Name="IDREDIRECT" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IPREDIRECT" Type="varchar" MaxLength="15" />
+          <Property Name="URLREDIRECT" Type="varchar" MaxLength="250" />
+          <Property Name="FECHACREACION" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SEGACCESOS">
+          <Key>
+            <PropertyRef Name="USUARIO" />
+            <PropertyRef Name="AUFECHACREACION" />
+          </Key>
+          <Property Name="USUARIO" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="DIRECCIONIP" Type="varchar" MaxLength="30" />
+          <Property Name="AUUSUARIOCREACION" Type="varchar" MaxLength="15" />
+          <Property Name="AUFECHACREACION" Type="datetime" Nullable="false" />
+          <Property Name="AUUSUARIOMODIFICACION" Type="varchar" MaxLength="15" />
+          <Property Name="AUFECHAMODIFICACION" Type="datetime" />
+          <Property Name="ESTASINCRONIZADA" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SEGOPCIONESSISTEMA">
+          <Key>
+            <PropertyRef Name="IDOPCIONSISTEMA" />
+          </Key>
+          <Property Name="IDOPCIONSISTEMA" Type="int" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="URL" Type="varchar" MaxLength="150" />
+          <Property Name="ESTAHABILITADO" Type="tinyint" Nullable="false" />
+          <Property Name="IDPADRE" Type="int" />
+          <Property Name="ORDEN" Type="smallint" Nullable="false" />
+          <Property Name="AUUSUARIOCREACION" Type="varchar" MaxLength="15" />
+          <Property Name="AUFECHACREACION" Type="datetime" />
+          <Property Name="AUUSUARIOMODIFICACION" Type="varchar" MaxLength="15" />
+          <Property Name="AUFECHAMODIFICACION" Type="datetime" />
+          <Property Name="ESTASINCRONIZADA" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SEGOPCIONESSISTEMAROLES">
+          <Key>
+            <PropertyRef Name="IDROL" />
+            <PropertyRef Name="IDOPCIONSISTEMA" />
+          </Key>
+          <Property Name="IDROL" Type="int" Nullable="false" />
+          <Property Name="IDOPCIONSISTEMA" Type="int" Nullable="false" />
+          <Property Name="AUUSUARIOCREACION" Type="varchar" MaxLength="15" />
+          <Property Name="AUFECHACREACION" Type="datetime" />
+          <Property Name="AUUSUARIOMODIFICACION" Type="varchar" MaxLength="15" />
+          <Property Name="AUFECHAMODIFICACION" Type="datetime" />
+          <Property Name="ESTASINCRONIZADA" Type="smallint" Nullable="false" />
+          <Property Name="PERMITEEDITAR" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SEGROLES">
+          <Key>
+            <PropertyRef Name="IDROL" />
+          </Key>
+          <Property Name="IDROL" Type="int" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="ESTAHABILITADO" Type="tinyint" Nullable="false" />
+          <Property Name="AUUSUARIOCREACION" Type="varchar" MaxLength="15" />
+          <Property Name="AUFECHACREACION" Type="datetime" />
+          <Property Name="AUUSUARIOMODIFICACION" Type="varchar" MaxLength="15" />
+          <Property Name="AUFECHAMODIFICACION" Type="datetime" />
+          <Property Name="ESTASINCRONIZADA" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SEGROLESUSUARIOS">
+          <Key>
+            <PropertyRef Name="IDUSUARIO" />
+            <PropertyRef Name="IDROL" />
+          </Key>
+          <Property Name="IDUSUARIO" Type="int" Nullable="false" />
+          <Property Name="IDROL" Type="int" Nullable="false" />
+          <Property Name="AUUSUARIOCREACION" Type="varchar" MaxLength="15" />
+          <Property Name="AUFECHACREACION" Type="datetime" />
+          <Property Name="AUUSUARIOMODIFICACION" Type="varchar" MaxLength="15" />
+          <Property Name="AUFECHAMODIFICACION" Type="datetime" />
+          <Property Name="ESTASINCRONIZADA" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SEGUSUARIOS">
+          <Key>
+            <PropertyRef Name="IDUSUARIO" />
+          </Key>
+          <Property Name="IDUSUARIO" Type="int" Nullable="false" />
+          <Property Name="USUARIO" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="CLAVE" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="IDEMPLEADO" Type="int" Nullable="false" />
+          <Property Name="ESTAHABILITADO" Type="tinyint" Nullable="false" />
+          <Property Name="ESTAELIMINADO" Type="int" Nullable="false" />
+          <Property Name="AUUSUARIOCREACION" Type="varchar" MaxLength="15" />
+          <Property Name="AUFECHACREACION" Type="datetime" />
+          <Property Name="AUUSUARIOMODIFICACION" Type="varchar" MaxLength="15" />
+          <Property Name="AUFECHAMODIFICACION" Type="datetime" />
+          <Property Name="AUUSUARIOELIMINACION" Type="varchar" MaxLength="15" />
+          <Property Name="AUFECHAELIMINACION" Type="datetime" />
+          <Property Name="ESTASINCRONIZADA" Type="smallint" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'segabas2.dbo.vv_OPCIONESUSUARIOSROL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vv_OPCIONESUSUARIOSROL">
+          <Key>
+            <PropertyRef Name="IDUSUARIO" />
+            <PropertyRef Name="USUARIO" />
+            <PropertyRef Name="IDROL" />
+            <PropertyRef Name="NOMBRE" />
+            <PropertyRef Name="IDOPCIONSISTEMA" />
+            <PropertyRef Name="DESCRIPCION" />
+            <PropertyRef Name="ESTAHABILITADO" />
+            <PropertyRef Name="ORDEN" />
+          </Key>
+          <Property Name="IDUSUARIO" Type="int" Nullable="false" />
+          <Property Name="USUARIO" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="IDROL" Type="int" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IDOPCIONSISTEMA" Type="int" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="URL" Type="varchar" MaxLength="150" />
+          <Property Name="ESTAHABILITADO" Type="tinyint" Nullable="false" />
+          <Property Name="IDPADRE" Type="int" />
+          <Property Name="ORDEN" Type="smallint" Nullable="false" />
+        </EntityType>
+        <Association Name="FKSEGOPCIONESSISTEMA_IDOPCIONSISTEMA">
+          <End Role="SEGOPCIONESSISTEMA" Type="segabas2Model.Store.SEGOPCIONESSISTEMA" Multiplicity="1" />
+          <End Role="SEGOPCIONESSISTEMAROLES" Type="segabas2Model.Store.SEGOPCIONESSISTEMAROLES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEGOPCIONESSISTEMA">
+              <PropertyRef Name="IDOPCIONSISTEMA" />
+            </Principal>
+            <Dependent Role="SEGOPCIONESSISTEMAROLES">
+              <PropertyRef Name="IDOPCIONSISTEMA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKSEGOPCIONESSISTEMA_IDPADRE">
+          <End Role="SEGOPCIONESSISTEMA" Type="segabas2Model.Store.SEGOPCIONESSISTEMA" Multiplicity="0..1" />
+          <End Role="SEGOPCIONESSISTEMA1" Type="segabas2Model.Store.SEGOPCIONESSISTEMA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEGOPCIONESSISTEMA">
+              <PropertyRef Name="IDOPCIONSISTEMA" />
+            </Principal>
+            <Dependent Role="SEGOPCIONESSISTEMA1">
+              <PropertyRef Name="IDPADRE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKSEGROLES_IDROL">
+          <End Role="SEGROLES" Type="segabas2Model.Store.SEGROLES" Multiplicity="1" />
+          <End Role="SEGROLESUSUARIOS" Type="segabas2Model.Store.SEGROLESUSUARIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEGROLES">
+              <PropertyRef Name="IDROL" />
+            </Principal>
+            <Dependent Role="SEGROLESUSUARIOS">
+              <PropertyRef Name="IDROL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKSEGROLES_IDROL2">
+          <End Role="SEGROLES" Type="segabas2Model.Store.SEGROLES" Multiplicity="1" />
+          <End Role="SEGOPCIONESSISTEMAROLES" Type="segabas2Model.Store.SEGOPCIONESSISTEMAROLES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEGROLES">
+              <PropertyRef Name="IDROL" />
+            </Principal>
+            <Dependent Role="SEGOPCIONESSISTEMAROLES">
+              <PropertyRef Name="IDROL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKSEGROLES_IDUSUARIO">
+          <End Role="SEGUSUARIOS" Type="segabas2Model.Store.SEGUSUARIOS" Multiplicity="1" />
+          <End Role="SEGROLESUSUARIOS" Type="segabas2Model.Store.SEGROLESUSUARIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEGUSUARIOS">
+              <PropertyRef Name="IDUSUARIO" />
+            </Principal>
+            <Dependent Role="SEGROLESUSUARIOS">
+              <PropertyRef Name="IDUSUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="sp_RedirectURL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IP" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sproc_EmpleadosSinUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDUSUARIO" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sproc_ListadoRolesUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDROL" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sproc_ListadoUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDUSUARIO" Type="int" Mode="In" />
+          <Parameter Name="ESTAELIMINADO" Type="int" Mode="In" />
+          <Parameter Name="TODOS" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sproc_ListadoUsuariosPorRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDROL" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sproc_ListadoUsuariosSinRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDUSUARIO" Type="int" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="segabas2Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="segabasEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SABREDIRECTs" EntityType="segabas2Model.SABREDIRECT" />
+          <EntitySet Name="SEGOPCIONESSISTEMAs" EntityType="segabas2Model.SEGOPCIONESSISTEMA" />
+          <EntitySet Name="SEGOPCIONESSISTEMAROLES" EntityType="segabas2Model.SEGOPCIONESSISTEMAROLE" />
+          <EntitySet Name="SEGROLES" EntityType="segabas2Model.SEGROLE" />
+          <EntitySet Name="vv_OPCIONESUSUARIOSROL" EntityType="segabas2Model.vv_OPCIONESUSUARIOSROL" />
+          <AssociationSet Name="FKSEGOPCIONESSISTEMA_IDOPCIONSISTEMA" Association="segabas2Model.FKSEGOPCIONESSISTEMA_IDOPCIONSISTEMA">
+            <End Role="SEGOPCIONESSISTEMA" EntitySet="SEGOPCIONESSISTEMAs" />
+            <End Role="SEGOPCIONESSISTEMAROLES" EntitySet="SEGOPCIONESSISTEMAROLES" />
+          </AssociationSet>
+          <AssociationSet Name="FKSEGOPCIONESSISTEMA_IDPADRE" Association="segabas2Model.FKSEGOPCIONESSISTEMA_IDPADRE">
+            <End Role="SEGOPCIONESSISTEMA" EntitySet="SEGOPCIONESSISTEMAs" />
+            <End Role="SEGOPCIONESSISTEMA1" EntitySet="SEGOPCIONESSISTEMAs" />
+          </AssociationSet>
+          <AssociationSet Name="FKSEGROLES_IDROL2" Association="segabas2Model.FKSEGROLES_IDROL2">
+            <End Role="SEGROLES" EntitySet="SEGROLES" />
+            <End Role="SEGOPCIONESSISTEMAROLES" EntitySet="SEGOPCIONESSISTEMAROLES" />
+          </AssociationSet>
+          <EntitySet Name="SEGACCESOS" EntityType="segabas2Model.SEGACCESO" />
+          <EntitySet Name="SEGROLESUSUARIOS" EntityType="segabas2Model.SEGROLESUSUARIO" />
+          <EntitySet Name="SEGUSUARIOS" EntityType="segabas2Model.SEGUSUARIO" />
+          <AssociationSet Name="FKSEGROLES_IDROL" Association="segabas2Model.FKSEGROLES_IDROL">
+            <End Role="SEGROLE" EntitySet="SEGROLES" />
+            <End Role="SEGROLESUSUARIO" EntitySet="SEGROLESUSUARIOS" />
+          </AssociationSet>
+          <AssociationSet Name="FKSEGROLES_IDUSUARIO" Association="segabas2Model.FKSEGROLES_IDUSUARIO">
+            <End Role="SEGUSUARIO" EntitySet="SEGUSUARIOS" />
+            <End Role="SEGROLESUSUARIO" EntitySet="SEGROLESUSUARIOS" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="SABREDIRECT">
+          <Key>
+            <PropertyRef Name="IDREDIRECT" />
+          </Key>
+          <Property Name="IDREDIRECT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IPREDIRECT" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="URLREDIRECT" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="FECHACREACION" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="SEGOPCIONESSISTEMA">
+          <Key>
+            <PropertyRef Name="IDOPCIONSISTEMA" />
+          </Key>
+          <Property Name="IDOPCIONSISTEMA" Type="Int32" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="URL" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="ESTAHABILITADO" Type="Byte" Nullable="false" />
+          <Property Name="IDPADRE" Type="Int32" />
+          <Property Name="ORDEN" Type="Int16" Nullable="false" />
+          <Property Name="AUUSUARIOCREACION" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="AUFECHACREACION" Type="DateTime" />
+          <Property Name="AUUSUARIOMODIFICACION" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="AUFECHAMODIFICACION" Type="DateTime" />
+          <Property Name="ESTASINCRONIZADA" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SEGOPCIONESSISTEMAROLES" Relationship="segabas2Model.FKSEGOPCIONESSISTEMA_IDOPCIONSISTEMA" FromRole="SEGOPCIONESSISTEMA" ToRole="SEGOPCIONESSISTEMAROLES" />
+          <NavigationProperty Name="SEGOPCIONESSISTEMA1" Relationship="segabas2Model.FKSEGOPCIONESSISTEMA_IDPADRE" FromRole="SEGOPCIONESSISTEMA" ToRole="SEGOPCIONESSISTEMA1" />
+          <NavigationProperty Name="SEGOPCIONESSISTEMA2" Relationship="segabas2Model.FKSEGOPCIONESSISTEMA_IDPADRE" FromRole="SEGOPCIONESSISTEMA1" ToRole="SEGOPCIONESSISTEMA" />
+        </EntityType>
+        <EntityType Name="SEGOPCIONESSISTEMAROLE">
+          <Key>
+            <PropertyRef Name="IDROL" />
+            <PropertyRef Name="IDOPCIONSISTEMA" />
+          </Key>
+          <Property Name="IDROL" Type="Int32" Nullable="false" />
+          <Property Name="IDOPCIONSISTEMA" Type="Int32" Nullable="false" />
+          <Property Name="AUUSUARIOCREACION" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="AUFECHACREACION" Type="DateTime" />
+          <Property Name="AUUSUARIOMODIFICACION" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="AUFECHAMODIFICACION" Type="DateTime" />
+          <Property Name="ESTASINCRONIZADA" Type="Int16" Nullable="false" />
+          <Property Name="PERMITEEDITAR" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="SEGOPCIONESSISTEMA" Relationship="segabas2Model.FKSEGOPCIONESSISTEMA_IDOPCIONSISTEMA" FromRole="SEGOPCIONESSISTEMAROLES" ToRole="SEGOPCIONESSISTEMA" />
+          <NavigationProperty Name="SEGROLE" Relationship="segabas2Model.FKSEGROLES_IDROL2" FromRole="SEGOPCIONESSISTEMAROLES" ToRole="SEGROLES" />
+        </EntityType>
+        <EntityType Name="SEGROLE">
+          <Key>
+            <PropertyRef Name="IDROL" />
+          </Key>
+          <Property Name="IDROL" Type="Int32" Nullable="false" />
+          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="ESTAHABILITADO" Type="Byte" Nullable="false" />
+          <Property Name="AUUSUARIOCREACION" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="AUFECHACREACION" Type="DateTime" />
+          <Property Name="AUUSUARIOMODIFICACION" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="AUFECHAMODIFICACION" Type="DateTime" />
+          <Property Name="ESTASINCRONIZADA" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SEGOPCIONESSISTEMAROLES" Relationship="segabas2Model.FKSEGROLES_IDROL2" FromRole="SEGROLES" ToRole="SEGOPCIONESSISTEMAROLES" />
+          <NavigationProperty Name="SEGROLESUSUARIOS" Relationship="segabas2Model.FKSEGROLES_IDROL" FromRole="SEGROLE" ToRole="SEGROLESUSUARIO" />
+        </EntityType>
+        <EntityType Name="vv_OPCIONESUSUARIOSROL">
+          <Key>
+            <PropertyRef Name="IDUSUARIO" />
+            <PropertyRef Name="USUARIO" />
+            <PropertyRef Name="IDROL" />
+            <PropertyRef Name="NOMBRE" />
+            <PropertyRef Name="IDOPCIONSISTEMA" />
+            <PropertyRef Name="DESCRIPCION" />
+            <PropertyRef Name="ESTAHABILITADO" />
+            <PropertyRef Name="ORDEN" />
+          </Key>
+          <Property Name="IDUSUARIO" Type="Int32" Nullable="false" />
+          <Property Name="USUARIO" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="IDROL" Type="Int32" Nullable="false" />
+          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IDOPCIONSISTEMA" Type="Int32" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="URL" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="ESTAHABILITADO" Type="Byte" Nullable="false" />
+          <Property Name="IDPADRE" Type="Int32" />
+          <Property Name="ORDEN" Type="Int16" Nullable="false" />
+        </EntityType>
+        <Association Name="FKSEGOPCIONESSISTEMA_IDOPCIONSISTEMA">
+          <End Role="SEGOPCIONESSISTEMA" Type="segabas2Model.SEGOPCIONESSISTEMA" Multiplicity="1" />
+          <End Role="SEGOPCIONESSISTEMAROLES" Type="segabas2Model.SEGOPCIONESSISTEMAROLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEGOPCIONESSISTEMA">
+              <PropertyRef Name="IDOPCIONSISTEMA" />
+            </Principal>
+            <Dependent Role="SEGOPCIONESSISTEMAROLES">
+              <PropertyRef Name="IDOPCIONSISTEMA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKSEGOPCIONESSISTEMA_IDPADRE">
+          <End Role="SEGOPCIONESSISTEMA" Type="segabas2Model.SEGOPCIONESSISTEMA" Multiplicity="0..1" />
+          <End Role="SEGOPCIONESSISTEMA1" Type="segabas2Model.SEGOPCIONESSISTEMA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEGOPCIONESSISTEMA">
+              <PropertyRef Name="IDOPCIONSISTEMA" />
+            </Principal>
+            <Dependent Role="SEGOPCIONESSISTEMA1">
+              <PropertyRef Name="IDPADRE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKSEGROLES_IDROL2">
+          <End Role="SEGROLES" Type="segabas2Model.SEGROLE" Multiplicity="1" />
+          <End Role="SEGOPCIONESSISTEMAROLES" Type="segabas2Model.SEGOPCIONESSISTEMAROLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEGROLES">
+              <PropertyRef Name="IDROL" />
+            </Principal>
+            <Dependent Role="SEGOPCIONESSISTEMAROLES">
+              <PropertyRef Name="IDROL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="GetUsuariosInfo">
+          <Property Type="Int32" Name="IDUSUARIO" Nullable="false" />
+          <Property Type="String" Name="USUARIO" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="NOMBRE" Nullable="false" MaxLength="62" />
+          <Property Type="Int32" Name="IDEMPLEADO" Nullable="false" />
+          <Property Type="Int32" Name="IDESTABLECIMIENTO" Nullable="false" />
+          <Property Type="Byte" Name="ESTAHABILITADO" Nullable="false" />
+          <Property Type="Int32" Name="ROLES" Nullable="true" />
+          <Property Type="String" Name="AUUSUARIOCREACION" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="AUFECHACREACION" Nullable="true" Precision="23" />
+          <Property Type="String" Name="NOMBRE_ESTABLECIMIENTO" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="NOMBRE_ROL" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="AUUSUARIOELIMINACION" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="AUFECHAELIMINACION" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="UsuariosPorRol">
+          <Property Type="Int32" Name="IDUSUARIO" Nullable="false" />
+          <Property Type="String" Name="USUARIO" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="CLAVE" Nullable="false" MaxLength="32" />
+          <Property Type="Int32" Name="IDEMPLEADO" Nullable="false" />
+          <Property Type="String" Name="NOMBRE" Nullable="false" MaxLength="62" />
+          <Property Type="Byte" Name="ESTAHABILITADO" Nullable="false" />
+          <Property Type="String" Name="AUUSUARIOCREACION" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="AUFECHACREACION" Nullable="true" Precision="23" />
+          <Property Type="String" Name="AUUSUARIOMODIFICACION" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="AUFECHAMODIFICACION" Nullable="true" Precision="23" />
+          <Property Type="Int16" Name="ESTASINCRONIZADA" Nullable="false" />
+          <Property Type="String" Name="ROL" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <EntityType Name="SEGACCESO">
+          <Key>
+            <PropertyRef Name="USUARIO" />
+            <PropertyRef Name="AUFECHACREACION" />
+          </Key>
+          <Property Type="String" Name="USUARIO" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DIRECCIONIP" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AUUSUARIOCREACION" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="AUFECHACREACION" Nullable="false" />
+          <Property Type="String" Name="AUUSUARIOMODIFICACION" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="AUFECHAMODIFICACION" />
+          <Property Type="Int16" Name="ESTASINCRONIZADA" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SEGROLESUSUARIO">
+          <Key>
+            <PropertyRef Name="IDUSUARIO" />
+            <PropertyRef Name="IDROL" />
+          </Key>
+          <Property Type="Int32" Name="IDUSUARIO" Nullable="false" />
+          <Property Type="Int32" Name="IDROL" Nullable="false" />
+          <Property Type="String" Name="AUUSUARIOCREACION" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="AUFECHACREACION" />
+          <Property Type="String" Name="AUUSUARIOMODIFICACION" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="AUFECHAMODIFICACION" />
+          <Property Type="Int16" Name="ESTASINCRONIZADA" Nullable="false" />
+          <NavigationProperty Name="SEGROLE" Relationship="segabas2Model.FKSEGROLES_IDROL" FromRole="SEGROLESUSUARIO" ToRole="SEGROLE" />
+          <NavigationProperty Name="SEGUSUARIO" Relationship="segabas2Model.FKSEGROLES_IDUSUARIO" FromRole="SEGROLESUSUARIO" ToRole="SEGUSUARIO" />
+        </EntityType>
+        <EntityType Name="SEGUSUARIO">
+          <Key>
+            <PropertyRef Name="IDUSUARIO" />
+          </Key>
+          <Property Type="Int32" Name="IDUSUARIO" Nullable="false" />
+          <Property Type="String" Name="USUARIO" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CLAVE" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IDEMPLEADO" Nullable="false" />
+          <Property Type="Byte" Name="ESTAHABILITADO" Nullable="false" />
+          <Property Type="Int32" Name="ESTAELIMINADO" Nullable="false" />
+          <Property Type="String" Name="AUUSUARIOCREACION" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="AUFECHACREACION" />
+          <Property Type="String" Name="AUUSUARIOMODIFICACION" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="AUFECHAMODIFICACION" />
+          <Property Type="String" Name="AUUSUARIOELIMINACION" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="AUFECHAELIMINACION" />
+          <Property Type="Int16" Name="ESTASINCRONIZADA" Nullable="false" />
+          <NavigationProperty Name="SEGROLESUSUARIOS" Relationship="segabas2Model.FKSEGROLES_IDUSUARIO" FromRole="SEGUSUARIO" ToRole="SEGROLESUSUARIO" />
+        </EntityType>
+        <Association Name="FKSEGROLES_IDROL">
+          <End Type="segabas2Model.SEGROLE" Role="SEGROLE" Multiplicity="1" />
+          <End Type="segabas2Model.SEGROLESUSUARIO" Role="SEGROLESUSUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEGROLE">
+              <PropertyRef Name="IDROL" />
+            </Principal>
+            <Dependent Role="SEGROLESUSUARIO">
+              <PropertyRef Name="IDROL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKSEGROLES_IDUSUARIO">
+          <End Type="segabas2Model.SEGUSUARIO" Role="SEGUSUARIO" Multiplicity="1" />
+          <End Type="segabas2Model.SEGROLESUSUARIO" Role="SEGROLESUSUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEGUSUARIO">
+              <PropertyRef Name="IDUSUARIO" />
+            </Principal>
+            <Dependent Role="SEGROLESUSUARIO">
+              <PropertyRef Name="IDUSUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="segabas2ModelStoreContainer" CdmEntityContainer="segabasEntities">
+          <EntitySetMapping Name="SABREDIRECTs"><EntityTypeMapping TypeName="segabas2Model.SABREDIRECT"><MappingFragment StoreEntitySet="SABREDIRECT">
+            <ScalarProperty Name="IDREDIRECT" ColumnName="IDREDIRECT" />
+            <ScalarProperty Name="IPREDIRECT" ColumnName="IPREDIRECT" />
+            <ScalarProperty Name="URLREDIRECT" ColumnName="URLREDIRECT" />
+            <ScalarProperty Name="FECHACREACION" ColumnName="FECHACREACION" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SEGOPCIONESSISTEMAs"><EntityTypeMapping TypeName="segabas2Model.SEGOPCIONESSISTEMA"><MappingFragment StoreEntitySet="SEGOPCIONESSISTEMA">
+            <ScalarProperty Name="IDOPCIONSISTEMA" ColumnName="IDOPCIONSISTEMA" />
+            <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+            <ScalarProperty Name="URL" ColumnName="URL" />
+            <ScalarProperty Name="ESTAHABILITADO" ColumnName="ESTAHABILITADO" />
+            <ScalarProperty Name="IDPADRE" ColumnName="IDPADRE" />
+            <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+            <ScalarProperty Name="AUUSUARIOCREACION" ColumnName="AUUSUARIOCREACION" />
+            <ScalarProperty Name="AUFECHACREACION" ColumnName="AUFECHACREACION" />
+            <ScalarProperty Name="AUUSUARIOMODIFICACION" ColumnName="AUUSUARIOMODIFICACION" />
+            <ScalarProperty Name="AUFECHAMODIFICACION" ColumnName="AUFECHAMODIFICACION" />
+            <ScalarProperty Name="ESTASINCRONIZADA" ColumnName="ESTASINCRONIZADA" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SEGOPCIONESSISTEMAROLES"><EntityTypeMapping TypeName="segabas2Model.SEGOPCIONESSISTEMAROLE"><MappingFragment StoreEntitySet="SEGOPCIONESSISTEMAROLES">
+            <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+            <ScalarProperty Name="IDOPCIONSISTEMA" ColumnName="IDOPCIONSISTEMA" />
+            <ScalarProperty Name="AUUSUARIOCREACION" ColumnName="AUUSUARIOCREACION" />
+            <ScalarProperty Name="AUFECHACREACION" ColumnName="AUFECHACREACION" />
+            <ScalarProperty Name="AUUSUARIOMODIFICACION" ColumnName="AUUSUARIOMODIFICACION" />
+            <ScalarProperty Name="AUFECHAMODIFICACION" ColumnName="AUFECHAMODIFICACION" />
+            <ScalarProperty Name="ESTASINCRONIZADA" ColumnName="ESTASINCRONIZADA" />
+            <ScalarProperty Name="PERMITEEDITAR" ColumnName="PERMITEEDITAR" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SEGROLES"><EntityTypeMapping TypeName="segabas2Model.SEGROLE"><MappingFragment StoreEntitySet="SEGROLES">
+            <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+            <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+            <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+            <ScalarProperty Name="ESTAHABILITADO" ColumnName="ESTAHABILITADO" />
+            <ScalarProperty Name="AUUSUARIOCREACION" ColumnName="AUUSUARIOCREACION" />
+            <ScalarProperty Name="AUFECHACREACION" ColumnName="AUFECHACREACION" />
+            <ScalarProperty Name="AUUSUARIOMODIFICACION" ColumnName="AUUSUARIOMODIFICACION" />
+            <ScalarProperty Name="AUFECHAMODIFICACION" ColumnName="AUFECHAMODIFICACION" />
+            <ScalarProperty Name="ESTASINCRONIZADA" ColumnName="ESTASINCRONIZADA" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vv_OPCIONESUSUARIOSROL"><EntityTypeMapping TypeName="segabas2Model.vv_OPCIONESUSUARIOSROL"><MappingFragment StoreEntitySet="vv_OPCIONESUSUARIOSROL">
+            <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+            <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+            <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+            <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+            <ScalarProperty Name="IDOPCIONSISTEMA" ColumnName="IDOPCIONSISTEMA" />
+            <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+            <ScalarProperty Name="URL" ColumnName="URL" />
+            <ScalarProperty Name="ESTAHABILITADO" ColumnName="ESTAHABILITADO" />
+            <ScalarProperty Name="IDPADRE" ColumnName="IDPADRE" />
+            <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SEGACCESOS">
+            <EntityTypeMapping TypeName="segabas2Model.SEGACCESO">
+              <MappingFragment StoreEntitySet="SEGACCESOS">
+                <ScalarProperty Name="ESTASINCRONIZADA" ColumnName="ESTASINCRONIZADA" />
+                <ScalarProperty Name="AUFECHAMODIFICACION" ColumnName="AUFECHAMODIFICACION" />
+                <ScalarProperty Name="AUUSUARIOMODIFICACION" ColumnName="AUUSUARIOMODIFICACION" />
+                <ScalarProperty Name="AUFECHACREACION" ColumnName="AUFECHACREACION" />
+                <ScalarProperty Name="AUUSUARIOCREACION" ColumnName="AUUSUARIOCREACION" />
+                <ScalarProperty Name="DIRECCIONIP" ColumnName="DIRECCIONIP" />
+                <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SEGROLESUSUARIOS">
+            <EntityTypeMapping TypeName="segabas2Model.SEGROLESUSUARIO">
+              <MappingFragment StoreEntitySet="SEGROLESUSUARIOS">
+                <ScalarProperty Name="ESTASINCRONIZADA" ColumnName="ESTASINCRONIZADA" />
+                <ScalarProperty Name="AUFECHAMODIFICACION" ColumnName="AUFECHAMODIFICACION" />
+                <ScalarProperty Name="AUUSUARIOMODIFICACION" ColumnName="AUUSUARIOMODIFICACION" />
+                <ScalarProperty Name="AUFECHACREACION" ColumnName="AUFECHACREACION" />
+                <ScalarProperty Name="AUUSUARIOCREACION" ColumnName="AUUSUARIOCREACION" />
+                <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+                <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SEGUSUARIOS">
+            <EntityTypeMapping TypeName="segabas2Model.SEGUSUARIO">
+              <MappingFragment StoreEntitySet="SEGUSUARIOS">
+                <ScalarProperty Name="ESTASINCRONIZADA" ColumnName="ESTASINCRONIZADA" />
+                <ScalarProperty Name="AUFECHAELIMINACION" ColumnName="AUFECHAELIMINACION" />
+                <ScalarProperty Name="AUUSUARIOELIMINACION" ColumnName="AUUSUARIOELIMINACION" />
+                <ScalarProperty Name="AUFECHAMODIFICACION" ColumnName="AUFECHAMODIFICACION" />
+                <ScalarProperty Name="AUUSUARIOMODIFICACION" ColumnName="AUUSUARIOMODIFICACION" />
+                <ScalarProperty Name="AUFECHACREACION" ColumnName="AUFECHACREACION" />
+                <ScalarProperty Name="AUUSUARIOCREACION" ColumnName="AUUSUARIOCREACION" />
+                <ScalarProperty Name="ESTAELIMINADO" ColumnName="ESTAELIMINADO" />
+                <ScalarProperty Name="ESTAHABILITADO" ColumnName="ESTAHABILITADO" />
+                <ScalarProperty Name="IDEMPLEADO" ColumnName="IDEMPLEADO" />
+                <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+                <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+                <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Segabas" ZoomLevel="77">
+        <EntityTypeShape EntityType="segabas2Model.SABREDIRECT" Width="2.5" PointX="10.75" PointY="0.625" Height="1.7879850260416672" IsExpanded="true" />
+        <EntityTypeShape EntityType="segabas2Model.SEGOPCIONESSISTEMA" Width="1.75" PointX="0.5" PointY="1" Height="3.7109993489583331" IsExpanded="true" />
+        <EntityTypeShape EntityType="segabas2Model.SEGOPCIONESSISTEMAROLE" Width="2.25" PointX="3" PointY="1.375" Height="2.9417936197916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="segabas2Model.SEGROLE" Width="1.5" PointX="0.75" PointY="6.25" Height="3.1340950520833335" IsExpanded="true" />
+        <EntityTypeShape EntityType="segabas2Model.vv_OPCIONESUSUARIOSROL" Width="2.75" PointX="6.375" PointY="1" Height="2.9417936197916674" IsExpanded="true" />
+        <AssociationConnector Association="segabas2Model.FKSEGOPCIONESSISTEMA_IDOPCIONSISTEMA" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.8458968098958328" />
+          <ConnectorPoint PointX="3" PointY="2.8458968098958328" />
+        </AssociationConnector>
+        <AssociationConnector Association="segabas2Model.FKSEGOPCIONESSISTEMA_IDPADRE" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.1205769230769231" PointY="4.7109993489583335" />
+          <ConnectorPoint PointX="1.1205769230769231" PointY="4.9609993489583335" />
+          <ConnectorPoint PointX="1.6415384615384618" PointY="4.9609993489583335" />
+          <ConnectorPoint PointX="1.6415384615384618" PointY="4.7109993489583335" />
+        </AssociationConnector>
+        <AssociationConnector Association="segabas2Model.FKSEGROLES_IDROL2" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="6.34375" />
+          <ConnectorPoint PointX="5.21875" PointY="6.34375" />
+          <ConnectorPoint PointX="5.21875" PointY="4.3167936197916656" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="segabas2Model.SEGACCESO" Width="1.5" PointX="9.75" PointY="5.375" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="segabas2Model.SEGROLESUSUARIO" Width="2.125" PointX="3" PointY="6.5" Height="2.7494921875000005" />
+        <EntityTypeShape EntityType="segabas2Model.SEGUSUARIO" Width="1.5" PointX="6" PointY="7.375" Height="3.7109993489583353" />
+        <AssociationConnector Association="segabas2Model.FKSEGROLES_IDROL" >
+          <ConnectorPoint PointX="2.25" PointY="7.87474609375" />
+          <ConnectorPoint PointX="3" PointY="7.87474609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="segabas2Model.FKSEGROLES_IDUSUARIO" >
+          <ConnectorPoint PointX="6" PointY="8.31224609375" />
+          <ConnectorPoint PointX="5.125" PointY="8.31224609375" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

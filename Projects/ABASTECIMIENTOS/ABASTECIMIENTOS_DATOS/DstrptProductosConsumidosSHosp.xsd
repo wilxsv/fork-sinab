@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DstrptProductosConsumidosSHosp" targetNamespace="http://tempuri.org/DstrptProductosConsumidosSHosp.xsd" xmlns:mstns="http://tempuri.org/DstrptProductosConsumidosSHosp.xsd" xmlns="http://tempuri.org/DstrptProductosConsumidosSHosp.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DstrptProductosConsumidosSHosp" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DstrptProductosConsumidosSHosp" msprop:Generator_DataSetName="DstrptProductosConsumidosSHosp">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CONSUMIDOSXSERVICIOHOSPITALARIO" msprop:Generator_UserTableName="CONSUMIDOSXSERVICIOHOSPITALARIO" msprop:Generator_RowDeletedName="CONSUMIDOSXSERVICIOHOSPITALARIORowDeleted" msprop:Generator_RowChangedName="CONSUMIDOSXSERVICIOHOSPITALARIORowChanged" msprop:Generator_RowClassName="CONSUMIDOSXSERVICIOHOSPITALARIORow" msprop:Generator_RowChangingName="CONSUMIDOSXSERVICIOHOSPITALARIORowChanging" msprop:Generator_RowEvArgName="CONSUMIDOSXSERVICIOHOSPITALARIORowChangeEvent" msprop:Generator_RowEvHandlerName="CONSUMIDOSXSERVICIOHOSPITALARIORowChangeEventHandler" msprop:Generator_TableClassName="CONSUMIDOSXSERVICIOHOSPITALARIODataTable" msprop:Generator_TableVarName="tableCONSUMIDOSXSERVICIOHOSPITALARIO" msprop:Generator_RowDeletingName="CONSUMIDOSXSERVICIOHOSPITALARIORowDeleting" msprop:Generator_TablePropName="CONSUMIDOSXSERVICIOHOSPITALARIO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDESTABLECIMIENTO" msprop:Generator_UserColumnName="IDESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnIDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="IDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="IDESTABLECIMIENTOColumn" type="xs:int" />
+              <xs:element name="IDRECETA" msprop:Generator_UserColumnName="IDRECETA" msprop:Generator_ColumnVarNameInTable="columnIDRECETA" msprop:Generator_ColumnPropNameInRow="IDRECETA" msprop:Generator_ColumnPropNameInTable="IDRECETAColumn" type="xs:int" />
+              <xs:element name="NUMERORECETA" msprop:Generator_UserColumnName="NUMERORECETA" msprop:Generator_ColumnVarNameInTable="columnNUMERORECETA" msprop:Generator_ColumnPropNameInRow="NUMERORECETA" msprop:Generator_ColumnPropNameInTable="NUMERORECETAColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMBRESERVICIO" msprop:Generator_UserColumnName="NOMBRESERVICIO" msprop:Generator_ColumnVarNameInTable="columnNOMBRESERVICIO" msprop:Generator_ColumnPropNameInRow="NOMBRESERVICIO" msprop:Generator_ColumnPropNameInTable="NOMBRESERVICIOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGOSERVICIO" msprop:Generator_UserColumnName="CODIGOSERVICIO" msprop:Generator_ColumnVarNameInTable="columnCODIGOSERVICIO" msprop:Generator_ColumnPropNameInRow="CODIGOSERVICIO" msprop:Generator_ColumnPropNameInTable="CODIGOSERVICIOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHARECETA" msprop:Generator_UserColumnName="FECHARECETA" msprop:Generator_ColumnVarNameInTable="columnFECHARECETA" msprop:Generator_ColumnPropNameInRow="FECHARECETA" msprop:Generator_ColumnPropNameInTable="FECHARECETAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MEDICO" msprop:Generator_UserColumnName="MEDICO" msprop:Generator_ColumnVarNameInTable="columnMEDICO" msprop:Generator_ColumnPropNameInRow="MEDICO" msprop:Generator_ColumnPropNameInTable="MEDICOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESPACHADO" msprop:Generator_UserColumnName="DESPACHADO" msprop:Generator_ColumnVarNameInTable="columnDESPACHADO" msprop:Generator_ColumnPropNameInRow="DESPACHADO" msprop:Generator_ColumnPropNameInTable="DESPACHADOColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="IDDETALLE" msprop:Generator_UserColumnName="IDDETALLE" msprop:Generator_ColumnVarNameInTable="columnIDDETALLE" msprop:Generator_ColumnPropNameInRow="IDDETALLE" msprop:Generator_ColumnPropNameInTable="IDDETALLEColumn" type="xs:int" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CONCENTRACION" msprop:Generator_UserColumnName="CONCENTRACION" msprop:Generator_ColumnVarNameInTable="columnCONCENTRACION" msprop:Generator_ColumnPropNameInRow="CONCENTRACION" msprop:Generator_ColumnPropNameInTable="CONCENTRACIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FORMAFARMACEUTICA" msprop:Generator_UserColumnName="FORMAFARMACEUTICA" msprop:Generator_ColumnVarNameInTable="columnFORMAFARMACEUTICA" msprop:Generator_ColumnPropNameInRow="FORMAFARMACEUTICA" msprop:Generator_ColumnPropNameInTable="FORMAFARMACEUTICAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRESENTACION" msprop:Generator_UserColumnName="PRESENTACION" msprop:Generator_ColumnVarNameInTable="columnPRESENTACION" msprop:Generator_ColumnPropNameInRow="PRESENTACION" msprop:Generator_ColumnPropNameInTable="PRESENTACIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESTABLECIMIENTO" msprop:Generator_UserColumnName="ESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="ESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="ESTABLECIMIENTOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UNIDAD" msprop:Generator_UserColumnName="UNIDAD" msprop:Generator_ColumnVarNameInTable="columnUNIDAD" msprop:Generator_ColumnPropNameInRow="UNIDAD" msprop:Generator_ColumnPropNameInTable="UNIDADColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NIVEL" msprop:Generator_UserColumnName="NIVEL" msprop:Generator_ColumnVarNameInTable="columnNIVEL" msprop:Generator_ColumnPropNameInRow="NIVEL" msprop:Generator_ColumnPropNameInTable="NIVELColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TIPOESTABLECIM" msprop:Generator_UserColumnName="TIPOESTABLECIM" msprop:Generator_ColumnVarNameInTable="columnTIPOESTABLECIM" msprop:Generator_ColumnPropNameInRow="TIPOESTABLECIM" msprop:Generator_ColumnPropNameInTable="TIPOESTABLECIMColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ZONA" msprop:Generator_UserColumnName="ZONA" msprop:Generator_ColumnVarNameInTable="columnZONA" msprop:Generator_ColumnPropNameInRow="ZONA" msprop:Generator_ColumnPropNameInTable="ZONAColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDSERVICIOHOSPITALARIO" msprop:Generator_UserColumnName="IDSERVICIOHOSPITALARIO" msprop:Generator_ColumnPropNameInRow="IDSERVICIOHOSPITALARIO" msprop:Generator_ColumnVarNameInTable="columnIDSERVICIOHOSPITALARIO" msprop:Generator_ColumnPropNameInTable="IDSERVICIOHOSPITALARIOColumn" type="xs:int" />
+              <xs:element name="IDPRODUCTO" msprop:Generator_UserColumnName="IDPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnIDPRODUCTO" msprop:Generator_ColumnPropNameInRow="IDPRODUCTO" msprop:Generator_ColumnPropNameInTable="IDPRODUCTOColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="CODIGO" msprop:Generator_UserColumnName="CODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CANTIDAD" msprop:Generator_UserColumnName="CANTIDAD" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD" msprop:Generator_ColumnPropNameInRow="CANTIDAD" msprop:Generator_ColumnPropNameInTable="CANTIDADColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CONSUMIDOSXSERVICIOHOSPITALARIO" />
+      <xs:field xpath="mstns:IDESTABLECIMIENTO" />
+      <xs:field xpath="mstns:IDRECETA" />
+      <xs:field xpath="mstns:IDDETALLE" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

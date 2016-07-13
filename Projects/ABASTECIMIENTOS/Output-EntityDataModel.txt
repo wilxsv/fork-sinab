@@ -1,0 +1,12 @@
+﻿The model was generated with warnings or errors.
+Please see the Error List for more details. These issues must be fixed before running your application.
+Loading metadata from the database took 00:00:01.4147103.
+Generating the model took 00:00:23.5588223.
+The model was generated with warnings or errors.
+Please see the Error List for more details. These issues must be fixed before running your application.
+Loading metadata from the database took 00:00:00.9168712.
+Generating the model took 00:00:34.7709310.
+The model was generated with warnings or errors.
+Please see the Error List for more details. These issues must be fixed before running your application.
+Loading metadata from the database took 00:00:00.8773179.
+Generating the model took 00:00:02.4042642.

@@ -1,0 +1,520 @@
+﻿body
+{
+  border-bottom: 0;
+  background-color: White;
+}
+
+table
+{
+  background-color: White;
+  font-family: Verdana, Arial;
+  font-size: 10pt;
+}
+
+tableHeader
+{
+  background-color: white;
+  text-align: left;
+  font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
+  font-size: 11pt;
+  color: navy;
+}
+
+rows
+{
+  background-color: white;
+  text-align: left;
+  font-family: Verdana, Arial;
+  font-size: 10pt;
+}
+
+rowsHeader
+{
+  background-color: #333333;
+  font-family: Verdana, Arial;
+  font-size: 7.5pt;
+  color: #000000;
+}
+
+inputGrid
+{
+  font-family: Verdana, Arial;
+  font-size: 8pt;
+}
+
+title
+{
+  background: #F4F4F4;
+  font-family: Verdana, Arial;
+  font-size: 11pt;
+  color: #000000;
+  font-weight: bold;
+}
+
+a:link
+{
+  color: navy;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:visited
+{
+  color: navy;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover
+{
+  color: red;
+  text-decoration: none;
+  background-color: transparent; /*text-decoration: underline overline;     text-transform: capitalize;*/
+}
+
+label
+{
+  font-size: 10pt;
+  color: black;
+  font-family: Arial, Verdana;
+}
+
+.Grid
+{
+  color: #333333;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.GridListHeader
+{
+  background-color: #507cd1;
+  color: white;
+  font-weight: bold;
+}
+
+.GridListHeaderSmaller
+{
+  background-color: #507cd1;
+  color: white;
+  font-size: smaller;
+  font-weight: bold;
+}
+
+.GridListFooter
+{
+  background-color: #507cd1;
+  color: white;
+  font-weight: bold;
+}
+
+.GridListFooterSmaller
+{
+  background-color: #507cd1;
+  color: white;
+  font-size: smaller;
+  font-weight: bold;
+}
+
+.GridListItem
+{
+  background-color: #eff3fb;
+}
+
+.GridListItemSmaller
+{
+  background-color: #eff3fb;
+  font-size: smaller;
+}
+
+.GridListSelectedItem
+{
+  background-color: #d1ddf1;
+  color: #333333;
+  font-weight: bold;
+}
+
+.GridListSelectedItemSmaller
+{
+  background-color: #d1ddf1;
+  color: #333333;
+  font-weight: bold;
+  font-size: smaller;
+}
+
+.GridListAlternatingItem
+{
+  background-color: white;
+}
+
+.GridListAlternatingItemSmaller
+{
+  background-color: white;
+  font-size: smaller;
+}
+
+.GridListPager
+{
+  color: white;
+  background-color: #2461bf;
+  text-align: center;
+}
+
+.GridListPagerSmaller
+{
+  color: white;
+  background-color: #2461bf;
+  text-align: center;
+  font-size: smaller;
+}
+
+.GridListPager a, .GridListPagerSmaller a
+{
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.GridListPager a:hover, .GridListPagerSmaller a:hover
+{
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.GridListPager a:visited, .GridListPagerSmaller a:visited
+{
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.GridListPager span, .GridListPagerSmaller span
+{
+  color: navy;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.GridListPager table, .GridListPagerSmaller table
+{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: transparent;
+}
+
+.GridListEditItem
+{
+  background-color: #2461bf;
+}
+
+.GridListEditItemSmaller
+{
+  background-color: #2461bf;
+  font-size: smaller;
+}
+
+.GridListHighLight
+{
+  background-color: #8888ff;
+}
+
+.GridListHighLightSmaller
+{
+  background-color: #8888ff;
+  font-size: smaller;
+}
+
+.GridImagenEliminarItem
+{
+  border-style: none;
+  border-width: 0px;
+  height: 18px;
+  width: 18px;
+}
+
+.GridFieldHeader
+{
+  background-color: #dee8f5;
+  font-weight: bold;
+  text-align: left;
+}
+
+.LinkMenuRuta
+{
+  background-color: #b5c7de;
+  text-align: left;
+}
+
+.Titulo
+{
+  color: #000099;
+  background-color: white;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+.Table
+{
+  text-align: center;
+  width: 100%;
+}
+
+.TableBorder
+{
+  text-align: center;
+  width: 100%;
+  border-right: black thin solid;
+  border-top: black thin solid;
+  border-left: black thin solid;
+  border-bottom: black thin solid;
+}
+
+.TituloCell
+{
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+}
+
+.TituloLeftCell
+{
+  text-align: left;
+  font-weight: bold;
+  width: 50%;
+}
+
+.LabelCell
+{
+  text-align: right;
+  width: 50%;
+}
+
+.CoolLabelCell
+{
+  background-color: #dcdcdc;
+  font-weight: bold;
+  text-align: right;
+  width: 50%;
+}
+
+.DataCell
+{
+  text-align: left;
+}
+
+.CoolDataCell
+{
+  background-color: #dcdcdc;
+  color: Navy;
+  text-align: left;
+  width: 50%;
+}
+
+.LabelText
+{
+  font-family: Verdana;
+  font-size: x-small;
+}
+
+.LabelData
+{
+  font-family: Verdana;
+  font-size: x-small;
+  font-weight: bold;
+}
+
+.CenteredDiv
+{
+  text-align: center;
+}
+
+.CenteredTable
+{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.Textbox
+{
+  font-family: Verdana;
+}
+
+.TextBoxMultiLine
+{
+  font-family: Verdana;
+  height: 100px;
+  width: 99%;
+}
+
+.RadioButtonListLeftAligned
+{
+  text-align: left;
+}
+
+.PasoLeft
+{
+  text-align: left;
+  font-family: Verdana;
+  font-weight: bold;
+  width: 50%;
+  background-color: #d6e2f0;
+}
+
+.PasoRight
+{
+  text-align: right;
+  font-family: Verdana;
+  font-weight: bold;
+  background-color: #d6e2f0;
+}
+
+.ScrollPanel
+{
+  vertical-align: top;
+  width: 100%;
+  /*overflow-y: auto;*/
+  
+}
+
+
+
+.SelectedNodeStyle
+{
+  background-color: #ffffc0;
+  border-style: none;
+}
+
+.DynamicMenuItemStyle
+{
+  background-color: #b0c4de; /*LightSteelBlue;*/
+  border-style: none;
+  font-family: Verdana;
+  font-size: 9pt;
+  padding: 2px 5px 2px 5px;
+}
+
+.DynamicHoverStyle
+{
+  background-color: white;
+  border-style: none;
+  color: white;
+}
+
+.DynamicMenuStyle
+{
+  background-color: #b5c7de;
+  /*border-color: Transparent;*/
+  border-style: none;
+}
+
+.DynamicSelectedStyle
+{
+  background-color: White;
+  border-style: none;
+  /*border-color: Transparent;*/
+  color: white;
+  font-family: Verdana;
+}
+
+.StaticMenuItemStyle
+{
+  background-color: #b0c4de; /*LightSteelBlue;*/
+  border-style: none;
+  padding: 2px 5px 2px 5px;
+}
+
+.StaticSelectedStyle
+{
+  background-color: #f5f5f5; /*WhiteSmoke;*/
+  border-style: none;
+}
+
+.StaticHoverStyle
+{
+  background-color: White;
+  border-style: none;
+  color: White;
+}
+
+.Menu
+{
+  background-color: #B5C7DE;
+  border-style: none;
+  color: #284E98;
+  font-family: Verdana;
+  font-size: 0.8em;
+  text-decoration: none;
+  width: 100%;
+}
+
+.modalBackground
+{
+  background-color: Gray;
+ /* filter: alpha(opacity=70);*/
+ /* opacity: 0.7;*/
+}
+/*Drag Panel*/
+.dragMe {
+	width:100%;
+	height:21px;
+	background-color:#FFF;
+	text-align:center;
+	cursor:move;
+	font-weight:bold;
+}
+.DetailsView td,.DetailsView th
+        {
+            padding:10px;
+        }
+        .DetailsView
+        {
+            border:double 4px black;
+        }
+        .header
+        {
+            letter-spacing:8px;
+            font:bold 16px Arial,Sans-Serif;
+            background-color:silver;
+        }
+        .fieldHeader
+        {
+            font-weight:bold;
+        }
+        .alternating
+        {
+            background-color:#eeeeee;
+        }
+        .command
+        {
+            background-color:silver;
+        }
+        .command a
+        {
+            color:black;
+            background-color:#eeeeee;
+            font:14px Arials,Sans-Serif;
+            text-decoration:none;
+            padding:3px;
+            border:solid 1px black;
+        }
+        .command a:hover
+        {
+            background-color:yellow;
+        }
+        .pager td
+        {
+            padding:2px;
+        }
+div.center {
+  text-align: center;
+
+  width: 100%;
+}
+div.center table {
+  margin-left: auto;
+  margin-right: auto;
+}

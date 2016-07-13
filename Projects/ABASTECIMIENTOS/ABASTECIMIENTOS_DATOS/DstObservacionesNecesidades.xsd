@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DstObservacionesNecesidades" targetNamespace="http://tempuri.org/DstObservacionesNecesidades.xsd" xmlns:mstns="http://tempuri.org/DstObservacionesNecesidades.xsd" xmlns="http://tempuri.org/DstObservacionesNecesidades.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DstObservacionesNecesidades" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DstObservacionesNecesidades" msprop:Generator_DataSetName="DstObservacionesNecesidades">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ObservacionesNecesidadesEstab" msprop:Generator_UserTableName="ObservacionesNecesidadesEstab" msprop:Generator_RowDeletedName="ObservacionesNecesidadesEstabRowDeleted" msprop:Generator_TableClassName="ObservacionesNecesidadesEstabDataTable" msprop:Generator_RowChangedName="ObservacionesNecesidadesEstabRowChanged" msprop:Generator_RowClassName="ObservacionesNecesidadesEstabRow" msprop:Generator_RowChangingName="ObservacionesNecesidadesEstabRowChanging" msprop:Generator_RowEvArgName="ObservacionesNecesidadesEstabRowChangeEvent" msprop:Generator_RowEvHandlerName="ObservacionesNecesidadesEstabRowChangeEventHandler" msprop:Generator_TablePropName="ObservacionesNecesidadesEstab" msprop:Generator_TableVarName="tableObservacionesNecesidadesEstab" msprop:Generator_RowDeletingName="ObservacionesNecesidadesEstabRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDESTABLECIMIENTO" msprop:Generator_UserColumnName="IDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="IDESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnIDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="IDESTABLECIMIENTOColumn" type="xs:int" />
+              <xs:element name="IDPRODUCTO" msprop:Generator_UserColumnName="IDPRODUCTO" msprop:Generator_ColumnPropNameInRow="IDPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnIDPRODUCTO" msprop:Generator_ColumnPropNameInTable="IDPRODUCTOColumn" type="xs:long" />
+              <xs:element name="IDNECESIDAD" msprop:Generator_UserColumnName="IDNECESIDAD" msprop:Generator_ColumnPropNameInRow="IDNECESIDAD" msprop:Generator_ColumnVarNameInTable="columnIDNECESIDAD" msprop:Generator_ColumnPropNameInTable="IDNECESIDADColumn" type="xs:long" />
+              <xs:element name="IDUNIDADMEDIDA" msprop:Generator_UserColumnName="IDUNIDADMEDIDA" msprop:Generator_ColumnPropNameInRow="IDUNIDADMEDIDA" msprop:Generator_ColumnVarNameInTable="columnIDUNIDADMEDIDA" msprop:Generator_ColumnPropNameInTable="IDUNIDADMEDIDAColumn" type="xs:int" />
+              <xs:element name="CONSUMOANUAL" msprop:Generator_UserColumnName="CONSUMOANUAL" msprop:Generator_ColumnPropNameInRow="CONSUMOANUAL" msprop:Generator_ColumnVarNameInTable="columnCONSUMOANUAL" msprop:Generator_ColumnPropNameInTable="CONSUMOANUALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RESERVAESTABLECIMIENTO" msprop:Generator_UserColumnName="RESERVAESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="RESERVAESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnRESERVAESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="RESERVAESTABLECIMIENTOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DEMANDAINSATISFECHA" msprop:Generator_UserColumnName="DEMANDAINSATISFECHA" msprop:Generator_ColumnPropNameInRow="DEMANDAINSATISFECHA" msprop:Generator_ColumnVarNameInTable="columnDEMANDAINSATISFECHA" msprop:Generator_ColumnPropNameInTable="DEMANDAINSATISFECHAColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RESERVATOTAL" msprop:Generator_UserColumnName="RESERVATOTAL" msprop:Generator_ColumnPropNameInRow="RESERVATOTAL" msprop:Generator_ColumnVarNameInTable="columnRESERVATOTAL" msprop:Generator_ColumnPropNameInTable="RESERVATOTALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EXISTENCIAESTIMADA" msprop:Generator_UserColumnName="EXISTENCIAESTIMADA" msprop:Generator_ColumnPropNameInRow="EXISTENCIAESTIMADA" msprop:Generator_ColumnVarNameInTable="columnEXISTENCIAESTIMADA" msprop:Generator_ColumnPropNameInTable="EXISTENCIAESTIMADAColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NECESIDADREAL" msprop:Generator_UserColumnName="NECESIDADREAL" msprop:Generator_ColumnPropNameInRow="NECESIDADREAL" msprop:Generator_ColumnVarNameInTable="columnNECESIDADREAL" msprop:Generator_ColumnPropNameInTable="NECESIDADREALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PRECIOUNITARIO" msprop:Generator_UserColumnName="PRECIOUNITARIO" msprop:Generator_ColumnPropNameInRow="PRECIOUNITARIO" msprop:Generator_ColumnVarNameInTable="columnPRECIOUNITARIO" msprop:Generator_ColumnPropNameInTable="PRECIOUNITARIOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NECESIDADAJUSTADA" msprop:Generator_UserColumnName="NECESIDADAJUSTADA" msprop:Generator_ColumnPropNameInRow="NECESIDADAJUSTADA" msprop:Generator_ColumnVarNameInTable="columnNECESIDADAJUSTADA" msprop:Generator_ColumnPropNameInTable="NECESIDADAJUSTADAColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NECESIDADFINAL" msprop:Generator_UserColumnName="NECESIDADFINAL" msprop:Generator_ColumnPropNameInRow="NECESIDADFINAL" msprop:Generator_ColumnVarNameInTable="columnNECESIDADFINAL" msprop:Generator_ColumnPropNameInTable="NECESIDADFINALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COSTOTOTALAJUSTADO" msprop:Generator_UserColumnName="COSTOTOTALAJUSTADO" msprop:Generator_ColumnPropNameInRow="COSTOTOTALAJUSTADO" msprop:Generator_ColumnVarNameInTable="columnCOSTOTOTALAJUSTADO" msprop:Generator_ColumnPropNameInTable="COSTOTOTALAJUSTADOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COSTOTOTALREAL" msprop:Generator_UserColumnName="COSTOTOTALREAL" msprop:Generator_ColumnPropNameInRow="COSTOTOTALREAL" msprop:Generator_ColumnVarNameInTable="columnCOSTOTOTALREAL" msprop:Generator_ColumnPropNameInTable="COSTOTOTALREALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OBSERVACION" msprop:Generator_UserColumnName="OBSERVACION" msprop:Generator_ColumnPropNameInRow="OBSERVACION" msprop:Generator_ColumnVarNameInTable="columnOBSERVACION" msprop:Generator_ColumnPropNameInTable="OBSERVACIONColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDOBSERVACION" msprop:Generator_UserColumnName="IDOBSERVACION" msprop:Generator_ColumnPropNameInRow="IDOBSERVACION" msprop:Generator_ColumnVarNameInTable="columnIDOBSERVACION" msprop:Generator_ColumnPropNameInTable="IDOBSERVACIONColumn" type="xs:long" />
+              <xs:element name="FECHA" msprop:Generator_UserColumnName="FECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" type="xs:dateTime" />
+              <xs:element name="CANTIDADACTUAL" msprop:Generator_UserColumnName="CANTIDADACTUAL" msprop:Generator_ColumnPropNameInRow="CANTIDADACTUAL" msprop:Generator_ColumnVarNameInTable="columnCANTIDADACTUAL" msprop:Generator_ColumnPropNameInTable="CANTIDADACTUALColumn" type="xs:long" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CORRPRODUCTO" msprop:Generator_UserColumnName="CORRPRODUCTO" msprop:Generator_ColumnPropNameInRow="CORRPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnCORRPRODUCTO" msprop:Generator_ColumnPropNameInTable="CORRPRODUCTOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCLARGO" msdata:ReadOnly="true" msprop:Generator_UserColumnName="DESCLARGO" msprop:Generator_ColumnPropNameInRow="DESCLARGO" msprop:Generator_ColumnVarNameInTable="columnDESCLARGO" msprop:Generator_ColumnPropNameInTable="DESCLARGOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="763" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UNIDADMEDIDA" msprop:Generator_UserColumnName="UNIDADMEDIDA" msprop:Generator_ColumnPropNameInRow="UNIDADMEDIDA" msprop:Generator_ColumnVarNameInTable="columnUNIDADMEDIDA" msprop:Generator_ColumnPropNameInTable="UNIDADMEDIDAColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

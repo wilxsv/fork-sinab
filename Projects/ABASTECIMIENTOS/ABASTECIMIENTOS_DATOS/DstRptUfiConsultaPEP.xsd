@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DstRptUfiConsultaPEP" targetNamespace="http://tempuri.org/DstRptUfiConsultaPEP.xsd" xmlns:mstns="http://tempuri.org/DstRptUfiConsultaPEP.xsd" xmlns="http://tempuri.org/DstRptUfiConsultaPEP.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DstRptUfiConsultaPEP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DstRptUfiConsultaPEP" msprop:Generator_DataSetName="DstRptUfiConsultaPEP">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UfiConsultaPEP" msprop:Generator_UserTableName="UfiConsultaPEP" msprop:Generator_RowDeletedName="UfiConsultaPEPRowDeleted" msprop:Generator_TableClassName="UfiConsultaPEPDataTable" msprop:Generator_RowChangedName="UfiConsultaPEPRowChanged" msprop:Generator_RowClassName="UfiConsultaPEPRow" msprop:Generator_RowChangingName="UfiConsultaPEPRowChanging" msprop:Generator_RowEvArgName="UfiConsultaPEPRowChangeEvent" msprop:Generator_RowEvHandlerName="UfiConsultaPEPRowChangeEventHandler" msprop:Generator_TablePropName="UfiConsultaPEP" msprop:Generator_TableVarName="tableUfiConsultaPEP" msprop:Generator_RowDeletingName="UfiConsultaPEPRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDESTABLECIMIENTO" msprop:Generator_UserColumnName="IDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="IDESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnIDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="IDESTABLECIMIENTOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

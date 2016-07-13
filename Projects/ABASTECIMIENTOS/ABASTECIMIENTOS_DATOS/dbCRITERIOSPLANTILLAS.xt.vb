@@ -1,0 +1,86 @@
+Partial Public Class dbCRITERIOSPLANTILLAS
+
+#Region " Métodos Agregados "
+
+    Public Function ObtenerDataSetCriteroPlanilla(ByVal IDPLANTILLA As Int32, ByVal IDTIPOCRITERIO As Int64, ByVal IDESTABLECIMIENTO As Integer, ByVal IDPROCESOCOMPRA As Integer) As DataSet
+
+        Dim strSQL As New Text.StringBuilder
+        strSQL.Append(" SELECT IDCRITERIOEVALUACION, IDTIPOCRITERIO, DESCRIPCION, PORCENTAJE, CHK ")
+        strSQL.Append(" FROM (SELECT SAB_CAT_CRITERIOSEVALUACION.IDCRITERIOEVALUACION, SAB_CAT_CRITERIOSEVALUACION.IDTIPOCRITERIO, ")
+        strSQL.Append(" SAB_CAT_CRITERIOSEVALUACION.DESCRIPCION, SAB_UACI_CRITERIOPROCESOCOMPRA.PORCENTAJE, '1' AS CHK ")
+        strSQL.Append(" FROM SAB_CAT_CRITERIOSEVALUACION INNER JOIN ")
+        strSQL.Append(" SAB_UACI_CRITERIOPROCESOCOMPRA ON ")
+        strSQL.Append(" SAB_CAT_CRITERIOSEVALUACION.IDCRITERIOEVALUACION = SAB_UACI_CRITERIOPROCESOCOMPRA.IDCRITERIOEVALUACION ")
+        strSQL.Append(" WHERE (SAB_CAT_CRITERIOSEVALUACION.IDTIPOCRITERIO = @IDTIPOCRITERIO) AND ")
+        strSQL.Append(" (SAB_UACI_CRITERIOPROCESOCOMPRA.IDESTABLECIMIENTO = @IDESTABLECIMIENTO) AND ")
+        strSQL.Append(" (SAB_UACI_CRITERIOPROCESOCOMPRA.IDPROCESOCOMPRA = @IDPROCESOCOMPRA) ")
+        strSQL.Append(" UNION ")
+        strSQL.Append(" SELECT IDCRITERIOEVALUACION, IDTIPOCRITERIO, DESCRIPCION, PORCENTAJE, '0' AS CHK ")
+        strSQL.Append(" FROM SAB_CAT_CRITERIOSEVALUACION AS SAB_CAT_CRITERIOSEVALUACION_2 ")
+        strSQL.Append(" WHERE (IDTIPOCRITERIO = @IDTIPOCRITERIO) AND (NOT (IDCRITERIOEVALUACION IN ")
+        strSQL.Append("    (SELECT SAB_CAT_CRITERIOSEVALUACION_1.IDCRITERIOEVALUACION ")
+        strSQL.Append("      FROM SAB_CAT_CRITERIOSEVALUACION AS SAB_CAT_CRITERIOSEVALUACION_1 INNER JOIN ")
+        strSQL.Append("                             SAB_UACI_CRITERIOPROCESOCOMPRA AS SAB_UACI_CRITERIOPROCESOCOMPRA_1 ON ")
+        strSQL.Append("                             SAB_CAT_CRITERIOSEVALUACION_1.IDCRITERIOEVALUACION = SAB_UACI_CRITERIOPROCESOCOMPRA_1.IDCRITERIOEVALUACION ")
+        strSQL.Append("      WHERE (SAB_CAT_CRITERIOSEVALUACION_1.IDTIPOCRITERIO = @IDTIPOCRITERIO) AND ")
+        strSQL.Append("                             (SAB_UACI_CRITERIOPROCESOCOMPRA_1.IDESTABLECIMIENTO = @IDESTABLECIMIENTO) AND ")
+        strSQL.Append("                             (SAB_UACI_CRITERIOPROCESOCOMPRA_1.IDPROCESOCOMPRA = @IDPROCESOCOMPRA))))) AS A ")
+        strSQL.Append(" ORDER BY IDCRITERIOEVALUACION ")
+
+        Dim args(3) As SqlParameter
+        args(0) = New SqlParameter("@IDTIPOCRITERIO", SqlDbType.Int)
+        args(0).Value = IDTIPOCRITERIO
+        args(1) = New SqlParameter("@IDESTABLECIMIENTO", SqlDbType.Int)
+        args(1).Value = IDESTABLECIMIENTO
+        args(2) = New SqlParameter("@IDPROCESOCOMPRA", SqlDbType.Int)
+        args(2).Value = IDPROCESOCOMPRA
+
+        Dim ds As DataSet
+        ds = SqlHelper.ExecuteDataset(Me.cnnStr, CommandType.Text, strSQL.ToString(), args)
+
+        Return ds
+
+    End Function
+
+    Public Function EliminarPorPlantilla(ByVal aEntidad As CRITERIOSPLANTILLAS) As Integer
+
+        Dim strSQL As New Text.StringBuilder
+        strSQL.Append("DELETE FROM SAB_UACI_CRITERIOSPLANTILLAS ")
+        strSQL.Append(" WHERE IDPLANTILLA = @IDPLANTILLA ")
+
+        Dim args(0) As SqlParameter
+        args(0) = New SqlParameter("@IDPLANTILLA", SqlDbType.Int)
+        args(0).Value = aEntidad.IDPLANTILLA
+
+        Return SqlHelper.ExecuteNonQuery(Me.cnnStr, CommandType.Text, strSQL.ToString(), args)
+
+    End Function
+
+    Public Function ObtenerDataSetporCriteroPlanilla(ByVal IDPLANTILLA As Int32, ByVal IDTIPOCRITERIO As Int64, ByVal IDESTABLECIMIENTO As Integer, ByVal IDPROCESOCOMPRA As Integer, ByVal IDCRITERIOEVALUACION As Integer) As DataSet
+
+        Dim strSQL As New Text.StringBuilder
+        strSQL.Append(" SELECT SAB_CAT_CRITERIOSEVALUACION.IDCRITERIOEVALUACION, SAB_CAT_CRITERIOSEVALUACION.IDTIPOCRITERIO, SAB_CAT_CRITERIOSEVALUACION.DESCRIPCION, ")
+        strSQL.Append("                       SAB_UACI_CRITERIOPROCESOCOMPRA.PORCENTAJE ")
+        strSQL.Append(" FROM SAB_CAT_CRITERIOSEVALUACION INNER JOIN ")
+        strSQL.Append("                       SAB_UACI_CRITERIOPROCESOCOMPRA ON SAB_CAT_CRITERIOSEVALUACION.IDCRITERIOEVALUACION = SAB_UACI_CRITERIOPROCESOCOMPRA.IDCRITERIOEVALUACION ")
+        strSQL.Append(" WHERE (SAB_CAT_CRITERIOSEVALUACION.IDTIPOCRITERIO = @IDTIPOCRITERIO) AND (SAB_UACI_CRITERIOPROCESOCOMPRA.IDESTABLECIMIENTO = @IDESTABLECIMIENTO) ")
+        strSQL.Append("                       AND (SAB_UACI_CRITERIOPROCESOCOMPRA.IDPROCESOCOMPRA = @IDPROCESOCOMPRA) AND (SAB_CAT_CRITERIOSEVALUACION.IDCRITERIOEVALUACION = " & IDCRITERIOEVALUACION & ")")
+
+        Dim args(3) As SqlParameter
+        args(0) = New SqlParameter("@IDTIPOCRITERIO", SqlDbType.Int)
+        args(0).Value = IDTIPOCRITERIO
+        args(1) = New SqlParameter("@IDESTABLECIMIENTO", SqlDbType.Int)
+        args(1).Value = IDESTABLECIMIENTO
+        args(2) = New SqlParameter("@IDPROCESOCOMPRA", SqlDbType.Int)
+        args(2).Value = IDPROCESOCOMPRA
+
+        Dim ds As DataSet
+        ds = SqlHelper.ExecuteDataset(Me.cnnStr, CommandType.Text, strSQL.ToString(), args)
+
+        Return ds
+
+    End Function
+
+#End Region
+
+End Class

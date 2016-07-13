@@ -1,0 +1,39 @@
+<%@ Page Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false"
+  CodeFile="FrmReporteCuadroDistribucionEstablecimiento.aspx.vb" Inherits="FrmReporteCuadroDistribucionEstablecimiento" %>
+
+<%@ MasterType VirtualPath="~/MasterPage.master" %>
+<asp:Content runat="server" ID="cmenu" ContentPlaceHolderID="MenuContent">
+    <asp:LinkButton ID="lnkMenu" runat="server" Text="Menu" />
+        UACI » Reportes » Cuadro de distribución por proceso de compra
+</asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="PageContent" runat="server">
+ 
+        <asp:GridView ID="gvProcesosCompra" runat="server" AllowPaging="True" AutoGenerateColumns="False"
+          CssClass="Grid" CellPadding="4" DataKeyNames="IDESTABLECIMIENTO,IdProcesoCompra"
+          EnableViewState="false" GridLines="None" Width="100%">
+          <HeaderStyle CssClass="GridListHeader" />
+          <FooterStyle CssClass="GridListFooter" />
+          <PagerStyle CssClass="GridListPager" />
+          <RowStyle CssClass="GridListItem" />
+          <SelectedRowStyle CssClass="GridListSelectedItem" />
+          <EditRowStyle CssClass="GridListEditItem" />
+          <AlternatingRowStyle CssClass="GridListAlternatingItem" />
+          <Columns>
+            <asp:TemplateField ItemStyle-Width="5%">
+              <ItemTemplate>
+                <asp:LinkButton ID="lbVer" runat="server" Text=">>" />
+              </ItemTemplate>
+            </asp:TemplateField>
+            <asp:BoundField DataField="ESTABLECIMIENTO" HeaderText="Establecimiento" ItemStyle-HorizontalAlign="Left"
+              ItemStyle-Width="20%" />
+            <asp:BoundField DataField="CODIGOLICITACION" HeaderText="C&#243;digo de Licitaci&#243;n"
+              ItemStyle-Width="10%" />
+            <asp:BoundField DataField="DESCRIPCIONLICITACION" HeaderText="Descripci&#243;n" ItemStyle-HorizontalAlign="Left" />
+            <asp:BoundField DataField="ESTADO" HeaderText="Estado" ItemStyle-HorizontalAlign="Left"
+              ItemStyle-Width="10%" />
+          </Columns>
+          <EmptyDataTemplate>
+            No se encontraron procesos de compra.</EmptyDataTemplate>
+        </asp:GridView>
+    
+</asp:Content>

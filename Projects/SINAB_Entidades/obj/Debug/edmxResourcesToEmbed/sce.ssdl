@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sceModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="sceModelStoreContainer">
+    <EntitySet Name="vv_EstablecimientoRegion" EntityType="sceModel.Store.vv_EstablecimientoRegion" store:Type="Views" store:Schema="dbo" store:Name="vv_EstablecimientoRegion">
+      <DefiningQuery>SELECT 
+      [vv_EstablecimientoRegion].[IdEstablecimiento] AS [IdEstablecimiento], 
+      [vv_EstablecimientoRegion].[CodigoEstablecimiento] AS [CodigoEstablecimiento], 
+      [vv_EstablecimientoRegion].[Nombre] AS [Nombre], 
+      [vv_EstablecimientoRegion].[IdRegion] AS [IdRegion], 
+      [vv_EstablecimientoRegion].[idEstablecimientoAbas] AS [idEstablecimientoAbas], 
+      [vv_EstablecimientoRegion].[sibasi] AS [sibasi]
+      FROM [dbo].[vv_EstablecimientoRegion] AS [vv_EstablecimientoRegion]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'sce.dbo.vv_EstablecimientoRegion' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="vv_EstablecimientoRegion">
+    <Key>
+      <PropertyRef Name="IdEstablecimiento" />
+      <PropertyRef Name="CodigoEstablecimiento" />
+      <PropertyRef Name="Nombre" />
+      <PropertyRef Name="IdRegion" />
+      <PropertyRef Name="idEstablecimientoAbas" />
+      <PropertyRef Name="sibasi" />
+    </Key>
+    <Property Name="IdEstablecimiento" Type="smallint" Nullable="false" />
+    <Property Name="CodigoEstablecimiento" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="80" />
+    <Property Name="IdRegion" Type="smallint" Nullable="false" />
+    <Property Name="idEstablecimientoAbas" Type="int" Nullable="false" />
+    <Property Name="sibasi" Type="varchar" Nullable="false" MaxLength="80" />
+  </EntityType>
+</Schema>

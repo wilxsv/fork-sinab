@@ -1,0 +1,32 @@
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.dll.config
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Utils.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Utils.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.pdb
+E:\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.dll.config
+E:\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.dll
+E:\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.pdb
+E:\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Utils.dll
+E:\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Utils.pdb
+E:\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.csprojResolveAssemblyReference.cache
+E:\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.dll
+E:\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.dll.config
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Utils.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Utils.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.dll.config
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Utils.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Utils.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.pdb

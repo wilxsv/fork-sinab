@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dstRptMultas" targetNamespace="http://tempuri.org/dstRptMultas.xsd" xmlns:mstns="http://tempuri.org/dstRptMultas.xsd" xmlns="http://tempuri.org/dstRptMultas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dstRptMultas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dstRptMultas" msprop:Generator_DataSetName="dstRptMultas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Texto" msprop:Generator_UserTableName="Texto" msprop:Generator_RowDeletedName="TextoRowDeleted" msprop:Generator_TableClassName="TextoDataTable" msprop:Generator_RowChangedName="TextoRowChanged" msprop:Generator_RowClassName="TextoRow" msprop:Generator_RowChangingName="TextoRowChanging" msprop:Generator_RowEvArgName="TextoRowChangeEvent" msprop:Generator_RowEvHandlerName="TextoRowChangeEventHandler" msprop:Generator_TablePropName="Texto" msprop:Generator_TableVarName="tableTexto" msprop:Generator_RowDeletingName="TextoRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="antes" msprop:Generator_UserColumnName="antes" msprop:Generator_ColumnPropNameInRow="antes" msprop:Generator_ColumnVarNameInTable="columnantes" msprop:Generator_ColumnPropNameInTable="antesColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="despues" msprop:Generator_UserColumnName="despues" msprop:Generator_ColumnPropNameInRow="despues" msprop:Generator_ColumnVarNameInTable="columndespues" msprop:Generator_ColumnPropNameInTable="despuesColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Detalle" msprop:Generator_UserTableName="Detalle" msprop:Generator_RowDeletedName="DetalleRowDeleted" msprop:Generator_TableClassName="DetalleDataTable" msprop:Generator_RowChangedName="DetalleRowChanged" msprop:Generator_RowClassName="DetalleRow" msprop:Generator_RowChangingName="DetalleRowChanging" msprop:Generator_RowEvArgName="DetalleRowChangeEvent" msprop:Generator_RowEvHandlerName="DetalleRowChangeEventHandler" msprop:Generator_TablePropName="Detalle" msprop:Generator_TableVarName="tableDetalle" msprop:Generator_RowDeletingName="DetalleRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RENGLON" msprop:Generator_UserColumnName="RENGLON" msprop:Generator_ColumnPropNameInRow="Renglon" msprop:Generator_ColumnVarNameInTable="columnRenglon" msprop:Generator_ColumnPropNameInTable="RenglonColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PRECIOUNITARIO" msprop:Generator_UserColumnName="PRECIOUNITARIO" msprop:Generator_ColumnPropNameInRow="PRECIOUNITARIO" msprop:Generator_ColumnVarNameInTable="columnPRECIOUNITARIO" msprop:Generator_ColumnPropNameInTable="PRECIOUNITARIOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="CANTIDADCONTRATADA" msprop:Generator_UserColumnName="CANTIDADCONTRATADA" msprop:Generator_ColumnPropNameInRow="CANTIDADCONTRATADA" msprop:Generator_ColumnVarNameInTable="columnCANTIDADCONTRATADA" msprop:Generator_ColumnPropNameInTable="CANTIDADCONTRATADAColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CANTIDADENTREGADAATRASO" msprop:Generator_UserColumnName="CANTIDADENTREGADAATRASO" msprop:Generator_ColumnPropNameInRow="CANTIDADENTREGADAATRASO" msprop:Generator_ColumnVarNameInTable="columnCANTIDADENTREGADAATRASO" msprop:Generator_ColumnPropNameInTable="CANTIDADENTREGADAATRASOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FECHAENTREGAPROGRAMADA" msprop:Generator_UserColumnName="FECHAENTREGAPROGRAMADA" msprop:Generator_ColumnPropNameInRow="FECHAENTREGAPROGRAMADA" msprop:Generator_ColumnVarNameInTable="columnFECHAENTREGAPROGRAMADA" msprop:Generator_ColumnPropNameInTable="FECHAENTREGAPROGRAMADAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAENTREGAREAL" msprop:Generator_UserColumnName="FECHAENTREGAREAL" msprop:Generator_ColumnPropNameInRow="FECHAENTREGAREAL" msprop:Generator_ColumnVarNameInTable="columnFECHAENTREGAREAL" msprop:Generator_ColumnPropNameInTable="FECHAENTREGAREALColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MONTOATRASO" msprop:Generator_UserColumnName="MONTOATRASO" msprop:Generator_ColumnPropNameInRow="MONTOATRASO" msprop:Generator_ColumnVarNameInTable="columnMONTOATRASO" msprop:Generator_ColumnPropNameInTable="MONTOATRASOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="DIASATRASO" msprop:Generator_UserColumnName="DIASATRASO" msprop:Generator_ColumnPropNameInRow="DIASATRASO" msprop:Generator_ColumnVarNameInTable="columnDIASATRASO" msprop:Generator_ColumnPropNameInTable="DIASATRASOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ENTREGA" msprop:Generator_UserColumnName="ENTREGA" msprop:Generator_ColumnPropNameInRow="ENTREGA" msprop:Generator_ColumnVarNameInTable="columnENTREGA" msprop:Generator_ColumnPropNameInTable="ENTREGAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PORCENTAJEINCLUMPLIMIENTO" msprop:Generator_UserColumnName="PORCENTAJEINCLUMPLIMIENTO" msprop:Generator_ColumnPropNameInRow="PORCENTAJEINCLUMPLIMIENTO" msprop:Generator_ColumnVarNameInTable="columnPORCENTAJEINCLUMPLIMIENTO" msprop:Generator_ColumnPropNameInTable="PORCENTAJEINCLUMPLIMIENTOColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

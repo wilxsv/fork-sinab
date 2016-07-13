@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsInformeMuestrasAceptacion" targetNamespace="http://tempuri.org/dsInformeMuestrasAceptacion.xsd" xmlns:mstns="http://tempuri.org/dsInformeMuestrasAceptacion.xsd" xmlns="http://tempuri.org/dsInformeMuestrasAceptacion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsInformeMuestrasAceptacion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsInformeMuestrasAceptacion" msprop:Generator_DataSetName="dsInformeMuestrasAceptacionxsd">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCancelacionesPorRenglon" msprop:Generator_UserTableName="dtCancelacionesPorRenglon" msprop:Generator_RowDeletedName="dtCancelacionesPorRenglonRowDeleted" msprop:Generator_RowChangedName="dtCancelacionesPorRenglonRowChanged" msprop:Generator_RowClassName="dtCancelacionesPorRenglonRow" msprop:Generator_RowChangingName="dtCancelacionesPorRenglonRowChanging" msprop:Generator_RowEvArgName="dtCancelacionesPorRenglonRowChangeEvent" msprop:Generator_RowEvHandlerName="dtCancelacionesPorRenglonRowChangeEventHandler" msprop:Generator_TableClassName="dtCancelacionesPorRenglonDataTable" msprop:Generator_TableVarName="tabledtCancelacionesPorRenglon" msprop:Generator_RowDeletingName="dtCancelacionesPorRenglonRowDeleting" msprop:Generator_TablePropName="dtCancelacionesPorRenglon">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FECHACANCELACION" msprop:Generator_UserColumnName="FECHACANCELACION" msprop:Generator_ColumnPropNameInRow="FECHACANCELACION" msprop:Generator_ColumnVarNameInTable="columnFECHACANCELACION" msprop:Generator_ColumnPropNameInTable="FECHACANCELACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MOTIVOCANCELACION" msprop:Generator_UserColumnName="MOTIVOCANCELACION" msprop:Generator_ColumnVarNameInTable="columnMOTIVOCANCELACION" msprop:Generator_ColumnPropNameInRow="MOTIVOCANCELACION" msprop:Generator_ColumnPropNameInTable="MOTIVOCANCELACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHAANULACION" msprop:Generator_UserColumnName="FECHAANULACION" msprop:Generator_ColumnVarNameInTable="columnFECHAANULACION" msprop:Generator_ColumnPropNameInRow="FECHAANULACION" msprop:Generator_ColumnPropNameInTable="FECHAANULACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MOTIVOANULACION" msprop:Generator_UserColumnName="MOTIVOANULACION" msprop:Generator_ColumnVarNameInTable="columnMOTIVOANULACION" msprop:Generator_ColumnPropNameInRow="MOTIVOANULACION" msprop:Generator_ColumnPropNameInTable="MOTIVOANULACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LOTE" msprop:Generator_UserColumnName="LOTE" msprop:Generator_ColumnVarNameInTable="columnLOTE" msprop:Generator_ColumnPropNameInRow="LOTE" msprop:Generator_ColumnPropNameInTable="LOTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ESTAHABILITADO" msprop:Generator_UserColumnName="ESTAHABILITADO" msprop:Generator_ColumnVarNameInTable="columnESTAHABILITADO" msprop:Generator_ColumnPropNameInRow="ESTAHABILITADO" msprop:Generator_ColumnPropNameInTable="ESTAHABILITADOColumn" type="xs:unsignedByte" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

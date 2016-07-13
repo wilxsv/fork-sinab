@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+***********************************************************************************************
+website.publishproj
+
+WARNING: DO NOT MODIFY this file, it is used for the web publish process.
+
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+***********************************************************************************************
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5fef407f-32a5-406c-8abe-8893a7165bb8}</ProjectGuid>
+    <SourceWebPhysicalPath>$(MSBuildThisFileDirectory)</SourceWebPhysicalPath>
+    <SourceWebVirtualPath>/ABASTECIMIENTOS</SourceWebVirtualPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SourceWebProject>
+    </SourceWebProject>
+    <SourceWebMetabasePath>
+    </SourceWebMetabasePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- for VS2010 we need to use 10.5 but for VS2012+ we should use VisualStudioVersion -->
+    <WebPublishTargetsVersion Condition=" '$(WebPublishTargetsVersion)' =='' and '$(VisualStudioVersion)' == 10.0 ">10.5</WebPublishTargetsVersion>
+    <WebPublishTargetsVersion Condition=" '$(WebPublishTargetsVersion)'=='' ">$(VisualStudioVersion)</WebPublishTargetsVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(WebPublishTargetsVersion)</VSToolsPath>
+    <_WebPublishTargetsPath Condition=" '$(_WebPublishTargetsPath)'=='' ">$(VSToolsPath)</_WebPublishTargetsPath>
+    <AssemblyFileVersion Condition="'$(AssemblyFileVersion)' == ''">1.0.0.0</AssemblyFileVersion>
+    <AssemblyVersion Condition="'$(AssemblyVersion)' == ''">1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\ABASTECIMIENTOS_DATOS.vbproj">
+      <Project>{DC64486C-763D-48FB-A6B3-DCE891B705E7}</Project>
+      <Name>ABASTECIMIENTOS_DATOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_ENTIDADES\ABASTECIMIENTOS_ENTIDADES.vbproj">
+      <Project>{7DE8CDB0-4460-4276-A16C-BFB144140F50}</Project>
+      <Name>ABASTECIMIENTOS_ENTIDADES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_NEGOCIO\ABASTECIMIENTOS_NEGOCIO.vbproj">
+      <Project>{0430770D-9781-44BF-94E7-4624541E4963}</Project>
+      <Name>ABASTECIMIENTOS_NEGOCIO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\ABASTECIMIENTOS_WUC.vbproj">
+      <Project>{3AA39EBA-95B5-490F-8AA1-BC54E9F476DC}</Project>
+      <Name>ABASTECIMIENTOS_WUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projects\SINAB_Entidades\SINAB_Entidades.csproj">
+      <Project>{4A665511-69F3-4C89-8C86-0455DCAA1B89}</Project>
+      <Name>SINAB_Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projects\SINAB_Utils\SINAB_Utils.csproj">
+      <Project>{240ED102-3556-4373-9F56-1D5F9B4838DF}</Project>
+      <Name>SINAB_Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(_WebPublishTargetsPath)\Web\Microsoft.WebSite.Publishing.targets" />
+</Project>

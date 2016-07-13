@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsAbastecimientoProductoAlmacen" targetNamespace="http://tempuri.org/DsAbastecimientoProductoAlmacen.xsd" xmlns:mstns="http://tempuri.org/DsAbastecimientoProductoAlmacen.xsd" xmlns="http://tempuri.org/DsAbastecimientoProductoAlmacen.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsAbastecimientoProductoAlmacen" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DsAbastecimientoProductoAlmacen" msprop:Generator_UserDSName="DsAbastecimientoProductoAlmacen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ProductoAlmacen" msprop:Generator_TableClassName="ProductoAlmacenDataTable" msprop:Generator_TableVarName="tableProductoAlmacen" msprop:Generator_RowChangedName="ProductoAlmacenRowChanged" msprop:Generator_TablePropName="ProductoAlmacen" msprop:Generator_RowDeletingName="ProductoAlmacenRowDeleting" msprop:Generator_RowChangingName="ProductoAlmacenRowChanging" msprop:Generator_RowEvHandlerName="ProductoAlmacenRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductoAlmacenRowDeleted" msprop:Generator_RowClassName="ProductoAlmacenRow" msprop:Generator_UserTableName="ProductoAlmacen" msprop:Generator_RowEvArgName="ProductoAlmacenRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Almacen" msprop:Generator_ColumnVarNameInTable="columnAlmacen" msprop:Generator_ColumnPropNameInRow="Almacen" msprop:Generator_ColumnPropNameInTable="AlmacenColumn" msprop:Generator_UserColumnName="Almacen" type="xs:string" />
+              <xs:element name="CuadroBasico" msprop:Generator_ColumnVarNameInTable="columnCuadroBasico" msprop:Generator_ColumnPropNameInRow="CuadroBasico" msprop:Generator_ColumnPropNameInTable="CuadroBasicoColumn" msprop:Generator_UserColumnName="CuadroBasico" type="xs:int" />
+              <xs:element name="Desabastecido" msprop:Generator_ColumnVarNameInTable="columnDesabastecido" msprop:Generator_ColumnPropNameInRow="Desabastecido" msprop:Generator_ColumnPropNameInTable="DesabastecidoColumn" msprop:Generator_UserColumnName="Desabastecido" type="xs:int" />
+              <xs:element name="Abastecido" msprop:Generator_ColumnVarNameInTable="columnAbastecido" msprop:Generator_ColumnPropNameInRow="Abastecido" msprop:Generator_ColumnPropNameInTable="AbastecidoColumn" msprop:Generator_UserColumnName="Abastecido" type="xs:short" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

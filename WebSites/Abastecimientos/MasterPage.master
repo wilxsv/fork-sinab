@@ -1,0 +1,275 @@
+<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" EnableViewState="true" %>
+
+<%@ Register Src="Controles/Seguridad/InformacionSesion.ascx" TagName="InformacionSesion"
+    TagPrefix="uc1" %>
+<%@ Register Src="Controles/Seguridad/FrmNuevoPassword.ascx" TagName="NuevoPassword"
+    TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ministerio De Salud P&uacute;blica .::SISTEMA DE ABASTECIMIENTO::.
+    </title>
+    <%--<link href="Style.css" rel="stylesheet" type="text/css" />--%>
+    <link href="Style/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css" />
+    <link href="Style/jquery.fileupload-ui.css" rel="stylesheet" type="text/css" />
+    <link href="Style/jquery.fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="Style/jquery.ui.timepicker.css" rel="stylesheet" type="text/css" />
+    <link href="Style/chosen.min.css" rel="stylesheet" type="text/css"/>
+    <link href="Style/Style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" media="handheld, only screen and (max-device-width: 480px)" href="Style/Mobile.css" />
+    <script type="text/javascript" language="JavaScript">
+        function GetPathAplicacion() {
+            var path;
+
+            var retorno;
+
+            path = location.pathname;
+            var campos = path.split("/");
+            if (campos.len = 0) {
+                retorno = "/";
+            }
+            else {
+                retorno = "/" + campos[1] + "/";
+            }
+
+            return retorno;
+        }
+        function IniAplicacion() {
+            AppLogo.src = GetPathAplicacion() + "frmViewLogo.aspx;";
+            alert("Alerta: " + AppLogo.src);
+        }
+        function GetPathAplicacionFrmLogo() {
+            try {
+                //Run some code here
+                document.getElementById('AppLogo').src = GetPathAplicacion() + "frmViewLogo.aspx";
+                document.getElementById('hrApp').href = GetPathAplicacion();
+                document.getElementById('hrAppLogo').href = GetPathAplicacion();
+            }
+            catch (err) {
+                //Handle errors here
+                alert('Error: ' + err);
+            }
+            return document.getElementById('AppLogo').src;
+
+        }   
+    </script>
+</head>
+<body>
+    <%--onload='GetPathAplicacionFrmLogo();'--%>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true">
+        <Scripts>
+            <asp:ScriptReference Path="Script/jquery-1.9.1.js" />
+            <asp:ScriptReference Path="Script/jquery-ui-1.10.3.custom.min.js" />
+            <asp:ScriptReference Path="Script/jquery.ui.datepicker-es.min.js" />
+            <asp:ScriptReference Path="Script/jquery.ui.timepicker.js" />
+            <asp:ScriptReference Path="Script/jquery.ui.combobox.js" />
+            <asp:ScriptReference Path="Script/jquery.ui.message.js" />
+            <asp:ScriptReference Path="Script/jquery.fileupload.js"/>
+            <asp:ScriptReference Path="Script/jquery.fileupload-ui.js"/>
+            <asp:ScriptReference Path="Script/jquery.fileupload-jquery-ui.js"/>
+            <asp:ScriptReference Path="Script/jquery.iframe-transport.js"/>
+            <asp:ScriptReference Path="Script/chosen.jquery.js"/>
+            <asp:ScriptReference Path="Script/script.js" />
+        </Scripts>
+    </asp:ScriptManager>
+    <div id="Page">
+        <div id="Header">
+            <div>
+                <div class="logo">
+                    <asp:Image runat="server" ID="logo" />
+                </div>
+                <div class="textos">
+                    <asp:HyperLink runat="server" ID="mainlink" CssClass="siglas" Text="SINAB" NavigateUrl="~/FrmPrincipal.aspx" />
+                    <div class="nombre">
+                        Sistema Nacional de Abastecimiento</div>
+                </div>
+            </div>
+            <table cellpadding="0" cellspacing="0" class="MenuBar">
+                <tr>
+                    <td style="width: 100%">
+                        <div id="MenuContainer">
+                            <asp:PlaceHolder ID="Menu" runat="server" />
+                            <div class="LinkMenuRuta">
+                                <asp:ContentPlaceHolder ID="MenuContent" runat="server" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="lnkbAyuda" runat="server" NavigateUrl="#" Visible="false" EnableViewState="False"
+                            CssClass="ayuda" />
+                    </td>
+                    <td>
+                        <table cellpadding="0" cellspacing="0" id="UserDialogs">
+                            <tr>
+                                <td>
+                                    <asp:HyperLink ID="lnkUsuario" runat="server" CssClass="usuario" />
+                                    <div class="ClavePopUp ChildDialog">
+                                        <div class="handler">
+                                        </div>
+                                        <div class="InfoPopUpBody">
+                                            <uc1:NuevoPassword ID="NuevoPassword1" runat="server" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <asp:HyperLink ID="LnkbinfoUsuario" runat="server" CausesValidation="False" CssClass="usuarioInfo"> </asp:HyperLink>
+                                    <div class="InfoPopUp ChildDialog">
+                                        <div class="handler">
+                                        </div>
+                                        <div class="InfoPopUpBody">
+                                            <uc1:InformacionSesion ID="InfoSesion" runat="server" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td nowrap="nowrap" style="padding-left: 10px">
+                        <asp:LinkButton ID="cerrarSesion" runat="server" CausesValidation="False" Text="Cerrar Sesión"
+                            CssClass="error" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="PageContent" runat="server" />
+        </div>
+        <div class="footer">
+            En linea:
+            <asp:Label ID="lblUserOnline" runat="server"></asp:Label></div>
+    </div>
+    </form>
+  
+
+    <script type="text/javascript">
+        //center
+        jQuery.fn.center = function () {
+            this.css("position", "absolute");
+            this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) +
+                $(window).scrollTop()) + "px");
+            this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) +
+                $(window).scrollLeft()) + "px");
+            return this;
+        };
+
+        $("div.loader").center();
+        //validacion de campos para tipo numérico
+        $(".numeric").keypress(function (e) {
+
+            var charCode = (e.which) ? e.which : e.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        });
+
+        $(".double").keypress(function (e) {
+            var charCode = (e.which) ? e.which : e.keyCode;
+            if (charCode > 31 && (charCode < 46 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        });
+
+
+        //Inicio Dialogos de Usuario
+        $(".ChildDialog").hide();
+
+        $("html").click(function () {
+            $(".ChildDialog").hide();
+        });
+
+
+        $("#UserDialogs a").click(function (event) {
+            event.stopPropagation();
+
+            if ($(this).next().is(":visible")) {
+                $(this).next().hide();
+            } else {
+                $(".ChildDialog").hide();
+                $(this).next().show();
+                if ($(this).next().hasClass("ClavePopUp")) {
+                    $(".ClavePopUp #divError").empty().append("<span></span>").removeClass("error").removeClass("aviso");
+                    $(".ClavePopUp #pForm span").hide();
+                    $(".ClavePopUp #pForm input").val("");
+                    $(".ClavePopUp #btnguardar").show();
+                }
+            }
+        });
+
+        $(".ClavePopUp").click(function (event) {
+            event.stopPropagation();
+        });
+        //Fin Dialogos de Usuario
+
+        $(function () {
+            
+            $(".monthyearfield").datepicker(
+                {
+                    dateFormat: "mm/yy",
+                    changeMonth: true,
+                    changeYear: true,
+                    showButtonPanel: true,
+                    onClose: function(dateText, inst) {
+                        function isDonePressed() {
+                            return ($('#ui-datepicker-div').html().indexOf('ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all ui-state-hover') > -1);
+                        }
+
+                        if (isDonePressed()) {
+                            var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+                            var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                            $(this).datepicker('setDate', new Date(year, month, 1)).trigger('change');
+
+                            $('.monthyearfield').focusout(); //Added to remove focus from datepicker input box on selecting date
+                        }
+                    },
+                    beforeShow: function(input, inst) {
+                       
+                        inst.dpDiv.addClass('month_year_datepicker');
+                        if ((datestr = $(this).val()).length > 0) {
+                            year = datestr.substring(datestr.length - 4, datestr.length);
+                            month = datestr.substring(0, 2);
+                            $(this).datepicker('option', 'defaultDate', new Date( (new Date(year, month,1))-1));
+                            $(this).datepicker('setDate',new Date( (new Date(year, month,1))-1));
+                            $(".ui-datepicker-calendar").hide();
+                        }
+                    }
+                });
+            
+            $(".datefield").datepicker({ dateFormat: 'dd/mm/yy' });
+            $(".datefield").datepicker($.datepicker.regional["es"]);
+       
+            $("div.aviso").message();
+            $("div.error").message({ type: "error" });
+
+            $.timepicker.regional['es'] = {
+                hourText: 'Hora',
+                minuteText: 'Minuto',
+                amPmText: ['AM', 'PM'],
+                closeButtonText: 'Aceptar',
+                nowButtonText: 'Ahora',
+                deselectButtonText: 'Deseleccionar'
+            };
+            
+            $.timepicker.setDefaults($.timepicker.regional['es']);
+
+            $(".timefield").timepicker({
+                showPeriod: true,
+                showLeadingZero: true
+            });
+            
+            $(".filterlist").chosen({
+                disable_search_threshold: 10,
+                no_results_text: "No se encontró su busqueda!"
+               // width: "95%"
+            });
+        });
+        
+       
+
+    </script>
+</body>
+</html>

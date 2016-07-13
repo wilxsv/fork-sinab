@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DstEstGerencialComprasTransito" targetNamespace="http://tempuri.org/DstEstGerencialComprasTransito.xsd" xmlns:mstns="http://tempuri.org/DstEstGerencialComprasTransito.xsd" xmlns="http://tempuri.org/DstEstGerencialComprasTransito.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DstEstGerencialComprasTransito" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DstEstGerencialComprasTransito" msprop:Generator_DataSetName="DstEstGerencialComprasTransito">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GerencialComprasTransito" msprop:Generator_UserTableName="GerencialComprasTransito" msprop:Generator_RowDeletedName="GerencialComprasTransitoRowDeleted" msprop:Generator_RowChangedName="GerencialComprasTransitoRowChanged" msprop:Generator_RowClassName="GerencialComprasTransitoRow" msprop:Generator_RowChangingName="GerencialComprasTransitoRowChanging" msprop:Generator_RowEvArgName="GerencialComprasTransitoRowChangeEvent" msprop:Generator_RowEvHandlerName="GerencialComprasTransitoRowChangeEventHandler" msprop:Generator_TableClassName="GerencialComprasTransitoDataTable" msprop:Generator_TableVarName="tableGerencialComprasTransito" msprop:Generator_RowDeletingName="GerencialComprasTransitoRowDeleting" msprop:Generator_TablePropName="GerencialComprasTransito">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDESTABLECIMIENTO" msprop:Generator_UserColumnName="IDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="IDESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnIDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="IDESTABLECIMIENTOColumn" type="xs:int" />
+              <xs:element name="IDPROVEEDOR" msprop:Generator_UserColumnName="IDPROVEEDOR" msprop:Generator_ColumnPropNameInRow="IDPROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnIDPROVEEDOR" msprop:Generator_ColumnPropNameInTable="IDPROVEEDORColumn" type="xs:int" />
+              <xs:element name="IDCONTRATO" msprop:Generator_UserColumnName="IDCONTRATO" msprop:Generator_ColumnPropNameInRow="IDCONTRATO" msprop:Generator_ColumnVarNameInTable="columnIDCONTRATO" msprop:Generator_ColumnPropNameInTable="IDCONTRATOColumn" type="xs:long" />
+              <xs:element name="RENGLON" msprop:Generator_UserColumnName="RENGLON" msprop:Generator_ColumnPropNameInRow="RENGLON" msprop:Generator_ColumnVarNameInTable="columnRENGLON" msprop:Generator_ColumnPropNameInTable="RENGLONColumn" type="xs:long" />
+              <xs:element name="CANTIDAD" msprop:Generator_UserColumnName="CANTIDAD" msprop:Generator_ColumnPropNameInRow="CANTIDAD" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD" msprop:Generator_ColumnPropNameInTable="CANTIDADColumn" type="xs:decimal" />
+              <xs:element name="PRECIOUNITARIO" msprop:Generator_UserColumnName="PRECIOUNITARIO" msprop:Generator_ColumnPropNameInRow="PRECIOUNITARIO" msprop:Generator_ColumnVarNameInTable="columnPRECIOUNITARIO" msprop:Generator_ColumnPropNameInTable="PRECIOUNITARIOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ESTAHABILITADO" msprop:Generator_UserColumnName="ESTAHABILITADO" msprop:Generator_ColumnPropNameInRow="ESTAHABILITADO" msprop:Generator_ColumnVarNameInTable="columnESTAHABILITADO" msprop:Generator_ColumnPropNameInTable="ESTAHABILITADOColumn" type="xs:unsignedByte" />
+              <xs:element name="CODIGOESTABLECIMIENTO" msprop:Generator_UserColumnName="CODIGOESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="CODIGOESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnCODIGOESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="CODIGOESTABLECIMIENTOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESTABLECIMIENTO" msprop:Generator_UserColumnName="ESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="ESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="ESTABLECIMIENTOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDZONA" msprop:Generator_UserColumnName="IDZONA" msprop:Generator_ColumnPropNameInRow="IDZONA" msprop:Generator_ColumnVarNameInTable="columnIDZONA" msprop:Generator_ColumnPropNameInTable="IDZONAColumn" type="xs:int" />
+              <xs:element name="ZONA" msprop:Generator_UserColumnName="ZONA" msprop:Generator_ColumnPropNameInRow="ZONA" msprop:Generator_ColumnVarNameInTable="columnZONA" msprop:Generator_ColumnPropNameInTable="ZONAColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESTAHABILITADA" msprop:Generator_UserColumnName="ESTAHABILITADA" msprop:Generator_ColumnPropNameInRow="ESTAHABILITADA" msprop:Generator_ColumnVarNameInTable="columnESTAHABILITADA" msprop:Generator_ColumnPropNameInTable="ESTAHABILITADAColumn" type="xs:unsignedByte" />
+              <xs:element name="CANTIDADALMACEN" msdata:ReadOnly="true" msprop:Generator_UserColumnName="CANTIDADALMACEN" msprop:Generator_ColumnPropNameInRow="CANTIDADALMACEN" msprop:Generator_ColumnVarNameInTable="columnCANTIDADALMACEN" msprop:Generator_ColumnPropNameInTable="CANTIDADALMACENColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ENTREGADAALMACEN" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ENTREGADAALMACEN" msprop:Generator_ColumnPropNameInRow="ENTREGADAALMACEN" msprop:Generator_ColumnVarNameInTable="columnENTREGADAALMACEN" msprop:Generator_ColumnPropNameInTable="ENTREGADAALMACENColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TRANSITO" msdata:ReadOnly="true" msprop:Generator_UserColumnName="TRANSITO" msprop:Generator_ColumnPropNameInRow="TRANSITO" msprop:Generator_ColumnVarNameInTable="columnTRANSITO" msprop:Generator_ColumnPropNameInTable="TRANSITOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CORRPRODUCTO" msprop:Generator_UserColumnName="CORRPRODUCTO" msprop:Generator_ColumnPropNameInRow="CORRPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnCORRPRODUCTO" msprop:Generator_ColumnPropNameInTable="CORRPRODUCTOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCLARGO" msprop:Generator_UserColumnName="DESCLARGO" msprop:Generator_ColumnPropNameInRow="DESCLARGO" msprop:Generator_ColumnVarNameInTable="columnDESCLARGO" msprop:Generator_ColumnPropNameInTable="DESCLARGOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="763" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROVEEDOR" msprop:Generator_UserColumnName="PROVEEDOR" msprop:Generator_ColumnPropNameInRow="PROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnPROVEEDOR" msprop:Generator_ColumnPropNameInTable="PROVEEDORColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDTIPOESTABLECIMIENTO" msprop:Generator_UserColumnName="IDTIPOESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="IDTIPOESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnIDTIPOESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="IDTIPOESTABLECIMIENTOColumn" type="xs:unsignedByte" />
+              <xs:element name="IDPRODUCTO" msprop:Generator_UserColumnName="IDPRODUCTO" msprop:Generator_ColumnPropNameInRow="IDPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnIDPRODUCTO" msprop:Generator_ColumnPropNameInTable="IDPRODUCTOColumn" type="xs:long" />
+              <xs:element name="CODIGOPROVEEDOR" msprop:Generator_UserColumnName="CODIGOPROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnCODIGOPROVEEDOR" msprop:Generator_ColumnPropNameInRow="CODIGOPROVEEDOR" msprop:Generator_ColumnPropNameInTable="CODIGOPROVEEDORColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UNIDADMEDIDA" msprop:Generator_UserColumnName="UNIDADMEDIDA" msprop:Generator_ColumnPropNameInRow="UNIDADMEDIDA" msprop:Generator_ColumnVarNameInTable="columnUNIDADMEDIDA" msprop:Generator_ColumnPropNameInTable="UNIDADMEDIDAColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GerencialComprasTransito" />
+      <xs:field xpath="mstns:IDESTABLECIMIENTO" />
+      <xs:field xpath="mstns:IDPROVEEDOR" />
+      <xs:field xpath="mstns:IDCONTRATO" />
+      <xs:field xpath="mstns:RENGLON" />
+      <xs:field xpath="mstns:IDZONA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

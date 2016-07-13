@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dstReportes" targetNamespace="http://tempuri.org/dstReportes.xsd" xmlns:mstns="http://tempuri.org/dstReportes.xsd" xmlns="http://tempuri.org/dstReportes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dstReportes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dstReportes" msprop:Generator_DataSetName="dstReportes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PROCESOCOMPRAS" msprop:Generator_UserTableName="PROCESOCOMPRAS" msprop:Generator_RowDeletedName="PROCESOCOMPRASRowDeleted" msprop:Generator_TableClassName="PROCESOCOMPRASDataTable" msprop:Generator_RowChangedName="PROCESOCOMPRASRowChanged" msprop:Generator_RowClassName="PROCESOCOMPRASRow" msprop:Generator_RowChangingName="PROCESOCOMPRASRowChanging" msprop:Generator_RowEvArgName="PROCESOCOMPRASRowChangeEvent" msprop:Generator_RowEvHandlerName="PROCESOCOMPRASRowChangeEventHandler" msprop:Generator_TablePropName="PROCESOCOMPRAS" msprop:Generator_TableVarName="tablePROCESOCOMPRAS" msprop:Generator_RowDeletingName="PROCESOCOMPRASRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDPROCESOCOMPRA" msprop:Generator_UserColumnName="IDPROCESOCOMPRA" msprop:Generator_ColumnPropNameInRow="IDPROCESOCOMPRA" msprop:Generator_ColumnVarNameInTable="columnIDPROCESOCOMPRA" msprop:Generator_ColumnPropNameInTable="IDPROCESOCOMPRAColumn" type="xs:long" />
+              <xs:element name="IDESTABLECIMIENTO" msprop:Generator_UserColumnName="IDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="IDESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnIDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="IDESTABLECIMIENTOColumn" type="xs:int" />
+              <xs:element name="FECHAENVIONOTA" msprop:Generator_UserColumnName="FECHAENVIONOTA" msprop:Generator_ColumnPropNameInRow="FECHAENVIONOTA" msprop:Generator_ColumnVarNameInTable="columnFECHAENVIONOTA" msprop:Generator_ColumnPropNameInTable="FECHAENVIONOTAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="COSTOBASE" msprop:Generator_UserColumnName="COSTOBASE" msprop:Generator_ColumnPropNameInRow="COSTOBASE" msprop:Generator_ColumnVarNameInTable="columnCOSTOBASE" msprop:Generator_ColumnPropNameInTable="COSTOBASEColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LUGARAPERTURABASE" msprop:Generator_UserColumnName="LUGARAPERTURABASE" msprop:Generator_ColumnPropNameInRow="LUGARAPERTURABASE" msprop:Generator_ColumnVarNameInTable="columnLUGARAPERTURABASE" msprop:Generator_ColumnPropNameInTable="LUGARAPERTURABASEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHAHORAINICIOAPERTURA" msprop:Generator_UserColumnName="FECHAHORAINICIOAPERTURA" msprop:Generator_ColumnPropNameInRow="FECHAHORAINICIOAPERTURA" msprop:Generator_ColumnVarNameInTable="columnFECHAHORAINICIOAPERTURA" msprop:Generator_ColumnPropNameInTable="FECHAHORAINICIOAPERTURAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAHORAFINAPERTURA" msprop:Generator_UserColumnName="FECHAHORAFINAPERTURA" msprop:Generator_ColumnPropNameInRow="FECHAHORAFINAPERTURA" msprop:Generator_ColumnVarNameInTable="columnFECHAHORAFINAPERTURA" msprop:Generator_ColumnPropNameInTable="FECHAHORAFINAPERTURAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAPUBLICACION" msprop:Generator_UserColumnName="FECHAPUBLICACION" msprop:Generator_ColumnPropNameInRow="FECHAPUBLICACION" msprop:Generator_ColumnVarNameInTable="columnFECHAPUBLICACION" msprop:Generator_ColumnPropNameInTable="FECHAPUBLICACIONColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LUGARRETIROBASE" msprop:Generator_UserColumnName="LUGARRETIROBASE" msprop:Generator_ColumnPropNameInRow="LUGARRETIROBASE" msprop:Generator_ColumnVarNameInTable="columnLUGARRETIROBASE" msprop:Generator_ColumnPropNameInTable="LUGARRETIROBASEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHAHORAINICIORETIRO" msprop:Generator_UserColumnName="FECHAHORAINICIORETIRO" msprop:Generator_ColumnPropNameInRow="FECHAHORAINICIORETIRO" msprop:Generator_ColumnVarNameInTable="columnFECHAHORAINICIORETIRO" msprop:Generator_ColumnPropNameInTable="FECHAHORAINICIORETIROColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAHORAFINRETIRO" msprop:Generator_UserColumnName="FECHAHORAFINRETIRO" msprop:Generator_ColumnPropNameInRow="FECHAHORAFINRETIRO" msprop:Generator_ColumnVarNameInTable="columnFECHAHORAFINRETIRO" msprop:Generator_ColumnPropNameInTable="FECHAHORAFINRETIROColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LUGARRECEPCIONOFERTA" msprop:Generator_UserColumnName="LUGARRECEPCIONOFERTA" msprop:Generator_ColumnPropNameInRow="LUGARRECEPCIONOFERTA" msprop:Generator_ColumnVarNameInTable="columnLUGARRECEPCIONOFERTA" msprop:Generator_ColumnPropNameInTable="LUGARRECEPCIONOFERTAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHAHORAINICIORECEPCION" msprop:Generator_UserColumnName="FECHAHORAINICIORECEPCION" msprop:Generator_ColumnPropNameInRow="FECHAHORAINICIORECEPCION" msprop:Generator_ColumnVarNameInTable="columnFECHAHORAINICIORECEPCION" msprop:Generator_ColumnPropNameInTable="FECHAHORAINICIORECEPCIONColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAHORAFINRECEPCION" msprop:Generator_UserColumnName="FECHAHORAFINRECEPCION" msprop:Generator_ColumnPropNameInRow="FECHAHORAFINRECEPCION" msprop:Generator_ColumnVarNameInTable="columnFECHAHORAFINRECEPCION" msprop:Generator_ColumnPropNameInTable="FECHAHORAFINRECEPCIONColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CODIGOLICITACION" msprop:Generator_UserColumnName="CODIGOLICITACION" msprop:Generator_ColumnPropNameInRow="CODIGOLICITACION" msprop:Generator_ColumnVarNameInTable="columnCODIGOLICITACION" msprop:Generator_ColumnPropNameInTable="CODIGOLICITACIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TITULOLICITACION" msprop:Generator_UserColumnName="TITULOLICITACION" msprop:Generator_ColumnPropNameInRow="TITULOLICITACION" msprop:Generator_ColumnVarNameInTable="columnTITULOLICITACION" msprop:Generator_ColumnPropNameInTable="TITULOLICITACIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDTIPOCOMPRASUGERIDO" msprop:Generator_UserColumnName="IDTIPOCOMPRASUGERIDO" msprop:Generator_ColumnPropNameInRow="IDTIPOCOMPRASUGERIDO" msprop:Generator_ColumnVarNameInTable="columnIDTIPOCOMPRASUGERIDO" msprop:Generator_ColumnPropNameInTable="IDTIPOCOMPRASUGERIDOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDTIPOCOMPRAEJECUTAR" msprop:Generator_UserColumnName="IDTIPOCOMPRAEJECUTAR" msprop:Generator_ColumnPropNameInRow="IDTIPOCOMPRAEJECUTAR" msprop:Generator_ColumnVarNameInTable="columnIDTIPOCOMPRAEJECUTAR" msprop:Generator_ColumnPropNameInTable="IDTIPOCOMPRAEJECUTARColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDESTADOPROCESOCOMPRA" msprop:Generator_UserColumnName="IDESTADOPROCESOCOMPRA" msprop:Generator_ColumnPropNameInRow="IDESTADOPROCESOCOMPRA" msprop:Generator_ColumnVarNameInTable="columnIDESTADOPROCESOCOMPRA" msprop:Generator_ColumnPropNameInTable="IDESTADOPROCESOCOMPRAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FECHAINICIOPROCESOCOMPRA" msprop:Generator_UserColumnName="FECHAINICIOPROCESOCOMPRA" msprop:Generator_ColumnPropNameInRow="FECHAINICIOPROCESOCOMPRA" msprop:Generator_ColumnVarNameInTable="columnFECHAINICIOPROCESOCOMPRA" msprop:Generator_ColumnPropNameInTable="FECHAINICIOPROCESOCOMPRAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAELABORACIONBASE" msprop:Generator_UserColumnName="FECHAELABORACIONBASE" msprop:Generator_ColumnPropNameInRow="FECHAELABORACIONBASE" msprop:Generator_ColumnVarNameInTable="columnFECHAELABORACIONBASE" msprop:Generator_ColumnPropNameInTable="FECHAELABORACIONBASEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AUUSUARIOCREACION" msprop:Generator_UserColumnName="AUUSUARIOCREACION" msprop:Generator_ColumnPropNameInRow="AUUSUARIOCREACION" msprop:Generator_ColumnVarNameInTable="columnAUUSUARIOCREACION" msprop:Generator_ColumnPropNameInTable="AUUSUARIOCREACIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AUFECHACREACION" msprop:Generator_UserColumnName="AUFECHACREACION" msprop:Generator_ColumnPropNameInRow="AUFECHACREACION" msprop:Generator_ColumnVarNameInTable="columnAUFECHACREACION" msprop:Generator_ColumnPropNameInTable="AUFECHACREACIONColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AUUSUARIOMODIFICACION" msprop:Generator_UserColumnName="AUUSUARIOMODIFICACION" msprop:Generator_ColumnPropNameInRow="AUUSUARIOMODIFICACION" msprop:Generator_ColumnVarNameInTable="columnAUUSUARIOMODIFICACION" msprop:Generator_ColumnPropNameInTable="AUUSUARIOMODIFICACIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AUFECHAMODIFICACION" msprop:Generator_UserColumnName="AUFECHAMODIFICACION" msprop:Generator_ColumnPropNameInRow="AUFECHAMODIFICACION" msprop:Generator_ColumnVarNameInTable="columnAUFECHAMODIFICACION" msprop:Generator_ColumnPropNameInTable="AUFECHAMODIFICACIONColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ESTASINCRONIZADA" msprop:Generator_UserColumnName="ESTASINCRONIZADA" msprop:Generator_ColumnPropNameInRow="ESTASINCRONIZADA" msprop:Generator_ColumnVarNameInTable="columnESTASINCRONIZADA" msprop:Generator_ColumnPropNameInTable="ESTASINCRONIZADAColumn" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

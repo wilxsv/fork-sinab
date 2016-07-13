@@ -1,0 +1,48 @@
+﻿<%@ Master Language="VB" CodeFile="Mastersinmenu.master.vb" Inherits="Mastersinmenu" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Ministerio De Salud Pública y Asistencia Social .::SISTEMA DE ABASTECIMIENTO::.
+    </title>
+    <link id="Link1" href="Style/Style.css" rel="stylesheet" type="text/css"/>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+   
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="Page" class="frame">
+        <div id="Header">
+            <div>
+                <div class="logo">
+                    <asp:Image runat="server" ID="logo" ImageUrl="~/Imagenes/MSPAS-LOGO.png" />
+                </div>
+                <div class="textos" style="margin: 0px !important">
+                    <asp:HyperLink runat="server" ID="mainlink" CssClass="siglas" Text="SINAB" NavigateUrl="~/FrmPrincipal.aspx" />
+                    <div class="nombre">
+                        Sistema Nacional de Abastecimiento</div>
+                </div>
+            </div>
+            <div class="userinfo">
+                <div style="padding: 10px">
+                    <asp:ContentPlaceHolder ID="Title" runat="server" />
+                    <%--<asp:HyperLink runat="server" ID="ImgbInicio" Text="Inicio" NavigateUrl="~/FrmPrincipal.aspx"
+                            CssClass="lnkhome" />
+                            </div>--%>
+                </div>
+            </div>
+        </div>
+        <div id="MenuContainer">
+            <div style="padding: 6px">
+                <asp:ContentPlaceHolder ID="Menu" runat="server" />
+            </div>
+        </div>
+        <div class="content" style="padding:10px;">
+            <asp:ContentPlaceHolder ID="PageContent" runat="server" />
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+    </form>
+</body>
+</html>

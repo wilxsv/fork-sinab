@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsValorizacionPorRenglon" targetNamespace="http://tempuri.org/dsValorizacionPorRenglon.xsd" xmlns:mstns="http://tempuri.org/dsValorizacionPorRenglon.xsd" xmlns="http://tempuri.org/dsValorizacionPorRenglon.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsValorizacionPorRenglon" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsValorizacionPorRenglon" msprop:Generator_DataSetName="dsValorizacionPorRenglon">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtValorizacionPorRenglon" msprop:Generator_UserTableName="dtValorizacionPorRenglon" msprop:Generator_RowDeletedName="dtValorizacionPorRenglonRowDeleted" msprop:Generator_RowChangedName="dtValorizacionPorRenglonRowChanged" msprop:Generator_RowClassName="dtValorizacionPorRenglonRow" msprop:Generator_RowChangingName="dtValorizacionPorRenglonRowChanging" msprop:Generator_RowEvArgName="dtValorizacionPorRenglonRowChangeEvent" msprop:Generator_RowEvHandlerName="dtValorizacionPorRenglonRowChangeEventHandler" msprop:Generator_TableClassName="dtValorizacionPorRenglonDataTable" msprop:Generator_TableVarName="tabledtValorizacionPorRenglon" msprop:Generator_RowDeletingName="dtValorizacionPorRenglonRowDeleting" msprop:Generator_TablePropName="dtValorizacionPorRenglon">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RENGLON" msprop:Generator_UserColumnName="RENGLON" msprop:Generator_ColumnVarNameInTable="columnRENGLON" msprop:Generator_ColumnPropNameInRow="RENGLON" msprop:Generator_ColumnPropNameInTable="RENGLONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PROVEEDOR" msprop:Generator_UserColumnName="PROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnPROVEEDOR" msprop:Generator_ColumnPropNameInRow="PROVEEDOR" msprop:Generator_ColumnPropNameInTable="PROVEEDORColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OFERTA" msprop:Generator_UserColumnName="OFERTA" msprop:Generator_ColumnVarNameInTable="columnOFERTA" msprop:Generator_ColumnPropNameInRow="OFERTA" msprop:Generator_ColumnPropNameInTable="OFERTAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ALTERNATIVA" msprop:Generator_UserColumnName="ALTERNATIVA" msprop:Generator_ColumnVarNameInTable="columnALTERNATIVA" msprop:Generator_ColumnPropNameInRow="ALTERNATIVA" msprop:Generator_ColumnPropNameInTable="ALTERNATIVAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPCIONGENERICA" msprop:Generator_UserColumnName="DESCRIPCIONGENERICA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCIONGENERICA" msprop:Generator_ColumnPropNameInRow="DESCRIPCIONGENERICA" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONGENERICAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPCIONPROVEEDOR" msprop:Generator_UserColumnName="DESCRIPCIONPROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCIONPROVEEDOR" msprop:Generator_ColumnPropNameInRow="DESCRIPCIONPROVEEDOR" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONPROVEEDORColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UNIDADMEDIDA" msprop:Generator_UserColumnName="UNIDADMEDIDA" msprop:Generator_ColumnVarNameInTable="columnUNIDADMEDIDA" msprop:Generator_ColumnPropNameInRow="UNIDADMEDIDA" msprop:Generator_ColumnPropNameInTable="UNIDADMEDIDAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CANTIDAD" msprop:Generator_UserColumnName="CANTIDAD" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD" msprop:Generator_ColumnPropNameInRow="CANTIDAD" msprop:Generator_ColumnPropNameInTable="CANTIDADColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PRECIOUNITARIO" msprop:Generator_UserColumnName="PRECIOUNITARIO" msprop:Generator_ColumnVarNameInTable="columnPRECIOUNITARIO" msprop:Generator_ColumnPropNameInRow="PRECIOUNITARIO" msprop:Generator_ColumnPropNameInTable="PRECIOUNITARIOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="MONTO" msprop:Generator_UserColumnName="MONTO" msprop:Generator_ColumnPropNameInRow="MONTO" msprop:Generator_ColumnVarNameInTable="columnMONTO" msprop:Generator_ColumnPropNameInTable="MONTOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IDESTABLECIMIENTO" msprop:Generator_UserColumnName="IDESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnIDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="IDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="IDESTABLECIMIENTOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDPROCESOCOMPRA" msprop:Generator_UserColumnName="IDPROCESOCOMPRA" msprop:Generator_ColumnVarNameInTable="columnIDPROCESOCOMPRA" msprop:Generator_ColumnPropNameInRow="IDPROCESOCOMPRA" msprop:Generator_ColumnPropNameInTable="IDPROCESOCOMPRAColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtComision" msprop:Generator_UserTableName="dtComision" msprop:Generator_RowDeletedName="dtComisionRowDeleted" msprop:Generator_RowChangedName="dtComisionRowChanged" msprop:Generator_RowClassName="dtComisionRow" msprop:Generator_RowChangingName="dtComisionRowChanging" msprop:Generator_RowEvArgName="dtComisionRowChangeEvent" msprop:Generator_RowEvHandlerName="dtComisionRowChangeEventHandler" msprop:Generator_TableClassName="dtComisionDataTable" msprop:Generator_TableVarName="tabledtComision" msprop:Generator_RowDeletingName="dtComisionRowDeleting" msprop:Generator_TablePropName="dtComision">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdEmpleado" msprop:Generator_UserColumnName="IdEmpleado" msprop:Generator_ColumnVarNameInTable="columnIdEmpleado" msprop:Generator_ColumnPropNameInRow="IdEmpleado" msprop:Generator_ColumnPropNameInTable="IdEmpleadoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Cargo" msprop:Generator_UserColumnName="Cargo" msprop:Generator_ColumnVarNameInTable="columnCargo" msprop:Generator_ColumnPropNameInRow="Cargo" msprop:Generator_ColumnPropNameInTable="CargoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Estahabilitado" msprop:Generator_UserColumnName="Estahabilitado" msprop:Generator_ColumnVarNameInTable="columnEstahabilitado" msprop:Generator_ColumnPropNameInRow="Estahabilitado" msprop:Generator_ColumnPropNameInTable="EstahabilitadoColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="IDESTABLECIMIENTO" msprop:Generator_UserColumnName="IDESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnIDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="IDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="IDESTABLECIMIENTOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDPROCESOCOMPRA" msprop:Generator_UserColumnName="IDPROCESOCOMPRA" msprop:Generator_ColumnVarNameInTable="columnIDPROCESOCOMPRA" msprop:Generator_ColumnPropNameInRow="IDPROCESOCOMPRA" msprop:Generator_ColumnPropNameInTable="IDPROCESOCOMPRAColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

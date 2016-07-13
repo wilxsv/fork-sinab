@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsConsumo" targetNamespace="http://tempuri.org/dsConsumo.xsd" xmlns:mstns="http://tempuri.org/dsConsumo.xsd" xmlns="http://tempuri.org/dsConsumo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsConsumo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsConsumo" msprop:Generator_DataSetName="dsConsumo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tabla" msprop:Generator_UserTableName="tabla" msprop:Generator_RowDeletedName="tablaRowDeleted" msprop:Generator_RowChangedName="tablaRowChanged" msprop:Generator_RowClassName="tablaRow" msprop:Generator_RowChangingName="tablaRowChanging" msprop:Generator_RowEvArgName="tablaRowChangeEvent" msprop:Generator_RowEvHandlerName="tablaRowChangeEventHandler" msprop:Generator_TableClassName="tablaDataTable" msprop:Generator_TableVarName="tabletabla" msprop:Generator_RowDeletingName="tablaRowDeleting" msprop:Generator_TablePropName="tabla">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="corrproducto" msprop:Generator_UserColumnName="corrproducto" msprop:Generator_ColumnVarNameInTable="columncorrproducto" msprop:Generator_ColumnPropNameInRow="corrproducto" msprop:Generator_ColumnPropNameInTable="corrproductoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="desclargo" msprop:Generator_UserColumnName="desclargo" msprop:Generator_ColumnVarNameInTable="columndesclargo" msprop:Generator_ColumnPropNameInRow="desclargo" msprop:Generator_ColumnPropNameInTable="desclargoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="descripcion" msprop:Generator_UserColumnName="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="consumoreal" msprop:Generator_UserColumnName="consumoreal" msprop:Generator_ColumnVarNameInTable="columnconsumoreal" msprop:Generator_ColumnPropNameInRow="consumoreal" msprop:Generator_ColumnPropNameInTable="consumorealColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="consumoajustado" msprop:Generator_UserColumnName="consumoajustado" msprop:Generator_ColumnVarNameInTable="columnconsumoajustado" msprop:Generator_ColumnPropNameInRow="consumoajustado" msprop:Generator_ColumnPropNameInTable="consumoajustadoColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="existencia" msprop:Generator_UserColumnName="existencia" msprop:Generator_ColumnVarNameInTable="columnexistencia" msprop:Generator_ColumnPropNameInRow="existencia" msprop:Generator_ColumnPropNameInTable="existenciaColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="porcentaje" msprop:Generator_UserColumnName="porcentaje" msprop:Generator_ColumnPropNameInRow="porcentaje" msprop:Generator_ColumnVarNameInTable="columnporcentaje" msprop:Generator_ColumnPropNameInTable="porcentajeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="diasDesab" msprop:Generator_UserColumnName="diasDesab" msprop:Generator_ColumnVarNameInTable="columndiasDesab" msprop:Generator_ColumnPropNameInRow="diasDesab" msprop:Generator_ColumnPropNameInTable="diasDesabColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="demandaInsatis" msprop:Generator_UserColumnName="demandaInsatis" msprop:Generator_ColumnVarNameInTable="columndemandaInsatis" msprop:Generator_ColumnPropNameInRow="demandaInsatis" msprop:Generator_ColumnPropNameInTable="demandaInsatisColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

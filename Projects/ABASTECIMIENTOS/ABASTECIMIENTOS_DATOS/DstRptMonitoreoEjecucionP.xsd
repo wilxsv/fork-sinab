@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DstRptMonitoreoEjecucionP" targetNamespace="http://tempuri.org/DstRptMonitoreoEjecucionP.xsd" xmlns:mstns="http://tempuri.org/DstRptMonitoreoEjecucionP.xsd" xmlns="http://tempuri.org/DstRptMonitoreoEjecucionP.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DstRptMonitoreoEjecucionP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DstRptMonitoreoEjecucionP" msprop:Generator_DataSetName="DstRptMonitoreoEjecucionP">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GerencialMonitoreoPresupuestario" msprop:Generator_UserTableName="GerencialMonitoreoPresupuestario" msprop:Generator_RowDeletedName="GerencialMonitoreoPresupuestarioRowDeleted" msprop:Generator_RowChangedName="GerencialMonitoreoPresupuestarioRowChanged" msprop:Generator_RowClassName="GerencialMonitoreoPresupuestarioRow" msprop:Generator_RowChangingName="GerencialMonitoreoPresupuestarioRowChanging" msprop:Generator_RowEvArgName="GerencialMonitoreoPresupuestarioRowChangeEvent" msprop:Generator_RowEvHandlerName="GerencialMonitoreoPresupuestarioRowChangeEventHandler" msprop:Generator_TableClassName="GerencialMonitoreoPresupuestarioDataTable" msprop:Generator_TableVarName="tableGerencialMonitoreoPresupuestario" msprop:Generator_RowDeletingName="GerencialMonitoreoPresupuestarioRowDeleting" msprop:Generator_TablePropName="GerencialMonitoreoPresupuestario">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDESTABLECIMIENTO" msprop:Generator_UserColumnName="IDESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnIDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="IDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="IDESTABLECIMIENTOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

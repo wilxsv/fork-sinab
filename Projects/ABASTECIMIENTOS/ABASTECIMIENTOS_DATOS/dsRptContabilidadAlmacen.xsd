@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReporteContabilidadAlmacen" targetNamespace="http://tempuri.org/dsReporteContabilidadAlmacen.xsd" xmlns:mstns="http://tempuri.org/dsReporteContabilidadAlmacen.xsd" xmlns="http://tempuri.org/dsReporteContabilidadAlmacen.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReporteContabilidadAlmacen" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsReporteContabilidadAlmacen" msprop:Generator_DataSetName="dsReporteContabilidadAlmacen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtReporteContabilidadAlmacen" msprop:Generator_UserTableName="dtReporteContabilidadAlmacen" msprop:Generator_RowDeletedName="dtReporteContabilidadAlmacenRowDeleted" msprop:Generator_RowChangedName="dtReporteContabilidadAlmacenRowChanged" msprop:Generator_RowClassName="dtReporteContabilidadAlmacenRow" msprop:Generator_RowChangingName="dtReporteContabilidadAlmacenRowChanging" msprop:Generator_RowEvArgName="dtReporteContabilidadAlmacenRowChangeEvent" msprop:Generator_RowEvHandlerName="dtReporteContabilidadAlmacenRowChangeEventHandler" msprop:Generator_TableClassName="dtReporteContabilidadAlmacenDataTable" msprop:Generator_TableVarName="tabledtReporteContabilidadAlmacen" msprop:Generator_RowDeletingName="dtReporteContabilidadAlmacenRowDeleting" msprop:Generator_TablePropName="dtReporteContabilidadAlmacen">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODIGOESTABLECIMIENTO" msprop:Generator_UserColumnName="CODIGOESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnCODIGOESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="CODIGOESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="CODIGOESTABLECIMIENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ESTABLECIMIENTODESTINO" msprop:Generator_UserColumnName="ESTABLECIMIENTODESTINO" msprop:Generator_ColumnVarNameInTable="columnESTABLECIMIENTODESTINO" msprop:Generator_ColumnPropNameInRow="ESTABLECIMIENTODESTINO" msprop:Generator_ColumnPropNameInTable="ESTABLECIMIENTODESTINOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDTIPOTRANSACCION" msprop:Generator_UserColumnName="IDTIPOTRANSACCION" msprop:Generator_ColumnVarNameInTable="columnIDTIPOTRANSACCION" msprop:Generator_ColumnPropNameInRow="IDTIPOTRANSACCION" msprop:Generator_ColumnPropNameInTable="IDTIPOTRANSACCIONColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MONTOEGRESO" msprop:Generator_UserColumnName="MONTOEGRESO" msprop:Generator_ColumnVarNameInTable="columnMONTOEGRESO" msprop:Generator_ColumnPropNameInRow="MONTOEGRESO" msprop:Generator_ColumnPropNameInTable="MONTOEGRESOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MONTOINGRESO" msprop:Generator_UserColumnName="MONTOINGRESO" msprop:Generator_ColumnVarNameInTable="columnMONTOINGRESO" msprop:Generator_ColumnPropNameInRow="MONTOINGRESO" msprop:Generator_ColumnPropNameInTable="MONTOINGRESOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOVIMIENTOS" msprop:Generator_UserColumnName="MOVIMIENTOS" msprop:Generator_ColumnVarNameInTable="columnMOVIMIENTOS" msprop:Generator_ColumnPropNameInRow="MOVIMIENTOS" msprop:Generator_ColumnPropNameInTable="MOVIMIENTOSColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NIVEL" msprop:Generator_UserColumnName="NIVEL" msprop:Generator_ColumnVarNameInTable="columnNIVEL" msprop:Generator_ColumnPropNameInRow="NIVEL" msprop:Generator_ColumnPropNameInTable="NIVELColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBREALMACEN" msprop:Generator_UserColumnName="NOMBREALMACEN" msprop:Generator_ColumnVarNameInTable="columnNOMBREALMACEN" msprop:Generator_ColumnPropNameInRow="NOMBREALMACEN" msprop:Generator_ColumnPropNameInTable="NOMBREALMACENColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SUBCLASIFICACIONMOVIMIENTO" msprop:Generator_UserColumnName="SUBCLASIFICACIONMOVIMIENTO" msprop:Generator_ColumnVarNameInTable="columnSUBCLASIFICACIONMOVIMIENTO" msprop:Generator_ColumnPropNameInRow="SUBCLASIFICACIONMOVIMIENTO" msprop:Generator_ColumnPropNameInTable="SUBCLASIFICACIONMOVIMIENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPOMOVIMIENTO" msprop:Generator_UserColumnName="TIPOMOVIMIENTO" msprop:Generator_ColumnVarNameInTable="columnTIPOMOVIMIENTO" msprop:Generator_ColumnPropNameInRow="TIPOMOVIMIENTO" msprop:Generator_ColumnPropNameInTable="TIPOMOVIMIENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPOTRANSACCION" msprop:Generator_UserColumnName="TIPOTRANSACCION" msprop:Generator_ColumnPropNameInRow="TIPOTRANSACCION" msprop:Generator_ColumnVarNameInTable="columnTIPOTRANSACCION" msprop:Generator_ColumnPropNameInTable="TIPOTRANSACCIONColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

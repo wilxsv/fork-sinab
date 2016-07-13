@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DstRptGerencialesLentoMovimiento" targetNamespace="http://tempuri.org/DstRptGerencialesLentoMovimiento.xsd" xmlns:mstns="http://tempuri.org/DstRptGerencialesLentoMovimiento.xsd" xmlns="http://tempuri.org/DstRptGerencialesLentoMovimiento.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DstRptGerencialesLentoMovimiento" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DstRptGerencialesLentoMovimiento" msprop:Generator_DataSetName="DstRptGerencialesLentoMovimiento">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LENTOMOVIMIENTO" msprop:Generator_UserTableName="LENTOMOVIMIENTO" msprop:Generator_RowDeletedName="LENTOMOVIMIENTORowDeleted" msprop:Generator_RowChangedName="LENTOMOVIMIENTORowChanged" msprop:Generator_RowClassName="LENTOMOVIMIENTORow" msprop:Generator_RowChangingName="LENTOMOVIMIENTORowChanging" msprop:Generator_RowEvArgName="LENTOMOVIMIENTORowChangeEvent" msprop:Generator_RowEvHandlerName="LENTOMOVIMIENTORowChangeEventHandler" msprop:Generator_TableClassName="LENTOMOVIMIENTODataTable" msprop:Generator_TableVarName="tableLENTOMOVIMIENTO" msprop:Generator_RowDeletingName="LENTOMOVIMIENTORowDeleting" msprop:Generator_TablePropName="LENTOMOVIMIENTO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FECHASALIDA" msprop:Generator_UserColumnName="FECHASALIDA" msprop:Generator_ColumnPropNameInRow="FECHASALIDA" msprop:Generator_ColumnVarNameInTable="columnFECHASALIDA" msprop:Generator_ColumnPropNameInTable="FECHASALIDAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MONTO" msprop:Generator_UserColumnName="MONTO" msprop:Generator_ColumnPropNameInRow="MONTO" msprop:Generator_ColumnVarNameInTable="columnMONTO" msprop:Generator_ColumnPropNameInTable="MONTOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AFECTAINVENTARIO" msprop:Generator_UserColumnName="AFECTAINVENTARIO" msprop:Generator_ColumnPropNameInRow="AFECTAINVENTARIO" msprop:Generator_ColumnVarNameInTable="columnAFECTAINVENTARIO" msprop:Generator_ColumnPropNameInTable="AFECTAINVENTARIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDLOTE" msprop:Generator_UserColumnName="IDLOTE" msprop:Generator_ColumnPropNameInRow="IDLOTE" msprop:Generator_ColumnVarNameInTable="columnIDLOTE" msprop:Generator_ColumnPropNameInTable="IDLOTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CODIGOESTABLECIMIENTO" msprop:Generator_UserColumnName="CODIGOESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="CODIGOESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnCODIGOESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="CODIGOESTABLECIMIENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ESTABLECIMIENTO" msprop:Generator_UserColumnName="ESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="ESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="ESTABLECIMIENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDZONA" msprop:Generator_UserColumnName="IDZONA" msprop:Generator_ColumnPropNameInRow="IDZONA" msprop:Generator_ColumnVarNameInTable="columnIDZONA" msprop:Generator_ColumnPropNameInTable="IDZONAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDTIPOESTABLECIMIENTO" msprop:Generator_UserColumnName="IDTIPOESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="IDTIPOESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnIDTIPOESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="IDTIPOESTABLECIMIENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDPRODUCTO" msprop:Generator_UserColumnName="IDPRODUCTO" msprop:Generator_ColumnPropNameInRow="IDPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnIDPRODUCTO" msprop:Generator_ColumnPropNameInTable="IDPRODUCTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCLARGO" msprop:Generator_UserColumnName="DESCLARGO" msprop:Generator_ColumnPropNameInRow="DESCLARGO" msprop:Generator_ColumnVarNameInTable="columnDESCLARGO" msprop:Generator_ColumnPropNameInTable="DESCLARGOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CORRPRODUCTO" msprop:Generator_UserColumnName="CORRPRODUCTO" msprop:Generator_ColumnPropNameInRow="CORRPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnCORRPRODUCTO" msprop:Generator_ColumnPropNameInTable="CORRPRODUCTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UNIDADMEDIDA" msprop:Generator_UserColumnName="UNIDADMEDIDA" msprop:Generator_ColumnPropNameInRow="UNIDADMEDIDA" msprop:Generator_ColumnVarNameInTable="columnUNIDADMEDIDA" msprop:Generator_ColumnPropNameInTable="UNIDADMEDIDAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LOTE" msprop:Generator_UserColumnName="LOTE" msprop:Generator_ColumnPropNameInRow="LOTE" msprop:Generator_ColumnVarNameInTable="columnLOTE" msprop:Generator_ColumnPropNameInTable="LOTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHAVENCIMIENTO" msprop:Generator_UserColumnName="FECHAVENCIMIENTO" msprop:Generator_ColumnPropNameInRow="FECHAVENCIMIENTO" msprop:Generator_ColumnVarNameInTable="columnFECHAVENCIMIENTO" msprop:Generator_ColumnPropNameInTable="FECHAVENCIMIENTOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CANTIDADTOTAL" msprop:Generator_UserColumnName="CANTIDADTOTAL" msprop:Generator_ColumnPropNameInRow="CANTIDADTOTAL" msprop:Generator_ColumnVarNameInTable="columnCANTIDADTOTAL" msprop:Generator_ColumnPropNameInTable="CANTIDADTOTALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ZONA" msprop:Generator_UserColumnName="ZONA" msprop:Generator_ColumnPropNameInRow="ZONA" msprop:Generator_ColumnVarNameInTable="columnZONA" msprop:Generator_ColumnPropNameInTable="ZONAColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

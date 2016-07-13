@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sceModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="sceEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="vv_EstablecimientoRegion" EntityType="sceModel.vv_EstablecimientoRegion" />
+  </EntityContainer>
+  <EntityType Name="vv_EstablecimientoRegion">
+    <Key>
+      <PropertyRef Name="IdEstablecimiento" />
+      <PropertyRef Name="CodigoEstablecimiento" />
+      <PropertyRef Name="Nombre" />
+      <PropertyRef Name="IdRegion" />
+      <PropertyRef Name="idEstablecimientoAbas" />
+      <PropertyRef Name="sibasi" />
+    </Key>
+    <Property Name="IdEstablecimiento" Type="Int16" Nullable="false" />
+    <Property Name="CodigoEstablecimiento" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="IdRegion" Type="Int16" Nullable="false" />
+    <Property Name="idEstablecimientoAbas" Type="Int32" Nullable="false" />
+    <Property Name="sibasi" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsConsolidadoDistribucion" targetNamespace="http://tempuri.org/dsConsolidadoDistribucion.xsd" xmlns:mstns="http://tempuri.org/dsConsolidadoDistribucion.xsd" xmlns="http://tempuri.org/dsConsolidadoDistribucion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsConsolidadoDistribucion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsConsolidadoDistribucion" msprop:Generator_DataSetName="dsConsolidadoDistribucion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ConsolidadoDistribucion" msprop:Generator_UserTableName="ConsolidadoDistribucion" msprop:Generator_RowDeletedName="ConsolidadoDistribucionRowDeleted" msprop:Generator_RowChangedName="ConsolidadoDistribucionRowChanged" msprop:Generator_RowClassName="ConsolidadoDistribucionRow" msprop:Generator_RowChangingName="ConsolidadoDistribucionRowChanging" msprop:Generator_RowEvArgName="ConsolidadoDistribucionRowChangeEvent" msprop:Generator_RowEvHandlerName="ConsolidadoDistribucionRowChangeEventHandler" msprop:Generator_TableClassName="ConsolidadoDistribucionDataTable" msprop:Generator_TableVarName="tableConsolidadoDistribucion" msprop:Generator_RowDeletingName="ConsolidadoDistribucionRowDeleting" msprop:Generator_TablePropName="ConsolidadoDistribucion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDESTABLECIMIENTOSOLICITUD" msprop:Generator_UserColumnName="IDESTABLECIMIENTOSOLICITUD" msprop:Generator_ColumnPropNameInRow="IDESTABLECIMIENTOSOLICITUD" msprop:Generator_ColumnVarNameInTable="columnIDESTABLECIMIENTOSOLICITUD" msprop:Generator_ColumnPropNameInTable="IDESTABLECIMIENTOSOLICITUDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDESTABLECIMIENTONECESIDAD" msprop:Generator_UserColumnName="IDESTABLECIMIENTONECESIDAD" msprop:Generator_ColumnPropNameInRow="IDESTABLECIMIENTONECESIDAD" msprop:Generator_ColumnVarNameInTable="columnIDESTABLECIMIENTONECESIDAD" msprop:Generator_ColumnPropNameInTable="IDESTABLECIMIENTONECESIDADColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDNECESIDAD" msprop:Generator_UserColumnName="IDNECESIDAD" msprop:Generator_ColumnPropNameInRow="IDNECESIDAD" msprop:Generator_ColumnVarNameInTable="columnIDNECESIDAD" msprop:Generator_ColumnPropNameInTable="IDNECESIDADColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="IDSOLICITUD" msprop:Generator_UserColumnName="IDSOLICITUD" msprop:Generator_ColumnPropNameInRow="IDSOLICITUD" msprop:Generator_ColumnVarNameInTable="columnIDSOLICITUD" msprop:Generator_ColumnPropNameInTable="IDSOLICITUDColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="IDPRODUCTO" msprop:Generator_UserColumnName="IDPRODUCTO" msprop:Generator_ColumnPropNameInRow="IDPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnIDPRODUCTO" msprop:Generator_ColumnPropNameInTable="IDPRODUCTOColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="CORRPRODUCTO" msprop:Generator_UserColumnName="CORRPRODUCTO" msprop:Generator_ColumnPropNameInRow="CORRPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnCORRPRODUCTO" msprop:Generator_ColumnPropNameInTable="CORRPRODUCTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCLARGO" msprop:Generator_UserColumnName="DESCLARGO" msprop:Generator_ColumnPropNameInRow="DESCLARGO" msprop:Generator_ColumnVarNameInTable="columnDESCLARGO" msprop:Generator_ColumnPropNameInTable="DESCLARGOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NECESIDADFINAL" msprop:Generator_UserColumnName="NECESIDADFINAL" msprop:Generator_ColumnPropNameInRow="NECESIDADFINAL" msprop:Generator_ColumnVarNameInTable="columnNECESIDADFINAL" msprop:Generator_ColumnPropNameInTable="NECESIDADFINALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RENGLON" msprop:Generator_UserColumnName="RENGLON" msprop:Generator_ColumnPropNameInRow="RENGLON" msprop:Generator_ColumnVarNameInTable="columnRENGLON" msprop:Generator_ColumnPropNameInTable="RENGLONColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NUMEROENTREGAS" msprop:Generator_UserColumnName="NUMEROENTREGAS" msprop:Generator_ColumnPropNameInRow="NUMEROENTREGAS" msprop:Generator_ColumnVarNameInTable="columnNUMEROENTREGAS" msprop:Generator_ColumnPropNameInTable="NUMEROENTREGASColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PRECIOUNITARIO" msprop:Generator_UserColumnName="PRECIOUNITARIO" msprop:Generator_ColumnPropNameInRow="PRECIOUNITARIO" msprop:Generator_ColumnVarNameInTable="columnPRECIOUNITARIO" msprop:Generator_ColumnPropNameInTable="PRECIOUNITARIOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CODIGONACIONESUNIDAS" msprop:Generator_UserColumnName="CODIGONACIONESUNIDAS" msprop:Generator_ColumnPropNameInRow="CODIGONACIONESUNIDAS" msprop:Generator_ColumnVarNameInTable="columnCODIGONACIONESUNIDAS" msprop:Generator_ColumnPropNameInTable="CODIGONACIONESUNIDASColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CODIGOESTABLECIMIENTO" msprop:Generator_UserColumnName="CODIGOESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnCODIGOESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="CODIGOESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="CODIGOESTABLECIMIENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ALMACEN" msprop:Generator_UserColumnName="ALMACEN" msprop:Generator_ColumnPropNameInRow="ALMACEN" msprop:Generator_ColumnVarNameInTable="columnALMACEN" msprop:Generator_ColumnPropNameInTable="ALMACENColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

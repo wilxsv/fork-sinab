@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsProgramacionPrecios" targetNamespace="http://tempuri.org/dsProgramacionPrecios.xsd" xmlns:mstns="http://tempuri.org/dsProgramacionPrecios.xsd" xmlns="http://tempuri.org/dsProgramacionPrecios.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsProgramacionPrecios" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsProgramacionPrecios" msprop:Generator_DataSetName="dsProgramacionPrecios">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tabla" msprop:Generator_UserTableName="tabla" msprop:Generator_RowDeletedName="tablaRowDeleted" msprop:Generator_RowChangedName="tablaRowChanged" msprop:Generator_RowClassName="tablaRow" msprop:Generator_RowChangingName="tablaRowChanging" msprop:Generator_RowEvArgName="tablaRowChangeEvent" msprop:Generator_RowEvHandlerName="tablaRowChangeEventHandler" msprop:Generator_TableClassName="tablaDataTable" msprop:Generator_TableVarName="tabletabla" msprop:Generator_RowDeletingName="tablaRowDeleting" msprop:Generator_TablePropName="tabla">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDPROGRAMACION" msprop:Generator_UserColumnName="IDPROGRAMACION" msprop:Generator_ColumnPropNameInRow="IDPROGRAMACION" msprop:Generator_ColumnVarNameInTable="columnIDPROGRAMACION" msprop:Generator_ColumnPropNameInTable="IDPROGRAMACIONColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CORRPRODUCTO" msprop:Generator_UserColumnName="CORRPRODUCTO" msprop:Generator_ColumnPropNameInRow="CORRPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnCORRPRODUCTO" msprop:Generator_ColumnPropNameInTable="CORRPRODUCTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCLARGO" msprop:Generator_UserColumnName="DESCLARGO" msprop:Generator_ColumnPropNameInRow="DESCLARGO" msprop:Generator_ColumnVarNameInTable="columnDESCLARGO" msprop:Generator_ColumnPropNameInTable="DESCLARGOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UM" msprop:Generator_UserColumnName="UM" msprop:Generator_ColumnPropNameInRow="UM" msprop:Generator_ColumnVarNameInTable="columnUM" msprop:Generator_ColumnPropNameInTable="UMColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PRECIO" msprop:Generator_UserColumnName="PRECIO" msprop:Generator_ColumnPropNameInRow="PRECIO" msprop:Generator_ColumnVarNameInTable="columnPRECIO" msprop:Generator_ColumnPropNameInTable="PRECIOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PRECIOAJUSTADO" msprop:Generator_UserColumnName="PRECIOAJUSTADO" msprop:Generator_ColumnPropNameInRow="PRECIOAJUSTADO" msprop:Generator_ColumnVarNameInTable="columnPRECIOAJUSTADO" msprop:Generator_ColumnPropNameInTable="PRECIOAJUSTADOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IDPRODUCTO" msprop:Generator_UserColumnName="IDPRODUCTO" msprop:Generator_ColumnPropNameInRow="IDPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnIDPRODUCTO" msprop:Generator_ColumnPropNameInTable="IDPRODUCTOColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

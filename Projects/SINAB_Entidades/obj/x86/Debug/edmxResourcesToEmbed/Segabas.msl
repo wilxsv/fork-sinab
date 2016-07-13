@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="segabas2ModelStoreContainer" CdmEntityContainer="segabasEntities">
+    <EntitySetMapping Name="SABREDIRECTs">
+      <EntityTypeMapping TypeName="segabas2Model.SABREDIRECT">
+        <MappingFragment StoreEntitySet="SABREDIRECT">
+          <ScalarProperty Name="IDREDIRECT" ColumnName="IDREDIRECT" />
+          <ScalarProperty Name="IPREDIRECT" ColumnName="IPREDIRECT" />
+          <ScalarProperty Name="URLREDIRECT" ColumnName="URLREDIRECT" />
+          <ScalarProperty Name="FECHACREACION" ColumnName="FECHACREACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEGOPCIONESSISTEMAs">
+      <EntityTypeMapping TypeName="segabas2Model.SEGOPCIONESSISTEMA">
+        <MappingFragment StoreEntitySet="SEGOPCIONESSISTEMA">
+          <ScalarProperty Name="IDOPCIONSISTEMA" ColumnName="IDOPCIONSISTEMA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ESTAHABILITADO" ColumnName="ESTAHABILITADO" />
+          <ScalarProperty Name="IDPADRE" ColumnName="IDPADRE" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          <ScalarProperty Name="AUUSUARIOCREACION" ColumnName="AUUSUARIOCREACION" />
+          <ScalarProperty Name="AUFECHACREACION" ColumnName="AUFECHACREACION" />
+          <ScalarProperty Name="AUUSUARIOMODIFICACION" ColumnName="AUUSUARIOMODIFICACION" />
+          <ScalarProperty Name="AUFECHAMODIFICACION" ColumnName="AUFECHAMODIFICACION" />
+          <ScalarProperty Name="ESTASINCRONIZADA" ColumnName="ESTASINCRONIZADA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEGOPCIONESSISTEMAROLES">
+      <EntityTypeMapping TypeName="segabas2Model.SEGOPCIONESSISTEMAROLE">
+        <MappingFragment StoreEntitySet="SEGOPCIONESSISTEMAROLES">
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="IDOPCIONSISTEMA" ColumnName="IDOPCIONSISTEMA" />
+          <ScalarProperty Name="AUUSUARIOCREACION" ColumnName="AUUSUARIOCREACION" />
+          <ScalarProperty Name="AUFECHACREACION" ColumnName="AUFECHACREACION" />
+          <ScalarProperty Name="AUUSUARIOMODIFICACION" ColumnName="AUUSUARIOMODIFICACION" />
+          <ScalarProperty Name="AUFECHAMODIFICACION" ColumnName="AUFECHAMODIFICACION" />
+          <ScalarProperty Name="ESTASINCRONIZADA" ColumnName="ESTASINCRONIZADA" />
+          <ScalarProperty Name="PERMITEEDITAR" ColumnName="PERMITEEDITAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEGROLES">
+      <EntityTypeMapping TypeName="segabas2Model.SEGROLE">
+        <MappingFragment StoreEntitySet="SEGROLES">
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ESTAHABILITADO" ColumnName="ESTAHABILITADO" />
+          <ScalarProperty Name="AUUSUARIOCREACION" ColumnName="AUUSUARIOCREACION" />
+          <ScalarProperty Name="AUFECHACREACION" ColumnName="AUFECHACREACION" />
+          <ScalarProperty Name="AUUSUARIOMODIFICACION" ColumnName="AUUSUARIOMODIFICACION" />
+          <ScalarProperty Name="AUFECHAMODIFICACION" ColumnName="AUFECHAMODIFICACION" />
+          <ScalarProperty Name="ESTASINCRONIZADA" ColumnName="ESTASINCRONIZADA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vv_OPCIONESUSUARIOSROL">
+      <EntityTypeMapping TypeName="segabas2Model.vv_OPCIONESUSUARIOSROL">
+        <MappingFragment StoreEntitySet="vv_OPCIONESUSUARIOSROL">
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="IDOPCIONSISTEMA" ColumnName="IDOPCIONSISTEMA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ESTAHABILITADO" ColumnName="ESTAHABILITADO" />
+          <ScalarProperty Name="IDPADRE" ColumnName="IDPADRE" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEGACCESOS">
+      <EntityTypeMapping TypeName="segabas2Model.SEGACCESO">
+        <MappingFragment StoreEntitySet="SEGACCESOS">
+          <ScalarProperty Name="ESTASINCRONIZADA" ColumnName="ESTASINCRONIZADA" />
+          <ScalarProperty Name="AUFECHAMODIFICACION" ColumnName="AUFECHAMODIFICACION" />
+          <ScalarProperty Name="AUUSUARIOMODIFICACION" ColumnName="AUUSUARIOMODIFICACION" />
+          <ScalarProperty Name="AUFECHACREACION" ColumnName="AUFECHACREACION" />
+          <ScalarProperty Name="AUUSUARIOCREACION" ColumnName="AUUSUARIOCREACION" />
+          <ScalarProperty Name="DIRECCIONIP" ColumnName="DIRECCIONIP" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEGROLESUSUARIOS">
+      <EntityTypeMapping TypeName="segabas2Model.SEGROLESUSUARIO">
+        <MappingFragment StoreEntitySet="SEGROLESUSUARIOS">
+          <ScalarProperty Name="ESTASINCRONIZADA" ColumnName="ESTASINCRONIZADA" />
+          <ScalarProperty Name="AUFECHAMODIFICACION" ColumnName="AUFECHAMODIFICACION" />
+          <ScalarProperty Name="AUUSUARIOMODIFICACION" ColumnName="AUUSUARIOMODIFICACION" />
+          <ScalarProperty Name="AUFECHACREACION" ColumnName="AUFECHACREACION" />
+          <ScalarProperty Name="AUUSUARIOCREACION" ColumnName="AUUSUARIOCREACION" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEGUSUARIOS">
+      <EntityTypeMapping TypeName="segabas2Model.SEGUSUARIO">
+        <MappingFragment StoreEntitySet="SEGUSUARIOS">
+          <ScalarProperty Name="ESTASINCRONIZADA" ColumnName="ESTASINCRONIZADA" />
+          <ScalarProperty Name="AUFECHAELIMINACION" ColumnName="AUFECHAELIMINACION" />
+          <ScalarProperty Name="AUUSUARIOELIMINACION" ColumnName="AUUSUARIOELIMINACION" />
+          <ScalarProperty Name="AUFECHAMODIFICACION" ColumnName="AUFECHAMODIFICACION" />
+          <ScalarProperty Name="AUUSUARIOMODIFICACION" ColumnName="AUUSUARIOMODIFICACION" />
+          <ScalarProperty Name="AUFECHACREACION" ColumnName="AUFECHACREACION" />
+          <ScalarProperty Name="AUUSUARIOCREACION" ColumnName="AUUSUARIOCREACION" />
+          <ScalarProperty Name="ESTAELIMINADO" ColumnName="ESTAELIMINADO" />
+          <ScalarProperty Name="ESTAHABILITADO" ColumnName="ESTAHABILITADO" />
+          <ScalarProperty Name="IDEMPLEADO" ColumnName="IDEMPLEADO" />
+          <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

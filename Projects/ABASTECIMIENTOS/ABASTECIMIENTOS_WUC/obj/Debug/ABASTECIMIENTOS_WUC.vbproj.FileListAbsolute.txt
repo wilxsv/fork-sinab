@@ -1,0 +1,16 @@
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\Debug\ABASTECIMIENTOS_WUC.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\Debug\ABASTECIMIENTOS_WUC.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\Debug\ABASTECIMIENTOS_ENTIDADES.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\Debug\ABASTECIMIENTOS_NEGOCIO.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\Debug\ABASTECIMIENTOS_DATOS.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\Debug\Microsoft.ApplicationBlocks.ExceptionManagement.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\Debug\Microsoft.ApplicationBlocks.ExceptionManagement.Interfaces.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\Debug\ABASTECIMIENTOS_ENTIDADES.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\Debug\ABASTECIMIENTOS_NEGOCIO.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\Debug\ABASTECIMIENTOS_DATOS.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\Debug\ABASTECIMIENTOS_WUC.vbprojResolveAssemblyReference.cache
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\Debug\ABASTECIMIENTOS.WUC.Resources.resources
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\Debug\ABASTECIMIENTOS_WUC.vbproj.GenerateResource.Cache
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\Debug\ABASTECIMIENTOS_WUC.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\Debug\ABASTECIMIENTOS_WUC.pdb

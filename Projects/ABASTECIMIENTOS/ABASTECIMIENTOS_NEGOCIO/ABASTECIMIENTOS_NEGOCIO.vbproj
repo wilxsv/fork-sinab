@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0430770D-9781-44BF-94E7-4624541E4963}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ABASTECIMIENTOS.NEGOCIO</RootNamespace>
+    <AssemblyName>ABASTECIMIENTOS_NEGOCIO</AssemblyName>
+    <MyType>Windows</MyType>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\ABASTECIMIENTOS_NEGOCIO.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ABASTECIMIENTOS_NEGOCIO.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationBlocks.ExceptionManagement">
+      <HintPath>..\..\..\External Assemblies\Microsoft.ApplicationBlocks.ExceptionManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ABASTECIMIENTOS.DATOS" />
+    <Import Include="ABASTECIMIENTOS.ENTIDADES" />
+    <Import Include="Microsoft.ApplicationBlocks.ExceptionManagement" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cACCESOS.vb" />
+    <Compile Include="cACLARACIONES.vb" />
+    <Compile Include="cADENDAS.vb" />
+    <Compile Include="cADENDAS.xt.vb" />
+    <Compile Include="cADJUDICACION.vb" />
+    <Compile Include="cADJUDICACION.xt.vb" />
+    <Compile Include="cAJUSTE.vb" />
+    <Compile Include="cAJUSTE.xt.vb" />
+    <Compile Include="cALMACENES.vb" />
+    <Compile Include="cALMACENES.xt.vb" />
+    <Compile Include="cALMACENESENTREGAADJUDICACION.vb" />
+    <Compile Include="cALMACENESENTREGAADJUDICACION.xt.vb" />
+    <Compile Include="cALMACENESENTREGACONTRATOS.vb" />
+    <Compile Include="cALMACENESENTREGACONTRATOS.xt.vb" />
+    <Compile Include="cALMACENESENTREGAMODIFICATIVA.vb" />
+    <Compile Include="cALMACENESENTREGASOLICITUD.vb" />
+    <Compile Include="cALMACENESENTREGASOLICITUD.xt.vb" />
+    <Compile Include="cALMACENESESTABLECIMIENTOS.vb" />
+    <Compile Include="cALMACENESESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="cALTERNATIVASPRODUCTO.vb" />
+    <Compile Include="cALTERNATIVASPRODUCTO.xt.vb" />
+    <Compile Include="cAMPLIACIONCONTRATO.vb" />
+    <Compile Include="cAMPLIACIONCONTRATO.xt.vb" />
+    <Compile Include="cANALISTAPROVEEDORES.vb" />
+    <Compile Include="cANALISTAPROVEEDORES.xt.vb" />
+    <Compile Include="cASESORIAPREDEFINIDA.vb" />
+    <Compile Include="cASESORIAPREDEFINIDA.xt.vb" />
+    <Compile Include="cAspectoCP.vb" />
+    <Compile Include="cCALIFICACIONCALIDADPROVEEDORES.vb" />
+    <Compile Include="cCALIFICACIONPROVEEDORES.vb" />
+    <Compile Include="cCALIFICACIONPROVEEDORES.xt.vb" />
+    <Compile Include="cCALIFICACIONRENGLONOFERTAS.vb" />
+    <Compile Include="cCALIFICACIONRENGLONOFERTAS.xt.vb" />
+    <Compile Include="cCANCELACIONLOTE.vb" />
+    <Compile Include="cCANCELACIONLOTE.xt.vb" />
+    <Compile Include="cCANCELACIONPRODUCTO.vb" />
+    <Compile Include="cCANCELACIONPRODUCTO.xt.vb" />
+    <Compile Include="cCARGADATOSSIM.vb" />
+    <Compile Include="cCARGADATOSSIM.xt.vb" />
+    <Compile Include="cCARGOS.vb" />
+    <Compile Include="cCARGOS.xt.vb" />
+    <Compile Include="cCATALOGOPRODUCTOS.vb" />
+    <Compile Include="cCATALOGOPRODUCTOS.xt.vb" />
+    <Compile Include="cCAUSALESCG.vb" />
+    <Compile Include="cCLAUSULAS.vb" />
+    <Compile Include="cCLAUSULAS.xt.vb" />
+    <Compile Include="cCLAUSULASCONTRATOS.vb" />
+    <Compile Include="cCLAUSULASCONTRATOS.xt.vb" />
+    <Compile Include="cCLAUSULASPLANTILLA.vb" />
+    <Compile Include="cCLAUSULASPLANTILLA.xt.vb" />
+    <Compile Include="cCOMISIONESEVALUADORAS.vb" />
+    <Compile Include="cCOMISIONESEVALUADORAS.xt.vb" />
+    <Compile Include="cCOMISIONPROCESOCOMPRA.vb" />
+    <Compile Include="cCOMISIONPROCESOCOMPRA.xt.vb" />
+    <Compile Include="cCONSUMOS.vb" />
+    <Compile Include="cCONSUMOS.xt.vb" />
+    <Compile Include="cCONTRATOS.vb" />
+    <Compile Include="cCONTRATOS.xt.vb" />
+    <Compile Include="cCONTRATOSPROCESOCOMPRA.vb" />
+    <Compile Include="cCONTRATOSPROCESOCOMPRA.xt.vb" />
+    <Compile Include="cCORRECCIONESALMACENES.vb" />
+    <Compile Include="cCORRECCIONESALMACENES.xt.vb" />
+    <Compile Include="cCRITERIOPROCESOCOMPRA.vb" />
+    <Compile Include="cCRITERIOPROCESOCOMPRA.xt.vb" />
+    <Compile Include="cCRITERIOSEVALUACION.vb" />
+    <Compile Include="cCRITERIOSEVALUACION.xt.vb" />
+    <Compile Include="cCRITERIOSPLANTILLAS.vb" />
+    <Compile Include="cCRITERIOSPLANTILLAS.xt.vb" />
+    <Compile Include="cDEPARTAMENTOS.vb" />
+    <Compile Include="cDEPENDENCIAESTABLECIMIENTOS.vb" />
+    <Compile Include="cDEPENDENCIAESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="cDEPENDENCIAS.vb" />
+    <Compile Include="cDEPENDENCIAS.xt.vb" />
+    <Compile Include="cDETALLEALMACENESENTREGACONTRATOS.vb" />
+    <Compile Include="cDETALLECANCELACIONPRODUCTO.vb" />
+    <Compile Include="cDETALLECANCELACIONPRODUCTO.xt.vb" />
+    <Compile Include="cDETALLECOMISIONEVALUADORA.vb" />
+    <Compile Include="cDETALLECOMISIONEVALUADORA.xt.vb" />
+    <Compile Include="cDETALLECONSUMOS.vb" />
+    <Compile Include="cDETALLECONSUMOS.xt.vb" />
+    <Compile Include="cDETALLEENTREGAS.vb" />
+    <Compile Include="cDETALLEENTREGAS.xt.vb" />
+    <Compile Include="cDETALLEENTREGASPROCESOCOMPRA.vb" />
+    <Compile Include="cDETALLEENTREGASPROCESOCOMPRA.xt.vb" />
+    <Compile Include="cDETALLEINVENTARIO.vb" />
+    <Compile Include="cDETALLEINVENTARIO.xt.vb" />
+    <Compile Include="cDETALLEINVENTARIOINICIAL.vb" />
+    <Compile Include="cDETALLEINVENTARIOINICIAL.xt.vb" />
+    <Compile Include="cDETALLEMODIFICATIVA.vb" />
+    <Compile Include="cDETALLEMOVIMIENTOS.vb" />
+    <Compile Include="cDETALLEMOVIMIENTOS.xt.vb" />
+    <Compile Include="cDETALLEMULTASCONTRATOS.vb" />
+    <Compile Include="cDETALLENECESIDADESTABLECIMIENTOS.vb" />
+    <Compile Include="cDETALLENECESIDADESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="cDETALLENOTAINCUMPLIMIENTOCONTRATO.vb" />
+    <Compile Include="cDETALLEOFERTA.vb" />
+    <Compile Include="cDETALLEOFERTA.xt.vb" />
+    <Compile Include="cDETALLEPLANTILLAPROCESOCOMPRA.vb" />
+    <Compile Include="cDETALLEPLANTILLAPROCESOCOMPRA.xt.vb" />
+    <Compile Include="cDETALLEPROCESOCOMPRA.vb" />
+    <Compile Include="cDETALLEPROCESOCOMPRA.xt.vb" />
+    <Compile Include="cDETALLERECETA.vb" />
+    <Compile Include="cDETALLERECETA.xt.vb" />
+    <Compile Include="cDETALLESOLICITUDES.vb" />
+    <Compile Include="cDETALLESOLICITUDES.xt.vb" />
+    <Compile Include="cDISTRIBUCION.vb" />
+    <Compile Include="cDISTRIBUCIONDETALLE.vb" />
+    <Compile Include="cDISTRIBUCIONPRODUCTO.vb" />
+    <Compile Include="cDOCUMENTOSBASE.vb" />
+    <Compile Include="cDOCUMENTOSBASE.xt.vb" />
+    <Compile Include="cDOCUMENTOSBASEPLANTILLA.vb" />
+    <Compile Include="cDOCUMENTOSBASEPLANTILLA.xt.vb" />
+    <Compile Include="cDOCUMENTOSOFERTA.vb" />
+    <Compile Include="cDOCUMENTOSOFERTA.xt.vb" />
+    <Compile Include="cDOCUMENTOSPROCESOSCOMPRA.vb" />
+    <Compile Include="cDOCUMENTOSPROCESOSCOMPRA.xt.vb" />
+    <Compile Include="cEMPLEADOS.vb" />
+    <Compile Include="cEMPLEADOS.xt.vb" />
+    <Compile Include="cEMPLEADOSALMACEN.vb" />
+    <Compile Include="cEMPLEADOSALMACEN.xt.vb" />
+    <Compile Include="cENTIDADCG.vb" />
+    <Compile Include="cENTREGAADJUDICACION.vb" />
+    <Compile Include="cENTREGAADJUDICACION.xt.vb" />
+    <Compile Include="cENTREGABASES.vb" />
+    <Compile Include="cENTREGABASES.xt.vb" />
+    <Compile Include="cENTREGACONTRATO.vb" />
+    <Compile Include="cENTREGACONTRATO.xt.vb" />
+    <Compile Include="cENTREGAMODIFICATIVA.vb" />
+    <Compile Include="cENTREGAPROCESOCOMPRA.vb" />
+    <Compile Include="cENTREGAPROCESOCOMPRA.xt.vb" />
+    <Compile Include="cENTREGASOLICITUDES.vb" />
+    <Compile Include="cENTREGASOLICITUDES.xt.vb" />
+    <Compile Include="cESPECIFICOGASTO.vb" />
+    <Compile Include="cESTABLECIMIENTOS.vb" />
+    <Compile Include="cESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="cESTADOPROCESOSCOMPRAS.vb" />
+    <Compile Include="cESTADOS.vb" />
+    <Compile Include="cESTADOS.xt.vb" />
+    <Compile Include="cESTADOSCALIFICACIONES.vb" />
+    <Compile Include="cESTADOSCONSUMOS.vb" />
+    <Compile Include="cESTADOSCONTRATOS.vb" />
+    <Compile Include="cESTADOSGARANTIAS.vb" />
+    <Compile Include="cESTADOSMOVIMIENTOS.vb" />
+    <Compile Include="cESTADOSNECESIDADES.vb" />
+    <Compile Include="cETIQUETASCAMPOS.vb" />
+    <Compile Include="cETIQUETASCAMPOS.xt.vb" />
+    <Compile Include="cETIQUETASCLAUSULAS.vb" />
+    <Compile Include="cETIQUETASCLAUSULAS.xt.vb" />
+    <Compile Include="cEXAMENOFERTA.vb" />
+    <Compile Include="cEXAMENOFERTA.xt.vb" />
+    <Compile Include="cEXAMENRENGLON.vb" />
+    <Compile Include="cEXAMENRENGLON.xt.vb" />
+    <Compile Include="cEXISTENCIASALMACENES.vb" />
+    <Compile Include="cEXISTENCIASALMACENES.xt.vb" />
+    <Compile Include="cFECHACONTEOS.vb" />
+    <Compile Include="cFUENTEFINANCIAMIENTOS.vb" />
+    <Compile Include="cFUENTEFINANCIAMIENTOS.xt.vb" />
+    <Compile Include="cFUENTEFINANCIAMIENTOSCONTRATOS.vb" />
+    <Compile Include="cFUENTEFINANCIAMIENTOSCONTRATOS.xt.vb" />
+    <Compile Include="cFUENTEFINANCIAMIENTOSNECESIDADES.vb" />
+    <Compile Include="cFUENTEFINANCIAMIENTOSOLICITUDES.vb" />
+    <Compile Include="cFUENTEFINANCIAMIENTOSOLICITUDES.xt.vb" />
+    <Compile Include="cGARANTIASCONTRATOS.vb" />
+    <Compile Include="cGARANTIASCONTRATOS.xt.vb" />
+    <Compile Include="cGRUPOS.vb" />
+    <Compile Include="cGRUPOS.xt.vb" />
+    <Compile Include="cGRUPOSFUENTEFINANCIAMIENTO.vb" />
+    <Compile Include="cGRUPOSREQTECNICOS.vb" />
+    <Compile Include="cHISTORICOESTADOSNECESIDADES.vb" />
+    <Compile Include="cHISTORICOESTADOSPROCESOS.vb" />
+    <Compile Include="cHISTORICOESTADOSSOLICITUDES.vb" />
+    <Compile Include="cHISTORICOESTADOSSOLICITUDES.xt.vb" />
+    <Compile Include="cHISTORICOPRECIOS.vb" />
+    <Compile Include="cHISTORICOPRECIOS.xt.vb" />
+    <Compile Include="cINCUMPLIMIENTO.vb" />
+    <Compile Include="cIndices.vb" />
+    <Compile Include="cINFORMEMUESTRAS.vb" />
+    <Compile Include="cINFORMEMUESTRAS.xt.vb" />
+    <Compile Include="cINFORMESNOACEPTACION.vb" />
+    <Compile Include="cINFORMESNOACEPTACION.xt.vb" />
+    <Compile Include="cINSTITUCIONES.vb" />
+    <Compile Include="cINSTITUCIONES.xt.vb" />
+    <Compile Include="cINVENTARIO.vb" />
+    <Compile Include="cDEPARTAMENTOS.xt.vb" />
+    <Compile Include="cINVENTARIO.xt.vb" />
+    <Compile Include="cINVENTARIOINICIAL.vb" />
+    <Compile Include="cINVENTARIOINICIAL.xt.vb" />
+    <Compile Include="cListaCP.vb" />
+    <Compile Include="cLogo.vb" />
+    <Compile Include="cLOTES.xt.vb" />
+    <Compile Include="cLOTESNOACEPTACION.vb" />
+    <Compile Include="cLOTESNOACEPTACION.xt.vb" />
+    <Compile Include="cMENSAJES.vb" />
+    <Compile Include="cMENSAJES.xt.vb" />
+    <Compile Include="cMODALIDADCOMPRACG.vb" />
+    <Compile Include="cMODALIDADESCOMPRA.vb" />
+    <Compile Include="cMODALIDADESCOMPRA.xt.vb" />
+    <Compile Include="cMODIFICATIVASCONTRATO.vb" />
+    <Compile Include="cMODIFICATIVASCONTRATO.xt.vb" />
+    <Compile Include="cMODIFICATIVASCONTRATOPRODUCTO.vb" />
+    <Compile Include="cMODIFICATIVASCONTRATOPRODUCTO.xt.vb" />
+    <Compile Include="cMOTIVOSNOACEPTACION.vb" />
+    <Compile Include="cMOTIVOSNOACEPTACION.xt.vb" />
+    <Compile Include="cMOTIVOSNOACEPTACIONINFORME.vb" />
+    <Compile Include="cMOTIVOSNOACEPTACIONINFORME.xt.vb" />
+    <Compile Include="cMOVIMIENTOS.vb" />
+    <Compile Include="cMOVIMIENTOS.xt.vb" />
+    <Compile Include="cMULTASCONTRATOS.vb" />
+    <Compile Include="cMULTASCONTRATOS.xt.vb" />
+    <Compile Include="cMUNICIPIOS.vb" />
+    <Compile Include="cMUNICIPIOS.xt.vb" />
+    <Compile Include="cNECESIDADESSOLICITUD.vb" />
+    <Compile Include="cNECESIDADESSOLICITUD.xt.vb" />
+    <Compile Include="cNECESIDADESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="cNIVELESUSO.xt.vb" />
+    <Compile Include="cNIVELESUSOESTABLECIMIENTOS.vb" />
+    <Compile Include="cNIVELESUSOESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="cNOTASACEPTACION.vb" />
+    <Compile Include="cNOTASACEPTACION.xt.vb" />
+    <Compile Include="cNOTASINCUMPLIMIENTO.vb" />
+    <Compile Include="cNOTASINCUMPLIMIENTO.xt.vb" />
+    <Compile Include="cNOTASINCUMPLIMIENTOCONTRATO.vb" />
+    <Compile Include="cNOTASINCUMPLIMIENTOCONTRATO.xt.vb" />
+    <Compile Include="cOBSERVACIONDETALLENECESIDAD.xt.vb" />
+    <Compile Include="cOFERTAPROCESOCOMPRA.xt.vb" />
+    <Compile Include="cOPCIONESSISTEMA.xt.vb" />
+    <Compile Include="cORDENSINCRONIZACION.vb" />
+    <Compile Include="cPLANTILLAPROCESOCOMPRA.vb" />
+    <Compile Include="cPLANTILLAPROCESOCOMPRA.xt.vb" />
+    <Compile Include="cPLANTILLAS.xt.vb" />
+    <Compile Include="cPLANTILLASCONTRATO.vb" />
+    <Compile Include="cPLANTILLASCONTRATO.xt.vb" />
+    <Compile Include="cPLANTILLASMULTAS.vb" />
+    <Compile Include="cPORCENTAJESMULTAS.vb" />
+    <Compile Include="cPROCESOCOMPRAS.xt.vb" />
+    <Compile Include="cLogin.vb" />
+    <Compile Include="cLOTES.vb" />
+    <Compile Include="cNECESIDADESTABLECIMIENTOS.vb" />
+    <Compile Include="cNIVELESUSO.vb" />
+    <Compile Include="cOBSERVACIONDETALLENECESIDAD.vb" />
+    <Compile Include="cOBSERVACIONPROCESOSCOMPRAS.vb" />
+    <Compile Include="cOBSERVACIONSOLICITUDES.vb" />
+    <Compile Include="cOFERTAPROCESOCOMPRA.vb" />
+    <Compile Include="controladorBase.vb" />
+    <Compile Include="cOPCIONESSISTEMA.vb" />
+    <Compile Include="cOPCIONESSISTEMAROLES.vb" />
+    <Compile Include="cOPCIONESSISTEMAROLES.xt.vb" />
+    <Compile Include="cPLANTILLAS.vb" />
+    <Compile Include="cPROCESOCOMPRAS.vb" />
+    <Compile Include="cPROCESOCOMPRASIGUIENTEESTADO.vb" />
+    <Compile Include="cProcesoCP.vb" />
+    <Compile Include="cPRODUCTOSCONTRATO.vb" />
+    <Compile Include="cPRODUCTOSCONTRATO.xt.vb" />
+    <Compile Include="cPRODUCTOSESTABLECIMIENTOS.vb" />
+    <Compile Include="cPRODUCTOSPROGRAMAS.vb" />
+    <Compile Include="cPRODUCTOSPROGRAMAS.xt.vb" />
+    <Compile Include="cPROGRAMACION.vb" />
+    <Compile Include="cPROGRAMACIONPRODUCTO.vb" />
+    <Compile Include="cPROGRAMADISTRIBUCION.vb" />
+    <Compile Include="cPROGRAMADISTRIBUCION.xt.vb" />
+    <Compile Include="cPROGRAMAS.vb" />
+    <Compile Include="cPROGRAMAS.xt.vb" />
+    <Compile Include="cPROVEEDORES.vb" />
+    <Compile Include="cPROVEEDORES.xt.vb" />
+    <Compile Include="cPROVEEDORESCG.vb" />
+    <Compile Include="cQUEDANS.vb" />
+    <Compile Include="cQUEDANS.xt.vb" />
+    <Compile Include="cRECEPCIONOFERTAS.vb" />
+    <Compile Include="cRECEPCIONOFERTAS.xt.vb" />
+    <Compile Include="cRECETAS.vb" />
+    <Compile Include="cRECETAS.xt.vb" />
+    <Compile Include="cRECIBOSRECEPCION.vb" />
+    <Compile Include="cRECIBOSRECEPCION.xt.vb" />
+    <Compile Include="cRECURSOSREVISION.vb" />
+    <Compile Include="cRECURSOSREVISION.xt.vb" />
+    <Compile Include="cREGISTROGARANTIAS.vb" />
+    <Compile Include="cRegistroProveedores.vb" />
+    <Compile Include="cREPRESENTANTEAPERTURAPROCESOS.vb" />
+    <Compile Include="cREPRESENTANTEAPERTURAPROCESOS.xt.vb" />
+    <Compile Include="cRESPONSABLEDISTRIBUCION.vb" />
+    <Compile Include="cRESPONSABLEDISTRIBUCION.xt.vb" />
+    <Compile Include="cRESPONSABLEDISTRIBUCIONCONTRATO.vb" />
+    <Compile Include="cRESPONSABLEDISTRIBUCIONCONTRATO.xt.vb" />
+    <Compile Include="cROLES.vb" />
+    <Compile Include="cROLES.xt.vb" />
+    <Compile Include="cROLESUSUARIOS.vb" />
+    <Compile Include="cSERVICIOSHOSPITALARIOS.vb" />
+    <Compile Include="cSERVICIOSHOSPITALARIOS.xt.vb" />
+    <Compile Include="cSIMDETALLERECETAS.vb" />
+    <Compile Include="cSIMMEDICOS.vb" />
+    <Compile Include="cSIMRECETAS.vb" />
+    <Compile Include="cSIMSERVICIOS.vb" />
+    <Compile Include="cSOLICITUDES.vb" />
+    <Compile Include="cSOLICITUDES.xt.vb" />
+    <Compile Include="cSOLICITUDESPROCESOCOMPRAS.vb" />
+    <Compile Include="cSOLICITUDESPROCESOCOMPRAS.xt.vb" />
+    <Compile Include="cSUBGRUPOS.vb" />
+    <Compile Include="cSUBGRUPOS.xt.vb" />
+    <Compile Include="cSUMINISTRODEPENDENCIAS.vb" />
+    <Compile Include="cSUMINISTRODEPENDENCIAS.xt.vb" />
+    <Compile Include="cSUMINISTROS.vb" />
+    <Compile Include="cSUMINISTROS.xt.vb" />
+    <Compile Include="cSUMINISTROSHOMOGENEOS.vb" />
+    <Compile Include="cTIPOCOMPRAS.vb" />
+    <Compile Include="cTIPOCOMPRAS.xt.vb" />
+    <Compile Include="cTIPOCRITERIO.vb" />
+    <Compile Include="cTIPOCRITERIO.xt.vb" />
+    <Compile Include="cTIPODOCUMENTOBASE.vb" />
+    <Compile Include="cTIPODOCUMENTOBASE.xt.vb" />
+    <Compile Include="cTIPODOCUMENTOCONTRATO.vb" />
+    <Compile Include="cTIPODOCUMENTOCONTRATO.xt.vb" />
+    <Compile Include="cTIPODOCUMENTORECEPCION.vb" />
+    <Compile Include="cTIPODOCUMENTOREFERENCIAS.vb" />
+    <Compile Include="cTIPODOCUMENTOREFERENCIAS.xt.vb" />
+    <Compile Include="cTIPOESTABLECIMIENTOS.vb" />
+    <Compile Include="cTIPOESTABLECIMIENTOS.xt.vb" />
+    <Compile Include="cTIPOGARANTIAS.vb" />
+    <Compile Include="cTIPOIDENTIFICACION.vb" />
+    <Compile Include="cTIPOINFORMES.vb" />
+    <Compile Include="cTIPOINFORMES.xt.vb" />
+    <Compile Include="cTIPOMOVIMIENTOS.vb" />
+    <Compile Include="cTIPOSDOCUMENTOSCG.vb" />
+    <Compile Include="cTIPOSUMINISTROS.vb" />
+    <Compile Include="cTIPOSUMINISTROS.xt.vb" />
+    <Compile Include="cTIPOTRANSACCIONES.vb" />
+    <Compile Include="cUBICACIONESPRODUCTOS.vb" />
+    <Compile Include="cUBICACIONESPRODUCTOS.xt.vb" />
+    <Compile Include="cUNIDADMEDIDAS.vb" />
+    <Compile Include="cUNIDADMEDIDAS.xt.vb" />
+    <Compile Include="cUNIDADMEDIDASUMINISTROS.vb" />
+    <Compile Include="cUSUARIOS.vb" />
+    <Compile Include="cUSUARIOS.xt.vb" />
+    <Compile Include="cUTILERIAS.vb" />
+    <Compile Include="cVALESSALIDA.vb" />
+    <Compile Include="cVALESSALIDA.xt.vb" />
+    <Compile Include="cZONAS.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABASTECIMIENTOS_DATOS\ABASTECIMIENTOS_DATOS.vbproj">
+      <Project>{DC64486C-763D-48FB-A6B3-DCE891B705E7}</Project>
+      <Name>ABASTECIMIENTOS_DATOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABASTECIMIENTOS_ENTIDADES\ABASTECIMIENTOS_ENTIDADES.vbproj">
+      <Project>{7DE8CDB0-4460-4276-A16C-BFB144140F50}</Project>
+      <Name>ABASTECIMIENTOS_ENTIDADES</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

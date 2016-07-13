@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsRemisionInforme" targetNamespace="http://tempuri.org/dsRemisionInforme.xsd" xmlns:mstns="http://tempuri.org/dsRemisionInforme.xsd" xmlns="http://tempuri.org/dsRemisionInforme.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsRemisionInforme" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsRemisionInforme" msprop:Generator_DataSetName="dsRemisionInforme">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TablePropName="DataTable1" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMEROINFORME" msprop:Generator_UserColumnName="NUMEROINFORME" msprop:Generator_ColumnPropNameInRow="NUMEROINFORME" msprop:Generator_ColumnVarNameInTable="columnNUMEROINFORME" msprop:Generator_ColumnPropNameInTable="NUMEROINFORMEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPOINFORME" msprop:Generator_UserColumnName="TIPOINFORME" msprop:Generator_ColumnPropNameInRow="TIPOINFORME" msprop:Generator_ColumnVarNameInTable="columnTIPOINFORME" msprop:Generator_ColumnPropNameInTable="TIPOINFORMEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RESULTADO" msprop:Generator_UserColumnName="RESULTADO" msprop:Generator_ColumnPropNameInRow="RESULTADO" msprop:Generator_ColumnVarNameInTable="columnRESULTADO" msprop:Generator_ColumnPropNameInTable="RESULTADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHAREMISION" msprop:Generator_UserColumnName="FECHAREMISION" msprop:Generator_ColumnPropNameInRow="FECHAREMISION" msprop:Generator_ColumnVarNameInTable="columnFECHAREMISION" msprop:Generator_ColumnPropNameInTable="FECHAREMISIONColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

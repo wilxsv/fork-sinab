@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XMLSchema" targetNamespace="http://tempuri.org/XMLSchema.xsd" xmlns:mstns="http://tempuri.org/XMLSchema.xsd" xmlns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PROCESOCOMPRAS" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdProcesoCompra" type="xs:long" />
+              <xs:element name="IDESTABLECIMIENTO" type="xs:int" />
+              <xs:element name="FECHAENVIONOTA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="COSTOBASE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LUGARAPERTURABASE" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHAHORAINICIOAPERTURA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAHORAFINAPERTURA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAPUBLICACION" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LUGARRETIROBASE" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHAHORAINICIORETIRO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAHORAFINRETIRO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LUGARRECEPCIONOFERTA" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHAHORAINICIORECEPCION" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAHORAFINRECEPCION" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CODIGOLICITACION" type="xs:string" minOccurs="0" />
+              <xs:element name="TITULOLICITACION" type="xs:string" minOccurs="0" />
+              <xs:element name="IDTIPOCOMPRASUGERIDO" type="xs:int" minOccurs="0" />
+              <xs:element name="IDTIPOCOMPRAEJECUTAR" type="xs:int" minOccurs="0" />
+              <xs:element name="IDESTADOPROCESOCOMPRA" type="xs:int" minOccurs="0" />
+              <xs:element name="FECHAINICIOPROCESOCOMPRA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAELABORACIONBASE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AUUSUARIOCREACION" type="xs:string" minOccurs="0" />
+              <xs:element name="AUFECHACREACION" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AUUSUARIOMODIFICACION" type="xs:string" minOccurs="0" />
+              <xs:element name="AUFECHAMODIFICACION" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ESTASINCRONIZADA" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Document1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ACTA_APERTURA" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TITULOLICITACION" type="xs:string" minOccurs="0" />
+              <xs:element name="CODIGOLICITACION" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBREREPRESENTANTE" type="xs:string" />
+              <xs:element name="MONTOOFERTA" type="xs:decimal" />
+              <xs:element name="MONTOGARANTIA" type="xs:decimal" />
+              <xs:element name="IdProcesoCompra" type="xs:long" />
+              <xs:element name="IDESTABLECIMIENTO" type="xs:int" />
+              <xs:element name="FECHAREALIZADAAPERTURA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DESCRIPCION" type="xs:string" minOccurs="0" />
+              <xs:element name="ORDENLLEGADA" type="xs:int" />
+              <xs:element name="DETALLE" type="xs:integer" />
+              <xs:element name="DUIENTREGA" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vCatalogoProductos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="vv_CATALOGOPRODUCTOS" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDSUMINISTRO" type="xs:int" />
+              <xs:element name="CORRSUMINISTRO" type="xs:string" />
+              <xs:element name="DESCSUMINISTRO" type="xs:string" />
+              <xs:element name="IDGRUPO" type="xs:int" />
+              <xs:element name="CORRGRUPO" type="xs:string" />
+              <xs:element name="DESCGRUPO" type="xs:string" />
+              <xs:element name="IDSUBGRUPO" type="xs:int" />
+              <xs:element name="CORRSUBGRUPO" type="xs:string" />
+              <xs:element name="DESCSUBGRUPO" type="xs:string" />
+              <xs:element name="IDPRODUCTO" type="xs:long" />
+              <xs:element name="CORRPRODUCTO" type="xs:string" />
+              <xs:element name="DESCPRODUCTO" type="xs:string" />
+              <xs:element name="IDNIVELUSO" type="xs:unsignedByte" />
+              <xs:element name="NOMBRECORTO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tHistoricoPrecios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="HISTORICOPRECIOS" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDPRODUCTO" type="xs:long" />
+              <xs:element name="CORRELATIVO" type="xs:long" />
+              <xs:element name="FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PRECIO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CODIGO_LICITACION" type="xs:string" minOccurs="0" />
+              <xs:element name="AUUSUARIOCREACION" type="xs:string" minOccurs="0" />
+              <xs:element name="AUFECHACREACION" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AUUSUARIOMODIFICACION" type="xs:string" minOccurs="0" />
+              <xs:element name="AUFECHAMODIFICACION" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ESTASINCRONIZADA" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PRODUCTOSHABILITADOS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CODIGOPRODUCTO" type="xs:string" />
+        <xs:element name="NIVELUSO" type="xs:string" />
+        <xs:element name="FECHA" type="xs:string" />
+        <xs:element name="NOMBREPRODUCTO" type="xs:string" />
+        <xs:element name="OBSERVACION" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ESTABLECIMIENTO_PRODUCTO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CODIGOESTABLECIMIENTO" type="xs:string" />
+        <xs:element name="NOMBRE" type="xs:string" />
+        <xs:element name="FECHA" type="xs:string" />
+        <xs:element name="OBSERVACION" type="xs:string" />
+        <xs:element name="DESCLARGO" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OBSERVACIONDETALLENECESIDAD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IDESTABLECIMIENTO" type="xs:int" />
+        <xs:element name="IDNECESIDAD" type="xs:int" />
+        <xs:element name="IDPRODUCTO" type="xs:int" />
+        <xs:element name="IDOBSERVACION" type="xs:int" />
+        <xs:element name="IDASESORIA" type="xs:int" />
+        <xs:element name="OBSERVACION" type="xs:string" />
+        <xs:element name="FECHA" type="xs:dateTime" />
+        <xs:element name="CANTIDADACTUAL" type="xs:int" />
+        <xs:element name="AUUSUARIOCREACION" type="xs:string" />
+        <xs:element name="AUFECHACREACION" type="xs:dateTime" />
+        <xs:element name="AUUSUARIOMODIFICACION" type="xs:string" />
+        <xs:element name="AUFECHAMODIFICACION" type="xs:dateTime" />
+        <xs:element name="ESTASINCRONIZADA" type="xs:short" />
+        <xs:element name="DESCRIPCION" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncabezadoConsolidarOfertas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ordenllegada" type="xs:int" />
+        <xs:element name="renglon" type="xs:int" />
+        <xs:element name="correlativorenglon" type="xs:int" />
+        <xs:element name="producto" type="xs:string" />
+        <xs:element name="um" type="xs:string" />
+        <xs:element name="cantidad" type="xs:double" />
+        <xs:element name="preciounitario" type="xs:double" />
+        <xs:element name="valortotal" type="xs:double" />
+        <xs:element name="entrega" type="xs:string" />
+        <xs:element name="CASAREPRESENTADA" type="xs:string" />
+        <xs:element name="MARCA" type="xs:string" />
+        <xs:element name="ORIGEN" type="xs:string" />
+        <xs:element name="VENCIMIENTO" type="xs:string" />
+        <xs:element name="NUMEROCSSP" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValorizacionPorRenglones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="renglon" type="xs:int" />
+        <xs:element name="correlativorenglon" type="xs:int" />
+        <xs:element name="proveedor" type="xs:string" />
+        <xs:element name="producto1" type="xs:string" />
+        <xs:element name="producto2" type="xs:string" />
+        <xs:element name="unidadmedida" type="xs:string" />
+        <xs:element name="cantidad" type="xs:decimal" />
+        <xs:element name="preciounitario" type="xs:decimal" />
+        <xs:element name="importe" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComisionEv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IdEmpleado" type="xs:int" />
+        <xs:element name="Nombre" type="xs:string" />
+        <xs:element name="Cargo" type="xs:string" />
+        <xs:element name="EstaHabilitado" type="xs:integer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XMLSchema" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Document" />
+        <xs:element ref="Document1" />
+        <xs:element ref="vCatalogoProductos" />
+        <xs:element ref="tHistoricoPrecios" />
+        <xs:element ref="PRODUCTOSHABILITADOS" />
+        <xs:element ref="ESTABLECIMIENTO_PRODUCTO" />
+        <xs:element ref="OBSERVACIONDETALLENECESIDAD" />
+        <xs:element ref="EncabezadoConsolidarOfertas" />
+        <xs:element ref="ValorizacionPorRenglones" />
+        <xs:element ref="ComisionEv" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,55 @@
+Partial Public Class dbADENDAS
+
+#Region " Metodos Agregados "
+
+    Public Function ObtenerAdendasPorProceso(ByVal IDPROCESOCOMPRA As Int32) As DataSet
+
+        Dim strSQL As New Text.StringBuilder
+        strSQL.Append(" SELECT IDADENDA, IDESTABLECIMIENTO, IDPROCESOCOMPRA, NUMEROADENDA, ")
+        strSQL.Append(" FECHAADENDA, DETALLEADENDA, AUUSUARIOCREACION ")
+        strSQL.Append(" FROM SAB_UACI_ADENDAS ")
+        strSQL.Append(" WHERE (IDPROCESOCOMPRA = @IDPROCESOCOMPRA) ")
+
+        Dim args(0) As SqlParameter
+        args(0) = New SqlParameter("@IDPROCESOCOMPRA", SqlDbType.Int)
+        args(0).Value = IDPROCESOCOMPRA
+
+        Dim ds As DataSet
+        ds = SqlHelper.ExecuteDataset(Me.cnnStr, CommandType.Text, strSQL.ToString(), args)
+
+        Return ds
+
+    End Function
+
+    Public Function ObtenerDataporAdenda(ByVal IDADENDA As Integer) As DataSet
+
+        Dim strSQL As New Text.StringBuilder
+        strSQL.Append(" SELECT A.IDADENDA AS ADENDA, A.NUMEROADENDA AS NADENDA, convert(varchar(10),FECHAadenda,103) as FECHAADENDA, A.DETALLEADENDA, PC.IDPROCESOCOMPRA AS PROCESOCOMPRA, ")
+        strSQL.Append(" PC.CODIGOLICITACION AS LICITACION, PC.TITULOLICITACION AS TITULO, PC.DESCRIPCIONLICITACION AS NOMBREPROCESO, ")
+        strSQL.Append(" S.CORRELATIVO AS SOLICITUD, E.NOMBRE AS ESTABLECIMIENTO, F.NOMBRE AS FUENTE, SM.DESCRIPCION AS SUMINISTRO ")
+        strSQL.Append(" FROM SAB_UACI_ADENDAS AS A INNER JOIN ")
+        strSQL.Append(" SAB_UACI_PROCESOCOMPRAS AS PC ON A.IDPROCESOCOMPRA = PC.IDPROCESOCOMPRA INNER JOIN ")
+        strSQL.Append(" SAB_EST_SOLICITUDESPROCESOCOMPRAS AS SP ON PC.IDPROCESOCOMPRA = SP.IDPROCESOCOMPRA AND ")
+        strSQL.Append(" PC.IDESTABLECIMIENTO = SP.IDESTABLECIMIENTO INNER JOIN ")
+        strSQL.Append(" SAB_EST_SOLICITUDES AS S ON SP.IDSOLICITUD = S.IDSOLICITUD AND SP.IDESTABLECIMIENTOSOLICITUD = S.IDESTABLECIMIENTO INNER JOIN ")
+        strSQL.Append(" SAB_CAT_ESTABLECIMIENTOS AS E ON S.IDESTABLECIMIENTO = E.IDESTABLECIMIENTO INNER JOIN ")
+        strSQL.Append(" SAB_EST_FUENTEFINANCIAMIENTOSOLICITUDES AS FP ON S.IDSOLICITUD = FP.IDSOLICITUD AND ")
+        strSQL.Append(" S.IDESTABLECIMIENTO = FP.IDESTABLECIMIENTO INNER JOIN ")
+        strSQL.Append(" SAB_CAT_FUENTEFINANCIAMIENTOS AS F ON FP.IDFUENTEFINANCIAMIENTO = F.IDFUENTEFINANCIAMIENTO INNER JOIN ")
+        strSQL.Append(" SAB_CAT_SUMINISTROS AS SM ON S.IDCLASESUMINISTRO = SM.IDSUMINISTRO ")
+        strSQL.Append(" WHERE (A.IDADENDA = @IDADENDA) ")
+
+        Dim args(1) As SqlParameter
+        args(0) = New SqlParameter("@IDADENDA", SqlDbType.Int)
+        args(0).Value = IDADENDA
+
+        Dim ds As DataSet
+        ds = SqlHelper.ExecuteDataset(Me.cnnStr, CommandType.Text, strSQL.ToString(), args)
+
+        Return ds
+
+    End Function
+
+#End Region
+
+End Class

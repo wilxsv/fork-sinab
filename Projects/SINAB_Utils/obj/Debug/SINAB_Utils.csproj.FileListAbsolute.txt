@@ -1,0 +1,4 @@
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\SINAB_Utils\bin\Debug\SINAB_Utils.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\SINAB_Utils\bin\Debug\SINAB_Utils.pdb
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\SINAB_Utils\obj\Debug\SINAB_Utils.dll
+C:\Users\Farid\Documents\Visual Studio 2012\Projects\ABASTECIMIENTO2\Projects\SINAB_Utils\obj\Debug\SINAB_Utils.pdb

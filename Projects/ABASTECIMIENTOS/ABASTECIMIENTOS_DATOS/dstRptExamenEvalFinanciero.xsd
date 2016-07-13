@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dstRptExamenEvalFinanciero" targetNamespace="http://tempuri.org/dstRptExamenEvalFinanciero.xsd" xmlns:mstns="http://tempuri.org/dstRptExamenEvalFinanciero.xsd" xmlns="http://tempuri.org/dstRptExamenEvalFinanciero.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dstRptExamenEvalFinanciero" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dstRptExamenEvalFinanciero" msprop:Generator_DataSetName="dstRptExamenEvalFinanciero">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" minOccurs="0" />
+              <xs:element name="CODIGOLICITACION" msprop:Generator_UserColumnName="CODIGOLICITACION" msprop:Generator_ColumnPropNameInRow="CODIGOLICITACION" msprop:Generator_ColumnVarNameInTable="columnCODIGOLICITACION" msprop:Generator_ColumnPropNameInTable="CODIGOLICITACIONColumn" minOccurs="0" />
+              <xs:element name="TITULOLICITACION" msprop:Generator_UserColumnName="TITULOLICITACION" msprop:Generator_ColumnPropNameInRow="TITULOLICITACION" msprop:Generator_ColumnVarNameInTable="columnTITULOLICITACION" msprop:Generator_ColumnPropNameInTable="TITULOLICITACIONColumn" minOccurs="0" />
+              <xs:element name="ORDENLLEGADA" msprop:Generator_UserColumnName="ORDENLLEGADA" msprop:Generator_ColumnPropNameInRow="ORDENLLEGADA" msprop:Generator_ColumnVarNameInTable="columnORDENLLEGADA" msprop:Generator_ColumnPropNameInTable="ORDENLLEGADAColumn" type="xs:int" />
+              <xs:element name="INDICESOLVENCIA" msprop:Generator_UserColumnName="INDICESOLVENCIA" msprop:Generator_ColumnPropNameInRow="INDICESOLVENCIA" msprop:Generator_ColumnVarNameInTable="columnINDICESOLVENCIA" msprop:Generator_ColumnPropNameInTable="INDICESOLVENCIAColumn" type="xs:decimal" />
+              <xs:element name="PONDERACIONSOLVENCIA" msprop:Generator_UserColumnName="PONDERACIONSOLVENCIA" msprop:Generator_ColumnPropNameInRow="PONDERACIONSOLVENCIA" msprop:Generator_ColumnVarNameInTable="columnPONDERACIONSOLVENCIA" msprop:Generator_ColumnPropNameInTable="PONDERACIONSOLVENCIAColumn" type="xs:decimal" />
+              <xs:element name="CAPITALTRABAJO" msprop:Generator_UserColumnName="CAPITALTRABAJO" msprop:Generator_ColumnPropNameInRow="CAPITALTRABAJO" msprop:Generator_ColumnVarNameInTable="columnCAPITALTRABAJO" msprop:Generator_ColumnPropNameInTable="CAPITALTRABAJOColumn" type="xs:decimal" />
+              <xs:element name="PONDERACIONCAPITAL" msprop:Generator_UserColumnName="PONDERACIONCAPITAL" msprop:Generator_ColumnPropNameInRow="PONDERACIONCAPITAL" msprop:Generator_ColumnVarNameInTable="columnPONDERACIONCAPITAL" msprop:Generator_ColumnPropNameInTable="PONDERACIONCAPITALColumn" type="xs:decimal" />
+              <xs:element name="INDICEENDEUDAMIENTO" msprop:Generator_UserColumnName="INDICEENDEUDAMIENTO" msprop:Generator_ColumnPropNameInRow="INDICEENDEUDAMIENTO" msprop:Generator_ColumnVarNameInTable="columnINDICEENDEUDAMIENTO" msprop:Generator_ColumnPropNameInTable="INDICEENDEUDAMIENTOColumn" type="xs:decimal" />
+              <xs:element name="PONDERACIONENDEUDAMIENTO" msprop:Generator_UserColumnName="PONDERACIONENDEUDAMIENTO" msprop:Generator_ColumnPropNameInRow="PONDERACIONENDEUDAMIENTO" msprop:Generator_ColumnVarNameInTable="columnPONDERACIONENDEUDAMIENTO" msprop:Generator_ColumnPropNameInTable="PONDERACIONENDEUDAMIENTOColumn" type="xs:decimal" />
+              <xs:element name="PONDERACIONREFERENCIA" msprop:Generator_UserColumnName="PONDERACIONREFERENCIA" msprop:Generator_ColumnPropNameInRow="PONDERACIONREFERENCIA" msprop:Generator_ColumnVarNameInTable="columnPONDERACIONREFERENCIA" msprop:Generator_ColumnPropNameInTable="PONDERACIONREFERENCIAColumn" type="xs:decimal" />
+              <xs:element name="TOTAL" msdata:ReadOnly="true" msprop:Generator_UserColumnName="TOTAL" msprop:Generator_ColumnPropNameInRow="TOTAL" msprop:Generator_ColumnVarNameInTable="columnTOTAL" msprop:Generator_ColumnPropNameInTable="TOTALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="REFERENCIAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="REFERENCIAS" msprop:Generator_ColumnPropNameInRow="REFERENCIAS" msprop:Generator_ColumnVarNameInTable="columnREFERENCIAS" msprop:Generator_ColumnPropNameInTable="REFERENCIASColumn" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

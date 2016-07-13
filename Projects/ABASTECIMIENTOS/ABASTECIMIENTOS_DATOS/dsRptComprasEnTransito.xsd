@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsRptComprasEnTransito" targetNamespace="http://tempuri.org/dsRptComprasEnTransito.xsd" xmlns:mstns="http://tempuri.org/dsRptComprasEnTransito.xsd" xmlns="http://tempuri.org/dsRptComprasEnTransito.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsRptComprasEnTransito" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsRptComprasEnTransito" msprop:Generator_DataSetName="dsRptComprasEnTransito">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsRptDemandaInsatisfecha" msprop:Generator_UserTableName="dsRptDemandaInsatisfecha" msprop:Generator_RowDeletedName="dsRptDemandaInsatisfechaRowDeleted" msprop:Generator_TableClassName="dsRptDemandaInsatisfechaDataTable" msprop:Generator_RowChangedName="dsRptDemandaInsatisfechaRowChanged" msprop:Generator_RowClassName="dsRptDemandaInsatisfechaRow" msprop:Generator_RowChangingName="dsRptDemandaInsatisfechaRowChanging" msprop:Generator_RowEvArgName="dsRptDemandaInsatisfechaRowChangeEvent" msprop:Generator_RowEvHandlerName="dsRptDemandaInsatisfechaRowChangeEventHandler" msprop:Generator_TablePropName="dsRptDemandaInsatisfecha" msprop:Generator_TableVarName="tabledsRptDemandaInsatisfecha" msprop:Generator_RowDeletingName="dsRptDemandaInsatisfechaRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDZONA" msprop:Generator_UserColumnName="IDZONA" msprop:Generator_ColumnPropNameInRow="IDZONA" msprop:Generator_ColumnVarNameInTable="columnIDZONA" msprop:Generator_ColumnPropNameInTable="IDZONAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ZONA" msprop:Generator_UserColumnName="ZONA" msprop:Generator_ColumnPropNameInRow="ZONA" msprop:Generator_ColumnVarNameInTable="columnZONA" msprop:Generator_ColumnPropNameInTable="ZONAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDESTABLECIMIENTO" msprop:Generator_UserColumnName="IDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="IDESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnIDESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="IDESTABLECIMIENTOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDSUMINISTRO" msprop:Generator_UserColumnName="IDSUMINISTRO" msprop:Generator_ColumnPropNameInRow="IDSUMINISTRO" msprop:Generator_ColumnVarNameInTable="columnIDSUMINISTRO" msprop:Generator_ColumnPropNameInTable="IDSUMINISTROColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DESCSUMINISTRO" msprop:Generator_UserColumnName="DESCSUMINISTRO" msprop:Generator_ColumnPropNameInRow="DESCSUMINISTRO" msprop:Generator_ColumnVarNameInTable="columnDESCSUMINISTRO" msprop:Generator_ColumnPropNameInTable="DESCSUMINISTROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDGRUPO" msprop:Generator_UserColumnName="IDGRUPO" msprop:Generator_ColumnPropNameInRow="IDGRUPO" msprop:Generator_ColumnVarNameInTable="columnIDGRUPO" msprop:Generator_ColumnPropNameInTable="IDGRUPOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DESCGRUPO" msprop:Generator_UserColumnName="DESCGRUPO" msprop:Generator_ColumnPropNameInRow="DESCGRUPO" msprop:Generator_ColumnVarNameInTable="columnDESCGRUPO" msprop:Generator_ColumnPropNameInTable="DESCGRUPOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDSUBGRUPO" msprop:Generator_UserColumnName="IDSUBGRUPO" msprop:Generator_ColumnPropNameInRow="IDSUBGRUPO" msprop:Generator_ColumnVarNameInTable="columnIDSUBGRUPO" msprop:Generator_ColumnPropNameInTable="IDSUBGRUPOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DESCSUBGRUPO" msprop:Generator_UserColumnName="DESCSUBGRUPO" msprop:Generator_ColumnPropNameInRow="DESCSUBGRUPO" msprop:Generator_ColumnVarNameInTable="columnDESCSUBGRUPO" msprop:Generator_ColumnPropNameInTable="DESCSUBGRUPOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDPRODUCTO" msprop:Generator_UserColumnName="IDPRODUCTO" msprop:Generator_ColumnPropNameInRow="IDPRODUCTO" msprop:Generator_ColumnVarNameInTable="columnIDPRODUCTO" msprop:Generator_ColumnPropNameInTable="IDPRODUCTOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DESCLARGO" msprop:Generator_UserColumnName="DESCLARGO" msprop:Generator_ColumnPropNameInRow="DESCLARGO" msprop:Generator_ColumnVarNameInTable="columnDESCLARGO" msprop:Generator_ColumnPropNameInTable="DESCLARGOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TRANSITO" msdata:Caption="DEMANDAINSATISFECHA" msprop:Generator_UserColumnName="TRANSITO" msprop:Generator_ColumnPropNameInRow="TRANSITO" msprop:Generator_ColumnVarNameInTable="columnTRANSITO" msprop:Generator_ColumnPropNameInTable="TRANSITOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="CODIGO" msprop:Generator_UserColumnName="CODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

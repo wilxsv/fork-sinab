@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dstSolicitudProcCompra" targetNamespace="http://tempuri.org/dstSolicitudProcCompra.xsd" xmlns:mstns="http://tempuri.org/dstSolicitudProcCompra.xsd" xmlns="http://tempuri.org/dstSolicitudProcCompra.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dstSolicitudProcCompra" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dstSolicitudProcCompra" msprop:Generator_DataSetName="dstSolicitudProcCompra">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idSolicitud" msprop:Generator_UserColumnName="idSolicitud" msprop:Generator_ColumnVarNameInTable="columnidSolicitud" msprop:Generator_ColumnPropNameInRow="idSolicitud" msprop:Generator_ColumnPropNameInTable="idSolicitudColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Dependencia" msprop:Generator_UserColumnName="Dependencia" msprop:Generator_ColumnVarNameInTable="columnDependencia" msprop:Generator_ColumnPropNameInRow="Dependencia" msprop:Generator_ColumnPropNameInTable="DependenciaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Clase" msprop:Generator_UserColumnName="Clase" msprop:Generator_ColumnVarNameInTable="columnClase" msprop:Generator_ColumnPropNameInRow="Clase" msprop:Generator_ColumnPropNameInTable="ClaseColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Financiamiento" msprop:Generator_UserColumnName="Financiamiento" msprop:Generator_ColumnVarNameInTable="columnFinanciamiento" msprop:Generator_ColumnPropNameInRow="Financiamiento" msprop:Generator_ColumnPropNameInTable="FinanciamientoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha_envio" msprop:Generator_UserColumnName="Fecha_envio" msprop:Generator_ColumnVarNameInTable="columnFecha_envio" msprop:Generator_ColumnPropNameInRow="Fecha_envio" msprop:Generator_ColumnPropNameInTable="Fecha_envioColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Proceso_sol" msprop:Generator_UserColumnName="Proceso_sol" msprop:Generator_ColumnVarNameInTable="columnProceso_sol" msprop:Generator_ColumnPropNameInRow="Proceso_sol" msprop:Generator_ColumnPropNameInTable="Proceso_solColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Proceso_" msprop:Generator_UserColumnName="Proceso_" msprop:Generator_ColumnVarNameInTable="columnProceso_" msprop:Generator_ColumnPropNameInRow="Proceso_" msprop:Generator_ColumnPropNameInTable="Proceso_Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ActaAperturaOferta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EMPLEADO" type="xs:string" minOccurs="0" />
+              <xs:element name="CARGO" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBREREPRESENTANTE" type="xs:string" minOccurs="0" />
+              <xs:element name="PROVEEDOR" type="xs:string" minOccurs="0" />
+              <xs:element name="EMPLEADOS" type="xs:string" minOccurs="0" />
+              <xs:element name="REPRESENTANTES" type="xs:string" minOccurs="0" />
+              <xs:element name="TITULOLICITACION" type="xs:string" minOccurs="0" />
+              <xs:element name="CODIGOLICITACION" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTOOFERTA" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTOGARANTIA" type="xs:string" minOccurs="0" />
+              <xs:element name="FUENTEFINANCIAMIENTO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

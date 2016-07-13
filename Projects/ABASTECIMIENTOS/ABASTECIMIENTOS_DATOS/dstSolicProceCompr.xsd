@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dstSolicProceCompr" targetNamespace="http://tempuri.org/dstSolicProceCompr.xsd" xmlns:mstns="http://tempuri.org/dstSolicProceCompr.xsd" xmlns="http://tempuri.org/dstSolicProceCompr.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dstSolicProceCompr" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dstSolicProceCompr" msprop:Generator_DataSetName="dstSolicProceCompr">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtSolicitud" msprop:Generator_UserTableName="dtSolicitud" msprop:Generator_RowDeletedName="dtSolicitudRowDeleted" msprop:Generator_RowChangedName="dtSolicitudRowChanged" msprop:Generator_RowClassName="dtSolicitudRow" msprop:Generator_RowChangingName="dtSolicitudRowChanging" msprop:Generator_RowEvArgName="dtSolicitudRowChangeEvent" msprop:Generator_RowEvHandlerName="dtSolicitudRowChangeEventHandler" msprop:Generator_TableClassName="dtSolicitudDataTable" msprop:Generator_TableVarName="tabledtSolicitud" msprop:Generator_RowDeletingName="dtSolicitudRowDeleting" msprop:Generator_TablePropName="dtSolicitud">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDSOLICITUD" msprop:Generator_UserColumnName="IDSOLICITUD" msprop:Generator_ColumnPropNameInRow="IDSOLICITUD" msprop:Generator_ColumnVarNameInTable="columnIDSOLICITUD" msprop:Generator_ColumnPropNameInTable="IDSOLICITUDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DEPENDENCIA_SOLICITANTE" msprop:Generator_UserColumnName="DEPENDENCIA_SOLICITANTE" msprop:Generator_ColumnPropNameInRow="DEPENDENCIA_SOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnDEPENDENCIA_SOLICITANTE" msprop:Generator_ColumnPropNameInTable="DEPENDENCIA_SOLICITANTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CLASE_SUMINISTRO" msprop:Generator_UserColumnName="CLASE_SUMINISTRO" msprop:Generator_ColumnPropNameInRow="CLASE_SUMINISTRO" msprop:Generator_ColumnVarNameInTable="columnCLASE_SUMINISTRO" msprop:Generator_ColumnPropNameInTable="CLASE_SUMINISTROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FUENTE_FINANCIAMIENTO" msprop:Generator_UserColumnName="FUENTE_FINANCIAMIENTO" msprop:Generator_ColumnPropNameInRow="FUENTE_FINANCIAMIENTO" msprop:Generator_ColumnVarNameInTable="columnFUENTE_FINANCIAMIENTO" msprop:Generator_ColumnPropNameInTable="FUENTE_FINANCIAMIENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHASOLICITUD" msprop:Generator_UserColumnName="FECHASOLICITUD" msprop:Generator_ColumnPropNameInRow="FECHASOLICITUD" msprop:Generator_ColumnVarNameInTable="columnFECHASOLICITUD" msprop:Generator_ColumnPropNameInTable="FECHASOLICITUDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PROCESO_COMPRA_SOL" msprop:Generator_UserColumnName="PROCESO_COMPRA_SOL" msprop:Generator_ColumnPropNameInRow="PROCESO_COMPRA_SOL" msprop:Generator_ColumnVarNameInTable="columnPROCESO_COMPRA_SOL" msprop:Generator_ColumnPropNameInTable="PROCESO_COMPRA_SOLColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PROCESO_COMPRA_SUG" msprop:Generator_UserColumnName="PROCESO_COMPRA_SUG" msprop:Generator_ColumnPropNameInRow="PROCESO_COMPRA_SUG" msprop:Generator_ColumnVarNameInTable="columnPROCESO_COMPRA_SUG" msprop:Generator_ColumnPropNameInTable="PROCESO_COMPRA_SUGColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDESTADO" msprop:Generator_UserColumnName="IDESTADO" msprop:Generator_ColumnPropNameInRow="IDESTADO" msprop:Generator_ColumnVarNameInTable="columnIDESTADO" msprop:Generator_ColumnPropNameInTable="IDESTADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTOSOLICITADO" msprop:Generator_UserColumnName="MONTOSOLICITADO" msprop:Generator_ColumnPropNameInRow="MONTOSOLICITADO" msprop:Generator_ColumnVarNameInTable="columnMONTOSOLICITADO" msprop:Generator_ColumnPropNameInTable="MONTOSOLICITADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="COMPRACONJUNTA" msprop:Generator_UserColumnName="COMPRACONJUNTA" msprop:Generator_ColumnVarNameInTable="columnCOMPRACONJUNTA" msprop:Generator_ColumnPropNameInRow="COMPRACONJUNTA" msprop:Generator_ColumnPropNameInTable="COMPRACONJUNTAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtSolicitudProcCompra" msprop:Generator_UserTableName="dtSolicitudProcCompra" msprop:Generator_RowDeletedName="dtSolicitudProcCompraRowDeleted" msprop:Generator_RowChangedName="dtSolicitudProcCompraRowChanged" msprop:Generator_RowClassName="dtSolicitudProcCompraRow" msprop:Generator_RowChangingName="dtSolicitudProcCompraRowChanging" msprop:Generator_RowEvArgName="dtSolicitudProcCompraRowChangeEvent" msprop:Generator_RowEvHandlerName="dtSolicitudProcCompraRowChangeEventHandler" msprop:Generator_TableClassName="dtSolicitudProcCompraDataTable" msprop:Generator_TableVarName="tabledtSolicitudProcCompra" msprop:Generator_RowDeletingName="dtSolicitudProcCompraRowDeleting" msprop:Generator_TablePropName="dtSolicitudProcCompra">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DEPENDENCIA_SOLICITANTE" msprop:Generator_UserColumnName="DEPENDENCIA_SOLICITANTE" msprop:Generator_ColumnPropNameInRow="DEPENDENCIA_SOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnDEPENDENCIA_SOLICITANTE" msprop:Generator_ColumnPropNameInTable="DEPENDENCIA_SOLICITANTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CLASE_SUMINISTRO" msprop:Generator_UserColumnName="CLASE_SUMINISTRO" msprop:Generator_ColumnPropNameInRow="CLASE_SUMINISTRO" msprop:Generator_ColumnVarNameInTable="columnCLASE_SUMINISTRO" msprop:Generator_ColumnPropNameInTable="CLASE_SUMINISTROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FUENTE_FINANCIAMIENTO" msprop:Generator_UserColumnName="FUENTE_FINANCIAMIENTO" msprop:Generator_ColumnPropNameInRow="FUENTE_FINANCIAMIENTO" msprop:Generator_ColumnVarNameInTable="columnFUENTE_FINANCIAMIENTO" msprop:Generator_ColumnPropNameInTable="FUENTE_FINANCIAMIENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDSOLICITUD" msprop:Generator_UserColumnName="IDSOLICITUD" msprop:Generator_ColumnPropNameInRow="IDSOLICITUD" msprop:Generator_ColumnVarNameInTable="columnIDSOLICITUD" msprop:Generator_ColumnPropNameInTable="IDSOLICITUDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDPROCESOCOMPRA" msprop:Generator_UserColumnName="IDPROCESOCOMPRA" msprop:Generator_ColumnPropNameInRow="IDPROCESOCOMPRA" msprop:Generator_ColumnVarNameInTable="columnIDPROCESOCOMPRA" msprop:Generator_ColumnPropNameInTable="IDPROCESOCOMPRAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTOSOLICITADO" msprop:Generator_UserColumnName="MONTOSOLICITADO" msprop:Generator_ColumnPropNameInRow="MONTOSOLICITADO" msprop:Generator_ColumnVarNameInTable="columnMONTOSOLICITADO" msprop:Generator_ColumnPropNameInTable="MONTOSOLICITADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ESTADO" msprop:Generator_UserColumnName="ESTADO" msprop:Generator_ColumnVarNameInTable="columnESTADO" msprop:Generator_ColumnPropNameInRow="ESTADO" msprop:Generator_ColumnPropNameInTable="ESTADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDCLASESUMINISTRO" msprop:Generator_UserColumnName="IDCLASESUMINISTRO" msprop:Generator_ColumnPropNameInRow="IDCLASESUMINISTRO" msprop:Generator_ColumnVarNameInTable="columnIDCLASESUMINISTRO" msprop:Generator_ColumnPropNameInTable="IDCLASESUMINISTROColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_SOLICITUD" msprop:Generator_UserColumnName="ID_SOLICITUD" msprop:Generator_ColumnPropNameInRow="ID_SOLICITUD" msprop:Generator_ColumnVarNameInTable="columnID_SOLICITUD" msprop:Generator_ColumnPropNameInTable="ID_SOLICITUDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Column1" msprop:Generator_UserColumnName="Column1" msprop:Generator_ColumnPropNameInRow="Column1" msprop:Generator_ColumnVarNameInTable="columnColumn1" msprop:Generator_ColumnPropNameInTable="Column1Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el Diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout Style="LeftRight" layoutVersion="2" viewPortLeft="10943" viewPortTop="4277" zoom="100">
+    <Document_XmlElement left="1317" top="1254" width="5292" height="2831" selected="0" zOrder="1" index="0" expanded="1">
+        <PROCESOCOMPRAS_XmlElement left="7243" top="1254" width="7355" height="2831" selected="0" zOrder="2" index="0" expanded="1" />
+    </Document_XmlElement>
+    <Document1_XmlElement left="20897" top="8668" width="5292" height="2831" selected="0" zOrder="5" index="1" expanded="1">
+        <ACTA_APERTURA_XmlElement left="26823" top="6763" width="7885" height="6641" selected="0" zOrder="29" index="0" expanded="1" />
+    </Document1_XmlElement>
+    <vCatalogoProductos_XmlElement left="233" top="12647" width="9869" height="2831" selected="0" zOrder="7" index="2" expanded="1">
+        <vv_CATALOGOPRODUCTOS_XmlElement left="10736" top="12224" width="7540" height="3677" selected="0" zOrder="9" index="0" expanded="1" />
+    </vCatalogoProductos_XmlElement>
+    <tHistoricoPrecios_XmlElement left="1793" top="8302" width="7805" height="2831" selected="0" zOrder="12" index="3" expanded="1">
+        <HISTORICOPRECIOS_XmlElement left="10232" top="7667" width="8229" height="4101" selected="0" zOrder="14" index="0" expanded="1" />
+    </tHistoricoPrecios_XmlElement>
+    <PRODUCTOSHABILITADOS_XmlElement left="14949" top="1164" width="8837" height="2831" selected="0" zOrder="17" index="4" expanded="1" />
+    <ESTABLECIMIENTO_PRODUCTO_XmlElement left="3281" top="4497" width="9578" height="2831" selected="0" zOrder="19" index="5" expanded="1" />
+    <OBSERVACIONDETALLENECESIDAD_XmlElement left="106" top="15875" width="9922" height="4948" selected="0" zOrder="21" index="6" expanded="1" />
+    <EncabezadoConsolidarOfertas_XmlElement left="12647" top="17144" width="11774" height="2831" selected="0" zOrder="23" index="7" expanded="1" />
+    <ValorizacionPorRenglones_XmlElement left="3916" top="21247" width="8466" height="4948" selected="0" zOrder="32" index="8" expanded="1" />
+    <ComisionEv_XmlElement left="16616" top="21801" width="9472" height="2831" selected="0" zOrder="34" index="9" expanded="1" />
+    <vv_CATALOGOPRODUCTOSHISTORICOPRECIOS_XmlKeyref left="10657" top="5671" width="503" height="503" selected="0" zOrder="25" expanded="0" />
+</XSDDesignerLayout>

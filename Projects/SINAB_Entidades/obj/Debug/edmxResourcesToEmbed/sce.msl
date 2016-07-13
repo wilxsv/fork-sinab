@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sceModelStoreContainer" CdmEntityContainer="sceEntities">
+    <EntitySetMapping Name="vv_EstablecimientoRegion">
+      <EntityTypeMapping TypeName="sceModel.vv_EstablecimientoRegion">
+        <MappingFragment StoreEntitySet="vv_EstablecimientoRegion">
+          <ScalarProperty Name="IdEstablecimiento" ColumnName="IdEstablecimiento" />
+          <ScalarProperty Name="CodigoEstablecimiento" ColumnName="CodigoEstablecimiento" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+          <ScalarProperty Name="idEstablecimientoAbas" ColumnName="idEstablecimientoAbas" />
+          <ScalarProperty Name="sibasi" ColumnName="sibasi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

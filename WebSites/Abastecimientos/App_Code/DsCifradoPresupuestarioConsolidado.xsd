@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsCifradoPresupuestarioConsolidado" targetNamespace="http://tempuri.org/DsCifradoPresupuestarioConsolidado.xsd" xmlns:mstns="http://tempuri.org/DsCifradoPresupuestarioConsolidado.xsd" xmlns="http://tempuri.org/DsCifradoPresupuestarioConsolidado.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsCifradoPresupuestarioConsolidado" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DsCifradoPresupuestarioConsolidado" msprop:Generator_UserDSName="DsCifradoPresupuestarioConsolidado">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CifradosConsolidados" msprop:Generator_TableClassName="CifradosConsolidadosDataTable" msprop:Generator_TableVarName="tableCifradosConsolidados" msprop:Generator_RowChangedName="CifradosConsolidadosRowChanged" msprop:Generator_TablePropName="CifradosConsolidados" msprop:Generator_RowDeletingName="CifradosConsolidadosRowDeleting" msprop:Generator_RowChangingName="CifradosConsolidadosRowChanging" msprop:Generator_RowEvHandlerName="CifradosConsolidadosRowChangeEventHandler" msprop:Generator_RowDeletedName="CifradosConsolidadosRowDeleted" msprop:Generator_RowClassName="CifradosConsolidadosRow" msprop:Generator_UserTableName="CifradosConsolidados" msprop:Generator_RowEvArgName="CifradosConsolidadosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdSolicitud" msprop:Generator_ColumnVarNameInTable="columnIdSolicitud" msprop:Generator_ColumnPropNameInRow="IdSolicitud" msprop:Generator_ColumnPropNameInTable="IdSolicitudColumn" msprop:Generator_UserColumnName="IdSolicitud" type="xs:int" minOccurs="0" />
+              <xs:element name="IdEstablecimiento" msprop:Generator_ColumnVarNameInTable="columnIdEstablecimiento" msprop:Generator_ColumnPropNameInRow="IdEstablecimiento" msprop:Generator_ColumnPropNameInTable="IdEstablecimientoColumn" msprop:Generator_UserColumnName="IdEstablecimiento" type="xs:int" minOccurs="0" />
+              <xs:element name="IdProducto" msprop:Generator_ColumnVarNameInTable="columnIdProducto" msprop:Generator_ColumnPropNameInRow="IdProducto" msprop:Generator_ColumnPropNameInTable="IdProductoColumn" msprop:Generator_UserColumnName="IdProducto" type="xs:int" minOccurs="0" />
+              <xs:element name="Renglon" msprop:Generator_ColumnVarNameInTable="columnRenglon" msprop:Generator_ColumnPropNameInRow="Renglon" msprop:Generator_ColumnPropNameInTable="RenglonColumn" msprop:Generator_UserColumnName="Renglon" type="xs:int" minOccurs="0" />
+              <xs:element name="IdFuenteFinanciamiento" msprop:Generator_ColumnVarNameInTable="columnIdFuenteFinanciamiento" msprop:Generator_ColumnPropNameInRow="IdFuenteFinanciamiento" msprop:Generator_ColumnPropNameInTable="IdFuenteFinanciamientoColumn" msprop:Generator_UserColumnName="IdFuenteFinanciamiento" type="xs:int" minOccurs="0" />
+              <xs:element name="Monto" msprop:Generator_ColumnVarNameInTable="columnMonto" msprop:Generator_ColumnPropNameInRow="Monto" msprop:Generator_ColumnPropNameInTable="MontoColumn" msprop:Generator_UserColumnName="Monto" type="xs:double" minOccurs="0" />
+              <xs:element name="FuenteFinanciamiento" msprop:Generator_ColumnVarNameInTable="columnFuenteFinanciamiento" msprop:Generator_ColumnPropNameInRow="FuenteFinanciamiento" msprop:Generator_ColumnPropNameInTable="FuenteFinanciamientoColumn" msprop:Generator_UserColumnName="FuenteFinanciamiento" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
