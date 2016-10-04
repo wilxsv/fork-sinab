@@ -6,9 +6,6 @@
   <br />
   <br />
     
-  <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Larger" ForeColor="Maroon"
-    Text="Avisos:" />
-  <br />
   <asp:GridView ID="gvLista" runat="server" AutoGenerateColumns="False" CellPadding="4"
     BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px"
     CellSpacing="2" Width="100%">

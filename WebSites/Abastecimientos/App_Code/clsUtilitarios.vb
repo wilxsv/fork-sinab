@@ -1,4 +1,17 @@
+Imports System.Text
+
 Public Class clsUtilitarios
+
+    Private Shared _int As Integer
+
+    Private Shared Property Int(p1 As Long) As Integer
+        Get
+            Return _int
+        End Get
+        Set(value As Integer)
+            _int = value
+        End Set
+    End Property
 
     Public Shared Function Num2Text(ByVal value As Double) As String
 
@@ -53,7 +66,7 @@ Public Class clsUtilitarios
 
     End Function
 
-    Public Shared Function DateToWords(ByVal Fecha As DateTime) As String
+    Public Shared Function DateToWords(ByVal Fecha As Date) As String
 
         Dim s As New StringBuilder
 
@@ -67,7 +80,7 @@ Public Class clsUtilitarios
         IIf(Fecha.Hour = 1, s.Append(" hora "), s.Append(" horas "))
         s.Append(" y ")
         s.Append(Num2Text(Fecha.Minute))
-        IIf(Fecha.Minute = 1, s.Append(" minuto "), s.Append(" minutos "))
+        iIf(Fecha.Minute = 1, s.Append(" minuto "), s.Append(" minutos "))
         s.Append(" del ")
         s.Append(Num2Text(Fecha.Day))
         s.Append(" de ")

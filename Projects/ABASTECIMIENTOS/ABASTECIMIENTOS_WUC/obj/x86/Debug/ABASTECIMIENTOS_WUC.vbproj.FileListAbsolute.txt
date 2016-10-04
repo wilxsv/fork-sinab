@@ -62,3 +62,21 @@ C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTE
 C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\x86\Debug\ABASTECIMIENTOS_WUC.vbproj.GenerateResource.Cache
 C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\x86\Debug\ABASTECIMIENTOS_WUC.dll
 C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\x86\Debug\ABASTECIMIENTOS_WUC.pdb
+E:\sinab-develop\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\x86\Debug\ABASTECIMIENTOS_WUC.vbprojResolveAssemblyReference.cache
+E:\sinab-develop\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\x86\Debug\ABASTECIMIENTOS_WUC.dll
+E:\sinab-develop\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\x86\Debug\ABASTECIMIENTOS_WUC.pdb
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\x86\Debug\ABASTECIMIENTOS_WUC.dll
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\x86\Debug\ABASTECIMIENTOS_WUC.pdb
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\x86\Debug\ABASTECIMIENTOS_ENTIDADES.dll
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\x86\Debug\ABASTECIMIENTOS_NEGOCIO.dll
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\x86\Debug\ABASTECIMIENTOS_DATOS.dll
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\x86\Debug\Microsoft.ApplicationBlocks.ExceptionManagement.dll
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\x86\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\x86\Debug\ABASTECIMIENTOS_ENTIDADES.pdb
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\x86\Debug\ABASTECIMIENTOS_NEGOCIO.pdb
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\bin\x86\Debug\ABASTECIMIENTOS_DATOS.pdb
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\x86\Debug\ABASTECIMIENTOS_WUC.vbprojResolveAssemblyReference.cache
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\x86\Debug\ABASTECIMIENTOS.WUC.Resources.resources
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\x86\Debug\ABASTECIMIENTOS_WUC.vbproj.GenerateResource.Cache
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\x86\Debug\ABASTECIMIENTOS_WUC.dll
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_WUC\obj\x86\Debug\ABASTECIMIENTOS_WUC.pdb

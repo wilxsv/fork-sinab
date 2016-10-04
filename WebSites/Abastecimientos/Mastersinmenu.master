@@ -20,7 +20,7 @@
                 <div class="textos" style="margin: 0px !important">
                     <asp:HyperLink runat="server" ID="mainlink" CssClass="siglas" Text="SINAB" NavigateUrl="~/FrmPrincipal.aspx" />
                     <div class="nombre">
-                        Sistema Nacional de Abastecimiento</div>
+                        Sistema Nacional de Abastecimiento2</div>
                 </div>
             </div>
             <div class="userinfo">

@@ -38,3 +38,15 @@ C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTE
 C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\obj\x86\Debug\ABASTECIMIENTOS_DATOS.vbproj.GenerateResource.Cache
 C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\obj\x86\Debug\ABASTECIMIENTOS_DATOS.dll
 C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\obj\x86\Debug\ABASTECIMIENTOS_DATOS.pdb
+E:\sinab-develop\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\obj\x86\Debug\ABASTECIMIENTOS_DATOS.vbprojResolveAssemblyReference.cache
+E:\sinab-develop\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\obj\x86\Debug\ABASTECIMIENTOS_DATOS.dll
+E:\sinab-develop\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\obj\x86\Debug\ABASTECIMIENTOS_DATOS.pdb
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\bin\x86\Debug\ABASTECIMIENTOS_DATOS.dll
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\bin\x86\Debug\ABASTECIMIENTOS_DATOS.pdb
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\bin\x86\Debug\ABASTECIMIENTOS_ENTIDADES.dll
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\bin\x86\Debug\ABASTECIMIENTOS_ENTIDADES.pdb
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\obj\x86\Debug\ABASTECIMIENTOS_DATOS.vbprojResolveAssemblyReference.cache
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\obj\x86\Debug\ABASTECIMIENTOS.DATOS.Resources.resources
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\obj\x86\Debug\ABASTECIMIENTOS_DATOS.vbproj.GenerateResource.Cache
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\obj\x86\Debug\ABASTECIMIENTOS_DATOS.dll
+C:\sica\sinab-develop - copia\Projects\ABASTECIMIENTOS\ABASTECIMIENTOS_DATOS\obj\x86\Debug\ABASTECIMIENTOS_DATOS.pdb

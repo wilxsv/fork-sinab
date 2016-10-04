@@ -17,3 +17,16 @@ C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_
 C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_Utils\obj\x86\Debug\SINAB_Utils.dll
 C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_Utils\obj\x86\Debug\SINAB_Utils.pdb
 C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_Utils\obj\x86\Debug\SINAB_Utils.csprojResolveAssemblyReference.cache
+E:\sinab-develop\Projects\SINAB_Utils\bin\x86\Debug\SINAB_Utils.dll
+E:\sinab-develop\Projects\SINAB_Utils\bin\x86\Debug\SINAB_Utils.pdb
+E:\sinab-develop\Projects\SINAB_Utils\obj\x86\Debug\SINAB_Utils.csprojResolveAssemblyReference.cache
+E:\sinab-develop\Projects\SINAB_Utils\obj\x86\Debug\SINAB_Utils.dll
+E:\sinab-develop\Projects\SINAB_Utils\obj\x86\Debug\SINAB_Utils.pdb
+C:\sica\sinab-develop - copia\Projects\SINAB_Utils\bin\x86\Debug\SINAB_Utils.dll
+C:\sica\sinab-develop - copia\Projects\SINAB_Utils\bin\x86\Debug\SINAB_Utils.pdb
+C:\sica\sinab-develop - copia\Projects\SINAB_Utils\obj\x86\Debug\SINAB_Utils.csprojResolveAssemblyReference.cache
+C:\sica\sinab-develop - copia\Projects\SINAB_Utils\obj\x86\Debug\SINAB_Utils.dll
+C:\sica\sinab-develop - copia\Projects\SINAB_Utils\obj\x86\Debug\SINAB_Utils.pdb
+C:\sica\sinab-develop - copia\Projects\SINAB_Utils\bin\x86\Debug\SINAB_Utils.dll.config
+C:\sica\sinab-develop - copia\Projects\SINAB_Utils\bin\x86\Debug\EntityFramework.dll
+C:\sica\sinab-develop - copia\Projects\SINAB_Utils\bin\x86\Debug\EntityFramework.xml

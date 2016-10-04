@@ -30,3 +30,21 @@ C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_
 C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.csprojResolveAssemblyReference.cache
 C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.dll
 C:\Users\Farid\Documents\Visual Studio 2012\Projects\SINAB\sinab\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.pdb
+E:\sinab-develop\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.dll.config
+E:\sinab-develop\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.dll
+E:\sinab-develop\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.pdb
+E:\sinab-develop\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Utils.dll
+E:\sinab-develop\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Utils.pdb
+E:\sinab-develop\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.csprojResolveAssemblyReference.cache
+E:\sinab-develop\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.dll
+E:\sinab-develop\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.pdb
+C:\sica\sinab-develop - copia\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.dll.config
+C:\sica\sinab-develop - copia\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.dll
+C:\sica\sinab-develop - copia\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Entidades.pdb
+C:\sica\sinab-develop - copia\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Utils.dll
+C:\sica\sinab-develop - copia\Projects\SINAB_Entidades\bin\x86\Debug\SINAB_Utils.pdb
+C:\sica\sinab-develop - copia\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.csprojResolveAssemblyReference.cache
+C:\sica\sinab-develop - copia\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.dll
+C:\sica\sinab-develop - copia\Projects\SINAB_Entidades\obj\x86\Debug\SINAB_Entidades.pdb
+C:\sica\sinab-develop - copia\Projects\SINAB_Entidades\bin\x86\Debug\EntityFramework.dll
+C:\sica\sinab-develop - copia\Projects\SINAB_Entidades\bin\x86\Debug\EntityFramework.xml
