@@ -55,6 +55,36 @@
 
         }   
     </script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $.datepicker.setDefaults($.datepicker.regional['es']);
+            $("#desde").datepicker({ dateFormat: 'yymmdd' });
+            $("#hasta").datepicker({ dateFormat: 'yymmdd' });
+      });
+    </script>
+    <script type="text/javascript">
+        function linkDownload(a, filename, content) {
+            contentType = 'data:application/octet-stream,';
+            uriContent = contentType + encodeURIComponent(content);
+            a.setAttribute('href', uriContent);
+            a.setAttribute('download', filename);
+        }
+        function download(filename, content) {
+            var a = document.createElement('a');
+            linkDownload(a, filename, content);
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+        function OpenInNewTabWinBrowser() {
+            var win = window.open('http://google.com', '_blank');
+            win.focus();
+        }
+    </script>
 </head>
 <body>
     <%--onload='GetPathAplicacionFrmLogo();'--%>

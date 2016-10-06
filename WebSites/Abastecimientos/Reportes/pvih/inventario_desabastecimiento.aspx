@@ -6,18 +6,18 @@
   <h1>Reporte de Inventario y Desabastecimiento</h1>
     <br />
     <table>
-        <tr><td>Fecha de ingresos: </td><td><asp:Calendar ID="Calendar1" runat="server"></asp:Calendar></td></tr>
+        <tr><td>Fecha de inventario: </td><td>[HASTA]: <input type="text" id="hasta"></td></tr>
         <tr>
             <td>Agrupación de productos VIH: </td>
             <td>
                 <select>
-                    <option>Antirretrovirales</option>
-                    <option>Pruebas de VIH</option>
-                    <option>Insumos para pruebas de VIH</option>
-                    <option>Infecciones Oportunistas</option>
-                    <option>ITS</option>
-                    <option>Otros VIH</option>
-                    <option>Todos</option>
+                    <option value="pdf">PDF</option>
+                    <option value="odt">ODT - Documento tipo word</option>
+                    <option value="ods">ODS - Hoja de calculo</option>
+                    <option value="xls">XLS</option>
+                    <option value="csv">CSV</option>
+                    <option value="json">JSON</option>
+                    <option value="xml">XML</option>
                 </select>
             </td>
         </tr>
@@ -35,8 +35,7 @@
                 </select>
             </td>
         </tr>
-        <tr><td></td><td><p style="text-align:right"><button> Generar reporte.</button></p> </td></tr>
-
+        <tr><td></td><td><p style="text-align:right"><input type="hidden" id="url" value="" /> <button onclick="OpenInNewTabWinBrowser();"> Generar reporte.</button></p> </td></tr>
     </table>
   <br />
     
