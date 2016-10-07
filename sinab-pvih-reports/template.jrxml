@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2016-09-22T12:14:16 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="template" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4aaef58e-648b-4b88-9ff0-6fb19461c667">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="usuarioNombre" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["n.a."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tituloReporte" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Inventario"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fechaLimite" class="java.lang.String">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd-MM-yyyy").format(new Date())]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="90" height="88" uuid="b8f24acb-f440-4acc-8822-ae4b4210293b"/>
+				<imageExpression><![CDATA["/home/wilx/JaspersoftWorkspace/sinab/escudo-El-Salvador-OFICIAL-med.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="590" y="6" width="189" height="82" uuid="a7255fde-cc03-4702-8b88-175377e856f6"/>
+				<imageExpression><![CDATA["/home/wilx/Documentos/minsal/img/M_SALUD+LOGO+2014_nuevo_sloganv2_recortado.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="220" y="2" width="320" height="48" uuid="3cac9df4-2a42-4c7f-b310-3589af2854fc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cantarell" size="34" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ministerio de Salud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="50" width="320" height="30" uuid="7d4497d8-aa72-4de9-81a1-acb407ed5663"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="14"/>
+				</textElement>
+				<text><![CDATA[Unidad de Abastecimientos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="2" width="590" height="30" uuid="0f718565-aebf-4006-87bd-310d27a23a42"/>
+				<textElement>
+					<font fontName="Cantarell" size="26"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Reporte de "+$P{tituloReporte}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="550" y="2" width="230" height="30" uuid="e780419a-7253-408b-a549-aab32c1240b0"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif10" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Parametros: [Fecha limite = "+new SimpleDateFormat("dd-MM-yyyy").format(new Date())+"]"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="66" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement x="580" y="24" width="200" height="30" uuid="d06191df-7a1f-4f61-821c-e81c43035848"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}+" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="24" width="230" height="32" uuid="3e1a9a59-076b-40f4-a565-12c64c321043"/>
+				<textFieldExpression><![CDATA["Generado el  "+new SimpleDateFormat("dd.MM.yyyy  HH:mm:ss").format(new Date())+" por "+$P{usuarioNombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
