@@ -1,0 +1,715 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0067)http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>
+	Ministerio De Salud Pública .::SISTEMA DE ABASTECIMIENTO::.
+    
+</title><link href="./inventario_files/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css"><link href="./inventario_files/jquery.fileupload-ui.css" rel="stylesheet" type="text/css"><link href="./inventario_files/jquery.fileupload.css" rel="stylesheet" type="text/css"><link href="./inventario_files/jquery.ui.timepicker.css" rel="stylesheet" type="text/css"><link href="./inventario_files/chosen.min.css" rel="stylesheet" type="text/css"><link href="./inventario_files/Style.css" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" media="handheld, only screen and (max-device-width: 480px)" href="./inventario_files/Mobile.css">
+    <script type="text/javascript" language="JavaScript">
+        function GetPathAplicacion() {
+            var path;
+
+            var retorno;
+
+            path = location.pathname;
+            var campos = path.split("/");
+            if (campos.len = 0) {
+                retorno = "/";
+            }
+            else {
+                retorno = "/" + campos[1] + "/";
+            }
+
+            return retorno;
+        }
+        function IniAplicacion() {
+            AppLogo.src = GetPathAplicacion() + "frmViewLogo.aspx;";
+            alert("Alerta: " + AppLogo.src);
+        }
+        function GetPathAplicacionFrmLogo() {
+            try {
+                //Run some code here
+                document.getElementById('AppLogo').src = GetPathAplicacion() + "frmViewLogo.aspx";
+                document.getElementById('hrApp').href = GetPathAplicacion();
+                document.getElementById('hrAppLogo').href = GetPathAplicacion();
+            }
+            catch (err) {
+                //Handle errors here
+                alert('Error: ' + err);
+            }
+            return document.getElementById('AppLogo').src;
+
+        }   
+    </script>
+    <link rel="stylesheet" href="./inventario_files/jquery-ui.css"><link rel="stylesheet" href="./inventario_files/Style(1).css">
+    <script src="./inventario_files/jquery-1.12.4.js"></script>
+    <script src="./inventario_files/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $.datepicker.setDefaults($.datepicker.regional['es']);
+            $("#desde").datepicker({ 
+                dateFormat: 'yymmdd',
+                 showOn: "button",
+                 buttonImage: "https://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+                 buttonImageOnly: true,
+                 buttonText: "Seleccione fecha desde" });
+            $("#hasta").datepicker({ 
+                dateFormat: 'yymmdd',
+                 showOn: "button",
+                 buttonImage: "https://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+                 buttonImageOnly: true,
+                 buttonText: "Seleccione fecha hasta" });
+      });
+    </script>
+    <script type="text/javascript">
+        function linkDownload(a, filename, content) {
+            contentType = 'data:application/octet-stream,';
+            uriContent = contentType + encodeURIComponent(content);
+            a.setAttribute('href', uriContent);
+            a.setAttribute('download', filename);
+        }
+        function download(filename, content) {
+            var a = document.createElement('a');
+            linkDownload(a, filename, content);
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+        function OpenInNewTabWinBrowser() {
+            var urlReport    = 'http://127.0.0.1:8080/jasperserver/flow.html?_flowId=viewReportFlow&standAlone=true&_flowId=viewReportFlow&';
+            var accessReport = '&j_acegi_security_check&j_username=jasperadmin&j_password=jasperadmin';
+            var formatReport = '&output='+document.getElementById("format").value;
+            var pathReport   = '/reports/sinab/pvih';
+            var paramsReport = '&idProducto='+document.getElementById('tipo').value+'&fechaDesde='+document.getElementById('desde').value+'&fechaHasta='+document.getElementById('hasta').value+'&tituloReporte='+document.getElementById('titulo').value;
+            pathReport = 'ParentFolderUri='+pathReport+'&reportUnit='+pathReport+'/'+document.getElementById('unit').value;
+            var tipo;
+            switch (document.getElementById('tipo').value) {
+                case 6:
+                    paramsReport = paramsReport+'&categoriaReporte='+'Productos Antirretrovirales';
+                    break;
+                case 7:
+                    paramsReport = paramsReport+'&categoriaReporte='+'Pruebas de VIH';
+                    break;
+                case 8:
+                    paramsReport = paramsReport+'&categoriaReporte='+'Insumos para pruebas de VIH';
+                    break;
+                case 9:
+                    paramsReport = paramsReport+'&categoriaReporte='+'Infecciones Oportunistas';
+                    break;
+                case 10:
+                    paramsReport = paramsReport+'&categoriaReporte='+'ITS';
+                    break;
+                case 11:
+                    paramsReport = paramsReport+'&categoriaReporte='+'Otros VIH';
+                    break;
+                case 2:
+                    paramsReport = paramsReport+'&categoriaReporte='+'Todos los productos del programa VIH';
+                    break;
+            }
+            var win = window.open(urlReport+pathReport+accessReport+formatReport+paramsReport, '_blank');
+            win.focus();
+        }
+    </script>
+<style type="text/css">
+	/* <![CDATA[ */
+	#ctl00_ctl13_Menu1 img.icon { border-style:none;vertical-align:middle; }
+	#ctl00_ctl13_Menu1 img.separator { border-style:none;display:block; }
+	#ctl00_ctl13_Menu1 img.horizontal-separator { border-style:none;vertical-align:middle; }
+	#ctl00_ctl13_Menu1 ul { list-style:none;margin:0;padding:0;width:auto; }
+	#ctl00_ctl13_Menu1 ul.dynamic { z-index:1; }
+	#ctl00_ctl13_Menu1 a { text-decoration:none;white-space:nowrap;display:block; }
+	#ctl00_ctl13_Menu1 a.static { padding-left:0.15em;padding-right:0.15em; }
+	#ctl00_ctl13_Menu1 a.popout-dynamic { background:url("/Abastecimientos/WebResource.axd?d=qt8rUOdECOy8a-vIO7jrKhHKQKuAdas3DIanNkmRkxP89OeKvWtBxg3yB92N-pJs1UX8_Ve2OEJK6PKeMBj33z3sMMILv0S4HIK9seiYYGA1&t=634773912100000000") no-repeat right center;padding-right:14px; }
+	#ctl00_ctl13_Menu1 a.static.selected { text-decoration:none;border-style:none; }
+	/* ]]> */
+</style></head>
+<body>
+    
+    <form method="post" action="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTI1NjgxMzc3Mg9kFgJmD2QWAgIED2QWDAIDDw8WAh4ISW1hZ2VVcmwFGX4vSW1hZ2VuZXMvTVNQQVMtTG9nby5qcGdkZAIHD2QWAmYPZBYCZg88KwANAQwUKwAKBSMwOjAsMDoxLDA6MiwwOjMsMDo0LDA6NSwwOjYsMDo3LDA6OBQrAAIWCB4FVmFsdWUFATEeBFRleHQFEEVzdGFibGVjaW1pZW50b3MeC05hdmlnYXRlVXJsZR4KU2VsZWN0YWJsZWgUKwAJBR8wOjAsMDoxLDA6MiwwOjMsMDo0LDA6NSwwOjYsMDo3FCsAAhYGHwEFAjEwHwIFFFJlcG9ydGVzIGRlbCBNw7NkdWxvHwMFOX4vRVNUQUJMRUNJTUlFTlRPUy9Gcm1SZXBvcnRlc01vZHVsb0VzdGFibGVjaW1pZW50b3MuYXNweGQUKwACFgYfAQUBOB8CBRNJbmdyZXNvIGRlIENvbnN1bW9zHwMFKH4vRVNUQUJMRUNJTUlFTlRPUy9Gcm1NYW50Q29uc3Vtb3MyLmFzcHhkFCsAAhYGHwEFAzEyMR8CBRZSZXBvcnRlcyBkZSBsYSBSZWdpw7NuHwMFPn4vRVNUQUJMRUNJTUlFTlRPUy9Gcm1SZXBvcnRlc0dlcmVuY2lhbGVzRXN0YWJsZWNpbWllbnRvcy5hc3B4ZBQrAAIWBh8BBQIxMR8CBRhSZXF1aXNpY2lvbmVzIGEgQWxtYWPDqW4fAwUhfi9BTE1BQ0VOL2ZybU1hbnRSZXF1ZXNpY2lvbi5hc3B4ZBQrAAIWBh8BBQIxMh8CBSRSZWNlcGNpw7NuIGRlIFByb2R1Y3RvcyBEZXBlbmRlbmNpYXMfAwUofi9BTE1BQ0VOL2ZybU1hbnRSZWNlcGNpb25Qcm9kdWN0b3MuYXNweGQUKwACFgYfAQUCMTMfAgUjRGV2b2x1Y2nDs24gZGUgUHJvZHVjdG9zIGEgQWxtYWPDqW4fAwUufi9BTE1BQ0VOL0ZybU1hbnREZXZvbHZlclByb2R1Y3Rvc0FsbWFjZW4uYXNweGQUKwACFgYfAQUBNx8CBRZJbmdyZXNvIGRlIFNvbGljaXR1ZGVzHwMFLn4vRVNUQUJMRUNJTUlFTlRPUy9Gcm1NYW50U29saWNpdHVkQ29tcHJhLmFzcHhkFCsAAhYGHwEFATkfAgUXQ8OhbGN1bG8gZGUgTmVjZXNpZGFkZXMfAwU6fi9FU1RBQkxFQ0lNSUVOVE9TL0ZybU1hbnROZWNlc2lkYWRlc0VzdGFibGVjaW1pZW50b3MuYXNweGQUKwACFggfAQUBMh8CBQRVQUNJHwNlHwRoFCsABwUXMDowLDA6MSwwOjIsMDozLDA6NCwwOjUUKwACFgYfAQUCMTQfAgUcQ29uc3VsdGEgZGUgU29saWNpdHVkZXMgVUFDSR8DBSV+L1VBQ0kvRnJtQ29uc3VsdGFyU29saWNpdHVkVWFjaS5hc3B4ZBQrAAIWBh8BBQI1MB8CBR1Db25zdWx0YSBkZSBQcm9jZXNvIGRlIENvbXByYR8DBSB+L1VBQ0kvRnJtTWFudFByb2Nlc29Db21wcmEuYXNweGQUKwACFgYfAQUDMTk3HwIFE0NhcmdhciBzb2xpY2l0dWRlcyAfAwUdfi9VQUNJL0NhcmdhclNvbGljaXR1ZGVzLmFzcHhkFCsAAhYGHwEFAzIwMB8CBRZDYXJnYXIgU29saWNpdHVkIFVSTUlOHwMFIn4vVUFDSS9DYXJnYXJTb2xpY2l0dWRlc1VSTUlNLmFzcHhkFCsAAhYGHwEFAjE1HwIFDUFkanVkaWNhY2nDs24fAwUBIBQrAAkFHzA6MCwwOjEsMDoyLDA6MywwOjQsMDo1LDA6NiwwOjcUKwACFgYfAQUCNDgfAgUeQ3JlYXIgQ29taXNpw7NuIGRlIEV2YWx1YWNpw7NuHwMFPH4vVUFDSS9Gcm1TZWxlY2Npb25lUHJvY2Vzb0NvbXByYS5hc3B4P2lkPUNvbWlzaW9uRXZhbHVhY2lvbmQUKwACFgYfAQUCMzkfAgUZSW5pY2lhciBQcm9jZXNvIGRlIENvbXByYR8DBSZ+L1VBQ0kvRnJtTWFudEluaWNpYVByb2Nlc29Db21wcmEuYXNweGQUKwACFgYfAQUCNTIfAgUgR2VuZXJhciBSZWNvbWVuZGFjacOzbiBkZSBDb21wcmEfAwU8fi9VQUNJL0ZybVNlbGVjY2lvbmVQcm9jZXNvQ29tcHJhLmFzcHg/aWQ9R2VuZXJhclJlY29tQ29tcHJhZBQrAAIWBh8BBQI4NB8CBSRHZW5lcmFyIFJlc29sdWNpw7NuIGRlIEFkanVkaWNhY2nDs24fAwVHfi9VQUNJL0ZybVNlbGVjY2lvbmVQcm9jZXNvQ29tcHJhLmFzcHg/aWQ9R2VuZXJhclJlc29sdWNpb25BZGp1ZGljYWNpb25kFCsAAhYGHwEFAjg1HwIFIk5vdGlmaWNhciBBZGp1ZGljYWNpw7NuIGEgRW1wcmVzYXMfAwU7fi9VQUNJL0ZybVNlbGVjY2lvbmVQcm9jZXNvQ29tcHJhLmFzcHg/aWQ9Tm90aWZpY2FyRW1wcmVzYXNkFCsAAhYGHwEFAzEwMh8CBStSZWdpc3RyYXIgTm90YXMgZGUgQWNlcHRhY2nDs24geSBTb2x2ZW5jaWFzHwMFOH4vVUFDSS9Gcm1TZWxlY2Npb25lUHJvY2Vzb0NvbXByYS5hc3B4P2lkPU5vdGFBY2VwdGFjaW9uZBQrAAIWBh8BBQMxMDQfAgUiTm90aWZpY2FyIEFkanVkaWNhY2nDsm4gYSBlbXByZXNhcx8DBTt+L1VBQ0kvRnJtU2VsZWNjaW9uZVByb2Nlc29Db21wcmEuYXNweD9pZD1Ob3RpZmljYXJFbXByZXNhc2QUKwACFgYfAQUDMTA5HwIFEUNvbnN1bHRhIGRlIEJhc2VzHwMFOH4vVUFDSS9Gcm1TZWxlY2Npb25lUHJvY2Vzb0NvbXByYS5hc3B4P2lkPUNvbnN1bHRhckJhc2VzZBQrAAIWBh8BBQIxNh8CBQ1Db250cmF0YWNpw7NuHwMFASAUKwAHBRcwOjAsMDoxLDA6MiwwOjMsMDo0LDA6NRQrAAIWBh8BBQMxMDAfAgUfUmVnaXN0cmFyIFJlY3Vyc29zIGRlIFJldmlzacOzbh8DBTp+L1VBQ0kvRnJtU2VsZWNjaW9uZVByb2Nlc29Db21wcmEuYXNweD9pZD1SZWN1cnNvc1JldmlzaW9uZBQrAAIWBh8BBQMxMjMfAgUgSW5ncmVzYXIgQ29taXNpw7NuIGRlIEFsdG8gTml2ZWwfAwVFfi9VQUNJL0ZybVNlbGVjY2lvbmVQcm9jZXNvQ29tcHJhLmFzcHg/aWQ9Q29taXNpb25FdmFsdWFjaW9uQWx0b05pdmVsZBQrAAIWBh8BBQMxNjUfAgUeQXNpZ25hciBQcm92ZWVkb3JlcyBhIEFuYWxpc3RhHwMFOX4vVUFDSS9Gcm1TZWxlY2Npb25lUHJvY2Vzb0NvbXByYS5hc3B4P2lkPUFzaWduYXJBbmFsaXN0YWQUKwACFgYfAQUDMTE2HwIFFkFkanVkaWNhY2nDs24gZW4gRmlybWUfAwUzfi9VQUNJL0ZybVNlbGVjY2lvbmVQcm9jZXNvQ29tcHJhLmFzcHg/aWQ9QWRqdWRpY2FyZBQrAAIWBh8BBQMxMDUfAgUYR2VuZXJhY2nDs24gZGUgQ29udHJhdG9zHwMFH34vVUFDSS9Gcm1HZW5lcmFyQ29udHJhdG9zLmFzcHhkFCsAAhYGHwEFAzExOB8CBRREaXN0cmlidWlyIENvbnRyYXRvcx8DBT1+L1VBQ0kvRnJtU2VsZWNjaW9uZVByb2Nlc29Db21wcmEuYXNweD9pZD1EaXN0cmlidWlyQ29udHJhdG9zZBQrAAIWCB8BBQEzHwIFCEFsbWFjw6luHwNlHwRoFCsAAgUDMDowFCsAAhYEHwEFAzIyOB8CBQpJbnZlbnRhcmlvFCsABgUTMDowLDA6MSwwOjIsMDozLDA6NBQrAAIWBh8BBQIxOB8CBSNBY3R1YWxpemFyIGV4aXN0ZW5jaWEgbm8gZGlzcG9uaWJsZR8DBTJ+L0FMTUFDRU4vRnJtQWN0dWFsaXphckV4aXN0ZW5jaWFOb0Rpc3BvbmlibGUuYXNweGQUKwACFgYfAQUCMTkfAgUgTW9kaWZpY2FyIFViaWNhY2nDs24gZGUgUHJvZHVjdG8fAwUwfi9BTE1BQ0VOL0ZybUluZ01vZFViaWNhY2lvblByb2R1Y3RvQWxtYWNlbi5hc3B4ZBQrAAIWBh8BBQI4Nx8CBRJBbnVsYXIgTW92aW1pZW50b3MfAwUlfi9BTE1BQ0VOL0ZybUFudWxhclRyYW5zYWNjaW9uZXMuYXNweGQUKwACFgYfAQUDMjQzHwIFFUNvbnN1bHRhIGRlIHByb2R1Y3Rvcx8DBSF+L0FMTUFDRU4vRnJtQnVzcXVlZGFDb2RpZ29zLmFzcHhkFCsAAhYGHwEFAjIwHwIFDkNvbnRlbyBGw61zaWNvHwMFIn4vQUxNQUNFTi9Gcm1JbnZlbnRhcmlvRmlzaWNvLmFzcHhkFCsAAhYIHwEFATQfAgUFVVJNSU0fAwUBIB8EaBQrAAgFGzA6MCwwOjEsMDoyLDA6MywwOjQsMDo1LDA6NhQrAAIWBB8BBQMxNjAfAgUOUmVwb3J0ZXMgVVJNSU0UKwACBQMwOjAUKwACFgYfAQUDMTYxHwIFF0NvbnN1bHRhcyBhbCBJbnZlbnRhcmlvHwMFIn4vVVJNSU0vRnJtQ29uc3VsdGFJbnZlbnRhcmlvLmFzcHhkFCsAAhYGHwEFAjIyHwIFJkhhYmlsaXRhciBQcm9kdWN0b3MgYSBFc3RhYmxlY2ltaWVudG9zHwMFJH4vVVJNSU0vRnJtSGFiaWxpdGFyUHJvZEVzdGFibGUuYXNweGQUKwACFgYfAQUCMjMfAgUWUHJveWVjY2nDs24gZGUgUHJlY2lvcx8DBSB+L1VSTUlNL2ZybVByb3llY3RhclByZWNpb3MuYXNweGQUKwACFgYfAQUCMjQfAgUiUmV2aXNhciBFc3RpbWFjacOzbiBkZSBOZWNlc2lkYWRlcx8DBS1+L1VSTUlNL2ZybVJldmlzaW9uRXN0aW1hY2lvbk5lY2VzaWRhZGVzLmFzcHhkFCsAAhYGHwEFAjI1HwIFHkNvbnNvbGlkYXIgUHJvZ3JhbWEgZGUgQ29tcHJhcx8DBSl+L1VSTUlNL2ZybUNvbnNvbGlkYXJQcm9ncmFtYUNvbXByYXMuYXNweGQUKwACFgYfAQUDMTQ5HwIFMENvbnNvbGlkYXIgUHJvZ3JhbWEgZGUgQ29tcHJhcyBjb24gQXl1ZGEgRXh0ZXJuYR8DBSt+L1VSTUlNL0ZybUNvbnNvbGlkYXJQcm9ncmFtYUNvbXByYXNJSS5hc3B4ZBQrAAIWBh8BBQIyMR8CBQdSZXBvcnRlHwMFI34vUmVwb3J0ZXMvRnJtUnB0UHJvY2Vzb0NvbXByYS5hc3B4ZBQrAAIWCB8BBQE1HwIFA1VGSR8DBQEgHwRoFCsAAgUDMDowFCsAAhYGHwEFAjI2HwIFEVJlc2VydmEgZGUgRm9uZG9zHwMFLn4vVUFDSS9Gcm1BdXRvcml6YXJTb2xpY2l0dWRlc0NvbXByYS5hc3B4P2lkPTFkFCsAAhYIHwEFATYfAgUJU2VndXJpZGFkHwMFASAfBGgUKwAKBSMwOjAsMDoxLDA6MiwwOjMsMDo0LDA6NSwwOjYsMDo3LDA6OBQrAAIWBh8BBQIyNx8CBRlNYW50ZW5pbWllbnRvIGRlIFVzdWFyaW9zHwMFIH4vU0VHVVJJREFEL0ZybU1hbnRVc3Vhcmlvcy5hc3B4ZBQrAAIWBh8BBQIyOB8CBRZNYW50ZW5pbWllbnRvIGRlIFJvbGVzHwMFHX4vU0VHVVJJREFEL0ZybU1hbnRSb2xlcy5hc3B4ZBQrAAIWBh8BBQIyOR8CBSJNYW50ZW5pbWllbnRvIE9wY2lvbmVzIGRlbCBTaXN0ZW1hHwMFJ34vU0VHVVJJREFEL0ZybU1hbnRPcGNpb25lc1Npc3RlbWEuYXNweGQUKwACFgYfAQUCMzAfAgUfQXNpZ25hY2nDs24gZGUgVXN1YXJpb3MgYSBSb2xlcx8DBSV+L1NFR1VSSURBRC9Gcm1NYW50VXN1YXJpb3NSb2xlcy5hc3B4ZBQrAAIWBh8BBQIzMR8CBShBc2lnbmFjacOzbiBkZSBPcGNpb25lcyBkZSBNZW7DuiBhIFJvbGVzHwMFJX4vU0VHVVJJREFEL0ZybU1hbnRPcGNpb25lc1JvbGVzLmFzcHhkFCsAAhYGHwEFAzE3MR8CBRBPcmRlbmFyIE9wY2lvbmVzHwMFKn4vU0VHVVJJREFEL0ZybU9yZGVuYXJPcGNpb25lc1Npc3RlbWEuYXNweGQUKwACFgYfAQUDMjAyHwIFFVBlcm1pc29zIHBvciBDYXRhbG9nbx8DBSZ+L3NlZ3VyaWRhZC9Gcm1NYW50Q2F0YWxvZ29zUm9sZXMuYXNweGQUKwACFgYfAQUDMjAzHwIFFVJlcG9ydGVzIGRlIGF1ZGl0b3JpYR8DBSB+L1NFR1VSSURBRC9Gcm1BdWRpdG9yaWFTQUIuYXNweGQUKwACFgYfAQUDMjMyHwIFCE1lbnNhamVzHwMFH34vQ2F0YWxvZ29zL3dmTWFudE1FTlNBSkVTLmFzcHhkFCsAAhYIHwEFAzEyOB8CBQ5MYWJvcmF0b3JpbyBDQx8DZR8EaBQrAAIFAzA6MBQrAAIWBh8BBQMxMzAfAgUjQ29uc3VsdGEgZGUgUHJvdmVlZG9yZXMgQ29udHJhdGFkb3MfAwU0fi9MQUJPUkFUT1JJTy9Gcm1Db25zdWx0YVByb3ZlZWRvcmVzQ29udHJhdGFkb3MuYXNweGQUKwACFggfAQUDMzMzHwIFFVJlcG9ydGVzIFByb2dyYW1hIFZJSB8DZR8EaBQrAAYFEzA6MCwwOjEsMDoyLDA6MywwOjQUKwACFgYfAQUDMzM1HwIFI0luZ3Jlc29zIHBvciBncnVwbyBkZSBwcm9kdWN0b3MgVklIHwMFHH4vUmVwb3J0ZXMvcHZpaC9pbmdyZXNvLmFzcHhkFCsAAhYGHwEFAzMzNh8CBS5JbmZvcm1lIGRlIEluZ3Jlc29zIHBvciBHcnVwbyBkZSBQcm9kdWN0b3MgVklIHwMFIn4vUmVwb3J0ZXMvcHZpaC9pbmdyZXNvX2dydXBvLmFzcHhkFCsAAhYGHwEFAzMzNx8CBS9JbmZvcm1lIGRlIERlc3BhY2hvcyBwb3IgR3J1cG8gZGUgUHJvZHVjdG9zIFZJSB8DBSN+L1JlcG9ydGVzL3B2aWgvZGVzcGFjaG9fZ3J1cG8uYXNweGQUKwACFgYfAQUDMzM4HwIFJUludmVudGFyaW8gcG9yIGdydXBvIGRlIHByb2R1Y3RvcyBWSUgfAwUffi9SZXBvcnRlcy9wdmloL2ludmVudGFyaW8uYXNweGQUKwACFgYfAQUDMzM5HwIFHkludmVudGFyaW8geSBkZXNhYmFzdGVjaW1pZW50bx8DBTF+L1JlcG9ydGVzL3B2aWgvaW52ZW50YXJpb19kZXNhYmFzdGVjaW1pZW50by5hc3B4ZBQrAAIWCB8BBQIzMh8CBQpDYXTDoWxvZ29zHwMFASAfBGgUKwARBUUwOjAsMDoxLDA6MiwwOjMsMDo0LDA6NSwwOjYsMDo3LDA6OCwwOjksMDoxMCwwOjExLDA6MTIsMDoxMywwOjE0LDA6MTUUKwACFgYfAQUCNTQfAgUJRW1wbGVhZG9zHwMFIH4vQ2F0YWxvZ29zL3dmTWFudEVNUExFQURPUy5hc3B4ZBQrAAIWBh8BBQI1OR8CBRJDYXTDoWxvZ29zIGRlIFVBQ0kfA2UUKwAPBTswOjAsMDoxLDA6MiwwOjMsMDo0LDA6NSwwOjYsMDo3LDA6OCwwOjksMDoxMCwwOjExLDA6MTIsMDoxMxQrAAIWBh8BBQIzMx8CBRJQbGFudGlsbGFzIChCYXNlcykfAwUcfi9VQUNJL0ZybUNyZWFQbGFudGlsbGEuYXNweGQUKwACFgYfAQUCMzUfAgUPVGlwbyBkZSBDb21wcmFzHwMFIn4vQ2F0YWxvZ29zL3dmTWFudFRJUE9DT01QUkFTLmFzcHhkFCsAAhYGHwEFAjM2HwIFEFRpcG8gZGUgQ3JpdGVyaW8fAwUjfi9DYXRhbG9nb3Mvd2ZNYW50VElQT0NSSVRFUklPLmFzcHhkFCsAAhYGHwEFAjU4HwIFKVRpcG8gZGUgRG9jdW1lbnRvIGRlIEJhc2VzIGRlIExpY2l0YWNpw7NuHwMFKH4vQ2F0YWxvZ29zL3dmTWFudFRJUE9ET0NVTUVOVE9CQVNFLmFzcHhkFCsAAhYGHwEFAjYyHwIFIVRpcG9zIGRlIERvY3VtZW50b3MgZGUgUmVmZXJlbmNpYR8DBS9+L0NhdGFsb2dvcy93Zk1hbnRUSVBPRE9DVU1FTlRPUkVGRVJFTkNJQVMuYXNweGQUKwACFgYfAQUCNjMfAgUZTW90aXZvcyBkZSBubyBBY2VwdGFjacOzbh8DBSp+L0NhdGFsb2dvcy93Zk1hbnRNT1RJVk9TTk9BQ0VQVEFDSU9OLmFzcHhkFCsAAhYGHwEFAjcwHwIFC1Byb3ZlZWRvcmVzHwMFIn4vQ2F0YWxvZ29zL3dmTWFudFBST1ZFRURPUkVTLmFzcHhkFCsAAhYGHwEFAjcyHwIFGVRpcG9zIGRlIEVzdGFibGVjaW1pZW50b3MfAwUrfi9DYXRhbG9nb3Mvd2ZNYW50VElQT0VTVEFCTEVDSU1JRU5UT1MuYXNweGQUKwACFgYfAQUCNzcfAgUYQ3JpdGVyaW9zIGRlIEV2YWx1YWNpw7NuHwMFKn4vQ2F0YWxvZ29zL3dmTWFudENSSVRFUklPU0VWQUxVQUNJT04uYXNweGQUKwACFgYfAQUCODkfAgUfVGlwbyBkZSBEb2N1bWVudG8gZGUgUmVmZXJlbmNpYR8DBS9+L2NhdGFsb2dvcy93Zk1hbnRUSVBPRE9DVU1FTlRPUkVGRVJFTkNJQVMuYXNweGQUKwACFgYfAQUCOTgfAgUSVW5pZGFkZXMgZGUgTWVkaWRhHwMFJH4vY2F0YWxvZ29zL3dmTWFudFVOSURBRE1FRElEQVMuYXNweGQUKwACFgQfAQUDMTA3HwIFCUNvbnRyYXRvcxQrAAIFAzA6MBQrAAIWBh8BBQMxMDgfAgUWUGxhbnRpbGxhcyAoQ29udHJhdG9zKR8DBSV+L1VBQ0kvRnJtQ3JlYVBsYW50aWxsYUNvbnRyYXRvcy5hc3B4ZBQrAAIWBh8BBQMxMTEfAgUKQ2zDoXVzdWxhcx8DBSh+L0NhdGFsb2dvcy93Zk1hbnRDTEFVU1VMQVMuYXNweD9JZE1vZD0xZBQrAAIWBh8BBQMxNTIfAgUkRG9jdW1lbnRvcyBwYXJhIEJhc2VzIGRlIExpY2l0YWNpw7NuHwMFJX4vY2F0YWxvZ29zL3dmTWFudERPQ1VNRU5UT1NCQVNFLmFzcHhkFCsAAhYGHwEFAjYwHwIFFENhdMOhbG9nb3MgZGUgbGEgVUZJHwNlFCsAAgUDMDowFCsAAhYGHwEFAjY1HwIFGUZ1ZW50ZXMgZGUgRmluYW5jaWFtaWVudG8fAwUsfi9DYXRhbG9nb3Mvd2ZNYW50RlVFTlRFRklOQU5DSUFNSUVOVE9TLmFzcHhkFCsAAhYEHwEFAjYxHwIFFkNhdMOhbG9nb3MgZGUgQWxtYWPDqW4UKwANBTEwOjAsMDoxLDA6MiwwOjMsMDo0LDA6NSwwOjYsMDo3LDA6OCwwOjksMDoxMCwwOjExFCsAAhYGHwEFAjY2HwIFFVRpcG8gZGUgVHJhbnNhY2Npb25lcx8DBSh+L0NhdGFsb2dvcy93Zk1hbnRUSVBPVFJBTlNBQ0NJT05FUy5hc3B4ZBQrAAIWBh8BBQI2Nx8CBRBUaXBvIGRlIEluZm9ybWVzHwMFI34vQ2F0YWxvZ29zL3dmTWFudFRJUE9JTkZPUk1FUy5hc3B4ZBQrAAIWBh8BBQMxMDMfAgUWRW1wbGVhZG9zIHBvciBBbG1hY8Opbh8DBSd+L0NhdGFsb2dvcy93Zk1hbnRFTVBMRUFET1NBTE1BQ0VOLmFzcHhkFCsAAhYGHwEFAzI0NB8CBRdUaXBvIGRvY3VtZW50byBDb250cmF0bx8DBSx+L0NhdGFsb2dvcy93Zk1hbnRUSVBPRE9DVU1FTlRPQ09OVFJBVE8uYXNweGQUKwACFgYfAQUDMjQ1HwIFGVRpcG8gRG9jdW1lbnRvIFJlY2VwY2nDs24fAwUtfi9DYXRhbG9nb3Mvd2ZNYW50VElQT0RPQ1VNRU5UT1JFQ0VQQ0lPTi5hc3B4ZBQrAAIWBh8BBQI3Nh8CBQlBbG1hY2VuZXMfAwUgfi9DYXRhbG9nb3Mvd2ZNYW50QUxNQUNFTkVTLmFzcHhkFCsAAhYGHwEFAjc4HwIFHVJlc3BvbnNhYmxlcyBkZSBEaXN0cmlidWNpw7NuHwMFLn4vQ2F0YWxvZ29zL3dmTWFudFJFU1BPTlNBQkxFRElTVFJJQlVDSU9OLmFzcHhkFCsAAhYGHwEFAjgyHwIFHUFsbWFjZW5lcyBwb3IgRXN0YWJsZWNpbWllbnRvHwMFMH4vQ2F0YWxvZ29zL3dmTWFudEFMTUFDRU5FU0VTVEFCTEVDSU1JRU5UT1MuYXNweGQUKwACFgYfAQUCOTUfAgUUVGlwb3MgZGUgU3VtaW5pc3Ryb3MfAwUmfi9jYXRhbG9nb3Mvd2ZNYW50VElQT1NVTUlOSVNUUk9TLmFzcHhkFCsAAhYGHwEFAjk5HwIFC1N1bWluaXN0cm9zHwMFIn4vY2F0YWxvZ29zL3dmTWFudFNVTUlOSVNUUk9TLmFzcHhkFCsAAhYGHwEFAzExNx8CBR5BbG1hY2VuZXMgcG9yIEVzdGFibGVjaW1pZW50b3MfAwUwfi9jYXRhbG9nb3Mvd2ZNYW50QUxNQUNFTkVTRVNUQUJMRUNJTUlFTlRPUy5hc3B4ZBQrAAIWBh8BBQMxMjAfAgUXRW1wbGVhZG9zIHBvciBBbG1hY2VuZXMfAwUnfi9jYXRhbG9nb3Mvd2ZNYW50RU1QTEVBRE9TQUxNQUNFTi5hc3B4ZBQrAAIWBh8BBQI2NB8CBQZDYXJnb3MfAwUdfi9DYXRhbG9nb3Mvd2ZNYW50Q0FSR09TLmFzcHhkFCsAAhYGHwEFAjcxHwIFDERlcGVuZGVuY2lhcx8DBSN+L0NhdGFsb2dvcy93Zk1hbnRERVBFTkRFTkNJQVMuYXNweGQUKwACFgQfAQUCNzMfAgUWQ2F0w6Fsb2dvIGRlIFByb2R1Y3RvcxQrAAkFHzA6MCwwOjEsMDoyLDA6MywwOjQsMDo1LDA6NiwwOjcUKwACFgYfAQUCNzQfAgUOTml2ZWxlcyBkZSBVc28fAwUhfi9DYXRhbG9nb3Mvd2ZNYW50TklWRUxFU1VTTy5hc3B4ZBQrAAIWBh8BBQI5Mx8CBRVBc2Vzb3LDrWEgUHJlZGVmaW5pZGEfAwUqfi9jYXRhbG9nb3Mvd2ZtYW50QVNFU09SSUFQUkVERUZJTklEQS5hc3B4ZBQrAAIWBh8BBQI4Mx8CBSlMaXN0YWRvcyBPZmljaWFsZXMgZGUgU3VtaW5pc3Ryb3MgTWVkaWNvcx8DBSR+L0NhdGFsb2dvcy93ZkNhdGFsb2dvUHJvZHVjdG9NLmFzcHhkFCsAAhYGHwEFAzE0Nx8CBQlQcm9ncmFtYXMfAwUgfi9DYXRhbG9nb3Mvd2ZNYW50UFJPR1JBTUFTLmFzcHhkFCsAAhYGHwEFAzE0OB8CBRNQcm9kdWN0b3MgUHJvZ3JhbWFzHwMFKX4vQ2F0YWxvZ29zL3dmTWFudFBST0RVQ1RPU1BST0dSQU1BUy5hc3B4ZBQrAAIWBh8BBQMxNTEfAgUXTWFudGVuaW1pZW50byBkZSBHcnVwb3MfAwUdfi9DYXRhbG9nb3Mvd2ZNYW50R1JVUE9TLmFzcHhkFCsAAhYGHwEFAzE3MB8CBTNTdWJjYXRhbG9nb3MgZGUgT2JyYXMsIEJpZW5lcyBHZW5lcmFsZXMgeSBTZXJ2aWNpb3MfAwUlfi9DYXRhbG9nb3Mvd2ZDYXRhbG9nb1Byb2R1Y3RvTk0uYXNweGQUKwACFgYfAQUDMTc1HwIFG01hbnRlbmltaWVudG8gZGUgU3ViLWdydXBvcx8DBSB+L0NhdGFsb2dvcy93Zk1hbnRTVUJHUlVQT1MuYXNweGQUKwACFgYfAQUCNzUfAgUNRGVwYXJ0YW1lbnRvcx8DBSR+L0NhdGFsb2dvcy93Zk1hbnRERVBBUlRBTUVOVE9TLmFzcHhkFCsAAhYGHwEFAjgxHwIFIERlcGVuZGVuY2lhcyBwb3IgRXN0YWJsZWNpbWllbnRvHwMFMn4vQ2F0YWxvZ29zL3dmTWFudERFUEVOREVOQ0lBRVNUQUJMRUNJTUlFTlRPUy5hc3B4ZBQrAAIWBh8BBQI5MR8CBQpNdW5pY2lwaW9zHwMFIX4vY2F0YWxvZ29zL3dmTWFudE1VTklDSVBJT1MuYXNweGQUKwACFgYfAQUCOTQfAgUNSW5zdGl0dWNpb25lcx8DBSR+L2NhdGFsb2dvcy93Zm1hbnRJTlNUSVRVQ0lPTkVTLmFzcHhkFCsAAhYGHwEFAzEwMR8CBQlQcm9kdWN0b3MfAwUifi9jYXRhbG9nb3Mvd2ZNYW5DQVRQUk9EVUNUT1MuYXNweGQUKwACFgYfAQUDMTEyHwIFEEVzdGFibGVjaW1pZW50b3MfAwUnfi9jYXRhbG9nb3Mvd2ZNYW50RVNUQUJMRUNJTUlFTlRPUy5hc3B4ZBQrAAIWBh8BBQMxMjcfAgURTW92aW1pZW50byBLYXJkZXgfAwUjfi9BTE1BQ0VOL2ZybU1vdmltaWVudG9zS2FyZGV4LmFzcHhkFCsAAhYGHwEFAzE3Mx8CBQpDbMOhdXN1bGFzHwMFKH4vQ2F0YWxvZ29zL3dmTWFudENMQVVTVUxBUy5hc3B4P0lkTW9kPTFkFCsAAhYGHwEFAzI4MR8CBRJFc3BlY8OtZmljb3MgR2FzdG8fAwUnfi9DYXRhbG9nb3Mvd2ZNYW50RVNQRUNJRklDT1NHQVNUTy5hc3B4ZGQCDQ8PFgIfAgUFQWRtaW5kZAITD2QWFgIBDw8WAh8CBQM0MDhkZAIDDw8WAh8CBQ5WbGFkaW1pciBNb3JhbmRkAgUPDxYCHwIFBUFkbWluZGQCBw8PFgIfAgUUQW5hbGlzdGEgcHJvZ3JhbWFkb3JkZAIJDw8WAh8CBQ1NZXRyb3BvbGl0YW5hZGQCCw8PFgIfAgU7RGlyZWNjacOzbiBkZSBUZWNub2xvZ8OtYXMgZGUgSW5mb3JtYWNpw7NuIHkgQ29tdW5pY2FjaW9uZXNkZAINDw8WAh8CBRNNaW5pc3RlcmlvIGRlIFNhbHVkZGQCDw8PFgIfAgUNTml2ZWwgQ2VudHJhbGRkAhEPDxYCHwIFATFkZAITDw8WAh8CBQItLWRkAhUPDxYCHwIFAi0tZGQCFw9kFgICAw88KwARAwAPFgQeC18hRGF0YUJvdW5kZx4LXyFJdGVtQ291bnRmZAEQFgAWABYADBQrAABkAhkPDxYCHwIFATFkZBgBBRljdGwwMCRQYWdlQ29udGVudCRndkxpc3RhDzwrAAwBCGZkIUkl/3e3H4Acb901Tfv/TVAHM/EjfMU9OCJUu1vz6Po=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./inventario_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./inventario_files/script.js" type="text/javascript"></script>
+<script src="./inventario_files/ScriptResource.axd" type="text/javascript"></script>
+<script src="./inventario_files/ScriptResource(1).axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"es-SV","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","IsReadOnly":false,"CurrencyGroupSizes":[3,0],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":",","CurrencySymbol":"$","NaNSymbol":"NeuN","CurrencyNegativePattern":0,"NumberNegativePattern":1,"PercentPositivePattern":0,"PercentNegativePattern":0,"NegativeInfinitySymbol":"-Infinito","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","CurrencyPositivePattern":0,"PositiveInfinitySymbol":"Infinito","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"AM","Calendar":{"MinSupportedDateTime":"\/Date(-62135575200000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":false},"DateSeparator":"/","FirstDayOfWeek":1,"CalendarWeekRule":0,"FullDateTimePattern":"dd/mm/yyyy hh:mm tt","LongDatePattern":"dddd, dd\u0027 de \u0027MMMM\u0027 de \u0027yyyy","LongTimePattern":"hh:mm:ss tt","MonthDayPattern":"dd MMMM","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"hh:mm tt","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM\u0027 de \u0027yyyy","AbbreviatedDayNames":["dom","lun","mar","mié","jue","vie","sáb"],"ShortestDayNames":["do","lu","ma","mi","ju","vi","sá"],"DayNames":["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],"AbbreviatedMonthNames":["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic",""],"MonthNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre",""],"IsReadOnly":false,"NativeCalendarName":"calendario gregoriano","AbbreviatedMonthGenitiveNames":["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic",""],"MonthGenitiveNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre",""]},"eras":[1,"d.C.",null,0]};//]]>
+</script>
+
+<script src="./inventario_files/ScriptResource(2).axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('Error al cargar el marco de trabajo de cliente ASP.NET Ajax.');
+//]]>
+</script>
+
+<script src="./inventario_files/ScriptResource(3).axd" type="text/javascript"></script>
+<script src="./inventario_files/jquery-1.9.1.js" type="text/javascript"></script>
+<script src="./inventario_files/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="./inventario_files/jquery.ui.datepicker-es.min.js" type="text/javascript"></script>
+<script src="./inventario_files/jquery.ui.timepicker.js" type="text/javascript"></script>
+<script src="./inventario_files/jquery.ui.combobox.js" type="text/javascript"></script>
+<script src="./inventario_files/jquery.ui.message.js" type="text/javascript"></script>
+<script src="./inventario_files/jquery.fileupload.js" type="text/javascript"></script>
+<script src="./inventario_files/jquery.fileupload-ui.js" type="text/javascript"></script>
+<script src="./inventario_files/jquery.fileupload-jquery-ui.js" type="text/javascript"></script>
+<script src="./inventario_files/jquery.iframe-transport.js" type="text/javascript"></script>
+<script src="./inventario_files/chosen.jquery.js" type="text/javascript"></script>
+<script src="./inventario_files/script.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAA31Ge22wWXXO2pKxmnqcM27raj9XjY1cEjibMGYRK0M9CDD8hre2d8Yf7XtatS1exyUPZsPpxEPQGQfn2ofIw4o35wweZnsrvnKqXyvYpbAXAbTQzRMbrkZ1eeZtkvZhsZPJCsRtGWUPz1VUmQHxIdC8hGXMhs7uydnXuZNRe7sTEgy8CNYEmrX3j8c5Qr2D59Y1jFl+8KqGVJ2ZEbqWsPth/IYFx3UZF2EmfJInEayMcFHNu5J25LUg00FRThL3fU9K2PxWZsTQVsatsS0B0JgOIixJLObLluB1RIFeY+h+6igatcxVHFN4UkMaz6m2DI=">
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div id="Page">
+        <div id="Header">
+            <div>
+                <div class="logo">
+                    <img id="ctl00_logo" src="./inventario_files/MSPAS-Logo.jpg">
+                </div>
+                <div class="textos">
+                    <a id="ctl00_mainlink" class="siglas" href="http://localhost:1064/Abastecimientos/FrmPrincipal.aspx">SINAB</a>
+                    <div class="nombre">
+                        Sistema Nacional de Abastecimiento</div>
+                </div>
+            </div>
+            <table cellpadding="0" cellspacing="0" class="MenuBar">
+                <tbody><tr>
+                    <td style="width: 100%">
+                        <div id="MenuContainer">
+                            <a href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#ctl00_ctl13_Menu1_SkipLink"><img alt="Omitir vínculos de navegación" src="./inventario_files/WebResource(1).axd" width="0" height="0" style="border-width:0px;"></a><div class="menu" id="ctl00_ctl13_Menu1" style="float: left;">
+	<ul class="level1 static" tabindex="0" role="menubar" style="position: relative; width: auto; float: left;">
+		<li class="has-popup static" aria-haspopup="ctl00_ctl13_Menu1:submenu:2" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">Establecimientos</a><ul class="level2 dynamic" id="ctl00_ctl13_Menu1:submenu:2" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/ESTABLECIMIENTOS/FrmReportesModuloEstablecimientos.aspx" tabindex="-1">Reportes del Módulo</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/ESTABLECIMIENTOS/FrmMantConsumos2.aspx" tabindex="-1">Ingreso de Consumos</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/ESTABLECIMIENTOS/FrmReportesGerencialesEstablecimientos.aspx" tabindex="-1">Reportes de la Región</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/ALMACEN/frmMantRequesicion.aspx" tabindex="-1">Requisiciones a Almacén</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/ALMACEN/frmMantRecepcionProductos.aspx" tabindex="-1">Recepción de Productos Dependencias</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/ALMACEN/FrmMantDevolverProductosAlmacen.aspx" tabindex="-1">Devolución de Productos a Almacén</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/ESTABLECIMIENTOS/FrmMantSolicitudCompra.aspx" tabindex="-1">Ingreso de Solicitudes</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/ESTABLECIMIENTOS/FrmMantNecesidadesEstablecimientos.aspx" tabindex="-1">Cálculo de Necesidades</a></li>
+		</ul></li><li class="has-popup static" aria-haspopup="ctl00_ctl13_Menu1:submenu:12" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">UACI</a><ul class="level2 dynamic" id="ctl00_ctl13_Menu1:submenu:12" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmConsultarSolicitudUaci.aspx" tabindex="-1">Consulta de Solicitudes UACI</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmMantProcesoCompra.aspx" tabindex="-1">Consulta de Proceso de Compra</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/UACI/CargarSolicitudes.aspx" tabindex="-1">Cargar solicitudes </a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/UACI/CargarSolicitudesURMIM.aspx" tabindex="-1">Cargar Solicitud URMIN</a></li><li class="has-popup dynamic" aria-haspopup="ctl00_ctl13_Menu1:submenu:17" role="menuitem" style="position: relative;"><a class="popout-dynamic level2 dynamic" href="http://localhost:1064/Abastecimientos/Controles/" tabindex="-1">Adjudicación</a><ul class="level3 dynamic" id="ctl00_ctl13_Menu1:submenu:17" style="display: none; position: absolute; top: 0px; left: 100%;">
+				<li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmSeleccioneProcesoCompra.aspx?id=ComisionEvaluacion" tabindex="-1">Crear Comisión de Evaluación</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmMantIniciaProcesoCompra.aspx" tabindex="-1">Iniciar Proceso de Compra</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmSeleccioneProcesoCompra.aspx?id=GenerarRecomCompra" tabindex="-1">Generar Recomendación de Compra</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmSeleccioneProcesoCompra.aspx?id=GenerarResolucionAdjudicacion" tabindex="-1">Generar Resolución de Adjudicación</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmSeleccioneProcesoCompra.aspx?id=NotificarEmpresas" tabindex="-1">Notificar Adjudicación a Empresas</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmSeleccioneProcesoCompra.aspx?id=NotaAceptacion" tabindex="-1">Registrar Notas de Aceptación y Solvencias</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmSeleccioneProcesoCompra.aspx?id=NotificarEmpresas" tabindex="-1">Notificar Adjudicaciòn a empresas</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmSeleccioneProcesoCompra.aspx?id=ConsultarBases" tabindex="-1">Consulta de Bases</a></li>
+			</ul></li><li class="has-popup dynamic" aria-haspopup="ctl00_ctl13_Menu1:submenu:27" role="menuitem" style="position: relative;"><a class="popout-dynamic level2 dynamic" href="http://localhost:1064/Abastecimientos/Controles/" tabindex="-1">Contratación</a><ul class="level3 dynamic" id="ctl00_ctl13_Menu1:submenu:27" style="display: none; position: absolute; top: 0px; left: 100%;">
+				<li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmSeleccioneProcesoCompra.aspx?id=RecursosRevision" tabindex="-1">Registrar Recursos de Revisión</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmSeleccioneProcesoCompra.aspx?id=ComisionEvaluacionAltoNivel" tabindex="-1">Ingresar Comisión de Alto Nivel</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmSeleccioneProcesoCompra.aspx?id=AsignarAnalista" tabindex="-1">Asignar Proveedores a Analista</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmSeleccioneProcesoCompra.aspx?id=Adjudicar" tabindex="-1">Adjudicación en Firme</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmGenerarContratos.aspx" tabindex="-1">Generación de Contratos</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmSeleccioneProcesoCompra.aspx?id=DistribuirContratos" tabindex="-1">Distribuir Contratos</a></li>
+			</ul></li>
+		</ul></li><li class="has-popup static" aria-haspopup="ctl00_ctl13_Menu1:submenu:36" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">Almacén</a><ul class="level2 dynamic" id="ctl00_ctl13_Menu1:submenu:36" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li class="has-popup dynamic" aria-haspopup="ctl00_ctl13_Menu1:submenu:37" role="menuitem" style="position: relative;"><a class="popout-dynamic level2 dynamic" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#" onclick="__doPostBack(&#39;ctl00$ctl13$Menu1&#39;,&#39;3\\228&#39;)" tabindex="-1">Inventario</a><ul class="level3 dynamic" id="ctl00_ctl13_Menu1:submenu:37" style="display: none; position: absolute; top: 0px; left: 100%;">
+				<li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/ALMACEN/FrmActualizarExistenciaNoDisponible.aspx" tabindex="-1">Actualizar existencia no disponible</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/ALMACEN/FrmIngModUbicacionProductoAlmacen.aspx" tabindex="-1">Modificar Ubicación de Producto</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/ALMACEN/FrmAnularTransacciones.aspx" tabindex="-1">Anular Movimientos</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/ALMACEN/FrmBusquedaCodigos.aspx" tabindex="-1">Consulta de productos</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/ALMACEN/FrmInventarioFisico.aspx" tabindex="-1">Conteo Físico</a></li>
+			</ul></li>
+		</ul></li><li class="has-popup static" aria-haspopup="ctl00_ctl13_Menu1:submenu:45" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">URMIM</a><ul class="level2 dynamic" id="ctl00_ctl13_Menu1:submenu:45" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li class="has-popup dynamic" aria-haspopup="ctl00_ctl13_Menu1:submenu:46" role="menuitem" style="position: relative;"><a class="popout-dynamic level2 dynamic" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#" onclick="__doPostBack(&#39;ctl00$ctl13$Menu1&#39;,&#39;4\\160&#39;)" tabindex="-1">Reportes URMIM</a><ul class="level3 dynamic" id="ctl00_ctl13_Menu1:submenu:46" style="display: none; position: absolute; top: 0px; left: 100%;">
+				<li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/URMIM/FrmConsultaInventario.aspx" tabindex="-1">Consultas al Inventario</a></li>
+			</ul></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/URMIM/FrmHabilitarProdEstable.aspx" tabindex="-1">Habilitar Productos a Establecimientos</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/URMIM/frmProyectarPrecios.aspx" tabindex="-1">Proyección de Precios</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/URMIM/frmRevisionEstimacionNecesidades.aspx" tabindex="-1">Revisar Estimación de Necesidades</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/URMIM/frmConsolidarProgramaCompras.aspx" tabindex="-1">Consolidar Programa de Compras</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/URMIM/FrmConsolidarProgramaComprasII.aspx" tabindex="-1">Consolidar Programa de Compras con Ayuda Externa</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/Reportes/FrmRptProcesoCompra.aspx" tabindex="-1">Reporte</a></li>
+		</ul></li><li class="has-popup static" aria-haspopup="ctl00_ctl13_Menu1:submenu:56" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">UFI</a><ul class="level2 dynamic" id="ctl00_ctl13_Menu1:submenu:56" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmAutorizarSolicitudesCompra.aspx?id=1" tabindex="-1">Reserva de Fondos</a></li>
+		</ul></li><li class="has-popup static" aria-haspopup="ctl00_ctl13_Menu1:submenu:59" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">Seguridad</a><ul class="level2 dynamic" id="ctl00_ctl13_Menu1:submenu:59" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/SEGURIDAD/FrmMantUsuarios.aspx" tabindex="-1">Mantenimiento de Usuarios</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/SEGURIDAD/FrmMantRoles.aspx" tabindex="-1">Mantenimiento de Roles</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/SEGURIDAD/FrmMantOpcionesSistema.aspx" tabindex="-1">Mantenimiento Opciones del Sistema</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/SEGURIDAD/FrmMantUsuariosRoles.aspx" tabindex="-1">Asignación de Usuarios a Roles</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/SEGURIDAD/FrmMantOpcionesRoles.aspx" tabindex="-1">Asignación de Opciones de Menú a Roles</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/SEGURIDAD/FrmOrdenarOpcionesSistema.aspx" tabindex="-1">Ordenar Opciones</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/seguridad/FrmMantCatalogosRoles.aspx" tabindex="-1">Permisos por Catalogo</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/SEGURIDAD/FrmAuditoriaSAB.aspx" tabindex="-1">Reportes de auditoria</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantMENSAJES.aspx" tabindex="-1">Mensajes</a></li>
+		</ul></li><li class="has-popup static" aria-haspopup="ctl00_ctl13_Menu1:submenu:70" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">Laboratorio CC</a><ul class="level2 dynamic" id="ctl00_ctl13_Menu1:submenu:70" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/LABORATORIO/FrmConsultaProveedoresContratados.aspx" tabindex="-1">Consulta de Proveedores Contratados</a></li>
+		</ul></li><li class="has-popup static" aria-haspopup="ctl00_ctl13_Menu1:submenu:73" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">Reportes Programa VIH</a><ul class="level2 dynamic" id="ctl00_ctl13_Menu1:submenu:73" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/Reportes/pvih/ingreso.aspx" tabindex="-1">Ingresos por grupo de productos VIH</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/Reportes/pvih/ingreso_grupo.aspx" tabindex="-1">Informe de Ingresos por Grupo de Productos VIH</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/Reportes/pvih/despacho_grupo.aspx" tabindex="-1">Informe de Despachos por Grupo de Productos VIH</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx" tabindex="-1">Inventario por grupo de productos VIH</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario_desabastecimiento.aspx" tabindex="-1">Inventario y desabastecimiento</a></li>
+		</ul></li><li class="has-popup static" aria-haspopup="ctl00_ctl13_Menu1:submenu:80" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">Catálogos</a><ul class="level2 dynamic" id="ctl00_ctl13_Menu1:submenu:80" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantEMPLEADOS.aspx" tabindex="-1">Empleados</a></li><li class="has-popup dynamic" aria-haspopup="ctl00_ctl13_Menu1:submenu:82" role="menuitem" style="position: relative;"><a class="popout-dynamic level2 dynamic" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#" onclick="__doPostBack(&#39;ctl00$ctl13$Menu1&#39;,&#39;32\\59&#39;)" tabindex="-1">Catálogos de UACI</a><ul class="level3 dynamic" id="ctl00_ctl13_Menu1:submenu:82" style="display: none; position: absolute; top: 0px; left: 100%;">
+				<li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmCreaPlantilla.aspx" tabindex="-1">Plantillas (Bases)</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantTIPOCOMPRAS.aspx" tabindex="-1">Tipo de Compras</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantTIPOCRITERIO.aspx" tabindex="-1">Tipo de Criterio</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantTIPODOCUMENTOBASE.aspx" tabindex="-1">Tipo de Documento de Bases de Licitación</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantTIPODOCUMENTOREFERENCIAS.aspx" tabindex="-1">Tipos de Documentos de Referencia</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantMOTIVOSNOACEPTACION.aspx" tabindex="-1">Motivos de no Aceptación</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantPROVEEDORES.aspx" tabindex="-1">Proveedores</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantTIPOESTABLECIMIENTOS.aspx" tabindex="-1">Tipos de Establecimientos</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantCRITERIOSEVALUACION.aspx" tabindex="-1">Criterios de Evaluación</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/catalogos/wfMantTIPODOCUMENTOREFERENCIAS.aspx" tabindex="-1">Tipo de Documento de Referencia</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/catalogos/wfMantUNIDADMEDIDAS.aspx" tabindex="-1">Unidades de Medida</a></li><li class="has-popup dynamic" aria-haspopup="ctl00_ctl13_Menu1:submenu:94" role="menuitem" style="position: relative;"><a class="popout-dynamic level3 dynamic" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#" onclick="__doPostBack(&#39;ctl00$ctl13$Menu1&#39;,&#39;32\\59\\107&#39;)" tabindex="-1">Contratos</a><ul class="level4 dynamic" id="ctl00_ctl13_Menu1:submenu:94" style="display: none; position: absolute; top: 0px; left: 100%;">
+					<li role="menuitem" class="dynamic" style="position: relative;"><a class="level4 dynamic" href="http://localhost:1064/Abastecimientos/UACI/FrmCreaPlantillaContratos.aspx" tabindex="-1">Plantillas (Contratos)</a></li>
+				</ul></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantCLAUSULAS.aspx?IdMod=1" tabindex="-1">Cláusulas</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/catalogos/wfMantDOCUMENTOSBASE.aspx" tabindex="-1">Documentos para Bases de Licitación</a></li>
+			</ul></li><li class="has-popup dynamic" aria-haspopup="ctl00_ctl13_Menu1:submenu:100" role="menuitem" style="position: relative;"><a class="popout-dynamic level2 dynamic" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#" onclick="__doPostBack(&#39;ctl00$ctl13$Menu1&#39;,&#39;32\\60&#39;)" tabindex="-1">Catálogos de la UFI</a><ul class="level3 dynamic" id="ctl00_ctl13_Menu1:submenu:100" style="display: none; position: absolute; top: 0px; left: 100%;">
+				<li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantFUENTEFINANCIAMIENTOS.aspx" tabindex="-1">Fuentes de Financiamiento</a></li>
+			</ul></li><li class="has-popup dynamic" aria-haspopup="ctl00_ctl13_Menu1:submenu:103" role="menuitem" style="position: relative;"><a class="popout-dynamic level2 dynamic" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#" onclick="__doPostBack(&#39;ctl00$ctl13$Menu1&#39;,&#39;32\\61&#39;)" tabindex="-1">Catálogos de Almacén</a><ul class="level3 dynamic" id="ctl00_ctl13_Menu1:submenu:103" style="display: none; position: absolute; top: 0px; left: 100%;">
+				<li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantTIPOTRANSACCIONES.aspx" tabindex="-1">Tipo de Transacciones</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantTIPOINFORMES.aspx" tabindex="-1">Tipo de Informes</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantEMPLEADOSALMACEN.aspx" tabindex="-1">Empleados por Almacén</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantTIPODOCUMENTOCONTRATO.aspx" tabindex="-1">Tipo documento Contrato</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantTIPODOCUMENTORECEPCION.aspx" tabindex="-1">Tipo Documento Recepción</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantALMACENES.aspx" tabindex="-1">Almacenes</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantRESPONSABLEDISTRIBUCION.aspx" tabindex="-1">Responsables de Distribución</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantALMACENESESTABLECIMIENTOS.aspx" tabindex="-1">Almacenes por Establecimiento</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/catalogos/wfMantTIPOSUMINISTROS.aspx" tabindex="-1">Tipos de Suministros</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/catalogos/wfMantSUMINISTROS.aspx" tabindex="-1">Suministros</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/catalogos/wfMantALMACENESESTABLECIMIENTOS.aspx" tabindex="-1">Almacenes por Establecimientos</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/catalogos/wfMantEMPLEADOSALMACEN.aspx" tabindex="-1">Empleados por Almacenes</a></li>
+			</ul></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantCARGOS.aspx" tabindex="-1">Cargos</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantDEPENDENCIAS.aspx" tabindex="-1">Dependencias</a></li><li class="has-popup dynamic" aria-haspopup="ctl00_ctl13_Menu1:submenu:119" role="menuitem" style="position: relative;"><a class="popout-dynamic level2 dynamic" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#" onclick="__doPostBack(&#39;ctl00$ctl13$Menu1&#39;,&#39;32\\73&#39;)" tabindex="-1">Catálogo de Productos</a><ul class="level3 dynamic" id="ctl00_ctl13_Menu1:submenu:119" style="display: none; position: absolute; top: 0px; left: 100%;">
+				<li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantNIVELESUSO.aspx" tabindex="-1">Niveles de Uso</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/catalogos/wfmantASESORIAPREDEFINIDA.aspx" tabindex="-1">Asesoría Predefinida</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfCatalogoProductoM.aspx" tabindex="-1">Listados Oficiales de Suministros Medicos</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantPROGRAMAS.aspx" tabindex="-1">Programas</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantPRODUCTOSPROGRAMAS.aspx" tabindex="-1">Productos Programas</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantGRUPOS.aspx" tabindex="-1">Mantenimiento de Grupos</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfCatalogoProductoNM.aspx" tabindex="-1">Subcatalogos de Obras, Bienes Generales y Servicios</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level3 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantSUBGRUPOS.aspx" tabindex="-1">Mantenimiento de Sub-grupos</a></li>
+			</ul></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantDEPARTAMENTOS.aspx" tabindex="-1">Departamentos</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantDEPENDENCIAESTABLECIMIENTOS.aspx" tabindex="-1">Dependencias por Establecimiento</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/catalogos/wfMantMUNICIPIOS.aspx" tabindex="-1">Municipios</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/catalogos/wfmantINSTITUCIONES.aspx" tabindex="-1">Instituciones</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/catalogos/wfManCATPRODUCTOS.aspx" tabindex="-1">Productos</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/catalogos/wfMantESTABLECIMIENTOS.aspx" tabindex="-1">Establecimientos</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/ALMACEN/frmMovimientosKardex.aspx" tabindex="-1">Movimiento Kardex</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantCLAUSULAS.aspx?IdMod=1" tabindex="-1">Cláusulas</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="http://localhost:1064/Abastecimientos/Catalogos/wfMantESPECIFICOSGASTO.aspx" tabindex="-1">Específicos Gasto</a></li>
+		</ul></li>
+	</ul>
+</div><div style="clear: left;"></div><a id="ctl00_ctl13_Menu1_SkipLink"></a>
+
+                            <div class="LinkMenuRuta">
+                                
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <table cellpadding="0" cellspacing="0" id="UserDialogs">
+                            <tbody><tr>
+                                <td>
+                                    <a id="ctl00_lnkUsuario" class="usuario">Admin</a>
+                                    <div class="ClavePopUp ChildDialog" style="display: none;">
+                                        <div class="handler">
+                                        </div>
+                                        <div class="InfoPopUpBody">
+                                            
+<div style="padding: 5px;">
+    <div style="font-weight: bold; text-align: center; padding: 5px;">
+        Cambio de contraseña</div>
+    <hr>
+    Cambie su contraseña de usuario escribiendo una nueva, los cambios tendrán efectos en el siguiente inicio de sesión de usuario.
+    <hr>
+    <table id="pForm" class="CenteredTable" style="width:100%" cellpadding="5px" cellspacing="0">
+        <tbody><tr>
+            <td class="LabelCell">
+                <label for="ctl00_NuevoPassword1_TextBox1" id="ctl00_NuevoPassword1_Label4">Nueva contraseña:</label>
+            </td>
+            <td class="DataCell">
+                <input name="ctl00$NuevoPassword1$TextBox1" type="password" maxlength="8" id="ctl00_NuevoPassword1_TextBox1">
+                </td>
+            <td>
+           <span id="ctl00_NuevoPassword1_RequiredFieldValidator1" title="Campo Obligatorio" style="display:none;">*</span></td>
+        </tr>
+        <tr>
+            <td class="LabelCell">
+                <label for="TextBox2" id="ctl00_NuevoPassword1_lbl5">Re-escriba contraseña:</label>
+            </td>
+            <td class="DataCell">
+                <input name="ctl00$NuevoPassword1$TextBox2" type="password" maxlength="8" id="TextBox2">
+                </td>
+            <td>
+                <span id="ctl00_NuevoPassword1_RequiredFieldValidator2" title="Campo Obligatorio" style="display:none;">*</span>
+                <span id="ctl00_NuevoPassword1_CompareValidator1" title="Las contraseñas no coinciden" style="display:none;">!</span>
+            </td>
+        </tr>
+    </tbody></table>
+    <hr>
+    <div id="divError">
+        <span id="msg"></span>
+    </div>
+    <div>
+        <input type="submit" name="ctl00$NuevoPassword1$btnguardarPSW" value="Guardar Contraseña" onclick="ValidarPSW(); return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$NuevoPassword1$btnguardarPSW&quot;, &quot;&quot;, true, &quot;chpswd&quot;, &quot;&quot;, false, false))" id="btnguardarPSW">
+        <input type="submit" name="ctl00$NuevoPassword1$cerrarPup" value="Cancelar" onclick="Cerrar(); return false;" id="cerrarPup">
+    </div>
+</div>
+<script type="text/javascript">
+    function ValidarPSW() {
+        var confirmacion = confirm("Está a punto de cambiar su contraseña permanentemente ¿Desea continuar?");
+        if (confirmacion) {
+            var res = Page_ClientValidate("chpswd");
+            if (res == true) {
+                $.ajax({
+                    type: "POST",
+                    url: "ws/wsSINAB.asmx/CambiarClave",
+                    data: "{'nuevaClave': '" + $('#TextBox2').val() + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function(msg) {
+                        var vals = msg.d;
+                        if (vals[0] == "error") {
+                            ProcesarError(vals[1]);
+                            $("div.error").message({ type: "error" });
+                        } else {
+                            //$(".divError").removeClass("loginerror error ui-state-error ui-corner-all");
+                            $("#divError").removeClass("error").addClass("aviso");
+                            $("#divError span").html(vals[1]);
+                            $("#btnguardarPSW").hide();
+                            $("div.aviso").message();
+                        }
+                    },
+                    error: function(err) {
+                        ProcesarError("Ocurrio un error. Intente nuevamente");
+                        $("div.error").message({ type: "error" });
+                    }
+                });
+
+            }
+        }
+    }
+    function ProcesarError(errormsg) {
+        // $("#divError").addClass("loginerror error ui-state-error ui-corner-all");
+        $("#divError").addClass("error");
+        $("#divError span").html(errormsg);
+    }
+    
+    function Cerrar() {
+        //$(".divError").removeClass("loginerror error ui-state-error ui-corner-all");
+        $("#divError").removeClass("error");
+        $("#pForm input").val("");
+        $("#divError span").html("");
+        $("#btnguardarPSW").show();
+        $(".ClavePopUp").hide();
+    }
+</script>
+
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a id="ctl00_LnkbinfoUsuario" class="usuarioInfo" causesvalidation="False"></a>
+                                    <div class="InfoPopUp ChildDialog" style="display: none;">
+                                        <div class="handler">
+                                        </div>
+                                        <div class="InfoPopUpBody">
+                                            
+<table class="CenteredTable" style="width: 100%;" cellpadding="5" cellspacing="0">
+    <tbody><tr>
+      <th colspan="2">
+          <div style="text-align: center;">Información de Usuario</div>
+          <hr>
+      </th>
+    </tr>
+    <tr>
+      <td class="LabelCell" width="120px">
+        Código Usuario:</td>
+      <td class="DataCell">
+        <span id="ctl00_InfoSesion_lblCodigoUsuario">408</span></td>
+    </tr>
+    <tr>
+      <td class="LabelCell">
+        Nombre Usuario:</td>
+      <td class="DataCell">
+        <span id="ctl00_InfoSesion_lblNombreUsuario">Vladimir Moran</span></td>
+    </tr>
+    <tr>
+      <td class="LabelCell">
+        Rol Usuario:</td>
+      <td class="DataCell">
+        <span id="ctl00_InfoSesion_lblRolUsuario">Admin</span></td>
+    </tr>
+    <tr>
+      <td class="LabelCell">
+        Cargo Usuario:</td>
+      <td class="DataCell">
+        <span id="ctl00_InfoSesion_lblCargo">Analista programador</span></td>
+    </tr>
+    <tr>
+      <td class="LabelCell">
+        Zona:</td>
+      <td class="DataCell">
+        <span id="ctl00_InfoSesion_lblZona">Metropolitana</span></td>
+    </tr>
+    <tr>
+      <td class="LabelCell">
+        Dependencia:</td>
+      <td class="DataCell">
+        <span id="ctl00_InfoSesion_lblDependencia">Dirección de Tecnologías de Información y Comunicaciones</span></td>
+    </tr>
+    <tr>
+      <td class="LabelCell">
+        Establecimiento:</td>
+      <td class="DataCell">
+        <span id="ctl00_InfoSesion_lblEstablecimientos">Ministerio de Salud</span></td>
+    </tr>
+    <tr>
+      <td class="LabelCell">
+        Tipo Establecimiento:</td>
+      <td class="DataCell">
+        <span id="ctl00_InfoSesion_lblTipoEstablecimiento">Nivel Central</span></td>
+    </tr>
+    <tr>
+      <td class="LabelCell">
+        Nivel:</td>
+      <td class="DataCell">
+        <span id="ctl00_InfoSesion_lblNivel">1</span></td>
+    </tr>
+    <tr>
+      <td class="LabelCell">
+        Almacén:</td>
+      <td class="DataCell">
+        <span id="ctl00_InfoSesion_lblAlmacen">--</span></td>
+    </tr>
+    <tr>
+      <td class="LabelCell">
+        Suministro:</td>
+      <td class="DataCell">
+        <span id="ctl00_InfoSesion_lblSuministro">--</span></td>
+    </tr>
+  </tbody></table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                    <td nowrap="nowrap" style="padding-left: 10px">
+                        <a id="ctl00_cerrarSesion" class="error" href="javascript:__doPostBack(&#39;ctl00$cerrarSesion&#39;,&#39;&#39;)">Cerrar Sesión</a>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        <div class="content">
+            
+  <h1>Reporte de Inventarios por grupo de productos VIH</h1>
+    <br>
+    <table>
+        <tbody><tr><td>Inventario hasta la fecha: </td><td><input type="text" id="hasta" class="hasDatepicker"></td></tr>
+        <tr>
+            <td>Agrupación de productos VIH: </td>
+            <td>
+                <select id="tipo">
+                    <option value="6">Antirretrovirales</option>
+                    <option value="7">Pruebas de VIH</option>
+                    <option value="8">Insumos para pruebas de VIH</option>
+                    <option value="9">Infecciones Oportunistas</option>
+                    <option value="10">ITS</option>
+                    <option value="11">Otros VIH</option>
+                    <option value="2" selected>Todos</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Tipo de documento: </td>
+            <td>
+                <select id="format">
+                    <option value="pdf" selected>PDF</option>
+                    <option value="odt">ODT - Documento tipo word</option>
+                    <option value="ods">ODS - Hoja de calculo</option>
+                    <option value="xls">XLS</option>
+                    <option value="csv">CSV</option>
+                    <option value="json">JSON</option>
+                    <option value="xml">XML</option>
+                </select>
+            </td>
+        </tr>
+        <input type="hidden" id="unit" value="pvih_inventario"> 
+        <input type="hidden" id="titulo" value="Inventarios por grupo de productos VIH"> 
+        <tr><td></td><td><p style="text-align:right"><button onclick="OpenInNewTabWinBrowser();"> Generar reporte.</button></p> </td></tr>
+
+    </tbody></table>
+  <br>
+    
+  <span id="ctl00_PageContent_Label1" style="color:Maroon;font-size:Larger;font-weight:bold;">Avisos:</span>
+
+  <br>
+  <div>
+
+</div>
+  
+    
+  
+
+
+        </div>
+        <div class="footer">
+            En linea:
+            <span id="ctl00_lblUserOnline">1</span></div>
+    </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_NuevoPassword1_RequiredFieldValidator1"), document.getElementById("ctl00_NuevoPassword1_RequiredFieldValidator2"), document.getElementById("ctl00_NuevoPassword1_CompareValidator1"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_NuevoPassword1_RequiredFieldValidator1 = document.all ? document.all["ctl00_NuevoPassword1_RequiredFieldValidator1"] : document.getElementById("ctl00_NuevoPassword1_RequiredFieldValidator1");
+ctl00_NuevoPassword1_RequiredFieldValidator1.controltovalidate = "ctl00_NuevoPassword1_TextBox1";
+ctl00_NuevoPassword1_RequiredFieldValidator1.errormessage = "Dato requerido";
+ctl00_NuevoPassword1_RequiredFieldValidator1.display = "Dynamic";
+ctl00_NuevoPassword1_RequiredFieldValidator1.validationGroup = "chpswd";
+ctl00_NuevoPassword1_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_NuevoPassword1_RequiredFieldValidator1.initialvalue = "";
+var ctl00_NuevoPassword1_RequiredFieldValidator2 = document.all ? document.all["ctl00_NuevoPassword1_RequiredFieldValidator2"] : document.getElementById("ctl00_NuevoPassword1_RequiredFieldValidator2");
+ctl00_NuevoPassword1_RequiredFieldValidator2.controltovalidate = "TextBox2";
+ctl00_NuevoPassword1_RequiredFieldValidator2.errormessage = "Dato requerido";
+ctl00_NuevoPassword1_RequiredFieldValidator2.display = "Dynamic";
+ctl00_NuevoPassword1_RequiredFieldValidator2.validationGroup = "chpswd";
+ctl00_NuevoPassword1_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_NuevoPassword1_RequiredFieldValidator2.initialvalue = "";
+var ctl00_NuevoPassword1_CompareValidator1 = document.all ? document.all["ctl00_NuevoPassword1_CompareValidator1"] : document.getElementById("ctl00_NuevoPassword1_CompareValidator1");
+ctl00_NuevoPassword1_CompareValidator1.controltovalidate = "TextBox2";
+ctl00_NuevoPassword1_CompareValidator1.display = "Dynamic";
+ctl00_NuevoPassword1_CompareValidator1.validationGroup = "chpswd";
+ctl00_NuevoPassword1_CompareValidator1.evaluationfunction = "CompareValidatorEvaluateIsValid";
+ctl00_NuevoPassword1_CompareValidator1.controltocompare = "ctl00_NuevoPassword1_TextBox1";
+ctl00_NuevoPassword1_CompareValidator1.controlhookup = "ctl00_NuevoPassword1_TextBox1";
+//]]>
+</script>
+
+<script type="text/javascript">new Sys.WebForms.Menu({ element: 'ctl00_ctl13_Menu1', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script>
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('ctl00_NuevoPassword1_RequiredFieldValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_NuevoPassword1_RequiredFieldValidator1'));
+}
+
+document.getElementById('ctl00_NuevoPassword1_RequiredFieldValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_NuevoPassword1_RequiredFieldValidator2'));
+}
+
+document.getElementById('ctl00_NuevoPassword1_CompareValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_NuevoPassword1_CompareValidator1'));
+}
+//]]>
+</script>
+</form>
+  
+
+    <script type="text/javascript">
+        //center
+        jQuery.fn.center = function () {
+            this.css("position", "absolute");
+            this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) +
+                $(window).scrollTop()) + "px");
+            this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) +
+                $(window).scrollLeft()) + "px");
+            return this;
+        };
+
+        $("div.loader").center();
+        //validacion de campos para tipo numérico
+        $(".numeric").keypress(function (e) {
+
+            var charCode = (e.which) ? e.which : e.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        });
+
+        $(".double").keypress(function (e) {
+            var charCode = (e.which) ? e.which : e.keyCode;
+            if (charCode > 31 && (charCode < 46 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        });
+
+
+        //Inicio Dialogos de Usuario
+        $(".ChildDialog").hide();
+
+        $("html").click(function () {
+            $(".ChildDialog").hide();
+        });
+
+
+        $("#UserDialogs a").click(function (event) {
+            event.stopPropagation();
+
+            if ($(this).next().is(":visible")) {
+                $(this).next().hide();
+            } else {
+                $(".ChildDialog").hide();
+                $(this).next().show();
+                if ($(this).next().hasClass("ClavePopUp")) {
+                    $(".ClavePopUp #divError").empty().append("<span></span>").removeClass("error").removeClass("aviso");
+                    $(".ClavePopUp #pForm span").hide();
+                    $(".ClavePopUp #pForm input").val("");
+                    $(".ClavePopUp #btnguardar").show();
+                }
+            }
+        });
+
+        $(".ClavePopUp").click(function (event) {
+            event.stopPropagation();
+        });
+        //Fin Dialogos de Usuario
+
+        $(function () {
+            
+            $(".monthyearfield").datepicker(
+                {
+                    dateFormat: "mm/yy",
+                    changeMonth: true,
+                    changeYear: true,
+                    showButtonPanel: true,
+                    onClose: function(dateText, inst) {
+                        function isDonePressed() {
+                            return ($('#ui-datepicker-div').html().indexOf('ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all ui-state-hover') > -1);
+                        }
+
+                        if (isDonePressed()) {
+                            var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+                            var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                            $(this).datepicker('setDate', new Date(year, month, 1)).trigger('change');
+
+                            $('.monthyearfield').focusout(); //Added to remove focus from datepicker input box on selecting date
+                        }
+                    },
+                    beforeShow: function(input, inst) {
+                       
+                        inst.dpDiv.addClass('month_year_datepicker');
+                        if ((datestr = $(this).val()).length > 0) {
+                            year = datestr.substring(datestr.length - 4, datestr.length);
+                            month = datestr.substring(0, 2);
+                            $(this).datepicker('option', 'defaultDate', new Date( (new Date(year, month,1))-1));
+                            $(this).datepicker('setDate',new Date( (new Date(year, month,1))-1));
+                            $(".ui-datepicker-calendar").hide();
+                        }
+                    }
+                });
+            
+            $(".datefield").datepicker({ dateFormat: 'dd/mm/yy' });
+            $(".datefield").datepicker($.datepicker.regional["es"]);
+       
+            $("div.aviso").message();
+            $("div.error").message({ type: "error" });
+
+            $.timepicker.regional['es'] = {
+                hourText: 'Hora',
+                minuteText: 'Minuto',
+                amPmText: ['AM', 'PM'],
+                closeButtonText: 'Aceptar',
+                nowButtonText: 'Ahora',
+                deselectButtonText: 'Deseleccionar'
+            };
+            
+            $.timepicker.setDefaults($.timepicker.regional['es']);
+
+            $(".timefield").timepicker({
+                showPeriod: true,
+                showLeadingZero: true
+            });
+            
+            $(".filterlist").chosen({
+                disable_search_threshold: 10,
+                no_results_text: "No se encontró su busqueda!"
+               // width: "95%"
+            });
+        });
+        
+       
+
+    </script>
+
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="position: absolute; top: 266.813px; left: 204px; z-index: 1; display: none;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="&lt;Ant"><span class="ui-icon ui-icon-circle-triangle-w">&lt;Ant</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Sig&gt;"><span class="ui-icon ui-icon-circle-triangle-e">Sig&gt;</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">Octubre</span>&nbsp;<span class="ui-datepicker-year">2016</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th><span title="Lunes">Lu</span></th><th><span title="Martes">Ma</span></th><th><span title="Miércoles">Mi</span></th><th><span title="Jueves">Ju</span></th><th><span title="Viernes">Vi</span></th><th class="ui-datepicker-week-end"><span title="Sábado">Sá</span></th><th class="ui-datepicker-week-end"><span title="Domingo">Do</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">1</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">2</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">3</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">5</a></td><td class=" ui-datepicker-days-cell-over  ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default ui-state-highlight ui-state-hover" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">6</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">7</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">8</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">9</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">13</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">14</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">15</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">16</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">21</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">22</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">23</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">28</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">29</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">30</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="http://localhost:1064/Abastecimientos/Reportes/pvih/inventario.aspx#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div><div id="ui-timepicker-div" class="ui-timepicker ui-widget ui-helper-clearfix ui-corner-all " style="display: none"></div></body></html>

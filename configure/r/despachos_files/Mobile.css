@@ -1,0 +1,14 @@
+﻿@media screen and (max-device-width:800px)
+{
+	#Page, .frame{ width:100% !important; }
+	div.logon{ width:80%;}
+}
+@media screen and (max-device-width:480px)
+{
+    #Header .textos .siglas{ font-size: 40px;}
+    #Page #Header .textos{ width: 100%;}
+	#Page #Header .textos .nombre{ font-size: 20px;}
+	div.logo{ display: none !important;}
+	div.logon{ width:90%;}
+	
+}

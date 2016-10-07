@@ -62,26 +62,55 @@
     <script>
         $(function () {
             $.datepicker.setDefaults($.datepicker.regional['es']);
-            $("#desde").datepicker({ dateFormat: 'yymmdd' });
-            $("#hasta").datepicker({ dateFormat: 'yymmdd' });
-      });
+            $("#desde").datepicker({
+                dateFormat: 'yymmdd',
+                showOn: "button",
+                buttonImage: "https://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+                buttonImageOnly: true,
+                buttonText: "Seleccione fecha desde"
+            });
+            $("#hasta").datepicker({
+                dateFormat: 'yymmdd',
+                showOn: "button",
+                buttonImage: "https://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+                buttonImageOnly: true,
+                buttonText: "Seleccione fecha hasta"
+            });
+        });
     </script>
     <script type="text/javascript">
-        function linkDownload(a, filename, content) {
-            contentType = 'data:application/octet-stream,';
-            uriContent = contentType + encodeURIComponent(content);
-            a.setAttribute('href', uriContent);
-            a.setAttribute('download', filename);
-        }
-        function download(filename, content) {
-            var a = document.createElement('a');
-            linkDownload(a, filename, content);
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
         function OpenInNewTabWinBrowser() {
-            var win = window.open('http://google.com', '_blank');
+            var urlReport = 'http://127.0.0.1:8080/jasperserver/flow.html?_flowId=viewReportFlow&standAlone=true&_flowId=viewReportFlow&';
+            var accessReport = '&j_acegi_security_check&j_username=jasperadmin&j_password=jasperadmin';
+            var formatReport = '&output=' + document.getElementById("format").value;
+            var pathReport = '/reports/sinab/pvih';
+            var paramsReport = '&idProducto=' + document.getElementById('tipo').value + '&fechaDesde=' + document.getElementById('desde').value + '&fechaHasta=' + document.getElementById('hasta').value + '&tituloReporte=' + document.getElementById('titulo').value;
+            pathReport = 'ParentFolderUri=' + pathReport + '&reportUnit=' + pathReport + '/' + document.getElementById('unit').value;
+            /*var tipo;
+        	switch (document.getElementById('tipo').value) {
+        		case 6:
+        			paramsReport = paramsReport+'&categoriaReporte='+'Productos Antirretrovirales';
+        			break;
+        		case 7:
+        			paramsReport = paramsReport+'&categoriaReporte='+'Pruebas de VIH';
+        			break;
+        		case 8:
+        			paramsReport = paramsReport+'&categoriaReporte='+'Insumos para pruebas de VIH';
+        			break;
+        		case 9:
+        			paramsReport = paramsReport+'&categoriaReporte='+'Infecciones Oportunistas';
+        			break;
+        		case 10:
+        			paramsReport = paramsReport+'&categoriaReporte='+'ITS';
+        			break;
+        		case 11:
+        			paramsReport = paramsReport+'&categoriaReporte='+'Otros VIH';
+        			break;
+        		case 2:
+        			paramsReport = paramsReport+'&categoriaReporte='+'Todos los productos del programa VIH';
+        			break;
+        	}*/
+            var win = window.open(urlReport + pathReport + accessReport + formatReport + paramsReport, '_blank');
             win.focus();
         }
     </script>

@@ -4,28 +4,28 @@
 <%-- Agregue aquí los controles de contenido --%>
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="PageContent">
   <h1>Informe de Ingresos por Grupo de Productos VIH</h1>
-    <br />
+    <br>
     <table>
-        <tr><td>Fecha de ingresos: </td><td>[DESDE]: <input type="text" id="desde"><br />[HASTA]: <input type="text" id="hasta"></td></tr>
+        <tbody><tr><td>Fecha de ingresos: </td><td>[DESDE]: <input type="text" id="desde" class="hasDatepicker"><br>[HASTA]: <input type="text" id="hasta" class="hasDatepicker"></td></tr>
         <tr>
             <td>Agrupación de productos VIH: </td>
             <td>
-                <select>
+                <select id="tipo">
                     <option value="6">Antirretrovirales</option>
                     <option value="7">Pruebas de VIH</option>
                     <option value="8">Insumos para pruebas de VIH</option>
                     <option value="9">Infecciones Oportunistas</option>
                     <option value="10">ITS</option>
                     <option value="11">Otros VIH</option>
-                    <option value="2">Todos</option>
+                    <option value="2" selected>Todos</option>
                 </select>
             </td>
         </tr>
         <tr>
             <td>Tipo de documento: </td>
             <td>
-                <select>
-                    <option value="pdf">PDF</option>
+                <select id="format">
+                    <option value="pdf" selected>PDF</option>
                     <option value="odt">ODT - Documento tipo word</option>
                     <option value="ods">ODS - Hoja de calculo</option>
                     <option value="xls">XLS</option>
@@ -35,8 +35,11 @@
                 </select>
             </td>
         </tr>
-        <tr><td></td><td><p style="text-align:right"><input type="hidden" id="url" value="" /> <button onclick="OpenInNewTabWinBrowser();"> Generar reporte.</button></p> </td></tr>
-    </table>
+
+        <input type="hidden" id="unit" value="pvih_ingresos"> 
+        <input type="hidden" id="titulo" value="Ingresos por Grupo de Productos VIH"> 
+        <tr><td></td><td><p style="text-align:right"><button onclick="OpenInNewTabWinBrowser();"> Generar reporte.</button></p> </td></tr>
+    </tbody></table>
   <br />
     
   <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Larger" ForeColor="Maroon"
